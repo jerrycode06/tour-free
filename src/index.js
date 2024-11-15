@@ -75,7 +75,7 @@ class Root extends React.Component {
               component={packageStandard}
             />
             <Route
-              path={`${process.env.PUBLIC_URL}/package-details`}
+              path={`${process.env.PUBLIC_URL}/package-details/:id`}
               component={packageDetails}
             />
             <Route path={`${process.env.PUBLIC_URL}/faq`} component={faq} />

@@ -65,9 +65,9 @@ class MainBanner extends Component {
                                 <h2>Amazing Tour In
                                     Dubai </h2>
                                 <h5>7 Days, 8 Night Tour</h5>
-                                <div className="banner-btn">
+                                {/* <div className="banner-btn">
                                     <Link to={`${process.env.PUBLIC_URL}/package`} className="btn-common">Book Now</Link>
-                                </div>
+                                </div> */}
                             </div>
                         </div>
                     </div>
