@@ -49,9 +49,9 @@ class HomePage extends Component {
         <Packages />
         <Destinations />
         <Achievement />
-        <Review />
-        <Features />
-        <Blog />
+        {/* <Review /> */}
+        {/* <Features /> */}
+        {/* <Blog /> */}
         {/*---------End Imported All Sections-----------*/}
       </div>
     );

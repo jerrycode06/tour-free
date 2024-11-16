@@ -62,9 +62,8 @@ class MainBanner extends Component {
                     <div className="slider-item slider-item-1">
                         <div className="container">
                             <div className="slider-content wow fadeInLeft animated" data-wow-delay="300ms" data-wow-duration="1500ms">
-                                <h2>Amazing Tour In
-                                    Dubai </h2>
-                                <h5>7 Days, 8 Night Tour</h5>
+                                <h2>Desert Hoppers Tours </h2>
+                                {/* <h5>7 Days, 8 Night Tour</h5> */}
                                 {/* <div className="banner-btn">
                                     <Link to={`${process.env.PUBLIC_URL}/package`} className="btn-common">Book Now</Link>
                                 </div> */}
@@ -100,7 +99,7 @@ class MainBanner extends Component {
             {/* ===============  Main banner area end =============== */}
 
             {/* ===============  findfrom area start ============= */}
-            <div className="find-form">
+            {/* <div className="find-form">
                 <div className="container">
                     <form className="findfrom-wrapper">
                         <div className="row">
@@ -133,7 +132,7 @@ class MainBanner extends Component {
                         </div>
                     </form>
                 </div>
-            </div>
+            </div> */}
 
             {/* ===============  findfrom area end =============== */}
         </>

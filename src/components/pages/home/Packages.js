@@ -38,7 +38,7 @@ class Packages extends Component {
               >
                 <div className="package-card">
                   <div className="package-thumb">
-                    <Link to={`${process.env.PUBLIC_URL}/package-details/1`}>
+                    <Link to={`${process.env.PUBLIC_URL}/package-details/11`}>
                       <img src={package1Img} alt="" className="img-fluid" />
                     </Link>
                   </div>
@@ -53,7 +53,7 @@ class Packages extends Component {
                     </div>
                     <h3>
                       <i className="flaticon-arrival" />
-                      <Link to={`${process.env.PUBLIC_URL}/package-details/1`}>
+                      <Link to={`${process.env.PUBLIC_URL}/package-details/11`}>
                         Hotel without Burj Khalifa (5 star)
                       </Link>
                     </h3>
@@ -68,7 +68,7 @@ class Packages extends Component {
               >
                 <div className="package-card">
                   <div className="package-thumb">
-                    <Link to={`${process.env.PUBLIC_URL}/package-details/2`}>
+                    <Link to={`${process.env.PUBLIC_URL}/package-details/10`}>
                       <img src={package1Img} alt="" className="img-fluid" />
                     </Link>
                   </div>
@@ -83,8 +83,38 @@ class Packages extends Component {
                     </div>
                     <h3>
                       <i className="flaticon-arrival" />
-                      <Link to={`${process.env.PUBLIC_URL}/package-details/2`}>
+                      <Link to={`${process.env.PUBLIC_URL}/package-details/10`}>
                         Hotel with Burj Khalifa (5 star)
+                      </Link>
+                    </h3>
+                  </div>
+                </div>
+              </div>
+
+              <div
+                className="col-lg-4 col-md-6 col-sm-6 wow fadeInUp animated"
+                data-wow-duration="1500ms"
+                data-wow-delay="0ms"
+              >
+                <div className="package-card">
+                  <div className="package-thumb">
+                    <Link to={`${process.env.PUBLIC_URL}/package-details/10`}>
+                      <img src={package1Img} alt="" className="img-fluid" />
+                    </Link>
+                  </div>
+                  <div className="package-details">
+                    <div className="package-info">
+                      <h5>
+                        <span>$312</span>/Per Person
+                      </h5>
+                      <h5>
+                        <i className="flaticon-calendar" />3 night/4 days
+                      </h5>
+                    </div>
+                    <h3>
+                      <i className="flaticon-arrival" />
+                      <Link to={`${process.env.PUBLIC_URL}/package-details/10`}>
+                        Hotel Basic Dubai Tour (3 star)
                       </Link>
                     </h3>
                   </div>
@@ -105,36 +135,6 @@ class Packages extends Component {
                   <div className="package-details">
                     <div className="package-info">
                       <h5>
-                        <span>$312</span>/Per Person
-                      </h5>
-                      <h5>
-                        <i className="flaticon-calendar" />3 night/4 days
-                      </h5>
-                    </div>
-                    <h3>
-                      <i className="flaticon-arrival" />
-                      <Link to={`${process.env.PUBLIC_URL}/package-details/3`}>
-                        Hotel Basic Dubai Tour (3 star)
-                      </Link>
-                    </h3>
-                  </div>
-                </div>
-              </div>
-
-              <div
-                className="col-lg-4 col-md-6 col-sm-6 wow fadeInUp animated"
-                data-wow-duration="1500ms"
-                data-wow-delay="0ms"
-              >
-                <div className="package-card">
-                  <div className="package-thumb">
-                    <Link to={`${process.env.PUBLIC_URL}/package-details/4`}>
-                      <img src={package1Img} alt="" className="img-fluid" />
-                    </Link>
-                  </div>
-                  <div className="package-details">
-                    <div className="package-info">
-                      <h5>
                         <span>$395</span>/Per Person
                       </h5>
                       <h5>
@@ -143,7 +143,7 @@ class Packages extends Component {
                     </div>
                     <h3>
                       <i className="flaticon-arrival" />
-                      <Link to={`${process.env.PUBLIC_URL}/package-details/4`}>
+                      <Link to={`${process.env.PUBLIC_URL}/package-details/3`}>
                         Hotel with Burj Khalifa (3 star)
                       </Link>
                     </h3>
@@ -158,14 +158,14 @@ class Packages extends Component {
               >
                 <div className="package-card">
                   <div className="package-thumb">
-                    <Link to={`${process.env.PUBLIC_URL}/package-details/5`}>
+                    <Link to={`${process.env.PUBLIC_URL}/package-details/6`}>
                       <img src={package1Img} alt="" className="img-fluid" />
                     </Link>
                   </div>
                   <div className="package-details">
                     <div className="package-info">
                       <h5>
-                        <span>$610</span>/Per Person
+                        <span>$512</span>/Per Person
                       </h5>
                       <h5>
                         <i className="flaticon-calendar" />3 night/4 days
@@ -173,7 +173,7 @@ class Packages extends Component {
                     </div>
                     <h3>
                       <i className="flaticon-arrival" />
-                      <Link to={`${process.env.PUBLIC_URL}/package-details/5`}>
+                      <Link to={`${process.env.PUBLIC_URL}/package-details/6`}>
                         Burj Khalifa Tour (4 star)
                       </Link>
                     </h3>
@@ -188,7 +188,7 @@ class Packages extends Component {
               >
                 <div className="package-card">
                   <div className="package-thumb">
-                    <Link to={`${process.env.PUBLIC_URL}/package-details/6`}>
+                    <Link to={`${process.env.PUBLIC_URL}/package-details/8`}>
                       <img src={package3Img} alt="" className="img-fluid" />
                     </Link>
                   </div>
@@ -203,68 +203,8 @@ class Packages extends Component {
                     </div>
                     <h3>
                       <i className="flaticon-arrival" />
-                      <Link to={`${process.env.PUBLIC_URL}/package-details/6`}>
-                        Hotel with Burj Khalifa (5 star)
-                      </Link>
-                    </h3>
-                  </div>
-                </div>
-              </div>
-
-              <div
-                className="col-lg-4 col-md-6 col-sm-6 wow fadeInUp animated"
-                data-wow-duration="1500ms"
-                data-wow-delay="600ms"
-              >
-                <div className="package-card">
-                  <div className="package-thumb">
-                    <Link to={`${process.env.PUBLIC_URL}/package-details/7`}>
-                      <img src={package3Img} alt="" className="img-fluid" />
-                    </Link>
-                  </div>
-                  <div className="package-details">
-                    <div className="package-info">
-                      <h5>
-                        <span>$530</span>/Per Person
-                      </h5>
-                      <h5>
-                        <i className="flaticon-calendar" />4 night/5 days
-                      </h5>
-                    </div>
-                    <h3>
-                      <i className="flaticon-arrival" />
-                      <Link to={`${process.env.PUBLIC_URL}/package-details/7`}>
-                        Hotel without Burj Khalifa (4 star)
-                      </Link>
-                    </h3>
-                  </div>
-                </div>
-              </div>
-
-              <div
-                className="col-lg-4 col-md-6 col-sm-6 wow fadeInUp animated"
-                data-wow-duration="1500ms"
-                data-wow-delay="300ms"
-              >
-                <div className="package-card">
-                  <div className="package-thumb">
-                    <Link to={`${process.env.PUBLIC_URL}/package-details/8`}>
-                      <img src={package2Img} alt="" className="img-fluid" />
-                    </Link>
-                  </div>
-                  <div className="package-details">
-                    <div className="package-info">
-                      <h5>
-                        <span>$458</span>/Per Person
-                      </h5>
-                      <h5>
-                        <i className="flaticon-calendar" />4 night/5 days
-                      </h5>
-                    </div>
-                    <h3>
-                      <i className="flaticon-arrival" />
                       <Link to={`${process.env.PUBLIC_URL}/package-details/8`}>
-                        Burj Khalifa Tour (3 star)
+                        Hotel with Burj Khalifa (5 star)
                       </Link>
                     </h3>
                   </div>
@@ -285,7 +225,7 @@ class Packages extends Component {
                   <div className="package-details">
                     <div className="package-info">
                       <h5>
-                        <span>$376</span>/Per Person
+                        <span>$558</span>/Per Person
                       </h5>
                       <h5>
                         <i className="flaticon-calendar" />4 night/5 days
@@ -294,7 +234,37 @@ class Packages extends Component {
                     <h3>
                       <i className="flaticon-arrival" />
                       <Link to={`${process.env.PUBLIC_URL}/package-details/9`}>
-                        Hotel without Burj Khalifa (3 star)
+                        Hotel without Burj Khalifa (5 star)
+                      </Link>
+                    </h3>
+                  </div>
+                </div>
+              </div>              
+
+              <div
+                className="col-lg-4 col-md-6 col-sm-6 wow fadeInUp animated"
+                data-wow-duration="1500ms"
+                data-wow-delay="600ms"
+              >
+                <div className="package-card">
+                  <div className="package-thumb">
+                    <Link to={`${process.env.PUBLIC_URL}/package-details/4`}>
+                      <img src={package3Img} alt="" className="img-fluid" />
+                    </Link>
+                  </div>
+                  <div className="package-details">
+                    <div className="package-info">
+                      <h5>
+                        <span>$610</span>/Per Person
+                      </h5>
+                      <h5>
+                        <i className="flaticon-calendar" />4 night/5 days
+                      </h5>
+                    </div>
+                    <h3>
+                      <i className="flaticon-arrival" />
+                      <Link to={`${process.env.PUBLIC_URL}/package-details/4`}>
+                        Hotel with Burj Khalifa (4 star)
                       </Link>
                     </h3>
                   </div>
@@ -308,8 +278,38 @@ class Packages extends Component {
               >
                 <div className="package-card">
                   <div className="package-thumb">
-                    <Link to={`${process.env.PUBLIC_URL}/package-details/10`}>
+                    <Link to={`${process.env.PUBLIC_URL}/package-details/5`}>
                       <img src={package3Img} alt="" className="img-fluid" />
+                    </Link>
+                  </div>
+                  <div className="package-details">
+                    <div className="package-info">
+                      <h5>
+                        <span>$530</span>/Per Person
+                      </h5>
+                      <h5>
+                        <i className="flaticon-calendar" />4 night/5 days
+                      </h5>
+                    </div>
+                    <h3>
+                      <i className="flaticon-arrival" />
+                      <Link to={`${process.env.PUBLIC_URL}/package-details/5`}>
+                        Hotel without Burj Khalifa (4 star)
+                      </Link>
+                    </h3>
+                  </div>
+                </div>
+              </div>
+
+              <div
+                className="col-lg-4 col-md-6 col-sm-6 wow fadeInUp animated"
+                data-wow-duration="1500ms"
+                data-wow-delay="300ms"
+              >
+                <div className="package-card">
+                  <div className="package-thumb">
+                    <Link to={`${process.env.PUBLIC_URL}/package-details/2`}>
+                      <img src={package2Img} alt="" className="img-fluid" />
                     </Link>
                   </div>
                   <div className="package-details">
@@ -323,8 +323,8 @@ class Packages extends Component {
                     </div>
                     <h3>
                       <i className="flaticon-arrival" />
-                      <Link to={`${process.env.PUBLIC_URL}/package-details/10`}>
-                        Hotel with Burj Khalifa (3 star)
+                      <Link to={`${process.env.PUBLIC_URL}/package-details/2`}>
+                        Burj Khalifa Tour (3 star)
                       </Link>
                     </h3>
                   </div>
@@ -338,83 +338,23 @@ class Packages extends Component {
               >
                 <div className="package-card">
                   <div className="package-thumb">
-                    <Link to={`${process.env.PUBLIC_URL}/package-details/11`}>
-                      <img src={package6Img} alt="" className="img-fluid" />
+                    <Link to={`${process.env.PUBLIC_URL}/package-details/1`}>
+                      <img src={package3Img} alt="" className="img-fluid" />
                     </Link>
                   </div>
                   <div className="package-details">
                     <div className="package-info">
                       <h5>
-                        <span>$525</span>/Per Person
+                        <span>$376</span>/Per Person
                       </h5>
                       <h5>
-                        <i className="flaticon-calendar" />5 night/6 days
+                        <i className="flaticon-calendar" />4 night/5 days
                       </h5>
                     </div>
                     <h3>
                       <i className="flaticon-arrival" />
-                      <Link to={`${process.env.PUBLIC_URL}/package-details/11`}>
-                        Burj Khalifa Tour (3 star hotel)
-                      </Link>
-                    </h3>
-                  </div>
-                </div>
-              </div>
-
-              <div
-                className="col-lg-4 col-md-6 col-sm-6 wow fadeInUp animated"
-                data-wow-duration="1500ms"
-                data-wow-delay="600ms"
-              >
-                <div className="package-card">
-                  <div className="package-thumb">
-                    <Link to={`${process.env.PUBLIC_URL}/package-details/12`}>
-                      <img src={package6Img} alt="" className="img-fluid" />
-                    </Link>
-                  </div>
-                  <div className="package-details">
-                    <div className="package-info">
-                      <h5>
-                        <span>$565</span>/Per Person
-                      </h5>
-                      <h5>
-                        <i className="flaticon-calendar" />5 night/6 days
-                      </h5>
-                    </div>
-                    <h3>
-                      <i className="flaticon-arrival" />
-                      <Link to={`${process.env.PUBLIC_URL}/package-details/12`}>
-                        Burj Khalifa & Abu Dhabi City Tour (3 star hotel)
-                      </Link>
-                    </h3>
-                  </div>
-                </div>
-              </div>
-
-              <div
-                className="col-lg-4 col-md-6 col-sm-6 wow fadeInUp animated"
-                data-wow-duration="1500ms"
-                data-wow-delay="600ms"
-              >
-                <div className="package-card">
-                  <div className="package-thumb">
-                    <Link to={`${process.env.PUBLIC_URL}/package-details/13`}>
-                      <img src={package6Img} alt="" className="img-fluid" />
-                    </Link>
-                  </div>
-                  <div className="package-details">
-                    <div className="package-info">
-                      <h5>
-                        <span>$482</span>/Per Person
-                      </h5>
-                      <h5>
-                        <i className="flaticon-calendar" />5 night/6 days
-                      </h5>
-                    </div>
-                    <h3>
-                      <i className="flaticon-arrival" />
-                      <Link to={`${process.env.PUBLIC_URL}/package-details/13`}>
-                        Abu Dhabi City Tour (3 star hotel)
+                      <Link to={`${process.env.PUBLIC_URL}/package-details/1`}>
+                        Hotel without Burj Khalifa (3 star)
                       </Link>
                     </h3>
                   </div>
@@ -435,7 +375,7 @@ class Packages extends Component {
                   <div className="package-details">
                     <div className="package-info">
                       <h5>
-                        <span>$710</span>/Per Person
+                        <span>$525</span>/Per Person
                       </h5>
                       <h5>
                         <i className="flaticon-calendar" />5 night/6 days
@@ -444,6 +384,96 @@ class Packages extends Component {
                     <h3>
                       <i className="flaticon-arrival" />
                       <Link to={`${process.env.PUBLIC_URL}/package-details/14`}>
+                        Burj Khalifa Tour (3 star hotel)
+                      </Link>
+                    </h3>
+                  </div>
+                </div>
+              </div>
+
+              <div
+                className="col-lg-4 col-md-6 col-sm-6 wow fadeInUp animated"
+                data-wow-duration="1500ms"
+                data-wow-delay="600ms"
+              >
+                <div className="package-card">
+                  <div className="package-thumb">
+                    <Link to={`${process.env.PUBLIC_URL}/package-details/13`}>
+                      <img src={package6Img} alt="" className="img-fluid" />
+                    </Link>
+                  </div>
+                  <div className="package-details">
+                    <div className="package-info">
+                      <h5>
+                        <span>$565</span>/Per Person
+                      </h5>
+                      <h5>
+                        <i className="flaticon-calendar" />5 night/6 days
+                      </h5>
+                    </div>
+                    <h3>
+                      <i className="flaticon-arrival" />
+                      <Link to={`${process.env.PUBLIC_URL}/package-details/13`}>
+                        Burj Khalifa & Abu Dhabi City Tour (3 star hotel)
+                      </Link>
+                    </h3>
+                  </div>
+                </div>
+              </div>
+
+              <div
+                className="col-lg-4 col-md-6 col-sm-6 wow fadeInUp animated"
+                data-wow-duration="1500ms"
+                data-wow-delay="600ms"
+              >
+                <div className="package-card">
+                  <div className="package-thumb">
+                    <Link to={`${process.env.PUBLIC_URL}/package-details/12`}>
+                      <img src={package6Img} alt="" className="img-fluid" />
+                    </Link>
+                  </div>
+                  <div className="package-details">
+                    <div className="package-info">
+                      <h5>
+                        <span>$482</span>/Per Person
+                      </h5>
+                      <h5>
+                        <i className="flaticon-calendar" />5 night/6 days
+                      </h5>
+                    </div>
+                    <h3>
+                      <i className="flaticon-arrival" />
+                      <Link to={`${process.env.PUBLIC_URL}/package-details/12`}>
+                        Abu Dhabi City Tour (3 star hotel)
+                      </Link>
+                    </h3>
+                  </div>
+                </div>
+              </div>
+
+              <div
+                className="col-lg-4 col-md-6 col-sm-6 wow fadeInUp animated"
+                data-wow-duration="1500ms"
+                data-wow-delay="600ms"
+              >
+                <div className="package-card">
+                  <div className="package-thumb">
+                    <Link to={`${process.env.PUBLIC_URL}/package-details/17`}>
+                      <img src={package6Img} alt="" className="img-fluid" />
+                    </Link>
+                  </div>
+                  <div className="package-details">
+                    <div className="package-info">
+                      <h5>
+                        <span>$710</span>/Per Person
+                      </h5>
+                      <h5>
+                        <i className="flaticon-calendar" />5 night/6 days
+                      </h5>
+                    </div>
+                    <h3>
+                      <i className="flaticon-arrival" />
+                      <Link to={`${process.env.PUBLIC_URL}/package-details/17`}>
                         Burj Khalifa Tour (4 star hotel)
                       </Link>
                     </h3>
@@ -456,6 +486,7 @@ class Packages extends Component {
                   </div>
                 </div>
               </div>
+
               <div
                 className="col-lg-4 col-md-6 col-sm-6 wow fadeInUp animated"
                 data-wow-duration="1500ms"
@@ -463,7 +494,7 @@ class Packages extends Component {
               >
                 <div className="package-card">
                   <div className="package-thumb">
-                    <Link to={`${process.env.PUBLIC_URL}/package-details/15`}>
+                    <Link to={`${process.env.PUBLIC_URL}/package-details/16`}>
                       <img src={package6Img} alt="" className="img-fluid" />
                     </Link>
                   </div>
@@ -478,7 +509,7 @@ class Packages extends Component {
                     </div>
                     <h3>
                       <i className="flaticon-arrival" />
-                      <Link to={`${process.env.PUBLIC_URL}/package-details/15`}>
+                      <Link to={`${process.env.PUBLIC_URL}/package-details/16`}>
                         Burj Khalifa & Abu Dhabi City Tour (4 star hotel)
                       </Link>
                     </h3>
@@ -491,6 +522,7 @@ class Packages extends Component {
                   </div>
                 </div>
               </div>
+
               <div
                 className="col-lg-4 col-md-6 col-sm-6 wow fadeInUp animated"
                 data-wow-duration="1500ms"
@@ -498,7 +530,7 @@ class Packages extends Component {
               >
                 <div className="package-card">
                   <div className="package-thumb">
-                    <Link to={`${process.env.PUBLIC_URL}/package-details/16`}>
+                    <Link to={`${process.env.PUBLIC_URL}/package-details/15`}>
                       <img src={package5Img} alt="" className="img-fluid" />
                     </Link>
                   </div>
@@ -513,7 +545,7 @@ class Packages extends Component {
                     </div>
                     <h3>
                       <i className="flaticon-arrival" />
-                      <Link to={`${process.env.PUBLIC_URL}/package-details/16`}>
+                      <Link to={`${process.env.PUBLIC_URL}/package-details/15`}>
                         Abu Dhabi City Tour (4 star hotel)
                       </Link>
                     </h3>
@@ -526,6 +558,7 @@ class Packages extends Component {
                   </div>
                 </div>
               </div>
+
               <div
                 className="col-lg-4 col-md-6 col-sm-6 wow fadeInUp animated"
                 data-wow-duration="1500ms"
@@ -533,7 +566,7 @@ class Packages extends Component {
               >
                 <div className="package-card">
                   <div className="package-thumb">
-                    <Link to={`${process.env.PUBLIC_URL}/package-details/17`}>
+                    <Link to={`${process.env.PUBLIC_URL}/package-details/20`}>
                       <img src={package6Img} alt="" className="img-fluid" />
                     </Link>
                   </div>
@@ -561,41 +594,7 @@ class Packages extends Component {
                   </div>
                 </div>
               </div>
-              <div
-                className="col-lg-4 col-md-6 col-sm-6 wow fadeInUp animated"
-                data-wow-duration="1500ms"
-                data-wow-delay="600ms"
-              >
-                <div className="package-card">
-                  <div className="package-thumb">
-                    <Link to={`${process.env.PUBLIC_URL}/package-details/18`}>
-                      <img src={package6Img} alt="" className="img-fluid" />
-                    </Link>
-                  </div>
-                  <div className="package-details">
-                    <div className="package-info">
-                      <h5>
-                        <span>$786</span>/Per Person
-                      </h5>
-                      <h5>
-                        <i className="flaticon-calendar" />5 night/6 days
-                      </h5>
-                    </div>
-                    <h3>
-                      <i className="flaticon-arrival" />
-                      <Link to={`${process.env.PUBLIC_URL}/package-details/18`}>
-                        Burj Khalifa & Abu Dhabi City Tour (5 star hotel)
-                      </Link>
-                    </h3>
-                    <div className="package-rating">
-                      <strong>
-                        <i className="bx bxs-star" />
-                        <span>8K+</span> Rating
-                      </strong>
-                    </div>
-                  </div>
-                </div>
-              </div>
+
               <div
                 className="col-lg-4 col-md-6 col-sm-6 wow fadeInUp animated"
                 data-wow-duration="1500ms"
@@ -610,7 +609,7 @@ class Packages extends Component {
                   <div className="package-details">
                     <div className="package-info">
                       <h5>
-                        <span>$705</span>/Per Person
+                        <span>$786</span>/Per Person
                       </h5>
                       <h5>
                         <i className="flaticon-calendar" />5 night/6 days
@@ -619,6 +618,42 @@ class Packages extends Component {
                     <h3>
                       <i className="flaticon-arrival" />
                       <Link to={`${process.env.PUBLIC_URL}/package-details/19`}>
+                        Burj Khalifa & Abu Dhabi City Tour (5 star hotel)
+                      </Link>
+                    </h3>
+                    <div className="package-rating">
+                      <strong>
+                        <i className="bx bxs-star" />
+                        <span>8K+</span> Rating
+                      </strong>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div
+                className="col-lg-4 col-md-6 col-sm-6 wow fadeInUp animated"
+                data-wow-duration="1500ms"
+                data-wow-delay="600ms"
+              >
+                <div className="package-card">
+                  <div className="package-thumb">
+                    <Link to={`${process.env.PUBLIC_URL}/package-details/18`}>
+                      <img src={package6Img} alt="" className="img-fluid" />
+                    </Link>
+                  </div>
+                  <div className="package-details">
+                    <div className="package-info">
+                      <h5>
+                        <span>$705</span>/Per Person
+                      </h5>
+                      <h5>
+                        <i className="flaticon-calendar" />5 night/6 days
+                      </h5>
+                    </div>
+                    <h3>
+                      <i className="flaticon-arrival" />
+                      <Link to={`${process.env.PUBLIC_URL}/package-details/18`}>
                         Abu Dhabi City Tour (5 star hotel)
                       </Link>
                     </h3>
@@ -639,7 +674,7 @@ class Packages extends Component {
               >
                 <div className="package-card">
                   <div className="package-thumb">
-                    <Link to={`${process.env.PUBLIC_URL}/package-details/20`}>
+                    <Link to={`${process.env.PUBLIC_URL}/package-details/24`}>
                       <img src={package6Img} alt="" className="img-fluid" />
                     </Link>
                   </div>
@@ -654,7 +689,7 @@ class Packages extends Component {
                     </div>
                     <h3>
                       <i className="flaticon-arrival" />
-                      <Link to={`${process.env.PUBLIC_URL}/package-details/20`}>
+                      <Link to={`${process.env.PUBLIC_URL}/package-details/24`}>
                         Basic Dubai Tour (3 star hotel)
                       </Link>
                     </h3>
@@ -783,7 +818,7 @@ class Packages extends Component {
               >
                 <div className="package-card">
                   <div className="package-thumb">
-                    <Link to={`${process.env.PUBLIC_URL}/package-details/24`}>
+                    <Link to={`${process.env.PUBLIC_URL}/package-details/28`}>
                       <img src={package6Img} alt="" className="img-fluid" />
                     </Link>
                   </div>
@@ -798,7 +833,7 @@ class Packages extends Component {
                     </div>
                     <h3>
                       <i className="flaticon-arrival" />
-                      <Link to={`${process.env.PUBLIC_URL}/package-details/24`}>
+                      <Link to={`${process.env.PUBLIC_URL}/package-details/28`}>
                         Dubai City Basic Tour (4 star hotel)
                       </Link>
                     </h3>
@@ -927,7 +962,7 @@ class Packages extends Component {
               >
                 <div className="package-card">
                   <div className="package-thumb">
-                    <Link to={`${process.env.PUBLIC_URL}/package-details/28`}>
+                    <Link to={`${process.env.PUBLIC_URL}/package-details/32`}>
                       <img src={package6Img} alt="" className="img-fluid" />
                     </Link>
                   </div>
@@ -942,7 +977,7 @@ class Packages extends Component {
                     </div>
                     <h3>
                       <i className="flaticon-arrival" />
-                      <Link to={`${process.env.PUBLIC_URL}/package-details/28`}>
+                      <Link to={`${process.env.PUBLIC_URL}/package-details/32`}>
                         Dubai Basic City Tour (5 star hotel)
                       </Link>
                     </h3>

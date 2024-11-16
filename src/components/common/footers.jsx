@@ -231,23 +231,22 @@ class Footers extends Component {
                                     <div className="footer-logo">
                                         <img src={secondLogo} alt="" className="img-fluid" />
                                     </div>
-                                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Aliquid maxime aut ut voluptate
-                                        dolorum nisi ducimus ratione</p>
+                                    <p>Travel with us and feel the best experience in Desert</p>
                                     <div className="footer-social-icons">
                                         <h5>Follow Us:</h5>
                                         <ul>
-                                            <li>
+                                            {/* <li>
                                                 <Link to={"#"}><i className="bx bxl-facebook" /></Link>
-                                            </li>
+                                            </li> */}
                                             <li>
-                                                <Link to={"#"}><i className="bx bxl-instagram" /></Link>
+                                                <a href="https://www.instagram.com/deserthoppers"><i className="bx bxl-instagram" /></a>
                                             </li>
-                                            <li>
+                                            {/* <li>
                                                 <Link to={"#"}><i className="bx bxl-twitter" /></Link>
                                             </li>
                                             <li>
                                                 <Link to={"#"}><i className="bx bxl-dribbble" /></Link>
-                                            </li>
+                                            </li> */}
                                         </ul>
                                     </div>
                                 </div>
@@ -260,11 +259,10 @@ class Footers extends Component {
                                             <div className="contact-box">
                                                 <span><i className="bx bx-phone" /></span>
                                                 <div>
-                                                    <a href="tel:+01852-1265122">+01852-1265122</a>
-                                                    <a href="tel:+01852-1265122">+01852-1265122</a>
+                                                    <a href="tel:+971-54-401-3834">+971-54-401-3834</a>
                                                 </div>
                                             </div>
-                                            <div className="contact-box">
+                                            {/* <div className="contact-box">
                                                 <span><i className="bx bx-mail-send" /></span>
                                                 <div>
                                                     <a href="mailto:info@example.com">info@example.com</a>
@@ -277,10 +275,10 @@ class Footers extends Component {
                                                     <Link to={"#"}>2752 Willison Street <br />
                                                         Eagan, United State</Link>
                                                 </div>
-                                            </div>
+                                            </div> */}
                                         </div>
                                     </div>
-                                    <div className="col-lg-3 col-md-3 col-sm-5">
+                                    {/* <div className="col-lg-3 col-md-3 col-sm-5">
                                         <div className="footer-links">
                                             <h5 className="widget-title">support</h5>
                                             <div className="category-list">
@@ -303,7 +301,7 @@ class Footers extends Component {
                                                 </ul>
                                             </div>
                                         </div>
-                                    </div>
+                                    </div> */}
                                     <div className="col-lg-4 col-md-4">
                                         <div className="footer-links payment-links">
                                             <h5 className="widget-title">We Accepts:</h5>

@@ -270,16 +270,16 @@ class Destinations extends Component {
                            <OwlCarousel className="row owl-carousel destinations-1"  {...destinationsOptions}>
                                <div className="package-card">
                                    <div className="package-thumb">
-                                       <Link to={`${process.env.PUBLIC_URL}/package-details`}>
+                                       <Link to={`${process.env.PUBLIC_URL}/package-details/2`}>
                                            <img src={destinations11Img} alt="" className="img-fluid" />
                                        </Link>
                                    </div>
                                    <div className="package-details">
                                        <div className="package-info">
-                                           <h5><span>$145</span>/Per Person</h5>
+                                           <h5><span>$485</span>/Per Person</h5>
                                        </div>
                                        <h3><i className="flaticon-arrival" />
-                                           <Link to={`${process.env.PUBLIC_URL}/package-details`}>Amalfi Costa, Italy</Link>
+                                           <Link to={`${process.env.PUBLIC_URL}/package-details/2`}>Burj Khalifa Tour (3 star Hotel)</Link>
                                        </h3>
                                        <div className="package-rating">
                                            <i className="bx bxs-star" />
@@ -289,16 +289,16 @@ class Destinations extends Component {
                                </div>
                                <div className="package-card">
                                    <div className="package-thumb">
-                                       <Link to={`${process.env.PUBLIC_URL}/package-details`}>
+                                       <Link to={`${process.env.PUBLIC_URL}/package-details/4`}>
                                            <img src={destinations5Img} alt="" className="img-fluid" />
                                        </Link>
                                    </div>
                                    <div className="package-details">
                                        <div className="package-info">
-                                           <h5><span>$240</span>/Per Person</h5>
+                                           <h5><span>$610</span>/Per Person</h5>
                                        </div>
                                        <h3><i className="flaticon-arrival" />
-                                           <Link to={`${process.env.PUBLIC_URL}/package-details`}>Maritime Heritage</Link>
+                                           <Link to={`${process.env.PUBLIC_URL}/package-details/4`}>Burj Khalifa Tour (4 star Hotel)</Link>
                                        </h3>
                                        <div className="package-rating">
                                            <i className="bx bxs-star" />
@@ -308,16 +308,16 @@ class Destinations extends Component {
                                </div>
                                <div className="package-card">
                                    <div className="package-thumb">
-                                       <Link to={`${process.env.PUBLIC_URL}/package-details`}>
+                                       <Link to={`${process.env.PUBLIC_URL}/package-details/18`}>
                                            <img src={destinations9Img} alt="" className="img-fluid" />
                                        </Link>
                                    </div>
                                    <div className="package-details">
                                        <div className="package-info">
-                                           <h5><span>$300</span>/Per Person</h5>
+                                           <h5><span>$705</span>/Per Person</h5>
                                        </div>
                                        <h3><i className="flaticon-arrival" />
-                                           <Link to={`${process.env.PUBLIC_URL}/package-details`}>Souks of Deira</Link>
+                                           <Link to={`${process.env.PUBLIC_URL}/package-details/18`}>Abu Dhabi Tour (5 star Hotel)</Link>
                                        </h3>
                                        <div className="package-rating">
                                            <i className="bx bxs-star" />
@@ -327,17 +327,17 @@ class Destinations extends Component {
                                </div>
                                <div className="package-card">
                                    <div className="package-thumb">
-                                       <Link to={`${process.env.PUBLIC_URL}/package-details`}>
+                                       <Link to={`${process.env.PUBLIC_URL}/package-details/16`}>
                                            <img src={destinations4Img} alt="" className="img-fluid" />
                                        </Link>
                                    </div>
                                    <div className="package-details">
                                        <div className="package-info">
-                                           <h5><span>$120</span>/Per Person</h5>
+                                           <h5><span>$750</span>/Per Person</h5>
                                        </div>
                                        <h3>
                                            <i className="flaticon-arrival" />
-                                           <Link to={`${process.env.PUBLIC_URL}/package-details`}>Jumeirah Mosque</Link>
+                                           <Link to={`${process.env.PUBLIC_URL}/package-details/16`}>Burj Khalifa and Abu Dhabi (4 star Hotel)</Link>
                                        </h3>
                                        <div className="package-rating">
                                            <i className="bx bxs-star" />

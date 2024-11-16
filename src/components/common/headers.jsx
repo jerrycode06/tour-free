@@ -24,21 +24,21 @@ class Headers extends Component {
                   <ul>
                     <li>
                       <i className="bx bxs-phone" />
-                      <a href="tel:+17632275032">+1 763-227-5032</a>
+                      <a href="tel:+17632275032">+971-54-401-3834</a>
                     </li>
 
                     <li>
-                      <i className="bx bxs-envelope" />
-                      <a href="mailto:info@example.com">info@example.com</a>
+                      <i className="bx bxl-instagram" />
+                      <a href="https://www.instagram.com/deserthoppers">Instagram</a>
                     </li>
                   </ul>
                 </div>
               </div>
-              <div className="col-lg-4 col-md-6 col-sm-6 col-xs-6 col-6">
+              {/* <div className="col-lg-4 col-md-6 col-sm-6 col-xs-6 col-6">
                 <div className="topbar-social">
                   <ul>
                     <li>
-                      <Link to={"#"}>
+                      <Link to={"https://www.instagram.com/deserthoppers"}>
                         <i className="bx bxl-instagram" />
                       </Link>
                     </li>
@@ -59,8 +59,8 @@ class Headers extends Component {
                     </li>
                   </ul>
                 </div>
-              </div>
-              <div className="col-lg-3 col-md-6 col-sm-6 col-xs-6 col-6">
+              </div> */}
+              {/* <div className="col-lg-3 col-md-6 col-sm-6 col-xs-6 col-6">
                 <div className="custom-select languege-select">
                   <select>
                     <option value={0}>ENG</option>
@@ -69,7 +69,7 @@ class Headers extends Component {
                     <option value={3}>CHI</option>
                   </select>
                 </div>
-              </div>
+              </div> */}
             </div>
           </div>
         </div>
@@ -89,7 +89,7 @@ class Headers extends Component {
                         className="navbar-brand"
                         onClick={this.scrollTop}
                       >
-                        <img src={logoMain} alt="" />
+                        <img src={"https://deserthoppers.com/assets/images/logo.png"} alt="" width={130} height={80}/>
                       </Link>
                     </div>
                     <div className="navbar-icons">

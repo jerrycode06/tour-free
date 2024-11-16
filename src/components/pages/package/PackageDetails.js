@@ -1,5 +1,5 @@
-import React, { Component } from "react";
-import { Link } from "react-router-dom";
+import React, { useState, useEffect } from "react";
+import { Link, useParams } from "react-router-dom";
 
 import pd_thumb from "../../../assets/images/package/pd-thumb.png";
 import pr_1 from "../../../assets/images/package/pr-1.png";
@@ -14,14 +14,10 @@ import galleryGxx1Img from "../../../assets/images/gallary/g-xxl-1.png";
 import galleryGxx2Img from "../../../assets/images/gallary/g-xxl-2.png";
 import galleryGxx3Img from "../../../assets/images/gallary/g-xxl-3.png";
 
-import gallery17Img from "../../../assets/images/gallary/gl-17.png";
-import gallery16Img from "../../../assets/images/gallary/gl-16.png";
-import gallery14Img from "../../../assets/images/gallary/gl-14.png";
 
 import galleryGxl1Img from "../../../assets/images/gallary/g-xl-1.png";
 import galleryGxl2Img from "../../../assets/images/gallary/g-xl-2.png";
 import galleryGxl3Img from "../../../assets/images/gallary/g-xl-3.png";
-import galleryGxl4Img from "../../../assets/images/gallary/g-xl-4.png";
 
 import pm_sm_1 from "../../../assets/images/package/p-sm-1.png";
 import pm_sm_4 from "../../../assets/images/package/p-sm-4.png";
@@ -35,31 +31,34 @@ import { SRLWrapper } from "simple-react-lightbox";
 
 import DatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
+import PackagesData from "../../../dessert-hopper-data.json"
 
-class PackageDetails extends Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      startDate: new Date(),
-    };
-  }
-  changeDatepickerHandeller = (date) => {
-    this.setState({ startDate: date });
+function PackageDetails() {
+  const [packageData, setPackageData] = useState(PackagesData.data || []);
+  const [startDate, setStartDate] = useState(new Date());
+  const { id } = useParams();
+
+  const changeDatepickerHandeller = (date) => {
+    setStartDate(date);
   };
 
-  componentDidMount() {
-    this.scrollTop();
-  }
-
-  scrollTop() {
+  const scrollTop= () => {
     window.scrollTo({
       top: 0,
       behavior: "smooth",
     });
   }
-  render() {
-    const { id } = this.props.match.params;
-    const startDate = this.state.startDate;
+
+  useEffect(() => {
+    scrollTop();
+  }, [])
+
+  const getValue = (key) => {
+    console.log({nik: packageData})
+    const foundItem = packageData.find((ele) => ele.id === Number(id));
+    return foundItem ? foundItem[key] : "Miss"; // Handle missing keys or items
+  }
+  console.log({nik: packageData})
     return (
       <>
         {/* ===============  breadcrumb area start =============== */}
@@ -74,7 +73,7 @@ class PackageDetails extends Component {
                       <Link to={`${process.env.PUBLIC_URL}/`}>Home</Link>
                       <i className="bx bx-chevron-right" />
                     </li>
-                    <li>Package Details - {id}</li>
+                    <li>Package Details</li>
                   </ul>
                 </div>
               </div>
@@ -92,10 +91,10 @@ class PackageDetails extends Component {
                   </div>
                   <div className="package-header">
                     <div className="package-title">
-                      <h3>Abu Dhabi City Tour</h3>
+                      <h3>{getValue("name")}</h3>
                       <strong>
                         <i className="flaticon-arrival" />
-                        Mount Dtna, Spain
+                        {getValue("Destination Name")}
                       </strong>
                     </div>
                     <div className="pd-review">
@@ -132,7 +131,7 @@ class PackageDetails extends Component {
                       <i className="flaticon-footprints" />
                       <div className="info-texts">
                         <strong>Tour Type</strong>
-                        <p>4 Days</p>
+                        <p>{getValue("daysCount")} Days</p>
                       </div>
                     </div>
                     <div className="single-info">
@@ -214,95 +213,60 @@ class PackageDetails extends Component {
                             <div className="tab-content-1">
                               <div className="p-overview">
                                 <h5>Overview</h5>
-                                <p>abrar</p>
+                                <p>{getValue("Overview")}</p>
                                 {/* <p>Pellentesque accumsan magna in augue sagittis, non fringilla eros molestie. Sed feugiat mi nec ex vehicula, nec vestibulum orci semper. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Donec tristique commodo fringilla. Duis aliquet varius mauris eget rutrum. Nullam sit amet justo consequat, bibendum orci in, convallis enim. Proin convallis neque viverra finibus cursus. Mauris lacinia lacinia erat in finibus. In non enim libero.Pellentesque accumsan magna in augue sagittis, non fringilla eros molestie. Sed feugiat mi nec ex vehicula, nec vestibulum orci semper. Class aptent taciti sociosqu ad litora torquent per conubia nostra.</p> */}
-                              </div>
-                              <div className="p-highlight">
-                                <h5>Highlight</h5>
-                                <ul>
-                                  <li>
-                                    <i className="bx bx-circle" />{" "}
-                                    <p>
-                                      Pellentesque accumsan magna in augue
-                                      sagittis, non fringilla eros molestie.
-                                    </p>
-                                  </li>
-                                  <li>
-                                    <i className="bx bx-circle" />{" "}
-                                    <p>
-                                      Pellentesque accumsan magna in augue
-                                      sagittis, non fringilla eros molestie.
-                                    </p>
-                                  </li>
-                                  <li>
-                                    <i className="bx bx-circle" />{" "}
-                                    <p>
-                                      Pellentesque accumsan magna in augue
-                                      sagittis, non fringilla eros molestie.
-                                    </p>
-                                  </li>
-                                  <li>
-                                    <i className="bx bx-circle" />{" "}
-                                    <p>
-                                      Pellentesque accumsan magna in augue
-                                      sagittis, non fringilla eros molestie.
-                                    </p>
-                                  </li>
-                                  <li>
-                                    <i className="bx bx-circle" />{" "}
-                                    <p>
-                                      Pellentesque accumsan magna in augue
-                                      sagittis, non fringilla eros molestie.
-                                    </p>
-                                  </li>
-                                  <li>
-                                    <i className="bx bx-circle" />{" "}
-                                    <p>
-                                      Pellentesque accumsan magna in augue
-                                      sagittis, non fringilla eros molestie.
-                                    </p>
-                                  </li>
-                                </ul>
                               </div>
                               <div className="p-details-table">
                                 <table className="table caption-top">
                                   <tbody>
                                     <tr>
                                       <td>Destination</td>
-                                      <td>New York City</td>
+                                      <td>Dubai</td>
                                     </tr>
                                     <tr>
-                                      <td>Depature</td>
+                                      <td>Departure</td>
                                       <td>Yes Required</td>
                                     </tr>
-                                    <tr>
+                                    {/* <tr>
                                       <td>Departure Time</td>
                                       <td>01 April, 2021 10.00AM</td>
                                     </tr>
                                     <tr>
                                       <td>Return Time</td>
                                       <td>08 April, 2021 10.00AM</td>
-                                    </tr>
+                                    </tr> */}
                                     <tr>
                                       <td>Included</td>
                                       <td>
                                         <ul className="table-list-allow">
                                           <li>
                                             <i className="bx bx-check" />{" "}
-                                            Specilaized Bilingual Guide
+                                            {getValue("Inclusions").split(".")[0]}
                                           </li>
                                           <li>
                                             {" "}
                                             <i className="bx bx-check" />{" "}
-                                            Private Transport
+                                            {getValue("Inclusions").split(".")[1]}
                                           </li>
                                           <li>
                                             <i className="bx bx-check" />{" "}
-                                            Entrance Fees
+                                            {getValue("Inclusions").split(".")[2]}
                                           </li>
                                           <li>
-                                            <i className="bx bx-check" /> Box
-                                            Lunch,Water,Dinner and Snacks
+                                            <i className="bx bx-check" />
+                                            {getValue("Inclusions").split(".")[3]}
+                                          </li>
+                                          <li>
+                                            <i className="bx bx-check" />
+                                            {getValue("Inclusions").split(".")[4]}
+                                          </li>
+                                          <li>
+                                            <i className="bx bx-check" />
+                                            {getValue("Inclusions").split(".")[5]}
+                                          </li>
+                                          <li>
+                                            <i className="bx bx-check" />
+                                            {getValue("Inclusions").split(".")[6]}
                                           </li>
                                         </ul>
                                       </td>
@@ -313,25 +277,37 @@ class PackageDetails extends Component {
                                         <ul className="table-list-disallow">
                                           <li>
                                             {" "}
-                                            <i className="bx bx-x" /> Additional
-                                            Services
+                                            <i className="bx bx-x" /> 
+                                            {getValue("Exclusions").split(".")[0]}
                                           </li>
                                           <li>
-                                            <i className="bx bx-x" /> Insurance
+                                            <i className="bx bx-x" /> {getValue("Exclusions").split(".")[1]}
                                           </li>
                                           <li>
-                                            <i className="bx bx-x" /> Drink
+                                            <i className="bx bx-x" /> {getValue("Exclusions").split(".")[2]}
                                           </li>
                                           <li>
-                                            <i className="bx bx-x" /> Tickets
+                                            <i className="bx bx-x" /> {getValue("Exclusions").split(".")[3]}
+                                          </li>
+                                          <li>
+                                            <i className="bx bx-x" /> {getValue("Exclusions").split(".")[4]}
+                                          </li>
+                                          <li>
+                                            <i className="bx bx-x" /> {getValue("Exclusions").split(".")[5]}
+                                          </li>
+                                          <li>
+                                            <i className="bx bx-x" /> {getValue("Exclusions").split(".")[6]}
+                                          </li>
+                                          <li>
+                                            <i className="bx bx-x" /> {getValue("Exclusions").split(".")[7]}
+                                          </li>
+                                          <li>
+                                            <i className="bx bx-x" /> {getValue("Exclusions").split(".")[8]}
+                                          </li>
+                                          <li>
+                                            <i className="bx bx-x" /> {getValue("Exclusions").split(".")[9]}
                                           </li>
                                         </ul>
-                                      </td>
-                                    </tr>
-                                    <tr>
-                                      <td colSpan={2} className="table-bottom">
-                                        <i className="flaticon-public-transport" />
-                                        Travel With Bus
                                       </td>
                                     </tr>
                                   </tbody>
@@ -546,7 +522,7 @@ class PackageDetails extends Component {
                                   </li>
                                 </ul>
                               </div>
-                              <div className="p-review-input">
+                              {/* <div className="p-review-input">
                                 <form>
                                   <h5>Leave Your Comment</h5>
                                   <div className="row">
@@ -601,7 +577,7 @@ class PackageDetails extends Component {
                                     </div>
                                   </div>
                                 </form>
-                              </div>
+                              </div> */}
                             </div>
                           </div>
                         </div>
@@ -618,230 +594,26 @@ class PackageDetails extends Component {
                               <div className="p-timeline-overview">
                                 <h5>Overview</h5>
                                 <p>
-                                  Pellentesque accumsan magna in augue sagittis,
-                                  non fringilla eros molestie. Sed feugiat mi
-                                  nec ex vehicula, nec vestibulum orci semper.
-                                  Class aptent taciti sociosqu ad litora
-                                  torquent per conubia nostra, per inceptos
-                                  himenaeos. Donec tristique commodo fringilla.
-                                  Duis aliquet varius mauris eget rutrum. Nullam
-                                  sit amet justo consequat, bibendum orci in,
-                                  convallis enim. Proin convallis neque viverra
-                                  finibus cursus. Mauris lacinia lacinia erat in
-                                  finibus.
+                                {getValue("Overview")}
                                 </p>
                               </div>
                               <ul className="p-timeline">
+                              {Array.from({ length: getValue("daysCount") }, (_, index) => index + 1).map((day) => (
                                 <li>
                                   <div className="timeline-index">
                                     <div className="index-circle">
-                                      <h5>01</h5>
+                                      <h5>0{day}</h5>
                                     </div>
                                   </div>
                                   <div className="timeline-content">
-                                    <h5>DAY 1 : Departure And Small Tour</h5>
+                                    <h5>DAY {day} : {getValue(`Day ${day}`).split(".")[0]}</h5>
                                     <strong>10.00 AM to 10.00 PM</strong>
                                     <p>
-                                      Pellentesque accumsan magna in augue
-                                      sagittis, non fringilla eros molestie. Sed
-                                      feugiat mi nec ex vehicula, nec vestibulum
-                                      orci semper. Class aptent taciti sociosqu
-                                      ad litora torquent per conubia nostra, per
-                                      inceptos himenaeos. Donec tristique
-                                      commodo fringilla.
+                                    {getValue(`Day ${day}`)}
                                     </p>
-                                    <ul>
-                                      <li />
-                                      <li>
-                                        <i className="bx bx-check" />
-                                        Specilaized Bilingual Guide
-                                      </li>
-                                      <li />
-                                      <li>
-                                        <i className="bx bx-check" />
-                                        Private Transport
-                                      </li>
-                                      <li />
-                                      <li>
-                                        <i className="bx bx-check" />
-                                        Entrance Fees
-                                      </li>
-                                      <li />
-                                      <li>
-                                        <i className="bx bx-check" />
-                                        Box Lunch,Water,Dinner and Snacks
-                                      </li>
-                                    </ul>
                                   </div>
                                 </li>
-                                <li>
-                                  <div className="timeline-index">
-                                    <div className="index-circle">
-                                      <h5>02</h5>
-                                    </div>
-                                  </div>
-                                  <div className="timeline-content">
-                                    <h5>DAY 2 : Departure And Small Tour</h5>
-                                    <strong>10.00 AM to 10.00 PM</strong>
-                                    <p>
-                                      Pellentesque accumsan magna in augue
-                                      sagittis, non fringilla eros molestie. Sed
-                                      feugiat mi nec ex vehicula, nec vestibulum
-                                      orci semper. Class aptent taciti sociosqu
-                                      ad litora torquent per conubia nostra, per
-                                      inceptos himenaeos. Donec tristique
-                                      commodo fringilla.
-                                    </p>
-                                    <ul>
-                                      <li />
-                                      <li>
-                                        <i className="bx bx-check" />
-                                        Specilaized Bilingual Guide
-                                      </li>
-                                      <li />
-                                      <li>
-                                        <i className="bx bx-check" />
-                                        Private Transport
-                                      </li>
-                                      <li />
-                                      <li>
-                                        <i className="bx bx-check" />
-                                        Entrance Fees
-                                      </li>
-                                      <li />
-                                      <li>
-                                        <i className="bx bx-check" />
-                                        Box Lunch,Water,Dinner and Snacks
-                                      </li>
-                                    </ul>
-                                  </div>
-                                </li>
-                                <li>
-                                  <div className="timeline-index">
-                                    <div className="index-circle">
-                                      <h5>03</h5>
-                                    </div>
-                                  </div>
-                                  <div className="timeline-content">
-                                    <h5>DAY 3 : Departure And Small Tour</h5>
-                                    <strong>10.00 AM to 10.00 PM</strong>
-                                    <p>
-                                      Pellentesque accumsan magna in augue
-                                      sagittis, non fringilla eros molestie. Sed
-                                      feugiat mi nec ex vehicula, nec vestibulum
-                                      orci semper. Class aptent taciti sociosqu
-                                      ad litora torquent per conubia nostra, per
-                                      inceptos himenaeos. Donec tristique
-                                      commodo fringilla.
-                                    </p>
-                                    <ul>
-                                      <li />
-                                      <li>
-                                        <i className="bx bx-check" />
-                                        Specilaized Bilingual Guide
-                                      </li>
-                                      <li />
-                                      <li>
-                                        <i className="bx bx-check" />
-                                        Private Transport
-                                      </li>
-                                      <li />
-                                      <li>
-                                        <i className="bx bx-check" />
-                                        Entrance Fees
-                                      </li>
-                                      <li />
-                                      <li>
-                                        <i className="bx bx-check" />
-                                        Box Lunch,Water,Dinner and Snacks
-                                      </li>
-                                    </ul>
-                                  </div>
-                                </li>
-                                <li>
-                                  <div className="timeline-index">
-                                    <div className="index-circle">
-                                      <h5>04</h5>
-                                    </div>
-                                  </div>
-                                  <div className="timeline-content">
-                                    <h5>DAY 4 : Departure And Small Tour</h5>
-                                    <strong>10.00 AM to 10.00 PM</strong>
-                                    <p>
-                                      Pellentesque accumsan magna in augue
-                                      sagittis, non fringilla eros molestie. Sed
-                                      feugiat mi nec ex vehicula, nec vestibulum
-                                      orci semper. Class aptent taciti sociosqu
-                                      ad litora torquent per conubia nostra, per
-                                      inceptos himenaeos. Donec tristique
-                                      commodo fringilla.
-                                    </p>
-                                    <ul>
-                                      <li />
-                                      <li>
-                                        <i className="bx bx-check" />
-                                        Specilaized Bilingual Guide
-                                      </li>
-                                      <li />
-                                      <li>
-                                        <i className="bx bx-check" />
-                                        Private Transport
-                                      </li>
-                                      <li />
-                                      <li>
-                                        <i className="bx bx-check" />
-                                        Entrance Fees
-                                      </li>
-                                      <li />
-                                      <li>
-                                        <i className="bx bx-check" />
-                                        Box Lunch,Water,Dinner and Snacks
-                                      </li>
-                                    </ul>
-                                  </div>
-                                </li>
-                                <li>
-                                  <div className="timeline-index">
-                                    <div className="index-circle">
-                                      <h5>05</h5>
-                                    </div>
-                                  </div>
-                                  <div className="timeline-content">
-                                    <h5>DAY 5 : Departure And Small Tour</h5>
-                                    <strong>10.00 AM to 10.00 PM</strong>
-                                    <p>
-                                      Pellentesque accumsan magna in augue
-                                      sagittis, non fringilla eros molestie. Sed
-                                      feugiat mi nec ex vehicula, nec vestibulum
-                                      orci semper. Class aptent taciti sociosqu
-                                      ad litora torquent per conubia nostra, per
-                                      inceptos himenaeos. Donec tristique
-                                      commodo fringilla.
-                                    </p>
-                                    <ul>
-                                      <li />
-                                      <li>
-                                        <i className="bx bx-check" />
-                                        Specilaized Bilingual Guide
-                                      </li>
-                                      <li />
-                                      <li>
-                                        <i className="bx bx-check" />
-                                        Private Transport
-                                      </li>
-                                      <li />
-                                      <li>
-                                        <i className="bx bx-check" />
-                                        Entrance Fees
-                                      </li>
-                                      <li />
-                                      <li>
-                                        <i className="bx bx-check" />
-                                        Box Lunch,Water,Dinner and Snacks
-                                      </li>
-                                    </ul>
-                                  </div>
-                                </li>
+                              ))}
                               </ul>
                             </div>
                           </div>
@@ -998,7 +770,7 @@ class PackageDetails extends Component {
               <div className="col-lg-4">
                 <div className="package-d-sidebar">
                   <div className="row">
-                    <div className="col-lg-12 col-md-6">
+                    {/* <div className="col-lg-12 col-md-6">
                       <div className="p-sidebar-form">
                         <form>
                           <h5 className="package-d-head">Book This Package</h5>
@@ -1052,7 +824,7 @@ class PackageDetails extends Component {
                                 <DatePicker
                                   selected={startDate}
                                   onChange={(date) =>
-                                    this.changeDatepickerHandeller(date)
+                                    changeDatepickerHandeller(date)
                                   }
                                   className="input-field check-in"
                                   placeholder="dd-mm-yy"
@@ -1077,7 +849,7 @@ class PackageDetails extends Component {
                           </div>
                         </form>
                       </div>
-                    </div>
+                    </div> */}
                     <div className="col-lg-12 col-md-6">
                       <div className="p-sidebar-cards mt-40">
                         <h5 className="package-d-head">Popular Packages</h5>
@@ -1089,20 +861,20 @@ class PackageDetails extends Component {
                             <div className="package-info">
                               <div className="package-date-sm">
                                 <strong>
-                                  <i className="flaticon-calendar" />5 Days/6
+                                  <i className="flaticon-calendar" />4 Days/3
                                   night
                                 </strong>
                               </div>
                               <h3>
                                 <i className="flaticon-arrival" />
                                 <Link
-                                  to={`${process.env.PUBLIC_URL}/package-details`}
+                                  to={`${process.env.PUBLIC_URL}/package-details/10`}
                                 >
-                                  Lake Garda
+                                  Burj Khalifa Tour (5 star Hotel)
                                 </Link>
                               </h3>
                               <h5>
-                                <span>$180</span>/ Per Person
+                                <span>$535</span>/ Per Person
                               </h5>
                             </div>
                           </li>
@@ -1113,20 +885,20 @@ class PackageDetails extends Component {
                             <div className="package-info">
                               <div className="package-date-sm">
                                 <strong>
-                                  <i className="flaticon-calendar" />5 Days/6
+                                  <i className="flaticon-calendar" />5 Days/4
                                   night
                                 </strong>
                               </div>
                               <h3>
                                 <i className="flaticon-arrival" />
                                 <Link
-                                  to={`${process.env.PUBLIC_URL}/package-details`}
+                                  to={`${process.env.PUBLIC_URL}/package-details/8`}
                                 >
-                                  Paris Hill Tour
+                                  Burj Khalifa Tour (5 star Hotel)
                                 </Link>
                               </h3>
                               <h5>
-                                <span>$180</span>/ Per Person
+                                <span>$640</span>/ Per Person
                               </h5>
                             </div>
                           </li>
@@ -1137,20 +909,20 @@ class PackageDetails extends Component {
                             <div className="package-info">
                               <div className="package-date-sm">
                                 <strong>
-                                  <i className="flaticon-calendar" />5 Days/6
+                                  <i className="flaticon-calendar" />6 Days/5
                                   night
                                 </strong>
                               </div>
                               <h3>
                                 <i className="flaticon-arrival" />
                                 <Link
-                                  to={`${process.env.PUBLIC_URL}/package-details`}
+                                  to={`${process.env.PUBLIC_URL}/package-details/19`}
                                 >
-                                  Amalfi Costa
+                                  Burj Khalifa and Abu Dhabi (5 star Hotel)
                                 </Link>
                               </h3>
                               <h5>
-                                <span>$180</span>/ Per Person
+                                <span>$786</span>/ Per Person
                               </h5>
                             </div>
                           </li>
@@ -1161,20 +933,20 @@ class PackageDetails extends Component {
                             <div className="package-info">
                               <div className="package-date-sm">
                                 <strong>
-                                  <i className="flaticon-calendar" />5 Days/6
+                                  <i className="flaticon-calendar" />6 Days/5
                                   night
                                 </strong>
                               </div>
                               <h3>
                                 <i className="flaticon-arrival" />
                                 <Link
-                                  to={`${process.env.PUBLIC_URL}/package-details`}
+                                  to={`${process.env.PUBLIC_URL}/package-details/18`}
                                 >
-                                  Mount Dtna
+                                  Abu Dhabi Tour (5 star Hotel)
                                 </Link>
                               </h3>
                               <h5>
-                                <span>$180</span>/ Per Person
+                                <span>$705</span>/ Per Person
                               </h5>
                             </div>
                           </li>
@@ -1185,27 +957,27 @@ class PackageDetails extends Component {
                             <div className="package-info">
                               <div className="package-date-sm">
                                 <strong>
-                                  <i className="flaticon-calendar" />5 Days/6
+                                  <i className="flaticon-calendar" />4 Days/3
                                   night
                                 </strong>
                               </div>
                               <h3>
                                 <i className="flaticon-arrival" />
                                 <Link
-                                  to={`${process.env.PUBLIC_URL}/package-details`}
+                                  to={`${process.env.PUBLIC_URL}/package-details/1`}
                                 >
-                                  Fench Rivirany
+                                  Hotel without Burj Khalifa (3 star Hotel)
                                 </Link>
                               </h3>
                               <h5>
-                                <span>$180</span>/ Per Person
+                                <span>$376</span>/ Per Person
                               </h5>
                             </div>
                           </li>
                         </ul>
                       </div>
                     </div>
-                    <div className="col-lg-12 col-md-6">
+                    {/* <div className="col-lg-12 col-md-6">
                       <div className="p-sidebar-organizer mt-40">
                         <h5 className="package-d-head">Organized By</h5>
                         <div className="organizer-card">
@@ -1241,8 +1013,8 @@ class PackageDetails extends Component {
                           </Link>
                         </div>
                       </div>
-                    </div>
-                    <div className="col-lg-12 col-md-6">
+                    </div> */}
+                    {/* <div className="col-lg-12 col-md-6">
                       <div className="p-sidebar-banner mt-40">
                         <img src={sidebarBannar} alt="" className="img-fluid" />
                         <div className="sidebar-banner-overlay">
@@ -1254,7 +1026,7 @@ class PackageDetails extends Component {
                           </div>
                         </div>
                       </div>
-                    </div>
+                    </div> */}
                   </div>
                 </div>
               </div>
@@ -1264,6 +1036,4 @@ class PackageDetails extends Component {
       </>
     );
   }
-}
-
 export default PackageDetails;

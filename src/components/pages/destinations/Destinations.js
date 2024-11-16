@@ -4,6 +4,7 @@ import OwlCarousel from "react-owl-carousel";
 import "owl.carousel/dist/assets/owl.carousel.css";
 import "owl.carousel/dist/assets/owl.theme.default.css";
 import { Link } from "react-router-dom";
+import Packages from "../home/Packages";
 
 //Import Images
 import destinations1Img from "../../../assets/images/destination/d-1.png";
@@ -17,7 +18,6 @@ import destinations10Img from "../../../assets/images/destination/d-10.png";
 import destinations11Img from "../../../assets/images/destination/d-11.png";
 import destinations2Img from "../../../assets/images/destination/d-2.png";
 import destinations3Img from "../../../assets/images/destination/d-3.png";
-
 class AboutUs extends Component {
   render() {
     const destinationsOptions = {
@@ -56,6 +56,7 @@ class AboutUs extends Component {
         <BreadCrumb />
 
         {/* =============== Destinations area start =============== */}
+        <Packages />
         <div className="destinations-area pt-120">
           <div className="container">
             <div className="row">
@@ -66,7 +67,7 @@ class AboutUs extends Component {
                 </div>
               </div>
             </div>
-            <div className="row">
+            {/* <div className="row">
               <div className="col-lg-3 col-md-3">
                 <div className="package-slider-wrap">
                   <img src={destinations1Img} alt="" className="img-fluid" />
@@ -202,8 +203,8 @@ class AboutUs extends Component {
                   </div>
                 </OwlCarousel>
               </div>
-            </div>
-            <div className="row">
+            </div> */}
+            {/* <div className="row">
               <div className="col-lg-9 col-md-9">
                 <OwlCarousel
                   className="row owl-carousel destinations-2"
@@ -342,7 +343,7 @@ class AboutUs extends Component {
                   </div>
                 </div>
               </div>
-            </div>
+            </div> */}
             <div className="row">
               <div className="col-lg-3 col-md-3">
                 <div className="package-slider-wrap">
@@ -359,7 +360,7 @@ class AboutUs extends Component {
                 >
                   <div className="package-card">
                     <div className="package-thumb">
-                      <Link to={`${process.env.PUBLIC_URL}/package-details`}>
+                      <Link to={`${process.env.PUBLIC_URL}/package-details/2`}>
                         <img
                           src={destinations11Img}
                           alt=""
@@ -370,13 +371,15 @@ class AboutUs extends Component {
                     <div className="package-details">
                       <div className="package-info">
                         <h5>
-                          <span>$145</span>/Per Person
+                          <span>$485</span>/Per Person
                         </h5>
                       </div>
                       <h3>
                         <i className="flaticon-arrival" />
-                        <Link to={`${process.env.PUBLIC_URL}/package-details`}>
-                          Amalfi Costa, Italy
+                        <Link
+                          to={`${process.env.PUBLIC_URL}/package-details/2`}
+                        >
+                          Burj Khalifa Tour (3 star Hotel)
                         </Link>
                       </h3>
                       <div className="package-rating">
@@ -389,7 +392,7 @@ class AboutUs extends Component {
                   </div>
                   <div className="package-card">
                     <div className="package-thumb">
-                      <Link to={`${process.env.PUBLIC_URL}/package-details`}>
+                      <Link to={`${process.env.PUBLIC_URL}/package-details/4`}>
                         <img
                           src={destinations5Img}
                           alt=""
@@ -400,13 +403,15 @@ class AboutUs extends Component {
                     <div className="package-details">
                       <div className="package-info">
                         <h5>
-                          <span>$240</span>/Per Person
+                          <span>$610</span>/Per Person
                         </h5>
                       </div>
                       <h3>
                         <i className="flaticon-arrival" />
-                        <Link to={`${process.env.PUBLIC_URL}/package-details`}>
-                          Maritime Heritage
+                        <Link
+                          to={`${process.env.PUBLIC_URL}/package-details/4`}
+                        >
+                          Burj Khalifa Tour (4 star Hotel)
                         </Link>
                       </h3>
                       <div className="package-rating">
@@ -419,7 +424,7 @@ class AboutUs extends Component {
                   </div>
                   <div className="package-card">
                     <div className="package-thumb">
-                      <Link to={`${process.env.PUBLIC_URL}/package-details`}>
+                      <Link to={`${process.env.PUBLIC_URL}/package-details/18`}>
                         <img
                           src={destinations9Img}
                           alt=""
@@ -430,13 +435,15 @@ class AboutUs extends Component {
                     <div className="package-details">
                       <div className="package-info">
                         <h5>
-                          <span>$300</span>/Per Person
+                          <span>$705</span>/Per Person
                         </h5>
                       </div>
                       <h3>
                         <i className="flaticon-arrival" />
-                        <Link to={`${process.env.PUBLIC_URL}/package-details`}>
-                          Souks of Deira
+                        <Link
+                          to={`${process.env.PUBLIC_URL}/package-details/18`}
+                        >
+                          Abu Dhabi Tour (5 star Hotel)
                         </Link>
                       </h3>
                       <div className="package-rating">
@@ -449,7 +456,7 @@ class AboutUs extends Component {
                   </div>
                   <div className="package-card">
                     <div className="package-thumb">
-                      <Link to={`${process.env.PUBLIC_URL}/package-details`}>
+                      <Link to={`${process.env.PUBLIC_URL}/package-details/16`}>
                         <img
                           src={destinations4Img}
                           alt=""
@@ -460,13 +467,15 @@ class AboutUs extends Component {
                     <div className="package-details">
                       <div className="package-info">
                         <h5>
-                          <span>$120</span>/Per Person
+                          <span>$750</span>/Per Person
                         </h5>
                       </div>
                       <h3>
                         <i className="flaticon-arrival" />
-                        <Link to={`${process.env.PUBLIC_URL}/package-details`}>
-                          Jumeirah Mosque
+                        <Link
+                          to={`${process.env.PUBLIC_URL}/package-details/16`}
+                        >
+                          Burj Khalifa and Abu Dhabi (4 star Hotel)
                         </Link>
                       </h3>
                       <div className="package-rating">
@@ -480,7 +489,7 @@ class AboutUs extends Component {
                 </OwlCarousel>
               </div>
             </div>
-            <div className="row">
+            {/* <div className="row">
               <div className="col-lg-9 col-md-9">
                 <OwlCarousel
                   className="row owl-carousel destinations-2"
@@ -619,8 +628,8 @@ class AboutUs extends Component {
                   </div>
                 </div>
               </div>
-            </div>
-            <div className="row">
+            </div> */}
+            {/* <div className="row">
               <div className="col-lg-3 col-md-3">
                 <div className="package-slider-wrap">
                   <img src={destinations1Img} alt="" className="img-fluid" />
@@ -756,8 +765,8 @@ class AboutUs extends Component {
                   </div>
                 </OwlCarousel>
               </div>
-            </div>
-            <div className="row">
+            </div> */}
+            {/* <div className="row">
               <div className="col-lg-12">
                 <div className="pagination mt-30">
                   <Link to={"#"}>
@@ -774,7 +783,7 @@ class AboutUs extends Component {
                   </Link>
                 </div>
               </div>
-            </div>
+            </div> */}
           </div>
         </div>
         {/* =============== Destinations area end =============== */}
