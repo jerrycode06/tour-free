@@ -93,32 +93,6 @@ class Headers extends Component {
                       </Link>
                     </div>
                     <div className="navbar-icons">
-                      <div className="searchbar-open">
-                        <i className="flaticon-magnifier" />
-                      </div>
-                      <div className="user-dropdown-icon">
-                        <i className="flaticon-user" />
-                        <div className="account-dropdown">
-                          <ul>
-                            <li className="account-el">
-                              <i className="bx bx-user-pin" />
-                              <Link to={"#"}>Sign in</Link>
-                            </li>
-                            <li className="account-el">
-                              <i className="bx bxs-user-account" />
-                              <Link to={"#"}>My Account</Link>
-                            </li>
-                            <li className="account-el">
-                              <i className="bx bx-extension" />
-                              <Link to={"#"}>Settings</Link>
-                            </li>
-                            <li className="account-el">
-                              <i className="bx bx-log-in-circle" />
-                              <Link to={"#"}>Log out</Link>
-                            </li>
-                          </ul>
-                        </div>
-                      </div>
                       <div className="mobile-menu d-flex ">
                         <div className="top-search-bar m-0 d-block d-xl-none"></div>
                         <Link to={"#"} className="hamburger d-block d-xl-none">
@@ -133,10 +107,10 @@ class Headers extends Component {
                 <div className="col-lg-10 col-md-10 col-sm-10 col-xs-10">
                   <nav className="main-nav">
                     <div className="navber-logo-sm">
-                      <img src={secondLogo} alt="" className="img-fluid" />
+                      <img src={"https://deserthoppers.com/assets/images/logo.png"} alt="" className="img-fluid" width={130} height={80} />
                     </div>
                     <ul>
-                      <li className="has-child-menu">
+                      <li>
                         <NavLink
                           activeClassName="active"
                           to={`${process.env.PUBLIC_URL}/`}
@@ -290,13 +264,7 @@ class Headers extends Component {
                       <ul>
                         <li className="sidebar-single-contact">
                           <i className="bx bxs-phone" />
-                          <Link to={`tel:+17632275032`}>+1 763-227-5032</Link>
-                        </li>
-                        <li className="sidebar-single-contact">
-                          <i className="bx bxs-envelope" />
-                          <Link to={`mailto:info@example.com`}>
-                            info@example.com
-                          </Link>
+                          <Link to={`tel:+971-54-401-3834`}>+971-54-401-3834</Link>
                         </li>
                       </ul>
                     </div>

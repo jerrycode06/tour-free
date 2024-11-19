@@ -617,8 +617,8 @@ a {
 }
 
 .breadcrumb-area {
-  background: -webkit-gradient(linear, left top, left bottom, color-stop(100%, rgba(0, 0, 0, 0.65)), to(rgba(0, 0, 0, 0.65))), url(../images/breadcrumb-bg.png);
-  background: linear-gradient(rgba(0, 0, 0, 0.65) 100%, rgba(0, 0, 0, 0.65) 100%), url(../images/breadcrumb-bg.png);
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(100%, rgba(0, 0, 0, 0.65)), to(rgba(0, 0, 0, 0.65))), url(../images/dubai/Dubai_Home.jpg);
+  background: linear-gradient(rgba(0, 0, 0, 0.65) 100%, rgba(0, 0, 0, 0.65) 100%), url(../images/dubai/Dubai_Home.jpg);
   background-size: cover;
   min-height: 320px;
   display: -webkit-box;
@@ -1588,8 +1588,8 @@ header > .header-area .nav-right {
 }
 
 .main-banner .slider-item-1 {
-  background: -webkit-gradient(linear, left top, left bottom, color-stop(100%, rgba(48, 79, 71, 0.65)), to(rgba(48, 79, 71, 0.65))), url(../images/dubai/Dubai_Home.jpg);
-  background: linear-gradient(rgba(48, 79, 71, 0.65) 100%, rgba(48, 79, 71, 0.65) 100%), url(../images/dubai/Dubai_Home.jpg);
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(100%, rgba(48, 79, 71, 0.65)), to(rgba(48, 79, 71, 0.65))), url(../images/dubai/Dubai.gif);
+  background: linear-gradient(rgba(48, 79, 71, 0.65) 100%, rgba(48, 79, 71, 0.65) 100%), url(../images/dubai/Dubai.gif);
   background-size: cover;
   background-position: center;
 }
@@ -5307,6 +5307,7 @@ li.package-card-sm .package-info h5 span {
 }
 
 .contact-inputs .contact-form input,
+.contact-inputs .contact-form select,
 .contact-inputs .contact-form textarea {
   margin-bottom: 40px;
   border: 1px solid #E1E1E1;
@@ -5317,12 +5318,14 @@ li.package-card-sm .package-info h5 span {
 }
 
 .contact-inputs .contact-form input::-webkit-input-placeholder,
+.contact-inputs .contact-form select::-webkit-input-placeholder,
 .contact-inputs .contact-form textarea::-webkit-input-placeholder {
   color: #A5A5A5;
   text-transform: capitalize;
 }
 
 .contact-inputs .contact-form input:-ms-input-placeholder,
+.contact-inputs .contact-form select:-ms-input-placeholder,
 .contact-inputs .contact-form textarea:-ms-input-placeholder {
   color: #A5A5A5;
   text-transform: capitalize;

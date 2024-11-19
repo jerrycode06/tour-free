@@ -5,6 +5,7 @@ import Destinations from "./Destinations";
 import Blog from "./Blog";
 import Features from "./Features";
 import Review from "./Review";
+import Enquiry from "./Enquiry";
 import Achievement from "./Achievement";
 
 //Define Default Content
@@ -46,6 +47,7 @@ class HomePage extends Component {
 
         {/*---------Start Imported All Sections-----------*/}
         <MainBanner />
+        <Enquiry />
         <Packages />
         <Destinations />
         <Achievement />

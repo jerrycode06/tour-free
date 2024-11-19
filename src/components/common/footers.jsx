@@ -229,7 +229,7 @@ class Footers extends Component {
                             <div className="col-lg-4 col-md-12">
                                 <div className="footer-info">
                                     <div className="footer-logo">
-                                        <img src={secondLogo} alt="" className="img-fluid" />
+                                        <img src={"https://deserthoppers.com/assets/images/logo.png"} alt="" className="img-fluid" width={150} height={100} />
                                     </div>
                                     <p>Travel with us and feel the best experience in Desert</p>
                                     <div className="footer-social-icons">
@@ -320,7 +320,7 @@ class Footers extends Component {
                         <div className="row">
                             <div className="col-lg-12">
                                 <div className="copyrigth-area">
-                                    <p>Copyright 2021 <Link to={`#`}>TourX</Link> | Design By <Link to={`#`}>Egens Lab</Link></p>
+                                    <p>Copyright 2021 <Link to={`#`}>DesertHoppers</Link></p>
                                 </div>
                             </div>
                         </div>
