@@ -46,8 +46,8 @@ class HomePage extends Component {
         {/* End Preloader Area */}
 
         {/*---------Start Imported All Sections-----------*/}
-        <MainBanner />
         <Enquiry />
+        <MainBanner />
         <Packages />
         <Destinations />
         <Achievement />

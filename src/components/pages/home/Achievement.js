@@ -28,7 +28,7 @@ class Achievement extends Component {
                                <div className="achievement-icon">
                                    <i className="flaticon-guide" />
                                </div>
-                               <h5>2000+ Our worldwide
+                               <h5>Have worldwide
                                    guide</h5>
                            </div>
                        </div>
@@ -37,7 +37,7 @@ class Achievement extends Component {
                                <div className="achievement-icon">
                                    <i className="flaticon-trust" />
                                </div>
-                               <h5>100% trusted travel agency</h5>
+                               <h5>Trusted travel agency</h5>
                            </div>
                        </div>
                        <div className="col-lg-3 col-md-6 col-sm-6 wow fadeInLeft animated" data-wow-duration="1500ms" data-wow-delay="400ms">
@@ -45,7 +45,7 @@ class Achievement extends Component {
                                <div className="achievement-icon">
                                    <i className="flaticon-experience" />
                                </div>
-                               <h5>10+ year of travel experience</h5>
+                               <h5>Travel Experience</h5>
                            </div>
                        </div>
                        <div className="col-lg-3 col-md-6 col-sm-6 wow fadeInLeft animated" data-wow-duration="1500ms" data-wow-delay="600ms">
@@ -53,7 +53,7 @@ class Achievement extends Component {
                                <div className="achievement-icon">
                                    <i className="flaticon-traveller" />
                                </div>
-                               <h5>90% of our traveller happy</h5>
+                               <h5>Satisfied Travellers</h5>
                            </div>
                        </div>
                    </div>

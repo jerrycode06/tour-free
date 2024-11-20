@@ -7,17 +7,11 @@ import { Link } from "react-router-dom";
 import Packages from "../home/Packages";
 
 //Import Images
-import destinations1Img from "../../../assets/images/destination/d-1.png";
-import destinations4Img from "../../../assets/images/destination/d-4.png";
-import destinations5Img from "../../../assets/images/destination/d-5.png";
-import destinations6Img from "../../../assets/images/destination/d-6.png";
-import destinations7Img from "../../../assets/images/destination/d-7.png";
-import destinations8Img from "../../../assets/images/destination/d-8.png";
-import destinations9Img from "../../../assets/images/destination/d-9.png";
-import destinations10Img from "../../../assets/images/destination/d-10.png";
-import destinations11Img from "../../../assets/images/destination/d-11.png";
-import destinations2Img from "../../../assets/images/destination/d-2.png";
-import destinations3Img from "../../../assets/images/destination/d-3.png";
+import package7Img from "../../../assets/images/dubai/package_7.jpg";
+import package9Img from "../../../assets/images/dubai/package_9.jpg";
+import package10Img from "../../../assets/images/dubai/package_10.jpg";
+import package12Img from "../../../assets/images/dubai/package_12.jpg";
+import package16Img from "../../../assets/images/dubai/package_16.jpg";
 class AboutUs extends Component {
   render() {
     const destinationsOptions = {
@@ -347,7 +341,7 @@ class AboutUs extends Component {
             <div className="row">
               <div className="col-lg-3 col-md-3">
                 <div className="package-slider-wrap">
-                  <img src={destinations3Img} alt="" className="img-fluid" />
+                  <img src={package7Img} alt="" className="img-fluid" />
                   <div className="pakage-overlay">
                     <strong>Dubai</strong>
                   </div>
@@ -362,7 +356,7 @@ class AboutUs extends Component {
                     <div className="package-thumb">
                       <Link to={`${process.env.PUBLIC_URL}/package-details/2`}>
                         <img
-                          src={destinations11Img}
+                          src={package9Img}
                           alt=""
                           className="img-fluid"
                         />
@@ -394,7 +388,7 @@ class AboutUs extends Component {
                     <div className="package-thumb">
                       <Link to={`${process.env.PUBLIC_URL}/package-details/4`}>
                         <img
-                          src={destinations5Img}
+                          src={package10Img}
                           alt=""
                           className="img-fluid"
                         />
@@ -426,7 +420,7 @@ class AboutUs extends Component {
                     <div className="package-thumb">
                       <Link to={`${process.env.PUBLIC_URL}/package-details/18`}>
                         <img
-                          src={destinations9Img}
+                          src={package16Img}
                           alt=""
                           className="img-fluid"
                         />
@@ -458,7 +452,7 @@ class AboutUs extends Component {
                     <div className="package-thumb">
                       <Link to={`${process.env.PUBLIC_URL}/package-details/16`}>
                         <img
-                          src={destinations4Img}
+                          src={package12Img}
                           alt=""
                           className="img-fluid"
                         />

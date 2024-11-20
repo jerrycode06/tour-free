@@ -1,46 +1,17 @@
 import React, { useState, useEffect } from "react";
 import { Link, useParams } from "react-router-dom";
-
-import pd_thumb from "../../../assets/images/package/pd-thumb.png";
 import pr_1 from "../../../assets/images/package/pr-1.png";
-
-import gallery1Img from "../../../assets/images/gallary/gl-1.png";
-import gallery2Img from "../../../assets/images/gallary/gl-2.png";
-import gallery4Img from "../../../assets/images/gallary/gl-4.png";
-import gallery5Img from "../../../assets/images/gallary/gl-5.png";
-import gallery6Img from "../../../assets/images/gallary/gl-6.png";
-
-import galleryGxx1Img from "../../../assets/images/gallary/g-xxl-1.png";
-import galleryGxx2Img from "../../../assets/images/gallary/g-xxl-2.png";
-import galleryGxx3Img from "../../../assets/images/gallary/g-xxl-3.png";
-
-
-import galleryGxl1Img from "../../../assets/images/gallary/g-xl-1.png";
-import galleryGxl2Img from "../../../assets/images/gallary/g-xl-2.png";
-import galleryGxl3Img from "../../../assets/images/gallary/g-xl-3.png";
-
-import pm_sm_1 from "../../../assets/images/package/p-sm-1.png";
-import pm_sm_4 from "../../../assets/images/package/p-sm-4.png";
-import pm_sm_2 from "../../../assets/images/package/p-sm-2.png";
-import pm_sm_3 from "../../../assets/images/package/p-sm-3.png";
-
-import organizer from "../../../assets/images/organizer.png";
-import sidebarBannar from "../../../assets/images/sidebar-banner.png";
-
-import { SRLWrapper } from "simple-react-lightbox";
-
-import DatePicker from "react-datepicker";
+import package7Img from "../../../assets/images/dubai/package_7.jpg";
+import package9Img from "../../../assets/images/dubai/package_9.jpg";
+import package10Img from "../../../assets/images/dubai/package_10.jpg";
+import package12Img from "../../../assets/images/dubai/package_12.jpg";
+import package16Img from "../../../assets/images/dubai/package_16.jpg";
 import "react-datepicker/dist/react-datepicker.css";
 import PackagesData from "../../../dessert-hopper-data.json"
 
 function PackageDetails() {
   const [packageData, setPackageData] = useState(PackagesData.data || []);
-  const [startDate, setStartDate] = useState(new Date());
   const { id } = useParams();
-
-  const changeDatepickerHandeller = (date) => {
-    setStartDate(date);
-  };
 
   const scrollTop= () => {
     window.scrollTo({
@@ -67,14 +38,6 @@ function PackageDetails() {
             <div className="row">
               <div className="col-lg-12 col-md-12 col-sm-12">
                 <div className="breadcrumb-wrap">
-                  <h2>Hey There</h2>
-                  <ul className="breadcrumb-links">
-                    <li>
-                      <Link to={`${process.env.PUBLIC_URL}/`}>Home</Link>
-                      <i className="bx bx-chevron-right" />
-                    </li>
-                    <li>Package Details</li>
-                  </ul>
                 </div>
               </div>
             </div>
@@ -86,9 +49,9 @@ function PackageDetails() {
             <div className="row">
               <div className="col-lg-8">
                 <div className="package-details">
-                  <div className="package-thumb">
+                  {/* <div className="package-thumb">
                     <img src={pd_thumb} alt="" />
-                  </div>
+                  </div> */}
                   <div className="package-header">
                     <div className="package-title">
                       <h3>{getValue("name")}</h3>
@@ -116,10 +79,10 @@ function PackageDetails() {
                           <i className="bx bx-star" />
                         </li>
                       </ul>
-                      <p>800 Review</p>
+                      {/* <p>800 Review</p> */}
                     </div>
                   </div>
-                  <div className="p-short-info">
+                  {/* <div className="p-short-info">
                     <div className="single-info">
                       <i className="flaticon-clock" />
                       <div className="info-texts">
@@ -148,7 +111,7 @@ function PackageDetails() {
                         <p>Any Language</p>
                       </div>
                     </div>
-                  </div>
+                  </div> */}
                   <div className="package-tab">
                     <ul className="nav nav-pills" id="pills-tab" role="tablist">
                       <li className="nav-item" role="presentation">
@@ -619,150 +582,6 @@ function PackageDetails() {
                           </div>
                         </div>
                       </div>
-                      <div
-                        className="tab-pane fade"
-                        id="pills-contact"
-                        role="tabpanel"
-                        aria-labelledby="pills-contact-tab"
-                      >
-                        <div className="tab-contant-3">
-                          <SRLWrapper>
-                            <div className="row">
-                              <div className="col-lg-8 col-md-8">
-                                <div className="package-grid-one">
-                                  <div className="single-grid">
-                                    <Link
-                                      to={gallery1Img}
-                                      className="g-img-sm-1 main-gallary"
-                                    >
-                                      <img
-                                        src={gallery1Img}
-                                        alt="gallary-img"
-                                      />
-                                    </Link>
-
-                                    <Link
-                                      to={gallery2Img}
-                                      className="g-img-sm-2 main-gallary"
-                                    >
-                                      <img
-                                        src={gallery2Img}
-                                        alt="gallary-img"
-                                      />
-                                    </Link>
-
-                                    <Link
-                                      to={galleryGxx1Img}
-                                      className="g-img-md main-gallary"
-                                    >
-                                      <img
-                                        src={galleryGxx1Img}
-                                        alt="gallary-img"
-                                      />
-                                    </Link>
-                                  </div>
-                                  <div className="single-grid mt-24">
-                                    <Link
-                                      to={gallery2Img}
-                                      className="g-img-sm-1 main-gallary"
-                                    >
-                                      <img
-                                        src={gallery2Img}
-                                        alt="gallary-img"
-                                      />
-                                    </Link>
-                                    <Link
-                                      to={gallery4Img}
-                                      className="g-img-sm-2 main-gallary"
-                                    >
-                                      <img
-                                        src={gallery4Img}
-                                        alt="gallary-img"
-                                      />
-                                    </Link>
-                                    <Link
-                                      to={galleryGxx2Img}
-                                      className="g-img-md main-gallary"
-                                    >
-                                      <img
-                                        src={galleryGxx2Img}
-                                        alt="gallary-img"
-                                      />
-                                    </Link>
-                                  </div>
-
-                                  <div className="single-grid mt-24">
-                                    <Link
-                                      to={gallery5Img}
-                                      className="g-img-sm-1 main-gallary"
-                                    >
-                                      <img
-                                        src={gallery5Img}
-                                        alt="gallary-img"
-                                      />
-                                    </Link>
-                                    <Link
-                                      to={gallery6Img}
-                                      className="g-img-sm-2 main-gallary"
-                                    >
-                                      <img
-                                        src={gallery6Img}
-                                        alt="gallary-img"
-                                      />
-                                    </Link>
-                                    <Link
-                                      to={galleryGxx3Img}
-                                      className="g-img-md main-gallary"
-                                    >
-                                      <img
-                                        src={galleryGxx3Img}
-                                        alt="gallary-img"
-                                      />
-                                    </Link>
-                                  </div>
-                                </div>
-                              </div>
-                              <div className="col-lg-4 col-md-4">
-                                <div className="package-grid-two">
-                                  <div className="single-grid-2">
-                                    <Link
-                                      to={galleryGxl1Img}
-                                      className="main-gallary"
-                                    >
-                                      <img
-                                        src={galleryGxl1Img}
-                                        alt="gallary-img"
-                                      />
-                                    </Link>
-                                  </div>
-                                  <div className="single-grid-2 mt-24">
-                                    <Link
-                                      to={galleryGxl2Img}
-                                      className="single-grid-2 main-gallary mt-30"
-                                    >
-                                      <img
-                                        src={galleryGxl2Img}
-                                        alt="gallary-img"
-                                      />
-                                    </Link>
-                                  </div>
-                                  <div className="single-grid-2 mt-24">
-                                    <Link
-                                      to={galleryGxl3Img}
-                                      className="main-gallary mt-30"
-                                    >
-                                      <img
-                                        src={galleryGxl3Img}
-                                        alt="gallary-img"
-                                      />
-                                    </Link>
-                                  </div>
-                                </div>
-                              </div>
-                            </div>
-                          </SRLWrapper>
-                        </div>
-                      </div>
                     </div>
                   </div>
                 </div>
@@ -856,7 +675,7 @@ function PackageDetails() {
                         <ul className="package-cards">
                           <li className="package-card-sm">
                             <div className="p-sm-img">
-                              <img src={pm_sm_1} alt="" />
+                              <img src={package7Img} alt="" />
                             </div>
                             <div className="package-info">
                               <div className="package-date-sm">
@@ -880,7 +699,7 @@ function PackageDetails() {
                           </li>
                           <li className="package-card-sm">
                             <div className="p-sm-img">
-                              <img src={pm_sm_4} alt="" />
+                              <img src={package9Img} alt="" />
                             </div>
                             <div className="package-info">
                               <div className="package-date-sm">
@@ -904,7 +723,7 @@ function PackageDetails() {
                           </li>
                           <li className="package-card-sm">
                             <div className="p-sm-img">
-                              <img src={pm_sm_2} alt="" />
+                              <img src={package10Img} alt="" />
                             </div>
                             <div className="package-info">
                               <div className="package-date-sm">
@@ -928,7 +747,7 @@ function PackageDetails() {
                           </li>
                           <li className="package-card-sm">
                             <div className="p-sm-img">
-                              <img src={pm_sm_3} alt="" />
+                              <img src={package12Img} alt="" />
                             </div>
                             <div className="package-info">
                               <div className="package-date-sm">
@@ -952,7 +771,7 @@ function PackageDetails() {
                           </li>
                           <li className="package-card-sm">
                             <div className="p-sm-img">
-                              <img src={pm_sm_4} alt="" />
+                              <img src={package16Img} alt="" />
                             </div>
                             <div className="package-info">
                               <div className="package-date-sm">

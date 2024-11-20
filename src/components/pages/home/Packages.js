@@ -2,12 +2,38 @@ import React, { Component } from "react";
 import { Link } from "react-router-dom";
 
 //Load Image
-import package1Img from "../../../assets/images/package/p-1.png";
-import package2Img from "../../../assets/images/package/p-2.png";
-import package3Img from "../../../assets/images/package/p-3.png";
-import package4Img from "../../../assets/images/package/p-4.png";
-import package5Img from "../../../assets/images/package/p-5.png";
-import package6Img from "../../../assets/images/package/p-6.png";
+import package1Img from "../../../assets/images/dubai/package_1.jpg";
+import package2Img from "../../../assets/images/dubai/package_2.jpg";
+import package3Img from "../../../assets/images/dubai/package_3.jpg";
+import package4Img from "../../../assets/images/dubai/package_4.webp";
+import package5Img from "../../../assets/images/dubai/package_5.jpg";
+import package6Img from "../../../assets/images/dubai/package_6.webp";
+import package7Img from "../../../assets/images/dubai/package_7.jpg";
+import package8Img from "../../../assets/images/dubai/package_8.jpg";
+import package9Img from "../../../assets/images/dubai/package_9.jpg";
+import package10Img from "../../../assets/images/dubai/package_10.jpg";
+import package11Img from "../../../assets/images/dubai/package_11.jpg";
+import package12Img from "../../../assets/images/dubai/package_12.jpg";
+import package13Img from "../../../assets/images/dubai/package_13.jpg";
+import package14Img from "../../../assets/images/dubai/package_14.jpg";
+import package15Img from "../../../assets/images/dubai/package_15.jpg";
+import package16Img from "../../../assets/images/dubai/package_16.jpg";
+import package17Img from "../../../assets/images/dubai/package_17.jpg";
+import package18Img from "../../../assets/images/dubai/package_18.jpg";
+import package19Img from "../../../assets/images/dubai/package_19.avif";
+import package20Img from "../../../assets/images/dubai/package_20.avif";
+import package21Img from "../../../assets/images/dubai/package_21.avif";
+import package22Img from "../../../assets/images/dubai/package_22.jpg";
+import package23Img from "../../../assets/images/dubai/package_23.jpg";
+import package24Img from "../../../assets/images/dubai/package_24.jpg";
+import package25Img from "../../../assets/images/dubai/package_25.jpg";
+import package26Img from "../../../assets/images/dubai/package_26.jpg";
+import package27Img from "../../../assets/images/dubai/package_27.jpg";
+import package28Img from "../../../assets/images/dubai/package_28.jpg";
+import package29Img from "../../../assets/images/dubai/package_29.jpg";
+import package30Img from "../../../assets/images/dubai/package_30.jpg";
+import package31Img from "../../../assets/images/dubai/package_31.jpg";
+import package32Img from "../../../assets/images/dubai/package_x.png";
 
 class Packages extends Component {
   constructor(props) {
@@ -69,7 +95,7 @@ class Packages extends Component {
                 <div className="package-card">
                   <div className="package-thumb">
                     <Link to={`${process.env.PUBLIC_URL}/package-details/10`}>
-                      <img src={package1Img} alt="" className="img-fluid" />
+                      <img src={package2Img} alt="" className="img-fluid" />
                     </Link>
                   </div>
                   <div className="package-details">
@@ -99,7 +125,7 @@ class Packages extends Component {
                 <div className="package-card">
                   <div className="package-thumb">
                     <Link to={`${process.env.PUBLIC_URL}/package-details/10`}>
-                      <img src={package1Img} alt="" className="img-fluid" />
+                      <img src={package3Img} alt="" className="img-fluid" />
                     </Link>
                   </div>
                   <div className="package-details">
@@ -129,7 +155,7 @@ class Packages extends Component {
                 <div className="package-card">
                   <div className="package-thumb">
                     <Link to={`${process.env.PUBLIC_URL}/package-details/3`}>
-                      <img src={package1Img} alt="" className="img-fluid" />
+                      <img src={package4Img} alt="" className="img-fluid" />
                     </Link>
                   </div>
                   <div className="package-details">
@@ -159,7 +185,7 @@ class Packages extends Component {
                 <div className="package-card">
                   <div className="package-thumb">
                     <Link to={`${process.env.PUBLIC_URL}/package-details/6`}>
-                      <img src={package1Img} alt="" className="img-fluid" />
+                      <img src={package5Img} alt="" className="img-fluid" />
                     </Link>
                   </div>
                   <div className="package-details">
@@ -189,7 +215,7 @@ class Packages extends Component {
                 <div className="package-card">
                   <div className="package-thumb">
                     <Link to={`${process.env.PUBLIC_URL}/package-details/8`}>
-                      <img src={package3Img} alt="" className="img-fluid" />
+                      <img src={package6Img} alt="" className="img-fluid" />
                     </Link>
                   </div>
                   <div className="package-details">
@@ -219,7 +245,7 @@ class Packages extends Component {
                 <div className="package-card">
                   <div className="package-thumb">
                     <Link to={`${process.env.PUBLIC_URL}/package-details/9`}>
-                      <img src={package3Img} alt="" className="img-fluid" />
+                      <img src={package7Img} alt="" className="img-fluid" />
                     </Link>
                   </div>
                   <div className="package-details">
@@ -249,7 +275,7 @@ class Packages extends Component {
                 <div className="package-card">
                   <div className="package-thumb">
                     <Link to={`${process.env.PUBLIC_URL}/package-details/4`}>
-                      <img src={package3Img} alt="" className="img-fluid" />
+                      <img src={package8Img} alt="" className="img-fluid" />
                     </Link>
                   </div>
                   <div className="package-details">
@@ -279,7 +305,7 @@ class Packages extends Component {
                 <div className="package-card">
                   <div className="package-thumb">
                     <Link to={`${process.env.PUBLIC_URL}/package-details/5`}>
-                      <img src={package3Img} alt="" className="img-fluid" />
+                      <img src={package9Img} alt="" className="img-fluid" />
                     </Link>
                   </div>
                   <div className="package-details">
@@ -309,7 +335,7 @@ class Packages extends Component {
                 <div className="package-card">
                   <div className="package-thumb">
                     <Link to={`${process.env.PUBLIC_URL}/package-details/2`}>
-                      <img src={package2Img} alt="" className="img-fluid" />
+                      <img src={package10Img} alt="" className="img-fluid" />
                     </Link>
                   </div>
                   <div className="package-details">
@@ -339,7 +365,7 @@ class Packages extends Component {
                 <div className="package-card">
                   <div className="package-thumb">
                     <Link to={`${process.env.PUBLIC_URL}/package-details/1`}>
-                      <img src={package3Img} alt="" className="img-fluid" />
+                      <img src={package11Img} alt="" className="img-fluid" />
                     </Link>
                   </div>
                   <div className="package-details">
@@ -369,7 +395,7 @@ class Packages extends Component {
                 <div className="package-card">
                   <div className="package-thumb">
                     <Link to={`${process.env.PUBLIC_URL}/package-details/14`}>
-                      <img src={package6Img} alt="" className="img-fluid" />
+                      <img src={package12Img} alt="" className="img-fluid" />
                     </Link>
                   </div>
                   <div className="package-details">
@@ -399,7 +425,7 @@ class Packages extends Component {
                 <div className="package-card">
                   <div className="package-thumb">
                     <Link to={`${process.env.PUBLIC_URL}/package-details/13`}>
-                      <img src={package6Img} alt="" className="img-fluid" />
+                      <img src={package13Img} alt="" className="img-fluid" />
                     </Link>
                   </div>
                   <div className="package-details">
@@ -429,7 +455,7 @@ class Packages extends Component {
                 <div className="package-card">
                   <div className="package-thumb">
                     <Link to={`${process.env.PUBLIC_URL}/package-details/12`}>
-                      <img src={package6Img} alt="" className="img-fluid" />
+                      <img src={package14Img} alt="" className="img-fluid" />
                     </Link>
                   </div>
                   <div className="package-details">
@@ -459,7 +485,7 @@ class Packages extends Component {
                 <div className="package-card">
                   <div className="package-thumb">
                     <Link to={`${process.env.PUBLIC_URL}/package-details/17`}>
-                      <img src={package6Img} alt="" className="img-fluid" />
+                      <img src={package15Img} alt="" className="img-fluid" />
                     </Link>
                   </div>
                   <div className="package-details">
@@ -495,7 +521,7 @@ class Packages extends Component {
                 <div className="package-card">
                   <div className="package-thumb">
                     <Link to={`${process.env.PUBLIC_URL}/package-details/16`}>
-                      <img src={package6Img} alt="" className="img-fluid" />
+                      <img src={package16Img} alt="" className="img-fluid" />
                     </Link>
                   </div>
                   <div className="package-details">
@@ -531,7 +557,7 @@ class Packages extends Component {
                 <div className="package-card">
                   <div className="package-thumb">
                     <Link to={`${process.env.PUBLIC_URL}/package-details/15`}>
-                      <img src={package5Img} alt="" className="img-fluid" />
+                      <img src={package17Img} alt="" className="img-fluid" />
                     </Link>
                   </div>
                   <div className="package-details">
@@ -567,7 +593,7 @@ class Packages extends Component {
                 <div className="package-card">
                   <div className="package-thumb">
                     <Link to={`${process.env.PUBLIC_URL}/package-details/20`}>
-                      <img src={package6Img} alt="" className="img-fluid" />
+                      <img src={package18Img} alt="" className="img-fluid" />
                     </Link>
                   </div>
                   <div className="package-details">
@@ -603,7 +629,7 @@ class Packages extends Component {
                 <div className="package-card">
                   <div className="package-thumb">
                     <Link to={`${process.env.PUBLIC_URL}/package-details/19`}>
-                      <img src={package6Img} alt="" className="img-fluid" />
+                      <img src={package19Img} alt="" className="img-fluid" />
                     </Link>
                   </div>
                   <div className="package-details">
@@ -639,7 +665,7 @@ class Packages extends Component {
                 <div className="package-card">
                   <div className="package-thumb">
                     <Link to={`${process.env.PUBLIC_URL}/package-details/18`}>
-                      <img src={package6Img} alt="" className="img-fluid" />
+                      <img src={package20Img} alt="" className="img-fluid" />
                     </Link>
                   </div>
                   <div className="package-details">
@@ -675,7 +701,7 @@ class Packages extends Component {
                 <div className="package-card">
                   <div className="package-thumb">
                     <Link to={`${process.env.PUBLIC_URL}/package-details/24`}>
-                      <img src={package6Img} alt="" className="img-fluid" />
+                      <img src={package21Img} alt="" className="img-fluid" />
                     </Link>
                   </div>
                   <div className="package-details">
@@ -711,7 +737,7 @@ class Packages extends Component {
                 <div className="package-card">
                   <div className="package-thumb">
                     <Link to={`${process.env.PUBLIC_URL}/package-details/21`}>
-                      <img src={package6Img} alt="" className="img-fluid" />
+                      <img src={package22Img} alt="" className="img-fluid" />
                     </Link>
                   </div>
                   <div className="package-details">
@@ -747,7 +773,7 @@ class Packages extends Component {
                 <div className="package-card">
                   <div className="package-thumb">
                     <Link to={`${process.env.PUBLIC_URL}/package-details/22`}>
-                      <img src={package6Img} alt="" className="img-fluid" />
+                      <img src={package23Img} alt="" className="img-fluid" />
                     </Link>
                   </div>
                   <div className="package-details">
@@ -783,7 +809,7 @@ class Packages extends Component {
                 <div className="package-card">
                   <div className="package-thumb">
                     <Link to={`${process.env.PUBLIC_URL}/package-details/23`}>
-                      <img src={package6Img} alt="" className="img-fluid" />
+                      <img src={package24Img} alt="" className="img-fluid" />
                     </Link>
                   </div>
                   <div className="package-details">
@@ -819,7 +845,7 @@ class Packages extends Component {
                 <div className="package-card">
                   <div className="package-thumb">
                     <Link to={`${process.env.PUBLIC_URL}/package-details/28`}>
-                      <img src={package6Img} alt="" className="img-fluid" />
+                      <img src={package25Img} alt="" className="img-fluid" />
                     </Link>
                   </div>
                   <div className="package-details">
@@ -855,7 +881,7 @@ class Packages extends Component {
                 <div className="package-card">
                   <div className="package-thumb">
                     <Link to={`${process.env.PUBLIC_URL}/package-details/25`}>
-                      <img src={package6Img} alt="" className="img-fluid" />
+                      <img src={package26Img} alt="" className="img-fluid" />
                     </Link>
                   </div>
                   <div className="package-details">
@@ -891,7 +917,7 @@ class Packages extends Component {
                 <div className="package-card">
                   <div className="package-thumb">
                     <Link to={`${process.env.PUBLIC_URL}/package-details/26`}>
-                      <img src={package6Img} alt="" className="img-fluid" />
+                      <img src={package27Img} alt="" className="img-fluid" />
                     </Link>
                   </div>
                   <div className="package-details">
@@ -927,7 +953,7 @@ class Packages extends Component {
                 <div className="package-card">
                   <div className="package-thumb">
                     <Link to={`${process.env.PUBLIC_URL}/package-details/27`}>
-                      <img src={package6Img} alt="" className="img-fluid" />
+                      <img src={package28Img} alt="" className="img-fluid" />
                     </Link>
                   </div>
                   <div className="package-details">
@@ -963,7 +989,7 @@ class Packages extends Component {
                 <div className="package-card">
                   <div className="package-thumb">
                     <Link to={`${process.env.PUBLIC_URL}/package-details/32`}>
-                      <img src={package6Img} alt="" className="img-fluid" />
+                      <img src={package29Img} alt="" className="img-fluid" />
                     </Link>
                   </div>
                   <div className="package-details">
@@ -999,7 +1025,7 @@ class Packages extends Component {
                 <div className="package-card">
                   <div className="package-thumb">
                     <Link to={`${process.env.PUBLIC_URL}/package-details/29`}>
-                      <img src={package6Img} alt="" className="img-fluid" />
+                      <img src={package30Img} alt="" className="img-fluid" />
                     </Link>
                   </div>
                   <div className="package-details">
@@ -1035,7 +1061,7 @@ class Packages extends Component {
                 <div className="package-card">
                   <div className="package-thumb">
                     <Link to={`${process.env.PUBLIC_URL}/package-details/30`}>
-                      <img src={package6Img} alt="" className="img-fluid" />
+                      <img src={package31Img} alt="" className="img-fluid" />
                     </Link>
                   </div>
                   <div className="package-details">
@@ -1071,7 +1097,7 @@ class Packages extends Component {
                 <div className="package-card">
                   <div className="package-thumb">
                     <Link to={`${process.env.PUBLIC_URL}/package-details/31`}>
-                      <img src={package6Img} alt="" className="img-fluid" />
+                      <img src={package32Img} alt="" className="img-fluid" />
                     </Link>
                   </div>
                   <div className="package-details">

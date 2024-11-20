@@ -73,6 +73,11 @@ class AboutUs extends Component {
                             <i className="bx bxl-instagram" />
                           </a>
                         </li>
+                        <li>
+                          <a href={"https://www.facebook.com/share/18BQscnH9K/?mibextid=LQQJ4d"}>
+                            <i className="bx bxl-facebook" />
+                          </a>
+                        </li>
                         {/* <li>
                           <Link to={"#"}>
                             <i className="bx bxl-facebook" />

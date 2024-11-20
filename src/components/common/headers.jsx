@@ -31,6 +31,10 @@ class Headers extends Component {
                       <i className="bx bxl-instagram" />
                       <a href="https://www.instagram.com/deserthoppers">Instagram</a>
                     </li>
+                    <li>
+                      <i className="bx bxl-facebook" />
+                      <a href="https://www.facebook.com/share/18BQscnH9K/?mibextid=LQQJ4d">Facebook</a>
+                    </li>
                   </ul>
                 </div>
               </div>
@@ -89,7 +93,7 @@ class Headers extends Component {
                         className="navbar-brand"
                         onClick={this.scrollTop}
                       >
-                        <img src={"https://deserthoppers.com/assets/images/logo.png"} alt="" width={130} height={80}/>
+                        <img src={"https://deserthoppers.com/assets/images/logo.png"} alt="" style={{width: "130px", height:"80px"}}/>
                       </Link>
                     </div>
                     <div className="navbar-icons">
