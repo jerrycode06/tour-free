@@ -854,6 +854,23 @@ a {
     right: 9em !important;
     top: 35% !important;
   }
+
+  .enquiry-form {
+    margin-top: 80px;
+  }
+
+  .enquiry-form-inside {
+    padding: 0px 0px !important;
+  }
+
+  .navbar-logo-img {
+    width: 90px !important;
+    height: 55px !important;
+  }
+
+  .navbar-header {
+    height: 70px;
+  }
 }
 /*  */
 
@@ -1588,8 +1605,8 @@ header > .header-area .nav-right {
 }
 
 .main-banner .slider-item-1 {
-  background: -webkit-gradient(linear, left top, left bottom, color-stop(100%, rgba(48, 79, 71, 0.65)), to(rgba(48, 79, 71, 0.65))), url(../images/dubai/Dubai.gif);
-  background: linear-gradient(rgba(48, 79, 71, 0.65) 100%, rgba(48, 79, 71, 0.65) 100%), url(../images/dubai/Dubai.gif);
+  /* background: -webkit-gradient(linear, left top, left bottom, color-stop(100%, rgba(48, 79, 71, 0.65)), to(rgba(48, 79, 71, 0.65))), url(../images/dubai/Dubai.gif); */
+  background: url(../images/dubai/Dubai.gif);
   background-size: cover;
   background-position: center;
 }
@@ -5262,6 +5279,21 @@ li.package-card-sm .package-info h5 span {
 
 .contact-card .contact-info ul.contact-icons li a i:hover {
   color: #FF7F47;
+}
+
+.enquiry-form {
+  padding: 10px;
+  border-radius: 20px;
+  background: rgba(255, 255, 255, 0.8);
+}
+
+.enquiry-form-inside {
+  padding: 10px 100px;
+}
+
+.navbar-logo-img {
+  width: 130px;
+  height: 80px;
 }
 
 .contact-inputs .contact-details h5.contact-d-head {

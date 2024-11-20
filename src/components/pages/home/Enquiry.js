@@ -2,8 +2,8 @@ import React from "react";
 
 const Enquiry = () => {
   return (
-    <div className="contact-inputs p-100">
-      <div className="center" style={{ padding: "10px 100px" }}>
+    <div className="contact-inputs p-100 enquiry-form">
+      <div className="center enquiry-form-inside">
         <div className="contact-form">
           <form name="trip-enquiry" method="post">
             <input type="hidden" name="form-name" value="trip-enquiry" />

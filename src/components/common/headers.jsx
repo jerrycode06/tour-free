@@ -81,7 +81,7 @@ class Headers extends Component {
         {/* =============== Topbar area end =============== */}
 
         {/* ===============  header area start =============== */}
-        <header>
+        <header className="navbar-header">
           <div className="header-area">
             <div className="container">
               <div className="row">
@@ -93,7 +93,7 @@ class Headers extends Component {
                         className="navbar-brand"
                         onClick={this.scrollTop}
                       >
-                        <img src={"https://deserthoppers.com/assets/images/logo.png"} alt="" style={{width: "130px", height:"80px"}}/>
+                        <img src={"https://deserthoppers.com/assets/images/logo.png"} alt="" className="navbar-logo-img"/>
                       </Link>
                     </div>
                     <div className="navbar-icons">

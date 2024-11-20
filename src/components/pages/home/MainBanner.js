@@ -5,6 +5,7 @@ import "owl.carousel/dist/assets/owl.theme.default.css";
 import {Link} from "react-router-dom";
 import DatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
+import Enquiry from "./Enquiry";
 
 class MainBanner extends Component {
 
@@ -47,8 +48,8 @@ class MainBanner extends Component {
               },
               1000:{
                   items:1,
-                  nav:true,
-                  loop:true
+                  nav:false,
+                  loop:false
               },
           }
       };
@@ -66,6 +67,7 @@ class MainBanner extends Component {
                                 {/* <div className="banner-btn">
                                     <Link to={`${process.env.PUBLIC_URL}/package`} className="btn-common">Book Now</Link>
                                 </div> */}
+                                <Enquiry />
                             </div>
                         </div>
                     </div>
