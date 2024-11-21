@@ -203,31 +203,53 @@ class Footers extends Component {
         {/* ===============  Newsletter area start =============== */}
         <div className="newsletter-area pt-120">
           <div className="container">
-            {/* <div className="row">
+            <div className="row">
               <div className="col-lg-12 col-md-12">
                 <div className="newsletter-wrapper">
-                  <h2>Subscribe To Our Newsletter For Latest Update</h2>
-                  <form>
-                    <div className="input-group newsletter-input">
-                      <input
-                        type="text"
-                        className="form-control"
-                        placeholder="Enter Your Email"
-                        aria-label="Recipient's username"
-                        aria-describedby="button-addon2"
-                      />
-                      <button
-                        className="btn btn-outline-secondary"
-                        type="button"
-                        id="button-addon2"
-                      >
-                        Subscribe
-                      </button>
-                    </div>
-                  </form>
+                  <h2>We are Social</h2>
+                  <div className="new-social-container">
+                    <h4>Join the fun and share your experience</h4>
+                    <ul>
+                      <li>
+                        <a
+                          href={
+                            "https://www.facebook.com/share/18BQscnH9K/?mibextid=LQQJ4d"
+                          }
+                        >
+                          <i className="bx bxl-facebook" />
+                        </a>
+                      </li>
+                      <li>
+                        <a href="https://www.instagram.com/deserthoppers">
+                          <i className="bx bxl-instagram" />
+                        </a>
+                      </li>
+                      <li>
+                        <a href="https://www.instagram.com/deserthoppers">
+                          <i className="bx bxl-twitter" />
+                        </a>
+                      </li>
+                      <li>
+                        <a href="https://www.instagram.com/deserthoppers">
+                          <i className="bx bxl-youtube" />
+                        </a>
+                      </li>
+                      <li>
+                        <a href="https://www.instagram.com/deserthoppers">
+                          <i className="bx bxl-linkedin" />
+                        </a>
+                      </li>
+                      {/* <li>
+                                                <Link to={"#"}><i className="bx bxl-twitter" /></Link>
+                                            </li>
+                                            <li>
+                                                <Link to={"#"}><i className="bx bxl-dribbble" /></Link>
+                                            </li> */}
+                    </ul>
+                  </div>
                 </div>
               </div>
-            </div> */}
+            </div>
           </div>
         </div>
         {/* ===============  Newsletter area end =============== */}
@@ -247,8 +269,10 @@ class Footers extends Component {
                       height={100}
                     />
                   </div>
-                  <p>Travel with us and feel the best experience in Desert</p>
-                  <div className="footer-social-icons">
+                  <p>
+                    Travel with us and feel the best <br /> experience in Desert
+                  </p>
+                  {/* <div className="footer-social-icons">
                     <h5>Follow Us:</h5>
                     <ul>
                       <li>
@@ -265,14 +289,18 @@ class Footers extends Component {
                           <i className="bx bxl-instagram" />
                         </a>
                       </li>
-                      {/* <li>
-                                                <Link to={"#"}><i className="bx bxl-twitter" /></Link>
-                                            </li>
-                                            <li>
-                                                <Link to={"#"}><i className="bx bxl-dribbble" /></Link>
-                                            </li> */}
+                      <li>
+                        <Link to={"#"}>
+                          <i className="bx bxl-twitter" />
+                        </Link>
+                      </li>
+                      <li>
+                        <Link to={"#"}>
+                          <i className="bx bxl-dribbble" />
+                        </Link>
+                      </li>
                     </ul>
-                  </div>
+                  </div> */}
                 </div>
               </div>
               <div className="col-lg-8 col-md-12">
@@ -304,30 +332,39 @@ class Footers extends Component {
                                             </div> */}
                     </div>
                   </div>
-                  {/* <div className="col-lg-3 col-md-3 col-sm-5">
-                                        <div className="footer-links">
-                                            <h5 className="widget-title">support</h5>
-                                            <div className="category-list">
-                                                <ul>
-                                                    <li>
-                                                        <Link to={`${process.env.PUBLIC_URL}/contact`} onClick={this.scrollTop} >Contact us</Link>
-                                                    </li>
-                                                    <li>
-                                                        <Link to={`${process.env.PUBLIC_URL}/about-us`} onClick={this.scrollTop}>About us</Link>
-                                                    </li>
-                                                    <li>
-                                                        <Link to={`${process.env.PUBLIC_URL}/destination`} onClick={this.scrollTop} >Destinations</Link>
-                                                    </li>
-                                                    <li>
-                                                        <Link to={`${process.env.PUBLIC_URL}/blog`} onClick={this.scrollTop}>our Blogs</Link>
-                                                    </li>
-                                                    <li>
-                                                        <Link to={`${process.env.PUBLIC_URL}/package`} className="sub-item" onClick={this.scrollTop}>Package</Link>
-                                                    </li>
-                                                </ul>
-                                            </div>
-                                        </div>
-                                    </div> */}
+                  <div className="col-lg-3 col-md-3 col-sm-5">
+                    <div className="footer-links">
+                      <h5 className="widget-title">Links</h5>
+                      <div className="category-list">
+                        <ul>
+                          <li>
+                            <Link
+                              to={`${process.env.PUBLIC_URL}`}
+                              onClick={this.scrollTop}
+                            >
+                              Home
+                            </Link>
+                          </li>
+                          <li>
+                            <Link
+                              to={`${process.env.PUBLIC_URL}/contact`}
+                              onClick={this.scrollTop}
+                            >
+                              Contact us
+                            </Link>
+                          </li>
+                          <li>
+                            <Link
+                              to={`${process.env.PUBLIC_URL}/destination`}
+                              onClick={this.scrollTop}
+                            >
+                              Destinations
+                            </Link>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
                   <div className="col-lg-4 col-md-4">
                     <div className="footer-links payment-links">
                       <h5 className="widget-title">We Accepts:</h5>

@@ -64,16 +64,6 @@ class Headers extends Component {
                   </ul>
                 </div>
               </div> */}
-              {/* <div className="col-lg-3 col-md-6 col-sm-6 col-xs-6 col-6">
-                <div className="custom-select languege-select">
-                  <select>
-                    <option value={0}>ENG</option>
-                    <option value={1}>BAN</option>
-                    <option value={2}>FSP</option>
-                    <option value={3}>CHI</option>
-                  </select>
-                </div>
-              </div> */}
             </div>
           </div>
         </div>
@@ -93,7 +83,7 @@ class Headers extends Component {
                         className="navbar-brand"
                         onClick={this.scrollTop}
                       >
-                        <img src={"https://deserthoppers.com/assets/images/logo.png"} alt="" className="navbar-logo-img"/>
+                        <img src={logoMain} alt="" className="navbar-logo-img"/>
                       </Link>
                     </div>
                     <div className="navbar-icons">
@@ -111,7 +101,7 @@ class Headers extends Component {
                 <div className="col-lg-10 col-md-10 col-sm-10 col-xs-10">
                   <nav className="main-nav">
                     <div className="navber-logo-sm">
-                      <img src={"https://deserthoppers.com/assets/images/logo.png"} alt="" className="img-fluid" width={130} height={80} />
+                      <img src={logoMain} alt="" className="img-fluid navbar-logo-img" />
                     </div>
                     <ul>
                       <li>
