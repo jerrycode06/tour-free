@@ -71,30 +71,6 @@ class MainBanner extends Component {
                             </div>
                         </div>
                     </div>
-                    <div className="slider-item slider-item-2">
-                        <div className="container">
-                            <div className="slider-content wow fadeInLeft animated" data-wow-delay="300ms" data-wow-duration="1500ms">
-                                <h2>Amazing Tour In
-                                    Dubai </h2>
-                                <h5>7 Days, 8 Night Tour</h5>
-                                <div className="banner-btn">
-                                    <Link to={`${process.env.PUBLIC_URL}/package`} className="btn-common">Book Now</Link>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div className="slider-item slider-item-3">
-                        <div className="container">
-                            <div className="slider-content wow fadeInLeft animated" data-wow-delay="300ms" data-wow-duration="1500ms">
-                                <h2>Amazing Tour In
-                                    Dubai </h2>
-                                <h5>7 Days, 8 Night Tour</h5>
-                                <div className="banner-btn">
-                                    <Link to={`${process.env.PUBLIC_URL}/package`} className="btn-common">Book Now</Link>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
                  {/* </OwlCarousel> */}
             </div>
             {/* ===============  Main banner area end =============== */}
