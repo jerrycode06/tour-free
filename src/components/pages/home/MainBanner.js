@@ -59,7 +59,7 @@ class MainBanner extends Component {
         <>
             {/* ===============  Main banner area start =============== */}
             <div className="main-banner">
-                <OwlCarousel className="banner-slider owl-carousel"  {...mainBannerOptions}>
+                {/* <OwlCarousel className="banner-slider owl-carousel"  {...mainBannerOptions}> */}
                     <div className="slider-item slider-item-1">
                         <div className="container">
                             <div className="slider-content wow fadeInLeft animated" data-wow-delay="300ms" data-wow-duration="1500ms">
@@ -95,7 +95,7 @@ class MainBanner extends Component {
                             </div>
                         </div>
                     </div>
-                 </OwlCarousel>
+                 {/* </OwlCarousel> */}
             </div>
             {/* ===============  Main banner area end =============== */}
 
