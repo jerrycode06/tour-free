@@ -111,10 +111,10 @@ body {
   padding: 70px 0;
 }
 .p-80{
-  padding: 80px 0;
+  padding: 0px 0;
 }
 .pt-120{
-  padding-top: 120px;
+  padding-top: 50px;
 }
   
 .pt-105{
@@ -597,8 +597,8 @@ a{
 
 // breadcrumb
 .breadcrumb-area {
-  background: linear-gradient(rgba(0, 0, 0, 0.65) 100%, rgba(0, 0, 0, 0.65) 100%),
-              url(../images/dubai/Dubai_Home.jpg);
+  background: linear-gradient(rgba(0, 0, 0, 0.25) 100%, rgba(0, 0, 0, 0.65) 100%),
+              url(../images/dubai/destination-banner.jpeg);
   background-size: cover;
   min-height: 320px;
   display: flex;
@@ -621,8 +621,8 @@ a{
       li {
         font-family: $secondary-font;
         font-size: 16px;
-        color: $primary-color;
-        font-weight: 500;
+        color: white;
+        font-weight: 600;
 
         a{
           color: #fff;
@@ -2010,7 +2010,7 @@ border-radius: 5px;
   }
   h5 {
     font-weight: 700;
-    font-size: 22px;
+    font-size: 17px;
     line-height: 32px;
     color: #FFFFFF;
   }

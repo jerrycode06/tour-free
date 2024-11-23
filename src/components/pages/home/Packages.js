@@ -46,31 +46,37 @@ class Packages extends Component {
     const destinationsOptions = {
       stagePadding: 1,
       items: 3,
-      loop: true,
-      margin:20,
-      smartSpeed: 1500,
-      autoplay: false,
-      dots: false,
-      nav: true,
-      navText : ["<i class='bx bx-chevron-left' ></i>","<i class='bx bx-chevron-right'></i>"],
-      responsive:{
-          0:{
-              items:1,
-              nav:false,
-              dots : false
-          },
-          600:{
-              items:2,
-              nav:false,
-              dost : false,
-          },
-          1000:{
-              items:3,
-              nav:true,
-              loop:true
-          }
-      }
-  };
+      loop: true, // Enables infinite scrolling
+      margin: 20, // Space between items
+      smartSpeed: 1500, // Animation speed for transitions
+      autoplay: true, // Enables auto-scrolling
+      autoplayTimeout: 3000, // Delay between auto-scrolls (3 seconds)
+      autoplayHoverPause: true, // Pauses auto-scroll on hover
+      dots: false, // Disable dots
+      nav: true, // Enables navigation arrows
+      navText: [
+        "<i class='bx bx-chevron-left'></i>",
+        "<i class='bx bx-chevron-right'></i>",
+      ],
+      responsive: {
+        0: {
+          items: 1, // Items to display on small screens
+          nav: false,
+          dots: false,
+        },
+        600: {
+          items: 2, // Items to display on medium screens
+          nav: false,
+          dots: false,
+        },
+        1000: {
+          items: 3, // Items to display on large screens
+          nav: true,
+          loop: true,
+        },
+      },
+    };
+    
     return (
       <>
         {/* ===============  Package  area start =============== */}
@@ -80,7 +86,7 @@ class Packages extends Component {
               <div className="col-lg-12 col-md-12 col-sm-12">
                 <div className="section-head pb-45">
                   <h5>Choose Your Package</h5>
-                  <h2>Select Your best Package For Your Travel</h2>
+                  <b><h4>Select Your best Package For Your Travel</h4></b>
                 </div>
               </div>
             </div>
@@ -143,7 +149,7 @@ class Packages extends Component {
                       <h3>
                         <i className="flaticon-arrival" />
                         <Link to={`${process.env.PUBLIC_URL}/package-details/10`}>
-                          Hotel with Burj Khalifa (5 star)
+                          Hotel with Burj Khalifa
                         </Link>
                       </h3>
                       <div className="package-rating mb-3">

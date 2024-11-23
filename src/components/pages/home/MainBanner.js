@@ -6,6 +6,8 @@ import {Link} from "react-router-dom";
 import DatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
 import Enquiry from "./Enquiry";
+import "../../../assets/css/style.css";
+import bannerVideo from '../../../assets/images/dubai/banner.MP4';
 
 class MainBanner extends Component {
 
@@ -55,65 +57,44 @@ class MainBanner extends Component {
       };
 
       const startDate =this.state.startDate;
-    return (
+      return (
         <>
-            {/* ===============  Main banner area start =============== */}
-            <div className="main-banner">
-                {/* <OwlCarousel className="banner-slider owl-carousel"  {...mainBannerOptions}> */}
-                    <div className="slider-item slider-item-1">
-                        <div className="container">
-                            <div className="slider-content wow fadeInLeft animated" data-wow-delay="300ms" data-wow-duration="1500ms">
-                                {/* <h5>7 Days, 8 Night Tour</h5> */}
-                                {/* <div className="banner-btn">
-                                    <Link to={`${process.env.PUBLIC_URL}/package`} className="btn-common">Book Now</Link>
-                                </div> */}
-                                <Enquiry />
-                            </div>
-                        </div>
+          {/* ===============  Main banner area start =============== */}
+          <div className="main-banner">
+            <section className="hero">
+              {/* Video as background */}
+              <video
+                className="hero-video"
+                autoPlay
+                muted
+                loop
+                playsInline
+              >
+                <source src={bannerVideo} type="video/mp4" />
+                Your browser does not support the video tag.
+              </video>
+      
+              {/* Overlay Content */}
+              <div className="overlay-content">
+                <div className="slider-item slider-item-1">
+                  <div className="container">
+                    <div
+                      className="slider-content wow fadeInLeft animated"
+                      data-wow-delay="300ms"
+                      data-wow-duration="1500ms"
+                    >
+                      {/* Enquiry Component */}
+                      <Enquiry />
                     </div>
-                 {/* </OwlCarousel> */}
-            </div>
-            {/* ===============  Main banner area end =============== */}
-
-            {/* ===============  findfrom area start ============= */}
-            {/* <div className="find-form">
-                <div className="container">
-                    <form className="findfrom-wrapper">
-                        <div className="row">
-                            <div className="col-lg-3">
-                                <input type="text" name="whereto" placeholder="Where To..." />
-                            </div>
-                            <div className="col-lg-3">
-                                <div className="calendar-input">
-                                    <DatePicker selected={startDate} onChange={(date) => this.changeDatepickerHandeller(date)}  className="input-field check-in" placeholder="dd-mm-yy"/>
-                                    <i className="flaticon-calendar" />
-                                </div>
-                            </div>
-                            <div className="col-lg-3">
-                                <div className="custom-select">
-                                    <select>
-                                        <option value={0}>Travel Type</option>
-                                        <option value={1}>City Tours</option>
-                                        <option value={2}>Vacation Tours</option>
-                                        <option value={3}>Couple Tours </option>
-                                        <option value={4}>Adventure Tours</option>
-                                        <option value={5}>Group Tours</option>
-                                    </select>
-                                </div>
-                            </div>
-                            <div className="col-lg-3">
-                                <div className="find-btn">
-                                    <Link to={`#`} className="btn-second"><i className="bx bx-search-alt" /> Find now</Link>
-                                </div>
-                            </div>
-                        </div>
-                    </form>
+                  </div>
                 </div>
-            </div> */}
-
-            {/* ===============  findfrom area end =============== */}
+              </div>
+            </section>
+          </div>
+          {/* ===============  Main banner area end =============== */}
         </>
-    );
+      );
+      
   }
 }
 

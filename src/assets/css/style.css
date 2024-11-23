@@ -186,6 +186,7 @@ h5,
 h6 {
   margin: 0;
   padding: 0;
+  font-weight: 800;
 }
 
 input[type=text], input[type=email], input[type=date], input[type=number], input[type=tel] {
@@ -848,6 +849,75 @@ a {
   vertical-align: middle;
 }
 
+
+/* updated css for hero section */
+
+    /* Hero Section */
+    .hero {
+      position: relative;
+      width: 100%;
+      height: 100vh; /* Full viewport height */
+      overflow: hidden;
+    }
+    
+    /* Video Styling */
+    .hero-video {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover; /* Ensures the video covers the entire section */
+      z-index: -1; /* Places the video behind the content */
+    }
+    
+    /* Overlay Content Styling */
+    .overlay-content {
+      position: relative;
+      width: 100%;
+      height: 100%; /* Match the height of the hero section */
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      z-index: 1; /* Ensure the content is above the video */
+      /* color: white;  */
+      background: rgba(0, 0, 0, 0.3); /* Optional: Adds a semi-transparent overlay */
+    }
+    
+    .slider-content {
+      /* text-align: center;  */
+      padding: 20px;
+    }
+    
+    .slider-content h1 {
+      font-size: 2.5rem;
+      margin-bottom: 1rem;
+    }
+    
+    .slider-content p {
+      font-size: 1.2rem;
+      margin-bottom: 1.5rem;
+    }
+    
+    .slider-content .btn-common {
+      background-color: #007bff; /* Adjust button styles as needed */
+      color: white;
+      padding: 0.75rem 1.5rem;
+      border: none;
+      border-radius: 4px;
+      font-size: 1rem;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+    
+    .slider-content .btn-common:hover {
+      background-color: #0056b3;
+    }
+    
+    
+      /* updated css for hero section ends here */
+    
+
 /* media query */
 @media (max-width: 768px) {
   .calendar-input i {
@@ -855,10 +925,12 @@ a {
     top: 35% !important;
   }
 
-  .main-banner .slider-item-1 {
-    background: url(../images/dubai/banner.MP4);
-  }
+  /* .main-banner .slider-item-1 {
+    background: url('../images/dubai/banner.MP4');
+  } */
 
+
+  
   .navbar-wrap {
     height: 70% !important;
   }
@@ -1612,11 +1684,6 @@ header > .header-area .nav-right {
   margin: 30px 0 50px 0;
 }
 
-.main-banner .slider-item-1 {
-  background: url(../images/dubai/banner.MP4);
-  background-size: cover;
-  background-position: center;
-}
 
 .main-banner .slider-item-2 {
   background: -webkit-gradient(linear, left top, left bottom, color-stop(100%, rgba(48, 79, 71, 0.65)), to(rgba(48, 79, 71, 0.65))), url(../images/banners/banner-3.png);
@@ -2377,6 +2444,10 @@ header > .header-area .nav-right {
 
 .achievement-card-2 .achieve-icon i::before {
   font-size: 65px;
+}
+
+.owl-stage-outer {
+  height: 500px;
 }
 
 /* =============================
@@ -5322,7 +5393,7 @@ li.package-card-sm .package-info h5 span {
 .enquiry-form {
   padding: 10px;
   border-radius: 20px;
-  background: rgba(255, 255, 255, 0.7);
+  background: rgba(255, 255, 255, 0.49);
 }
 
 .enquiry-form-inside {

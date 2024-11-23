@@ -18,7 +18,7 @@ class Achievement extends Component {
                        <div className="col-lg-12 col-md-12 col-sm-12">
                            <div className="section-head pb-30">
                                <h5>Why Desert Hoppers?</h5>
-                               <h2>Why you are travel with Desert Hoppers?</h2>
+                               <h4>Why you are travel with Desert Hoppers?</h4>
                            </div>
                        </div>
                    </div>

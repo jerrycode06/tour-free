@@ -216,27 +216,28 @@ class Footers extends Component {
                             "https://www.facebook.com/share/18BQscnH9K/?mibextid=LQQJ4d"
                           }
                         >
-                          <i className="bx bxl-facebook" />
+                         <i className="bx bxl-facebook" style={{ color: '#FFD700' }} />
+
                         </a>
                       </li>
                       <li>
                         <a href="https://www.instagram.com/deserthoppers">
-                          <i className="bx bxl-instagram" />
+                          <i className="bx bxl-instagram" style={{ color: '#FFD700' }} />
                         </a>
                       </li>
                       <li>
-                        <a href="https://www.instagram.com/deserthoppers">
-                          <i className="bx bxl-twitter" />
+                        <a href="">
+                          <i className="bx bxl-twitter" style={{ color: '#FFD700' }}/>
                         </a>
                       </li>
                       <li>
-                        <a href="https://www.instagram.com/deserthoppers">
-                          <i className="bx bxl-youtube" />
+                        <a href="">
+                          <i className="bx bxl-youtube" style={{ color: '#FFD700' }}/>
                         </a>
                       </li>
                       <li>
-                        <a href="https://www.instagram.com/deserthoppers">
-                          <i className="bx bxl-linkedin" />
+                        <a href="">
+                          <i className="bx bxl-linkedin" style={{ color: '#FFD700' }}/>
                         </a>
                       </li>
                       {/* <li>
