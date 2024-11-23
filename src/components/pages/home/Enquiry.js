@@ -2,7 +2,7 @@ import React from "react";
 
 const Enquiry = () => {
   return (
-    <div className="contact-inputs p-100 enquiry-form">
+    <div className="contact-inputs p-100 enquiry-form" id="enquiry-form-id">
       <div className="center enquiry-form-inside">
         <div className="contact-form">
           <form name="trip-enquiry" method="post">

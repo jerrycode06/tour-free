@@ -17,7 +17,8 @@ const FloatingButtons = () => {
   };
 
   const handleEnquireNowClick = () => {
-    window.location.href = "/enquire-now"; // Replace with your specific page/section
+    window.location.href = "/";
+    window.location.href = "#enquiry-form-id"; // Replace with your specific page/section
   };
 
   return (
