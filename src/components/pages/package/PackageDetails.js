@@ -689,9 +689,17 @@ function PackageDetails() {
                                 <Link
                                   to={`${process.env.PUBLIC_URL}/package-details/10`}
                                 >
-                                  Burj Khalifa Tour (5 star Hotel)
+                                  Burj Khalifa Tour
                                 </Link>
                               </h3>
+                              <div className="package-rating mb-3">
+                              <i className="bx bxs-city" style={{marginRight:'15px'}}></i>
+                                  <i className="bx bxs-star" />
+                                  <i className="bx bxs-star" />
+                                  <i className="bx bxs-star" />
+                                  <i className="bx bxs-star" />
+                                  <i className="bx bxs-star" />
+                              </div>
                               <h5>
                                 <span>$535</span>/ Per Person
                               </h5>
@@ -713,9 +721,16 @@ function PackageDetails() {
                                 <Link
                                   to={`${process.env.PUBLIC_URL}/package-details/8`}
                                 >
-                                  Burj Khalifa Tour (5 star Hotel)
+                                  Burj Khalifa Tour
                                 </Link>
                               </h3>
+                              <div className="package-rating mb-3">
+                                <i className="bx bxs-star" />
+                                <i className="bx bxs-star" />
+                                <i className="bx bxs-star" />
+                                <i className="bx bxs-star" />
+                                <i className="bx bxs-star" />
+                              </div>
                               <h5>
                                 <span>$640</span>/ Per Person
                               </h5>
@@ -737,9 +752,17 @@ function PackageDetails() {
                                 <Link
                                   to={`${process.env.PUBLIC_URL}/package-details/19`}
                                 >
-                                  Burj Khalifa and Abu Dhabi (5 star Hotel)
+                                  Burj Khalifa and Abu Dhabi
                                 </Link>
                               </h3>
+                              <div className="package-rating mb-3">
+                              <i className="bx bxs-city" style={{marginRight:'15px'}}></i>
+                                  <i className="bx bxs-star" />
+                                  <i className="bx bxs-star" />
+                                  <i className="bx bxs-star" />
+                                  <i className="bx bxs-star" />
+                                  <i className="bx bxs-star" />
+                              </div>
                               <h5>
                                 <span>$786</span>/ Per Person
                               </h5>
@@ -761,9 +784,17 @@ function PackageDetails() {
                                 <Link
                                   to={`${process.env.PUBLIC_URL}/package-details/18`}
                                 >
-                                  Abu Dhabi Tour (5 star Hotel)
+                                  Abu Dhabi Tour
                                 </Link>
                               </h3>
+                              <div className="package-rating mb-3">
+                              <i className="bx bxs-city" style={{marginRight:'15px'}}></i>
+                                  <i className="bx bxs-star" />
+                                  <i className="bx bxs-star" />
+                                  <i className="bx bxs-star" />
+                                  <i className="bx bxs-star" />
+                                  <i className="bx bxs-star" />
+                              </div>
                               <h5>
                                 <span>$705</span>/ Per Person
                               </h5>
@@ -785,9 +816,15 @@ function PackageDetails() {
                                 <Link
                                   to={`${process.env.PUBLIC_URL}/package-details/1`}
                                 >
-                                  Hotel without Burj Khalifa (3 star Hotel)
+                                  Hotel without Burj Khalifa
                                 </Link>
                               </h3>
+                              <div className="package-rating mb-3">
+                              <i className="bx bxs-city" style={{marginRight:'15px'}}></i>
+                              <i className="bx bxs-star" />
+                              <i className="bx bxs-star" />
+                              <i className="bx bxs-star" />
+                          </div>
                               <h5>
                                 <span>$376</span>/ Per Person
                               </h5>

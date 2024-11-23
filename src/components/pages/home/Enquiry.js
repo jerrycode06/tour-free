@@ -7,17 +7,8 @@ const Enquiry = () => {
         <div className="contact-form">
           <form name="trip-enquiry" method="post">
             <input type="hidden" name="form-name" value="trip-enquiry" />
-            <h5 className="contact-d-head">Trip in mind?</h5>
+            <h5 className="contact-d-head d-flex justify-content-center">Enquire Now</h5>
             <div className="row">
-              <div className="col-lg-6">
-                <label htmlFor="from">Leaving From</label>
-                <input
-                  type="text"
-                  placeholder="Leaving From"
-                  name="from"
-                  required
-                />
-              </div>
               <div className="col-lg-6">
                 <label htmlFor="to">Travelling To</label>
                 <input
@@ -28,18 +19,28 @@ const Enquiry = () => {
                 />
               </div>
               <div className="col-lg-6">
+                <label htmlFor="no">No of adults</label>
+                <input
+                  type="number"
+                  placeholder="No of adults"
+                  name="no"
+                  required
+                />
+              </div>
+              <div className="col-lg-6">
+                <label htmlFor="no">No of child</label>
+                <input
+                  type="number"
+                  placeholder="No of child"
+                  name="no"
+                  required
+                />
+              </div>
+              <div className="col-lg-6">
                 <label htmlFor="when">Depart Date</label>
                 <input type="date" placeholder="Depart" name="when" required />
               </div>
-              <div className="col-lg-6">
-                <label htmlFor="budget">Budget</label>
-                <select name="budget">
-                  <option value="Low">Low</option>
-                  <option value="Medium">Medium</option>
-                  <option value="High">High</option>
-                </select>
-              </div>
-              <div className="col-lg-12">
+              <div className="col-lg-12 d-flex justify-content-center">
                 <input type="submit" defaultValue="Submit Now" />
               </div>
             </div>

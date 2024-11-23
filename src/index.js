@@ -28,6 +28,7 @@ import blog from "./components/pages/blog/BlogComponent";
 import blogSidebar from "./components/pages/blog/BlogSidebar";
 import blogStandard from "./components/pages/blog/BlogStandard";
 import blogDetails from "./components/pages/blog/BlogDetails";
+import FloatingButtons from "./components/common/floating-buttons"
 
 //Initializations All Css
 import "./index.css";
@@ -114,6 +115,7 @@ ReactDOM.render(
     <SimpleReactLightbox>
       <Root />
     </SimpleReactLightbox>
+    <FloatingButtons />
   </React.StrictMode>,
   document.getElementById("root")
 );

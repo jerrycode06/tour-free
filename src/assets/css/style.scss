@@ -42,7 +42,7 @@ Last update :
 ======================*/
 
 /*--- Color ---*/
-$primary-color : #FFCC00;
+$primary-color : #386641;
 $secondary-color : #304F47;
 $tertiary-color : #ffffff;
 $text-color-one:  #262339;
@@ -184,11 +184,15 @@ h6 {
 input[type=text],input[type=email],input[type=date],input[type=number],input[type=tel]{
   padding: 8px 15px;
   display: block;
-  width: 100%;
+  width: 90%;
   background: #ffffff;
   border: 1px solid #eee;
   border-radius: 5px;
   height: 50px;
+}
+
+.contact-form label {
+  font-weight: 700;
 }
 
 input:focus {
@@ -755,7 +759,7 @@ a{
   font-weight: 700;
   font-size: 13px;
   line-height: 16px;
-  color: #FFCC00;
+  color: #386641;
 
   &:last-child{
     border: none;
@@ -854,7 +858,7 @@ a{
 
 .topbar-area{
   padding: 8px 0;
-  background: #FFCC00;
+  background:#386641;
 
   .topbar-contact{
     height: 100%;
@@ -1164,7 +1168,7 @@ header .header-area .main-nav {
     //         transform: translateX(10px);
 
     transform: translateX(7px);
-    color: #FFCC00;
+    color: #386641;
   }
   header .header-area .main-nav ul li ul.sub-menu > li a:hover::before {
     opacity: 0;
@@ -1396,7 +1400,7 @@ header .header-area .main-nav {
         font-weight: 700;
         font-size: 30px;
         line-height: 37px;
-        color: #FFCC00;
+        color: #386641;
         margin: 30px 0 50px 0;
       }
       }
@@ -2287,7 +2291,7 @@ border-radius: 50px 50px 0px 0px;
       font-weight: 700;
       font-size: 23px;
       line-height: 27px;
-      color: #FFCC00;
+      color: #386641;
       text-transform: capitalize;
       padding-top: 20px;
       
@@ -2297,7 +2301,7 @@ border-radius: 50px 50px 0px 0px;
         font-size: 18px;
       }
       a{
-        color: #FFCC00;
+        color: #386641;
       }
     }
   }
@@ -2603,8 +2607,8 @@ border-radius: 0px 0px 3px 3px;
       button {
         width: 172px;
         border-radius: 10px;
-        background: #FFCC00;
-        border: 1px solid #FFCC00;
+        background: #386641;
+        border: 1px solid #386641;
         box-sizing: border-box;
         box-shadow: 2px 2px 10px rgba(26, 34, 56, 0.18);
         border-radius: 10px;
@@ -2985,7 +2989,7 @@ p {
     }
     label {
       font-family: $secondary-font;
-      font-style: normal;
+      font-style:normal;
       font-weight: 500;
       font-size: 18px;
       color: #A5A5A5;
@@ -3048,7 +3052,7 @@ p {
       .sidebar-banner-btn{
         a {
           padding: 14px 35px;
-          background: #FFCC00;
+          background: #386641;
           border-radius: 5px;
           font-weight: 600;
           font-size: 16px;
@@ -3242,7 +3246,7 @@ p {
       .sidebar-banner-btn{
         a {
           padding: 14px 35px;
-          background: #FFCC00;
+          background: #386641;
           border-radius: 5px;
           font-weight: 600;
           font-size: 16px;
@@ -3306,7 +3310,7 @@ li.package-card-sm{
       font-weight: 700;
       font-size: 16px;
       line-height: 22px;
-      color: #FFCC00;
+      color: #386641;
       margin: 8px 0;
 
       i{
@@ -4063,7 +4067,7 @@ li.package-card-sm{
       .sidebar-banner-btn{
         a {
           padding: 16px 32px;
-          background: #FFCC00;
+          background: #386641;
           border-radius: 5px;
           font-weight: 600;
           font-size: 16px;
@@ -4289,7 +4293,7 @@ li.package-card-sm{
           font-weight: 700;
           font-size: 15px;
           text-transform: capitalize;
-          color: #FFCC00;
+          color: #386641;
 
           i{
             font-size: 18px;
@@ -4689,7 +4693,7 @@ li.package-card-sm{
     }
     input,
     textarea {
-      margin-bottom: 40px;
+      margin-bottom: 15px;
       border: 1px solid #E1E1E1;
       box-sizing: border-box;
       border-radius: 6px;
