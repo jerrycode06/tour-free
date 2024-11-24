@@ -5446,6 +5446,7 @@ li.package-card-sm .package-info h5 span {
 }
 
 .enquiry-form {
+  width: 100%;
   padding: 10px;
   border-radius: 20px;
   background: rgba(255, 255, 255, 0.49);
