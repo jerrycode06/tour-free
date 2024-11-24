@@ -12,6 +12,7 @@ import package9Img from "../../../assets/images/dubai/package_9.jpg";
 import package10Img from "../../../assets/images/dubai/package_10.jpg";
 import package12Img from "../../../assets/images/dubai/package_12.jpg";
 import package16Img from "../../../assets/images/dubai/package_16.jpg";
+import package11Img from "../../../assets/images/dubai/package_11.jpg";
 class AboutUs extends Component {
   render() {
     const destinationsOptions = {
@@ -56,7 +57,7 @@ class AboutUs extends Component {
             <div className="row">
               <div className="col-lg-12 col-md-12 col-sm-12">
                 <div className="section-head pb-40">
-                  <h5>Choose Your Package</h5>
+                  <h5>Popular packages</h5>
                   <b><h4>Select Your best Package For Your Travel</h4></b>
                 </div>
               </div>
@@ -339,19 +340,49 @@ class AboutUs extends Component {
               </div>
             </div> */}
             <div className="row">
-              <div className="col-lg-3 col-md-3">
+              {/* <div className="col-lg-3 col-md-3">
                 <div className="package-slider-wrap">
                   <img src={package7Img} alt="" className="img-fluid" />
                   <div className="pakage-overlay">
                     <strong>Dubai</strong>
                   </div>
                 </div>
-              </div>
+              </div> */}
+                               <div className="package-card">
+                    <div className="package-thumb">
+                      <Link to={`${process.env.PUBLIC_URL}/package-details/1`}>
+                        <img src={package11Img} alt="" className="img-fluid" />
+                      </Link>
+                    </div>
+                    <div className="package-details">
+                      <div className="package-info">
+                        <h5>
+                          <span>$376</span>/Per Person
+                        </h5>
+                        <h5>
+                          <i className="flaticon-calendar" />4 night/5 days
+                        </h5>
+                      </div>
+                      <h3>
+                        <i className="flaticon-arrival" />
+                        <Link to={`${process.env.PUBLIC_URL}/package-details/1`}>
+                          Hotel without Burj Khalifa
+                        </Link>
+                      </h3>
+                      <div className="package-rating mb-3">
+                      <i className="bx bxs-city" style={{marginRight:'15px'}}></i>
+                                <i className="bx bxs-star" />
+                                <i className="bx bxs-star" />
+                                <i className="bx bxs-star" />
+                            </div>
+                            <div className="package-rating">
+                      <i className="bx bxs-star" />
+                      <strong><span>2.6K+</span> Rating</strong>
+                    </div>
+                    </div>
+                  </div>
+
               <div className="col-lg-9 col-md-9">
-                <OwlCarousel
-                  className="row owl-carousel destinations-1"
-                  {...destinationsOptions}
-                >
                   <div className="package-card">
                     <div className="package-thumb">
                       <Link to={`${process.env.PUBLIC_URL}/package-details/2`}>
@@ -507,7 +538,6 @@ class AboutUs extends Component {
                       </div>
                     </div>
                   </div>
-                </OwlCarousel>
               </div>
             </div>
             {/* <div className="row">

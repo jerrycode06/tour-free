@@ -464,6 +464,56 @@ a.btn-second {
   z-index: 20;
 }
 
+/* Modal background */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.6); /* semi-transparent background */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+}
+
+/* Modal content */
+.contact-inputs {
+  background-color: #fff;
+  padding: 40px;
+  border-radius: 8px;
+  width: 500px;
+  position: relative;
+}
+
+/* Close button */
+.close-modal-btn {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: none;
+  border: none;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+/* Button to open the modal */
+.open-modal-btn {
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
+  border-radius: 4px;
+}
+
+.open-modal-btn:hover {
+  background-color: #0056b3;
+}
+
+
 a.btn-second:focus {
   -webkit-box-shadow: none;
           box-shadow: none;
@@ -958,6 +1008,10 @@ a {
   vertical-align: middle;
 }
 
+.animated-card {
+  display: flex;
+  justify-content: center;
+}
 /*==== 2. preloader =====*/
 .preloader {
   position: fixed;
@@ -2047,6 +2101,7 @@ header > .header-area .nav-right {
   width: 100%;
   -webkit-transition: all .4s;
   transition: all .4s;
+  height: 300px;
 }
 
 .package-card .package-details {
@@ -3086,7 +3141,7 @@ header > .header-area .nav-right {
 .footer-area {
   color: #386641;
   padding-top: 170px;
-  background: #262339;
+  background: #143A52;
 }
 
 .footer-area .footer-links h5 {
@@ -5641,36 +5696,40 @@ li.package-card-sm .package-info h5 span {
   bottom: 20px;
   right: 20px;
   display: flex;
-  flex-direction: column;
-  gap: 15px;
-  z-index: 1000;
+  flex-direction: row;
+  gap: 15px; /* Adds spacing between buttons */
+  z-index: 9999; /* Ensure the buttons are on top of all other content */
 }
 
 .floating-button {
-  width: 60px;
-  height: 60px;
-  border-radius: 50%;
-  border: none;
+  /* background: rgba(255, 255, 255, 0.7);  White background with slight transparency */
+  border: none;                          /* Removes the default border */
+  border-radius: 50%;                    /* Keeps the circular shape */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);  /* Adds shadow for better visibility */
   cursor: pointer;
-  font-size: 24px;
-  color: white;
-  background-color: #007bff; /* Default blue */
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
-  transition: all 0.3s ease;
+  padding: 12px;                         /* Adjust padding to fit the icon properly */
+  transition: transform 0.2s ease;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 60px;                           /* Set width for circular button */
+  height: 60px;                          /* Set height for circular button */
 }
 
 .floating-button:hover {
-  transform: scale(1.1);
+  transform: scale(1.1); /* Slightly enlarges the button on hover */
 }
 
-.floating-button.caller {
-  background-color: #28a745; /* Green */
+.floating-button img {
+  width: 40px;  /* Sets the width of the icon inside the button */
+  height: 40px; /* Sets the height of the icon inside the button */
+  object-fit: contain; /* Ensures the logo fits without distortion */
+  filter: brightness(1.5); /* Increases brightness of the icons */
+  transition: filter 0.2s ease;
 }
 
-.floating-button.whatsapp {
-  background-color: #25d366; /* WhatsApp green */
+.floating-button:hover img {
+  filter: brightness(2); /* Brightens the icon more on hover */
 }
 
-.floating-button.enquire {
-  background-color: #ff5722; /* Orange */
-}
+

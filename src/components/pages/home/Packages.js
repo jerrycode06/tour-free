@@ -48,10 +48,10 @@ class Packages extends Component {
       items: 3,
       loop: true, // Enables infinite scrolling
       margin: 20, // Space between items
-      smartSpeed: 1500, // Animation speed for transitions
-      autoplay: true, // Enables auto-scrolling
-      autoplayTimeout: 3000, // Delay between auto-scrolls (3 seconds)
-      autoplayHoverPause: true, // Pauses auto-scroll on hover
+      smartSpeed: 3000, // Animation speed for transitions
+      // autoplay: false, // Enables auto-scrolling
+      // autoplayTimeout: 3000, // Delay between auto-scrolls (3 seconds)
+      // autoplayHoverPause: true, // Pauses auto-scroll on hover
       dots: false, // Disable dots
       nav: true, // Enables navigation arrows
       navText: [

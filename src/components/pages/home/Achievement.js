@@ -23,7 +23,7 @@ class Achievement extends Component {
                        </div>
                    </div>
                    <div className="row">
-                       <div className="col-lg-3 col-md-6 col-sm-6 wow fadeInLeft animated" data-wow-duration="1500ms" data-wow-delay="0ms">
+                       <div className="col-lg-3 col-md-6 col-sm-6 wow fadeInLeft animated animated-card" data-wow-duration="1500ms" data-wow-delay="0ms">
                            <div className="achievement-card mt-30">
                                <div className="achievement-icon">
                                    <i className="flaticon-guide" />
@@ -32,7 +32,7 @@ class Achievement extends Component {
                                    guide</h5>
                            </div>
                        </div>
-                       <div className="col-lg-3 col-md-6 col-sm-6 wow fadeInLeft animated" data-wow-duration="1500ms" data-wow-delay="200ms">
+                       <div className="col-lg-3 col-md-6 col-sm-6 wow fadeInLeft animated animated-card" data-wow-duration="1500ms" data-wow-delay="200ms">
                            <div className="achievement-card mt-30">
                                <div className="achievement-icon">
                                    <i className="flaticon-trust" />
@@ -40,7 +40,7 @@ class Achievement extends Component {
                                <h5>Trusted travel agency</h5>
                            </div>
                        </div>
-                       <div className="col-lg-3 col-md-6 col-sm-6 wow fadeInLeft animated" data-wow-duration="1500ms" data-wow-delay="400ms">
+                       <div className="col-lg-3 col-md-6 col-sm-6 wow fadeInLeft animated animated-card" data-wow-duration="1500ms" data-wow-delay="400ms">
                            <div className="achievement-card mt-30">
                                <div className="achievement-icon">
                                    <i className="flaticon-experience" />
@@ -48,10 +48,10 @@ class Achievement extends Component {
                                <h5>Travel Experience</h5>
                            </div>
                        </div>
-                       <div className="col-lg-3 col-md-6 col-sm-6 wow fadeInLeft animated" data-wow-duration="1500ms" data-wow-delay="600ms">
+                       <div className="col-lg-3 col-md-6 col-sm-6 wow fadeInLeft animated animated-card" data-wow-duration="1500ms" data-wow-delay="600ms">
                            <div className="achievement-card mt-30">
                                <div className="achievement-icon">
-                                   <i className="flaticon-traveller" />
+                                   <i className="flaticon-traveller" style={{ transform: 'scale(0.3)' }}/>
                                </div>
                                <h5>Satisfied Travellers</h5>
                            </div>

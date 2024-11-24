@@ -261,7 +261,7 @@ class Footers extends Component {
             <div className="row">
               <div className="col-lg-4 col-md-12">
                 <div className="footer-info">
-                  <div className="footer-logo">
+                  {/* <div className="footer-logo">
                     <img
                       src={"https://deserthoppers.com/assets/images/logo.png"}
                       alt=""
@@ -269,10 +269,10 @@ class Footers extends Component {
                       width={150}
                       height={100}
                     />
-                  </div>
-                  <p>
+                  </div> */}
+                  {/* <p>
                     Travel with us and feel the best <br /> experience in Desert
-                  </p>
+                  </p> */}
                   {/* <div className="footer-social-icons">
                     <h5>Follow Us:</h5>
                     <ul>
@@ -306,34 +306,54 @@ class Footers extends Component {
               </div>
               <div className="col-lg-8 col-md-12">
                 <div className="row">
-                  <div className="col-lg-5 col-md-5 col-sm-7">
-                    <div className="footer-links">
-                      <h5 className="widget-title">Contact us</h5>
-                      <div className="contact-box">
-                        <span>
-                          <i className="bx bx-phone" />
-                        </span>
-                        <div>
-                          <a href="tel:+971-54-401-3834">+971-54-401-3834</a>
-                        </div>
-                      </div>
-                      {/* <div className="contact-box">
-                                                <span><i className="bx bx-mail-send" /></span>
-                                                <div>
-                                                    <a href="mailto:info@example.com">info@example.com</a>
-                                                    <a href="mailto:support@example.com">support@example.com</a>
-                                                </div>
-                                            </div>
-                                            <div className="contact-box">
-                                                <span><i className="bx bx-location-plus" /></span>
-                                                <div>
-                                                    <Link to={"#"}>2752 Willison Street <br />
-                                                        Eagan, United State</Link>
-                                                </div>
-                                            </div> */}
-                    </div>
-                  </div>
+
                   <div className="col-lg-3 col-md-3 col-sm-5">
+                  <div className="footer-links">
+                      <h5 className="widget-title">Popular Packages</h5>
+                      <div className="category-list">
+                        <ul>
+                          <li>
+                            <Link
+                              to={`${process.env.PUBLIC_URL}/package-details/10`}
+                              onClick={this.scrollTop}
+                            >
+                              &gt;&gt; Hotel With Burj Khalifa
+                            </Link>
+                          </li>
+                          <li>
+                            <Link
+                              to={`${process.env.PUBLIC_URL}/package-details/18`}
+                              onClick={this.scrollTop}
+                            >
+                              &gt;&gt; Abu Dhabi City Tour 
+                            </Link>
+                          </li>
+                          <li>
+                            <Link
+                              to={`${process.env.PUBLIC_URL}/package-details/19`}
+                              onClick={this.scrollTop}
+                            >
+                             &gt;&gt; Burj Khalifa and Abu Dhabi
+                            </Link>
+                            <Link
+                              to={`${process.env.PUBLIC_URL}/package-details/10`}
+                              onClick={this.scrollTop}
+                            >
+                             &gt;&gt; Dubai Basic City Tour
+                            </Link>
+                            <Link
+                              to={`${process.env.PUBLIC_URL}/package-details/11`}
+                              onClick={this.scrollTop}
+                            >
+                             &gt;&gt; Hotel Without Burj Khalifa
+                            </Link>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+
+
+
                     <div className="footer-links">
                       <h5 className="widget-title">Links</h5>
                       <div className="category-list">
@@ -343,7 +363,7 @@ class Footers extends Component {
                               to={`${process.env.PUBLIC_URL}`}
                               onClick={this.scrollTop}
                             >
-                              Home
+                              &gt;&gt; Home
                             </Link>
                           </li>
                           <li>
@@ -351,7 +371,7 @@ class Footers extends Component {
                               to={`${process.env.PUBLIC_URL}/contact`}
                               onClick={this.scrollTop}
                             >
-                              Contact us
+                              &gt;&gt; Contact us
                             </Link>
                           </li>
                           <li>
@@ -359,13 +379,42 @@ class Footers extends Component {
                               to={`${process.env.PUBLIC_URL}/destination`}
                               onClick={this.scrollTop}
                             >
-                              Destinations
+                             &gt;&gt; Destinations
                             </Link>
                           </li>
                         </ul>
                       </div>
                     </div>
                   </div>
+
+                  <div className="col-lg-5 col-md-5 col-sm-7">
+                    <div className="footer-links">
+                      {/* <h5 className="widget-title">Contact us</h5>
+                      <div className="contact-box">
+                        <span>
+                          <i className="bx bx-phone" />
+                        </span>
+                        <div>
+                          <a href="tel:+971-54-401-3834">+971-54-401-3834</a>
+                        </div>
+                      </div> */}
+                      <div className="contact-box">
+                                                <span><i className="bx bx-mail-send" /></span>
+                                                <div>
+                                                <a href="mailto:enquiry@deserthoppers.com"><b>enquiry@deserthoppers.com</b></a>
+                                                </div>
+                                            </div>
+                                            <div className="contact-box">
+                                                <span><i className="bx bx-location-plus" /></span>
+                                                <div>
+                                                    <Link to={"#"}><b>C13-28-370 Hamsah A Building <br/>
+                                                    Al Karama Dubai, United Arab Emirates (87556)</b></Link>
+                                                </div>
+                                            </div>
+                    </div>
+                  </div>
+
+
                   <div className="col-lg-4 col-md-4">
                     <div className="footer-links payment-links">
                       <h5 className="widget-title">We Accepts:</h5>

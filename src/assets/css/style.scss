@@ -71,7 +71,7 @@ body {
   margin-top: 120px;
 }
 .mt-100{
-  margin-top: 100px;
+  margin-top: 30px;
 }
 .mt-105{
   margin-top: 105px;
@@ -118,7 +118,7 @@ body {
 }
   
 .pt-105{
-  padding-top: 105px;
+  padding-top: 50px;
 }
   
 .pt-100{
@@ -1993,6 +1993,7 @@ input[type="date"] {
 }
 .achievement-card{
   padding: 20px;
+  width: 70%;
   text-align: center;
   background: $secondary-color;
   color: #fff;
@@ -2004,7 +2005,7 @@ border-radius: 5px;
     i{
       color: #fff;
       &::before{
-        font-size: 82px;
+        font-size: 70px;
       }
     }
   }
