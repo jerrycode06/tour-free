@@ -1,8 +1,8 @@
 import React from "react";
 import "../../assets/css/style.css"; // CSS file for styling
-import phoneIcon from '../../assets/images/call.png'; 
-import whatsappIcon from '../../assets/images//whatsapp-logo.png'; 
-import enquireIcon from '../../assets/images/enquire-now.png'; 
+import phoneIcon from "../../assets/images/call-us.png";
+import whatsappIcon from "../../assets/images/whatsapp.png";
+import enquireIcon from "../../assets/images/enquire.png";
 import { useState } from "react";
 
 const FloatingButtons = () => {
@@ -19,7 +19,7 @@ const FloatingButtons = () => {
       "_blank"
     );
   };
-  
+
   const [isModalOpen, setModalOpen] = useState(false);
 
   // Handle opening the modal
@@ -40,19 +40,30 @@ const FloatingButtons = () => {
   return (
     <div className="floating-buttons">
       <button className="floating-button" onClick={handlePhoneClick}>
-        <img src={phoneIcon} alt="Phone Icon" />
+        <img
+          src={phoneIcon}
+          alt="Phone Icon"
+          style={{ width: "80px", height: "80px" }}
+        />
       </button>
       <button className="floating-button" onClick={handleWhatsAppClick}>
         <img src={whatsappIcon} alt="WhatsApp Icon" />
       </button>
-      <button className="floating-button open-modal-btn"onClick={openModal}>
-        <img src={enquireIcon} alt="Enquire Icon" />
+      <button className="floating-button open-modal-btn" onClick={openModal}>
+        <img
+          src={enquireIcon}
+          alt="Enquire Icon"
+          style={{ width: "80px", height: "80px" }}
+        />
       </button>
 
       {/* Modal */}
       {isModalOpen && (
         <div className="modal-overlay">
-          <div className="contact-inputs p-100 enquiry-form" id="enquiry-form-id">
+          <div
+            className="contact-inputs p-100 enquiry-form"
+            id="enquiry-form-id"
+          >
             <div className="center enquiry-form-inside">
               <div className="contact-form">
                 <form name="trip-enquiry" method="post">
@@ -90,7 +101,12 @@ const FloatingButtons = () => {
                     </div>
                     <div className="col-lg-6">
                       <label htmlFor="when">Depart Date</label>
-                      <input type="date" placeholder="Depart" name="when" required />
+                      <input
+                        type="date"
+                        placeholder="Depart"
+                        name="when"
+                        required
+                      />
                     </div>
                     <div className="col-lg-12 d-flex justify-content-center">
                       <input type="submit" defaultValue="Submit Now" />
@@ -99,7 +115,9 @@ const FloatingButtons = () => {
                 </form>
               </div>
             </div>
-            <button className="close-modal-btn" onClick={closeModal}>X</button>
+            <button className="close-modal-btn" onClick={closeModal}>
+              X
+            </button>
           </div>
         </div>
       )}

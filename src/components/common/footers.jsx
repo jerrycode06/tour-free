@@ -208,7 +208,7 @@ class Footers extends Component {
                 <div className="newsletter-wrapper">
                   <h2>We are Social</h2>
                   <div className="new-social-container">
-                    <h4>Join the fun and share your experience</h4>
+                    <h4 style={{color: "black"}}>Join the fun and share your experience</h4>
                     <ul>
                       <li>
                         <a
@@ -216,28 +216,28 @@ class Footers extends Component {
                             "https://www.facebook.com/share/18BQscnH9K/?mibextid=LQQJ4d"
                           }
                         >
-                         <i className="bx bxl-facebook" style={{ color: '#FFD700' }} />
+                         <i className="bx bxl-facebook" style={{ color: '#304f47' }} />
 
                         </a>
                       </li>
                       <li>
                         <a href="https://www.instagram.com/deserthoppers">
-                          <i className="bx bxl-instagram" style={{ color: '#FFD700' }} />
+                          <i className="bx bxl-instagram" style={{ color: '#304f47' }} />
                         </a>
                       </li>
                       <li>
                         <a href="">
-                          <i className="bx bxl-twitter" style={{ color: '#FFD700' }}/>
+                          <i className="bx bxl-twitter" style={{ color: '#304f47' }}/>
                         </a>
                       </li>
                       <li>
                         <a href="">
-                          <i className="bx bxl-youtube" style={{ color: '#FFD700' }}/>
+                          <i className="bx bxl-youtube" style={{ color: '#304f47' }}/>
                         </a>
                       </li>
                       <li>
                         <a href="">
-                          <i className="bx bxl-linkedin" style={{ color: '#FFD700' }}/>
+                          <i className="bx bxl-linkedin" style={{ color: '#304f47' }}/>
                         </a>
                       </li>
                       {/* <li>
@@ -304,9 +304,8 @@ class Footers extends Component {
                   </div> */}
                 </div>
               </div>
-              <div className="col-lg-8 col-md-12">
+              <div className="col-lg-12 col-md-12">
                 <div className="row">
-
                   <div className="col-lg-3 col-md-3 col-sm-5">
                   <div className="footer-links">
                       <h5 className="widget-title">Popular Packages</h5>

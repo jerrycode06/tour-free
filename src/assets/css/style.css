@@ -501,16 +501,16 @@ a.btn-second {
 /* Button to open the modal */
 .open-modal-btn {
   padding: 10px 20px;
-  background-color: #007bff;
+  /* background-color: #007bff; */
   color: #fff;
   border: none;
   cursor: pointer;
   font-size: 16px;
-  border-radius: 4px;
+  /* border-radius: 4px; */
 }
 
 .open-modal-btn:hover {
-  background-color: #0056b3;
+  /* background-color: #0056b3; */
 }
 
 
@@ -3038,7 +3038,8 @@ header > .header-area .nav-right {
   max-width: 970px;
   margin: 0 auto;
   padding: 48px;
-  background: #304F47;
+  background: #f5f5f5;
+  color: black;
   -webkit-box-shadow: 0px 32px 64px rgba(17, 17, 17, 0.08);
           box-shadow: 0px 32px 64px rgba(17, 17, 17, 0.08);
   border-radius: 20px 20px 0px 0px;
@@ -3050,7 +3051,7 @@ header > .header-area .nav-right {
   font-size: 42px;
   line-height: 54px;
   text-transform: capitalize;
-  color: #FFFFFF;
+  color: black;
   max-width: 612px;
   margin: 0 auto;
   margin-bottom: 45px;
@@ -5703,18 +5704,18 @@ li.package-card-sm .package-info h5 span {
 }
 
 .floating-button {
-  /* background: rgba(255, 255, 255, 0.7);  White background with slight transparency */
-  border: none;                          /* Removes the default border */
-  border-radius: 50%;                    /* Keeps the circular shape */
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);  /* Adds shadow for better visibility */
+  background: none;
+  border: none;                         
+  /* border-radius: 50%;                  */
+  /* box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);   */
   cursor: pointer;
-  padding: 12px;                         /* Adjust padding to fit the icon properly */
+  /* padding: 12px;                          */
   transition: transform 0.2s ease;
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 60px;                           /* Set width for circular button */
-  height: 60px;                          /* Set height for circular button */
+  width: 60px;                           
+  height: 60px;                          
 }
 
 .floating-button:hover {
@@ -5722,10 +5723,10 @@ li.package-card-sm .package-info h5 span {
 }
 
 .floating-button img {
-  width: 40px;  /* Sets the width of the icon inside the button */
-  height: 40px; /* Sets the height of the icon inside the button */
+  width: 60px;  /* Sets the width of the icon inside the button */
+  height: 60px; /* Sets the height of the icon inside the button */
   object-fit: contain; /* Ensures the logo fits without distortion */
-  filter: brightness(1.5); /* Increases brightness of the icons */
+  /* filter: brightness(1.5);  */
   transition: filter 0.2s ease;
 }
 
