@@ -483,7 +483,7 @@ class Footers extends Component {
             </h1>
             <h2 className="text-xl text-white" style={{fontFamily:"Oswald", fontWeight:"600"}}>FOLLOW US</h2>
             <div className="flex gap-2  max-[650px]:justify-evenly max-[650px]:w-full ">
-              <span className="bg-orange-300 p-2 rounded-lg " href="https://www.facebook.com/share/18BQscnH9K/?mibextid=LQQJ4d">
+              <a className="bg-orange-300 p-2 rounded-lg " href="https://www.facebook.com/share/18BQscnH9K/?mibextid=LQQJ4d">
                 <img
                   src={svg1}
                   alt=""
@@ -491,8 +491,8 @@ class Footers extends Component {
                   width={20}
                   className="filter invert"
                 />
-              </span>
-              <span className="bg-orange-300 p-2 rounded-lg" href="https://www.instagram.com/deserthoppers">
+              </a>
+              <a className="bg-orange-300 p-2 rounded-lg" href="https://www.instagram.com/deserthoppers">
                 <img
                   src={svg2}
                   alt=""
@@ -500,7 +500,7 @@ class Footers extends Component {
                   width={20}
                   className="filter invert"
                 />
-              </span>
+              </a>
               <span className="bg-orange-300 p-2 rounded-lg" >
                 <img
                   src={svg3}
@@ -510,7 +510,7 @@ class Footers extends Component {
                   className="filter invert"
                 />
               </span>
-              <span className="bg-orange-300 p-2 rounded-lg" onclick={handleWhatsAppClick}>
+              <button className="bg-orange-300 p-2 rounded-lg" onClick={handleWhatsAppClick}>
                 <img
                   src={svg4}
                   alt=""
@@ -518,7 +518,7 @@ class Footers extends Component {
                   width={20}
                   className="filter invert"
                 />
-              </span>
+              </button>
             </div>
             <h2 className="text-xl text-white" style={{fontFamily:"Oswald", fontWeight:"600"}}>GET IN TOUCH</h2>
             <span className="text-center text-sm flex relative max-[650px]:w-[95%]">
