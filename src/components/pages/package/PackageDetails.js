@@ -570,7 +570,7 @@ function PackageDetails() {
                                   </div>
                                   <div className="timeline-content">
                                     <h5>DAY {day} : {getValue(`Day ${day}`).split(".")[0]}</h5>
-                                    <strong>10.00 AM to 10.00 PM</strong>
+                                    {/* <strong>10.00 AM to 10.00 PM</strong> */}
                                     <p>
                                     {getValue(`Day ${day}`)}
                                     </p>

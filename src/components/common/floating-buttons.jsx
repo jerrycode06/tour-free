@@ -1,18 +1,18 @@
 import React from "react";
 import "../../assets/css/style.css"; // CSS file for styling
 import phoneIcon from "../../assets/images/call-us.png";
-import whatsappIcon from "../../assets/images/whatsapp.png";
-import enquireIcon from "../../assets/images/enquire.png";
+import whatsappIcon from "../../assets/images/links/whatsapp-button.png";
+import enquireIcon from "../../assets/images/links/enq.png"
 import { useState } from "react";
 
 const FloatingButtons = () => {
   // Handlers
   const handlePhoneClick = () => {
-    window.location.href = "tel:+919990766146"; // Replace with your phone number
+    window.location.href = "tel:+918447510420"; // Replace with your phone number
   };
 
   const handleWhatsAppClick = () => {
-    const phoneNumber = "+919990766146"; // Replace with the WhatsApp number
+    const phoneNumber = "+918447510420"; // Replace with the WhatsApp number
     const message = "Hello, I would like to enquire about your services."; // Default message
     window.open(
       `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`,
@@ -38,22 +38,22 @@ const FloatingButtons = () => {
   };
 
   return (
-    <div className="floating-buttons">
-      <button className="floating-button" onClick={handlePhoneClick}>
+    <div className="z-10 fixed flex gap-3 w-full justify-center items-center bottom-2">
+      <button onClick={handlePhoneClick}>
         <img
           src={phoneIcon}
           alt="Phone Icon"
-          style={{ width: "80px", height: "80px" }}
+          style={{ width: "100px", height: "40px" }}
         />
       </button>
       <button className="floating-button" onClick={handleWhatsAppClick}>
         <img src={whatsappIcon} alt="WhatsApp Icon" />
       </button>
-      <button className="floating-button open-modal-btn" onClick={openModal}>
+      <button onClick={openModal}>
         <img
           src={enquireIcon}
           alt="Enquire Icon"
-          style={{ width: "80px", height: "80px" }}
+          style={{ width: "100px", height: "60px" }}
         />
       </button>
 

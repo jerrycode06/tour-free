@@ -49,24 +49,24 @@ class Packages extends Component {
       loop: true, // Enables infinite scrolling
       margin: 20, // Space between items
       smartSpeed: 3000, // Animation speed for transitions
-      // autoplay: false, // Enables auto-scrolling
+      // autoplay: true, // Enables auto-scrolling
       // autoplayTimeout: 3000, // Delay between auto-scrolls (3 seconds)
       // autoplayHoverPause: true, // Pauses auto-scroll on hover
       dots: false, // Disable dots
       nav: true, // Enables navigation arrows
       navText: [
-        "<i class='bx bx-chevron-left'></i>",
-        "<i class='bx bx-chevron-right'></i>",
+        "<i class='bx bx-chevron-left bg-black'></i>",
+        "<i class='bx bx-chevron-right bg-black''></i>",
       ],
       responsive: {
         0: {
           items: 1, // Items to display on small screens
-          nav: false,
+          nav: true,
           dots: false,
         },
         600: {
           items: 2, // Items to display on medium screens
-          nav: false,
+          nav: true,
           dots: false,
         },
         1000: {
@@ -76,7 +76,7 @@ class Packages extends Component {
         },
       },
     };
-    
+
     return (
       <>
         {/* ===============  Package  area start =============== */}
@@ -103,7 +103,7 @@ class Packages extends Component {
                     <div className="package-details">
                       <div className="package-info">
                         <h5>
-                          <span>$452</span>/Per Person
+                          <span>AED452</span>/Per Person
                         </h5>
                         <h5>
                           <i className="flaticon-calendar" />3 night/4 days
@@ -140,7 +140,7 @@ class Packages extends Component {
                     <div className="package-details">
                       <div className="package-info">
                         <h5>
-                          <span>$535</span>/Per Person
+                          <span>AED535</span>/Per Person
                         </h5>
                         <h5>
                           <i className="flaticon-calendar" />3 night/4 days
@@ -176,7 +176,7 @@ class Packages extends Component {
                     <div className="package-details">
                       <div className="package-info">
                         <h5>
-                          <span>$312</span>/Per Person
+                          <span>AED312</span>/Per Person
                         </h5>
                         <h5>
                           <i className="flaticon-calendar" />3 night/4 days
@@ -210,7 +210,7 @@ class Packages extends Component {
                     <div className="package-details">
                       <div className="package-info">
                         <h5>
-                          <span>$395</span>/Per Person
+                          <span>AED395</span>/Per Person
                         </h5>
                         <h5>
                           <i className="flaticon-calendar" />3 night/4 days
@@ -246,7 +246,7 @@ class Packages extends Component {
                     <div className="package-details">
                       <div className="package-info">
                         <h5>
-                          <span>$512</span>/Per Person
+                          <span>AED512</span>/Per Person
                         </h5>
                         <h5>
                           <i className="flaticon-calendar" />3 night/4 days
@@ -282,7 +282,7 @@ class Packages extends Component {
                     <div className="package-details">
                       <div className="package-info">
                         <h5>
-                          <span>$640</span>/Per Person
+                          <span>AED640</span>/Per Person
                         </h5>
                         <h5>
                           <i className="flaticon-calendar" />4 night/5 days
@@ -319,7 +319,7 @@ class Packages extends Component {
                     <div className="package-details">
                       <div className="package-info">
                         <h5>
-                          <span>$558</span>/Per Person
+                          <span>AED558</span>/Per Person
                         </h5>
                         <h5>
                           <i className="flaticon-calendar" />4 night/5 days
@@ -356,7 +356,7 @@ class Packages extends Component {
                     <div className="package-details">
                       <div className="package-info">
                         <h5>
-                          <span>$610</span>/Per Person
+                          <span>AED610</span>/Per Person
                         </h5>
                         <h5>
                           <i className="flaticon-calendar" />4 night/5 days
@@ -391,7 +391,7 @@ class Packages extends Component {
                     <div className="package-details">
                       <div className="package-info">
                         <h5>
-                          <span>$530</span>/Per Person
+                          <span>AED530</span>/Per Person
                         </h5>
                         <h5>
                           <i className="flaticon-calendar" />4 night/5 days
@@ -427,7 +427,7 @@ class Packages extends Component {
                     <div className="package-details">
                       <div className="package-info">
                         <h5>
-                          <span>$458</span>/Per Person
+                          <span>AED458</span>/Per Person
                         </h5>
                         <h5>
                           <i className="flaticon-calendar" />4 night/5 days
@@ -461,7 +461,7 @@ class Packages extends Component {
                     <div className="package-details">
                       <div className="package-info">
                         <h5>
-                          <span>$376</span>/Per Person
+                          <span>AED376</span>/Per Person
                         </h5>
                         <h5>
                           <i className="flaticon-calendar" />4 night/5 days
@@ -495,7 +495,7 @@ class Packages extends Component {
                     <div className="package-details">
                       <div className="package-info">
                         <h5>
-                          <span>$525</span>/Per Person
+                          <span>AED525</span>/Per Person
                         </h5>
                         <h5>
                           <i className="flaticon-calendar" />5 night/6 days
@@ -530,7 +530,7 @@ class Packages extends Component {
                     <div className="package-details">
                       <div className="package-info">
                         <h5>
-                          <span>$565</span>/Per Person
+                          <span>AED565</span>/Per Person
                         </h5>
                         <h5>
                           <i className="flaticon-calendar" />5 night/6 days
@@ -565,7 +565,7 @@ class Packages extends Component {
                     <div className="package-details">
                       <div className="package-info">
                         <h5>
-                          <span>$482</span>/Per Person
+                          <span>AED482</span>/Per Person
                         </h5>
                         <h5>
                           <i className="flaticon-calendar" />5 night/6 days
@@ -599,7 +599,7 @@ class Packages extends Component {
                     <div className="package-details">
                       <div className="package-info">
                         <h5>
-                          <span>$710</span>/Per Person
+                          <span>AED710</span>/Per Person
                         </h5>
                         <h5>
                           <i className="flaticon-calendar" />5 night/6 days
@@ -638,7 +638,7 @@ class Packages extends Component {
                     <div className="package-details">
                       <div className="package-info">
                         <h5>
-                          <span>$750</span>/Per Person
+                          <span>AED750</span>/Per Person
                         </h5>
                         <h5>
                           <i className="flaticon-calendar" />5 night/6 days
@@ -676,7 +676,7 @@ class Packages extends Component {
                     <div className="package-details">
                       <div className="package-info">
                         <h5>
-                          <span>$670</span>/Per Person
+                          <span>AED670</span>/Per Person
                         </h5>
                         <h5>
                           <i className="flaticon-calendar" />5 night/6 days
@@ -714,7 +714,7 @@ class Packages extends Component {
                     <div className="package-details">
                       <div className="package-info">
                         <h5>
-                          <span>$745</span>/Per Person
+                          <span>AED745</span>/Per Person
                         </h5>
                         <h5>
                           <i className="flaticon-calendar" />6 Days and 5 night
@@ -752,7 +752,7 @@ class Packages extends Component {
                     <div className="package-details">
                       <div className="package-info">
                         <h5>
-                          <span>$786</span>/Per Person
+                          <span>AED786</span>/Per Person
                         </h5>
                         <h5>
                           <i className="flaticon-calendar" />5 night/6 days
@@ -791,7 +791,7 @@ class Packages extends Component {
                     <div className="package-details">
                       <div className="package-info">
                         <h5>
-                          <span>$705</span>/Per Person
+                          <span>AED705</span>/Per Person
                         </h5>
                         <h5>
                           <i className="flaticon-calendar" />5 night/6 days
@@ -830,7 +830,7 @@ class Packages extends Component {
                     <div className="package-details">
                       <div className="package-info">
                         <h5>
-                          <span>$505</span>/Per Person
+                          <span>AED505</span>/Per Person
                         </h5>
                         <h5>
                           <i className="flaticon-calendar" />6 night/7 days
@@ -866,7 +866,7 @@ class Packages extends Component {
                     <div className="package-details">
                       <div className="package-info">
                         <h5>
-                          <span>$545</span>/Per Person
+                          <span>AED545</span>/Per Person
                         </h5>
                         <h5>
                           <i className="flaticon-calendar" />6 night/7 days
@@ -902,7 +902,7 @@ class Packages extends Component {
                     <div className="package-details">
                       <div className="package-info">
                         <h5>
-                          <span>$626</span>/Per Person
+                          <span>AED626</span>/Per Person
                         </h5>
                         <h5>
                           <i className="flaticon-calendar" />6 night/7 days
@@ -938,7 +938,7 @@ class Packages extends Component {
                     <div className="package-details">
                       <div className="package-info">
                         <h5>
-                          <span>$585</span>/Per Person
+                          <span>AED585</span>/Per Person
                         </h5>
                         <h5>
                           <i className="flaticon-calendar" />6 night/7 days
@@ -974,7 +974,7 @@ class Packages extends Component {
                     <div className="package-details">
                       <div className="package-info">
                         <h5>
-                          <span>$725</span>/Per Person
+                          <span>AED725</span>/Per Person
                         </h5>
                         <h5>
                           <i className="flaticon-calendar" />6 night/7 days
@@ -1011,7 +1011,7 @@ class Packages extends Component {
                     <div className="package-details">
                       <div className="package-info">
                         <h5>
-                          <span>$765</span>/Per Person
+                          <span>AED765</span>/Per Person
                         </h5>
                         <h5>
                           <i className="flaticon-calendar" />6 night/7 days
@@ -1049,7 +1049,7 @@ class Packages extends Component {
                     <div className="package-details">
                       <div className="package-info">
                         <h5>
-                          <span>$848</span>/Per Person
+                          <span>AED848</span>/Per Person
                         </h5>
                         <h5>
                           <i className="flaticon-calendar" />6 night/7 days
@@ -1087,7 +1087,7 @@ class Packages extends Component {
                     <div className="package-details">
                       <div className="package-info">
                         <h5>
-                          <span>$807</span>/Per Person
+                          <span>AED807</span>/Per Person
                         </h5>
                         <h5>
                           <i className="flaticon-calendar" />6 night/7 days
@@ -1125,7 +1125,7 @@ class Packages extends Component {
                     <div className="package-details">
                       <div className="package-info">
                         <h5>
-                          <span>$768</span>/Per Person
+                          <span>AED768</span>/Per Person
                         </h5>
                         <h5>
                           <i className="flaticon-calendar" />6 night/7 days
@@ -1164,7 +1164,7 @@ class Packages extends Component {
                     <div className="package-details">
                       <div className="package-info">
                         <h5>
-                          <span>$810</span>/Per Person
+                          <span>AED810</span>/Per Person
                         </h5>
                         <h5>
                           <i className="flaticon-calendar" />6 night/7 days
@@ -1203,7 +1203,7 @@ class Packages extends Component {
                     <div className="package-details">
                       <div className="package-info">
                         <h5>
-                          <span>$892</span>/Per Person
+                          <span>AED892</span>/Per Person
                         </h5>
                         <h5>
                           <i className="flaticon-calendar" />6 night/7 days
@@ -1242,7 +1242,7 @@ class Packages extends Component {
                     <div className="package-details">
                       <div className="package-info">
                         <h5>
-                          <span>$850</span>/Per Person
+                          <span>AED850</span>/Per Person
                         </h5>
                         <h5>
                           <i className="flaticon-calendar" />6 night/7 days

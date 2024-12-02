@@ -12,6 +12,14 @@ class AboutUs extends Component {
     });
   }
   render() {
+    const handleWhatsAppClick = () => {
+      const phoneNumber = "+918447510420"; // Replace with the WhatsApp number
+      const message = "Hello, I would like to enquire about your services."; // Default message
+      window.open(
+        `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`,
+        "_blank"
+      );
+    }
     return (
       <>
         {/* ===============  breadcrumb area start =============== */}
@@ -77,6 +85,11 @@ class AboutUs extends Component {
                           <a href={"https://www.facebook.com/share/18BQscnH9K/?mibextid=LQQJ4d"}>
                             <i className="bx bxl-facebook" />
                           </a>
+                        </li>
+                        <li>
+                          <Link onClick={handleWhatsAppClick}>
+                            <i className="bx bxl-whatsapp" />
+                          </Link>
                         </li>
                         {/* <li>
                           <Link to={"#"}>

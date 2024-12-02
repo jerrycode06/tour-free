@@ -1,6 +1,14 @@
 import React, { Component } from "react";
 import { Link } from "react-router-dom";
 import $ from "jquery";
+import svg1 from "../../assets/images/links/facebook-176-svgrepo-com.svg";
+import svg2 from "../../assets/images/links/instagram-svgrepo-com.svg";
+import svg3 from "../../assets/images/links/linkedin-svgrepo-com.svg";
+import svg4 from "../../assets/images/links/whatsapp-svgrepo-com.svg";
+import svg5 from "../../assets/images/links/address-location-map-svgrepo-com.png"
+import svg6 from "../../assets/images/links/phone-call-svgrepo-com.png"
+import svg7 from "../../assets/images/links/mail-svgrepo-com.png"
+
 
 //Import Image
 import secondLogo from "../../assets/images/logo-2.png";
@@ -198,10 +206,18 @@ class Footers extends Component {
     });
   }
   render() {
+    const handleWhatsAppClick = () => {
+      const phoneNumber = "+918447510420"; // Replace with the WhatsApp number
+      const message = "Hello, I would like to enquire about your services."; // Default message
+      window.open(
+        `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`,
+        "_blank"
+      );
+    }
     return (
       <>
         {/* ===============  Newsletter area start =============== */}
-        <div className="newsletter-area pt-120">
+        {/* <div className="newsletter-area pt-120">
           <div className="container">
             <div className="row">
               <div className="col-lg-12 col-md-12">
@@ -246,22 +262,22 @@ class Footers extends Component {
                                             <li>
                                                 <Link to={"#"}><i className="bx bxl-dribbble" /></Link>
                                             </li> */}
-                    </ul>
+        {/* </ul>
                   </div>
                 </div>
               </div>
             </div>
-          </div>
-        </div>
+          </div> */}
+        {/* </div> */}
         {/* ===============  Newsletter area end =============== */}
 
         {/* ==============  Footer area start================= */}
-        <div className="footer-area">
+        {/* <div className="footer-area">
           <div className="container">
             <div className="row">
               <div className="col-lg-4 col-md-12">
-                <div className="footer-info">
-                  {/* <div className="footer-logo">
+                <div className="footer-info"> */}
+        {/* <div className="footer-logo">
                     <img
                       src={"https://deserthoppers.com/assets/images/logo.png"}
                       alt=""
@@ -270,10 +286,10 @@ class Footers extends Component {
                       height={100}
                     />
                   </div> */}
-                  {/* <p>
+        {/* <p>
                     Travel with us and feel the best <br /> experience in Desert
                   </p> */}
-                  {/* <div className="footer-social-icons">
+        {/* <div className="footer-social-icons">
                     <h5>Follow Us:</h5>
                     <ul>
                       <li>
@@ -302,7 +318,7 @@ class Footers extends Component {
                       </li>
                     </ul>
                   </div> */}
-                </div>
+        {/* </div>
               </div>
               <div className="col-lg-12 col-md-12">
                 <div className="row">
@@ -316,7 +332,7 @@ class Footers extends Component {
                               to={`${process.env.PUBLIC_URL}/package-details/10`}
                               onClick={this.scrollTop}
                             >
-                              &gt;&gt; Hotel With Burj Khalifa
+                               Hotel With Burj Khalifa
                             </Link>
                           </li>
                           <li>
@@ -324,7 +340,7 @@ class Footers extends Component {
                               to={`${process.env.PUBLIC_URL}/package-details/18`}
                               onClick={this.scrollTop}
                             >
-                              &gt;&gt; Abu Dhabi City Tour 
+                              Abu Dhabi City Tour 
                             </Link>
                           </li>
                           <li>
@@ -384,11 +400,11 @@ class Footers extends Component {
                         </ul>
                       </div>
                     </div>
-                  </div>
+                  </div> */}
 
-                  <div className="col-lg-5 col-md-5 col-sm-7">
-                    <div className="footer-links">
-                      {/* <h5 className="widget-title">Contact us</h5>
+        {/* <div className="col-lg-5 col-md-5 col-sm-7">
+                    <div className="footer-links"> */}
+        {/* <h5 className="widget-title">Contact us</h5>
                       <div className="contact-box">
                         <span>
                           <i className="bx bx-phone" />
@@ -397,8 +413,8 @@ class Footers extends Component {
                           <a href="tel:+971-54-401-3834">+971-54-401-3834</a>
                         </div>
                       </div> */}
-                      <div className="contact-box">
-                                                <span><i className="bx bx-mail-send" /></span>
+        {/* <div className="contact-box"> */}
+        {/* <span><i className="bx bx-mail-send" /></span>
                                                 <div>
                                                 <a href="mailto:enquiry@deserthoppers.com"><b>enquiry@deserthoppers.com</b></a>
                                                 </div>
@@ -457,6 +473,140 @@ class Footers extends Component {
                   </p>
                 </div>
               </div>
+            </div>
+          </div>
+        </div> */}
+        <div className="bg-black max-[650px]:h-screen text-white flex justify-center py-[70px]">
+          <div className="w-[80%] flex flex-col items-center gap-3">
+            <h1 className="text-3xl font-extrabold" >
+              Desert <span className="text-orange-300">Hoopers</span>
+            </h1>
+            <h2 className="text-xl text-white" style={{fontFamily:"Oswald", fontWeight:"600"}}>FOLLOW US</h2>
+            <div className="flex gap-2  max-[650px]:justify-evenly max-[650px]:w-full ">
+              <span className="bg-orange-300 p-2 rounded-lg " href="https://www.facebook.com/share/18BQscnH9K/?mibextid=LQQJ4d">
+                <img
+                  src={svg1}
+                  alt=""
+                  height={20}
+                  width={20}
+                  className="filter invert"
+                />
+              </span>
+              <span className="bg-orange-300 p-2 rounded-lg" href="https://www.instagram.com/deserthoppers">
+                <img
+                  src={svg2}
+                  alt=""
+                  height={20}
+                  width={20}
+                  className="filter invert"
+                />
+              </span>
+              <span className="bg-orange-300 p-2 rounded-lg" >
+                <img
+                  src={svg3}
+                  alt=""
+                  height={20}
+                  width={20}
+                  className="filter invert"
+                />
+              </span>
+              <span className="bg-orange-300 p-2 rounded-lg" onclick={handleWhatsAppClick}>
+                <img
+                  src={svg4}
+                  alt=""
+                  height={20}
+                  width={20}
+                  className="filter invert"
+                />
+              </span>
+            </div>
+            <h2 className="text-xl text-white" style={{fontFamily:"Oswald", fontWeight:"600"}}>GET IN TOUCH</h2>
+            <span className="text-center text-sm flex relative max-[650px]:w-[95%]">
+              <img src={svg5} alt="" height={18} width={18} className="absolute left-6"/> C13-28-370 Hamsah A Building <br />
+              Al Karama Dubai, United Arab Emirates (87556)
+            </span>
+            <span className="text-center text-sm flex gap-2">
+              <img src={svg6} alt="" height={18} width={18} /> <a href="tel:+971-54-401-3834">+971-54-401-3834</a>
+            </span>
+            <span className="text-center text-sm flex gap-2">
+              <img src={svg7} alt="" height={18} width={18}/> <a href="mailto:enquiry@deserthoppers.com">
+                enquiry@deserthoppers.com
+              </a>
+            </span>
+            <div className="flex gap-[100px] max-[650px]:block">
+              <div className="flex flex-col pb-3">
+                <h5 className="text-2xl font-bold pb-3" style={{fontFamily:"Oswald", fontWeight:"600"}}>Popular Packages</h5>
+                  <ul className="flex flex-col text-orange-300 font-bold ">
+                    <li className="">
+                      <Link
+                        to={`${process.env.PUBLIC_URL}/package-details/10`}
+                        onClick={this.scrollTop}
+                      >
+                        Hotel With Burj Khalifa
+                      </Link>
+                    </li>
+                    <li>
+                      <Link
+                        to={`${process.env.PUBLIC_URL}/package-details/18`}
+                        onClick={this.scrollTop}
+                      >
+                        Abu Dhabi City Tour
+                      </Link>
+                    </li>
+                    <li>
+                      <Link
+                        to={`${process.env.PUBLIC_URL}/package-details/19`}
+                        onClick={this.scrollTop}
+                      >
+                        Burj Khalifa and Abu Dhabi
+                      </Link>
+                      
+                      <li>
+                      <Link
+                        to={`${process.env.PUBLIC_URL}/package-details/10`}
+                        onClick={this.scrollTop}
+                      >
+                        Dubai Basic City Tour
+                      </Link>
+                      </li>
+                      <Link
+                        to={`${process.env.PUBLIC_URL}/package-details/11`}
+                        onClick={this.scrollTop}
+                      >
+                        Hotel Without Burj Khalifa
+                      </Link>
+                    </li>
+                  </ul>
+              </div>
+            <div>
+              <h2 className="text-xl text-white pb-3 " style={{fontFamily:"Oswald", fontWeight:"600"}}>QUICK LINKS</h2>
+              <ul className="text-orange-300 font-bold ">
+                <li>
+                  <Link
+                    to={`${process.env.PUBLIC_URL}`}
+                    onClick={this.scrollTop}
+                  >
+                    Home
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                    to={`${process.env.PUBLIC_URL}/contact`}
+                    onClick={this.scrollTop}
+                  >
+                    Contact us
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                    to={`${process.env.PUBLIC_URL}/destination`}
+                    onClick={this.scrollTop}
+                  >
+                    Destinations
+                  </Link>
+                </li>
+              </ul>
+            </div>
             </div>
           </div>
         </div>

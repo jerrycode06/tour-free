@@ -7,6 +7,7 @@ import Features from "./Features";
 import Review from "./Review";
 import Enquiry from "./Enquiry";
 import Achievement from "./Achievement";
+import International from "./International";
 
 //Define Default Content
 class HomePage extends Component {
@@ -16,7 +17,7 @@ class HomePage extends Component {
   }
   render() {
     return (
-      <div>
+      <div className="pb-[70px]">
         {/* Start Preloader Area */}
         <div className="preloader">
           <div className="loader loader1">
@@ -49,7 +50,7 @@ class HomePage extends Component {
         <MainBanner />
         <Packages />
         <Destinations />
-        <Achievement />
+        <International/>
         {/* <Review /> */}
         {/* <Features /> */}
         {/* <Blog /> */}

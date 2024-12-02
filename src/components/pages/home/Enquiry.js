@@ -37,12 +37,17 @@ const Enquiry = () => {
                 />
               </div>
               <div className="col-lg-6">
+                <label htmlFor="when">Child age</label>
+                <input type="number" placeholder="child age" name="no" required />
+              </div>
+              <div className="col-lg-6">
                 <label htmlFor="when">Depart Date</label>
                 <input type="date" placeholder="Depart" name="when" required />
               </div>
               <div className="col-lg-12 d-flex justify-content-center">
                 <input type="submit" defaultValue="Submit Now" />
               </div>
+              
             </div>
           </form>
         </div>
