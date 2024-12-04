@@ -24,7 +24,7 @@ function PackageDetails() {
 
   useEffect(() => {
     scrollTop();
-  }, [internationalPackageData])
+  }, [internationalPackageData, id])
 
   const getValue = (key) => {
     console.log({nik: packageData})
@@ -36,6 +36,12 @@ function PackageDetails() {
     }
     return foundItem ? foundItem[key] : "Miss"; // Handle missing keys or items
   }
+
+  const extractPrice = (str) => {
+    const match = str.match(/USD\s+(\d+)/);
+    return match ? parseInt(match[1], 10) : null;
+  }
+
   console.log({nik: packageData})
     return (
       <>
@@ -61,7 +67,7 @@ function PackageDetails() {
                   </div> */}
                   <div className="package-header">
                     <div className="package-title">
-                      <h3>{getValue("name")}</h3>
+                      <h3>{getValue("name")} - <br/>AED {extractPrice(getValue("Price"))}/person</h3>
                       <strong>
                         <i className="flaticon-arrival" />
                         {getValue("Destination Name")}

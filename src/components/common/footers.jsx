@@ -5,18 +5,10 @@ import svg1 from "../../assets/images/links/facebook-176-svgrepo-com.svg";
 import svg2 from "../../assets/images/links/instagram-svgrepo-com.svg";
 import svg3 from "../../assets/images/links/linkedin-svgrepo-com.svg";
 import svg4 from "../../assets/images/links/whatsapp-svgrepo-com.svg";
-import svg5 from "../../assets/images/links/address-location-map-svgrepo-com.png"
-import svg6 from "../../assets/images/links/phone-call-svgrepo-com.png"
-import svg7 from "../../assets/images/links/mail-svgrepo-com.png"
-
-
-//Import Image
-import secondLogo from "../../assets/images/logo-2.png";
-import paymentCard1Img from "../../assets/images/payment/payment-card-1.png";
-import paymentCard2Img from "../../assets/images/payment/payment-card-2.png";
-import paymentCard3Img from "../../assets/images/payment/payment-card-3.png";
-import paymentCard4Img from "../../assets/images/payment/payment-card-4.png";
-import paymentCard5Img from "../../assets/images/payment/payment-card-5.png";
+import svg5 from "../../assets/images/links/address-location-map-svgrepo-com.png";
+import svg6 from "../../assets/images/links/phone-call-svgrepo-com.png";
+import svg7 from "../../assets/images/links/mail-svgrepo-com.png";
+import PackagesData from "../../dessert-hopper-data.json";
 
 class Footers extends Component {
   //Inherited Parent options.
@@ -195,16 +187,13 @@ class Footers extends Component {
     });
   }
 
-  //Set data
-  componentWillMount() {}
-  //Un set data
-  componentWillUnmount() {}
   scrollTop() {
     window.scrollTo({
       top: 0,
       behavior: "smooth",
     });
   }
+  
   render() {
     const handleWhatsAppClick = () => {
       const phoneNumber = "+918447510420"; // Replace with the WhatsApp number
@@ -213,277 +202,52 @@ class Footers extends Component {
         `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`,
         "_blank"
       );
-    }
+    };
     return (
       <>
         {/* ===============  Newsletter area start =============== */}
-        {/* <div className="newsletter-area pt-120">
+        <div className="newsletter-area">
           <div className="container">
             <div className="row">
               <div className="col-lg-12 col-md-12">
                 <div className="newsletter-wrapper">
-                  <h2>We are Social</h2>
+                  <h2>Terms and Conditions</h2>
                   <div className="new-social-container">
-                    <h4 style={{color: "black"}}>Join the fun and share your experience</h4>
-                    <ul>
-                      <li>
-                        <a
-                          href={
-                            "https://www.facebook.com/share/18BQscnH9K/?mibextid=LQQJ4d"
-                          }
-                        >
-                         <i className="bx bxl-facebook" style={{ color: '#304f47' }} />
-
-                        </a>
-                      </li>
-                      <li>
-                        <a href="https://www.instagram.com/deserthoppers">
-                          <i className="bx bxl-instagram" style={{ color: '#304f47' }} />
-                        </a>
-                      </li>
-                      <li>
-                        <a href="">
-                          <i className="bx bxl-twitter" style={{ color: '#304f47' }}/>
-                        </a>
-                      </li>
-                      <li>
-                        <a href="">
-                          <i className="bx bxl-youtube" style={{ color: '#304f47' }}/>
-                        </a>
-                      </li>
-                      <li>
-                        <a href="">
-                          <i className="bx bxl-linkedin" style={{ color: '#304f47' }}/>
-                        </a>
-                      </li>
-                      {/* <li>
-                                                <Link to={"#"}><i className="bx bxl-twitter" /></Link>
-                                            </li>
-                                            <li>
-                                                <Link to={"#"}><i className="bx bxl-dribbble" /></Link>
-                                            </li> */}
-        {/* </ul>
+                    <ol type="a">
+                      <li>1) The above rates are quoted in AED, Nett and non-commissionable to you.</li>
+                      <li>2) Above is just an offer and we are not holding any booking against this query.</li>
+                      <li>3) All services/rooms are subject to availability at the time of receiving final confirmation from your end.</li>
+                      <li>4) The above quote is valid only for this query and may vary in case the number of passengers change.</li>
+                      <li>5) Please be reminded that all special requests like early check-in, smoking, nonsmoking, views, floors, king, twin, adjoining / interconnecting rooms are strictly subject to availability upon arrival and same cannot be guaranteed prior.</li>
+                      <li>6) If the Hotel or Suppliers change their Quote for the services that they offer, the same will be forwarded to your Company.</li>
+                      <li>7) Burj Khalifa tour once booked cannot be cancelled, also be informed the Burj Khalifa tour charge is nonrefundable and non-transferable.</li>
+                      <li>8) Kindly note that during Major Exhibitions/Events additional surcharge will be applicable, Surcharge may vary depending on the Hotels and will be advised at the time of final confirmation.</li>
+                    </ol>
                   </div>
-                </div>
-              </div>
-            </div>
-          </div> */}
-        {/* </div> */}
-        {/* ===============  Newsletter area end =============== */}
-
-        {/* ==============  Footer area start================= */}
-        {/* <div className="footer-area">
-          <div className="container">
-            <div className="row">
-              <div className="col-lg-4 col-md-12">
-                <div className="footer-info"> */}
-        {/* <div className="footer-logo">
-                    <img
-                      src={"https://deserthoppers.com/assets/images/logo.png"}
-                      alt=""
-                      className="img-fluid"
-                      width={150}
-                      height={100}
-                    />
-                  </div> */}
-        {/* <p>
-                    Travel with us and feel the best <br /> experience in Desert
-                  </p> */}
-        {/* <div className="footer-social-icons">
-                    <h5>Follow Us:</h5>
-                    <ul>
-                      <li>
-                        <a
-                          href={
-                            "https://www.facebook.com/share/18BQscnH9K/?mibextid=LQQJ4d"
-                          }
-                        >
-                          <i className="bx bxl-facebook" />
-                        </a>
-                      </li>
-                      <li>
-                        <a href="https://www.instagram.com/deserthoppers">
-                          <i className="bx bxl-instagram" />
-                        </a>
-                      </li>
-                      <li>
-                        <Link to={"#"}>
-                          <i className="bx bxl-twitter" />
-                        </Link>
-                      </li>
-                      <li>
-                        <Link to={"#"}>
-                          <i className="bx bxl-dribbble" />
-                        </Link>
-                      </li>
-                    </ul>
-                  </div> */}
-        {/* </div>
-              </div>
-              <div className="col-lg-12 col-md-12">
-                <div className="row">
-                  <div className="col-lg-3 col-md-3 col-sm-5">
-                  <div className="footer-links">
-                      <h5 className="widget-title">Popular Packages</h5>
-                      <div className="category-list">
-                        <ul>
-                          <li>
-                            <Link
-                              to={`${process.env.PUBLIC_URL}/package-details/10`}
-                              onClick={this.scrollTop}
-                            >
-                               Hotel With Burj Khalifa
-                            </Link>
-                          </li>
-                          <li>
-                            <Link
-                              to={`${process.env.PUBLIC_URL}/package-details/18`}
-                              onClick={this.scrollTop}
-                            >
-                              Abu Dhabi City Tour 
-                            </Link>
-                          </li>
-                          <li>
-                            <Link
-                              to={`${process.env.PUBLIC_URL}/package-details/19`}
-                              onClick={this.scrollTop}
-                            >
-                             &gt;&gt; Burj Khalifa and Abu Dhabi
-                            </Link>
-                            <Link
-                              to={`${process.env.PUBLIC_URL}/package-details/10`}
-                              onClick={this.scrollTop}
-                            >
-                             &gt;&gt; Dubai Basic City Tour
-                            </Link>
-                            <Link
-                              to={`${process.env.PUBLIC_URL}/package-details/11`}
-                              onClick={this.scrollTop}
-                            >
-                             &gt;&gt; Hotel Without Burj Khalifa
-                            </Link>
-                          </li>
-                        </ul>
-                      </div>
-                    </div>
-
-
-
-                    <div className="footer-links">
-                      <h5 className="widget-title">Links</h5>
-                      <div className="category-list">
-                        <ul>
-                          <li>
-                            <Link
-                              to={`${process.env.PUBLIC_URL}`}
-                              onClick={this.scrollTop}
-                            >
-                              &gt;&gt; Home
-                            </Link>
-                          </li>
-                          <li>
-                            <Link
-                              to={`${process.env.PUBLIC_URL}/contact`}
-                              onClick={this.scrollTop}
-                            >
-                              &gt;&gt; Contact us
-                            </Link>
-                          </li>
-                          <li>
-                            <Link
-                              to={`${process.env.PUBLIC_URL}/destination`}
-                              onClick={this.scrollTop}
-                            >
-                             &gt;&gt; Destinations
-                            </Link>
-                          </li>
-                        </ul>
-                      </div>
-                    </div>
-                  </div> */}
-
-        {/* <div className="col-lg-5 col-md-5 col-sm-7">
-                    <div className="footer-links"> */}
-        {/* <h5 className="widget-title">Contact us</h5>
-                      <div className="contact-box">
-                        <span>
-                          <i className="bx bx-phone" />
-                        </span>
-                        <div>
-                          <a href="tel:+971-54-401-3834">+971-54-401-3834</a>
-                        </div>
-                      </div> */}
-        {/* <div className="contact-box"> */}
-        {/* <span><i className="bx bx-mail-send" /></span>
-                                                <div>
-                                                <a href="mailto:enquiry@deserthoppers.com"><b>enquiry@deserthoppers.com</b></a>
-                                                </div>
-                                            </div>
-                                            <div className="contact-box">
-                                                <span><i className="bx bx-location-plus" /></span>
-                                                <div>
-                                                    <Link to={"#"}><b>C13-28-370 Hamsah A Building <br/>
-                                                    Al Karama Dubai, United Arab Emirates (87556)</b></Link>
-                                                </div>
-                                            </div>
-                    </div>
-                  </div>
-
-
-                  <div className="col-lg-4 col-md-4">
-                    <div className="footer-links payment-links">
-                      <h5 className="widget-title">We Accepts:</h5>
-                      <div className="payment-cards">
-                        <img
-                          src={paymentCard2Img}
-                          alt=""
-                          className="img-fluid"
-                        />
-                        <img
-                          src={paymentCard1Img}
-                          alt=""
-                          className="img-fluid"
-                        />
-                        <img
-                          src={paymentCard3Img}
-                          alt=""
-                          className="img-fluid"
-                        />
-                        <img
-                          src={paymentCard4Img}
-                          alt=""
-                          className="img-fluid"
-                        />
-                        <img
-                          src={paymentCard5Img}
-                          alt=""
-                          className="img-fluid"
-                        />
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div className="row">
-              <div className="col-lg-12">
-                <div className="copyrigth-area">
-                  <p>
-                    Copyright 2021 <Link to={`#`}>DesertHoppers</Link>
-                  </p>
                 </div>
               </div>
             </div>
           </div>
-        </div> */}
+        </div>
+        {/* ===============  Newsletter area end =============== */}
+
+        {/* =============== Footer Area Start ================= */}
         <div className="bg-black max-[650px]:h-screen text-white flex justify-center py-[70px]">
           <div className="w-[80%] flex flex-col items-center gap-3">
-            <h1 className="text-3xl font-extrabold" >
+            <h1 className="text-3xl font-extrabold">
               Desert <span className="text-orange-300">Hoopers</span>
             </h1>
-            <h2 className="text-xl text-white" style={{fontFamily:"Oswald", fontWeight:"600"}}>FOLLOW US</h2>
+            <h2
+              className="text-xl text-white"
+              style={{ fontFamily: "Oswald", fontWeight: "600" }}
+            >
+              FOLLOW US
+            </h2>
             <div className="flex gap-2  max-[650px]:justify-evenly max-[650px]:w-full ">
-              <a className="bg-orange-300 p-2 rounded-lg " href="https://www.facebook.com/share/18BQscnH9K/?mibextid=LQQJ4d">
+              <a
+                className="bg-orange-300 p-2 rounded-lg "
+                href="https://www.facebook.com/share/18BQscnH9K/?mibextid=LQQJ4d"
+              >
                 <img
                   src={svg1}
                   alt=""
@@ -492,7 +256,10 @@ class Footers extends Component {
                   className="filter invert"
                 />
               </a>
-              <a className="bg-orange-300 p-2 rounded-lg" href="https://www.instagram.com/deserthoppers">
+              <a
+                className="bg-orange-300 p-2 rounded-lg"
+                href="https://www.instagram.com/deserthoppers"
+              >
                 <img
                   src={svg2}
                   alt=""
@@ -501,7 +268,7 @@ class Footers extends Component {
                   className="filter invert"
                 />
               </a>
-              <span className="bg-orange-300 p-2 rounded-lg" >
+              <span className="bg-orange-300 p-2 rounded-lg">
                 <img
                   src={svg3}
                   alt=""
@@ -510,7 +277,10 @@ class Footers extends Component {
                   className="filter invert"
                 />
               </span>
-              <button className="bg-orange-300 p-2 rounded-lg" onClick={handleWhatsAppClick}>
+              <button
+                className="bg-orange-300 p-2 rounded-lg"
+                onClick={handleWhatsAppClick}
+              >
                 <img
                   src={svg4}
                   alt=""
@@ -520,93 +290,125 @@ class Footers extends Component {
                 />
               </button>
             </div>
-            <h2 className="text-xl text-white" style={{fontFamily:"Oswald", fontWeight:"600"}}>GET IN TOUCH</h2>
+            <h2
+              className="text-xl text-white"
+              style={{ fontFamily: "Oswald", fontWeight: "600" }}
+            >
+              GET IN TOUCH
+            </h2>
             <span className="text-center text-sm flex relative max-[650px]:w-[95%]">
-              <img src={svg5} alt="" height={18} width={18} className="absolute left-6"/> C13-28-370 Hamsah A Building <br />
+              <img
+                src={svg5}
+                alt=""
+                height={18}
+                width={18}
+                className="absolute left-6"
+              />{" "}
+              C13-28-370 Hamsah A Building <br />
               Al Karama Dubai, United Arab Emirates (87556)
             </span>
             <span className="text-center text-sm flex gap-2">
-              <img src={svg6} alt="" height={18} width={18} /> <a href="tel:+971-54-401-3834">+971-54-401-3834</a>
+              <img src={svg6} alt="" height={18} width={18} />{" "}
+              <a href="tel:+971-54-401-3834">+971-54-401-3834</a>
             </span>
             <span className="text-center text-sm flex gap-2">
-              <img src={svg7} alt="" height={18} width={18}/> <a href="mailto:enquiry@deserthoppers.com">
+              <img src={svg7} alt="" height={18} width={18} />{" "}
+              <a href="mailto:enquiry@deserthoppers.com">
                 enquiry@deserthoppers.com
               </a>
             </span>
             <div className="flex gap-[100px] max-[650px]:block">
               <div className="flex flex-col pb-3">
-                <h5 className="text-2xl font-bold pb-3" style={{fontFamily:"Oswald", fontWeight:"600"}}>Popular Packages</h5>
-                  <ul className="flex flex-col text-orange-300 font-bold ">
-                    <li className="">
-                      <Link
-                        to={`${process.env.PUBLIC_URL}/package-details/10`}
-                        onClick={this.scrollTop}
-                      >
-                        Hotel With Burj Khalifa
-                      </Link>
-                    </li>
+                <h5
+                  className="text-2xl font-bold pb-3"
+                  style={{ fontFamily: "Oswald", fontWeight: "600" }}
+                >
+                  Popular Packages
+                </h5>
+                <ul className="flex flex-col text-orange-300 font-bold ">
+                  <li className="">
+                    <Link
+                      to={`${process.env.PUBLIC_URL}/package-details/10`}
+                      onClick={this.scrollTop}
+                    >
+                      Hotel With Burj Khalifa
+                    </Link>
+                  </li>
+                  <li>
+                    <Link
+                      to={`${process.env.PUBLIC_URL}/package-details/18`}
+                      onClick={this.scrollTop}
+                    >
+                      Abu Dhabi City Tour
+                    </Link>
+                  </li>
+                  <li>
+                    <Link
+                      to={`${process.env.PUBLIC_URL}/package-details/19`}
+                      onClick={this.scrollTop}
+                    >
+                      Burj Khalifa and Abu Dhabi
+                    </Link>
+
                     <li>
-                      <Link
-                        to={`${process.env.PUBLIC_URL}/package-details/18`}
-                        onClick={this.scrollTop}
-                      >
-                        Abu Dhabi City Tour
-                      </Link>
-                    </li>
-                    <li>
-                      <Link
-                        to={`${process.env.PUBLIC_URL}/package-details/19`}
-                        onClick={this.scrollTop}
-                      >
-                        Burj Khalifa and Abu Dhabi
-                      </Link>
-                      
-                      <li>
                       <Link
                         to={`${process.env.PUBLIC_URL}/package-details/10`}
                         onClick={this.scrollTop}
                       >
                         Dubai Basic City Tour
                       </Link>
-                      </li>
-                      <Link
-                        to={`${process.env.PUBLIC_URL}/package-details/11`}
-                        onClick={this.scrollTop}
-                      >
-                        Hotel Without Burj Khalifa
-                      </Link>
                     </li>
-                  </ul>
+                    <Link
+                      to={`${process.env.PUBLIC_URL}/package-details/11`}
+                      onClick={this.scrollTop}
+                    >
+                      Hotel Without Burj Khalifa
+                    </Link>
+                  </li>
+                </ul>
               </div>
-            <div>
-              <h2 className="text-xl text-white pb-3 " style={{fontFamily:"Oswald", fontWeight:"600"}}>QUICK LINKS</h2>
-              <ul className="text-orange-300 font-bold ">
-                <li>
-                  <Link
-                    to={`${process.env.PUBLIC_URL}`}
-                    onClick={this.scrollTop}
-                  >
-                    Home
-                  </Link>
-                </li>
-                <li>
-                  <Link
-                    to={`${process.env.PUBLIC_URL}/contact`}
-                    onClick={this.scrollTop}
-                  >
-                    Contact us
-                  </Link>
-                </li>
-                <li>
-                  <Link
-                    to={`${process.env.PUBLIC_URL}/destination`}
-                    onClick={this.scrollTop}
-                  >
-                    Destinations
-                  </Link>
-                </li>
-              </ul>
-            </div>
+              <div>
+                <h2
+                  className="text-xl text-white pb-3 "
+                  style={{ fontFamily: "Oswald", fontWeight: "600" }}
+                >
+                  QUICK LINKS
+                </h2>
+                <ul className="text-orange-300 font-bold ">
+                  <li>
+                    <Link
+                      to={`${process.env.PUBLIC_URL}`}
+                      onClick={this.scrollTop}
+                    >
+                      Home
+                    </Link>
+                  </li>
+                  <li>
+                    <Link
+                      to={`${process.env.PUBLIC_URL}/contact`}
+                      onClick={this.scrollTop}
+                    >
+                      Contact us
+                    </Link>
+                  </li>
+                  <li>
+                    <Link
+                      to={`${process.env.PUBLIC_URL}/contact`}
+                      onClick={this.scrollTop}
+                    >
+                      Blog
+                    </Link>
+                  </li>
+                  <li>
+                    <Link
+                      to={`${process.env.PUBLIC_URL}/destination`}
+                      onClick={this.scrollTop}
+                    >
+                      Destinations
+                    </Link>
+                  </li>
+                </ul>
+              </div>
             </div>
           </div>
         </div>

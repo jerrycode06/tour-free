@@ -96,7 +96,7 @@ class Root extends React.Component {
               component={blogStandard}
             />
             <Route
-              path={`${process.env.PUBLIC_URL}/blog-details`}
+              path={`${process.env.PUBLIC_URL}/blog-details/:id`}
               component={blogDetails}
             />
             <Route

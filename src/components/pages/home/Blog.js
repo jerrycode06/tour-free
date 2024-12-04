@@ -34,7 +34,7 @@ class Blog extends Component {
                            <div className="blog-card">
                                <div className="blog-img">
                                    <img src={blog1Img} alt="" className="img-fluid" />
-                                   <div className="blog-date"><i className="flaticon-calendar" /> 1 April, 2021</div>
+                                   <div className="blog-date"><i className="flaticon-calendar" /> 10 October, 2024</div>
                                </div>
                                <div className="blog-details">
                                    <div className="blog-info">
