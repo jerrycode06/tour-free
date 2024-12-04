@@ -401,7 +401,7 @@ class Footers extends Component {
                   </li>
                   <li>
                     <Link
-                      to={`${process.env.PUBLIC_URL}/destination`}
+                      to={`${process.env.PUBLIC_URL}/bothDestinaton`}
                       onClick={this.scrollTop}
                     >
                       Destinations

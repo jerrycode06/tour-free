@@ -1,24 +1,12 @@
 import React, { useEffect, useState } from "react";
-
-import b_sm_5 from "../../../assets/images/blog/b-sm5.png";
-
-import bd_png from "../../../assets/images/blog/bd.png";
-import b_g_1 from "../../../assets/images/blog/blog-g-1.png";
-import b_g_2 from "../../../assets/images/blog/blog-g-2.png";
-import b_g_3 from "../../../assets/images/blog/blog-g-3.png";
-import c_1 from "../../../assets/images/blog/c-1.png";
-import c_2 from "../../../assets/images/blog/c-2.png";
-import c_3 from "../../../assets/images/blog/c-3.png";
-
-import b_sm_1 from "../../../assets/images/blog/b-sm1.png";
-import b_sm_2 from "../../../assets/images/blog/b-sm2.png";
-import b_sm_3 from "../../../assets/images/blog/b-sm3.png";
-import b_sm_4 from "../../../assets/images/blog/b-sm4.png";
-import BlogData from "../../../json/blog_data.json";
-
-import sidebarBanner from "../../../assets/images/sidebar-banner.png";
-
 import { Link, useParams } from "react-router-dom";
+import bd_png from "../../../assets/images/blog/bd.png";
+import package7Img from "../../../assets/images/dubai/package_7.jpg";
+import package9Img from "../../../assets/images/dubai/package_9.jpg";
+import package10Img from "../../../assets/images/dubai/package_10.jpg";
+import package12Img from "../../../assets/images/dubai/package_12.jpg";
+import package16Img from "../../../assets/images/dubai/package_16.jpg";
+import BlogData from "../../../json/blog_data.json";
 
 const BlogDetails = () => {
   const [blogData, setBlogData] = useState(BlogData.data || []);
@@ -33,7 +21,7 @@ const BlogDetails = () => {
 
   useEffect(() => {
     scrollTop();
-  }, []);
+  }, [id]);
 
   const getValue = (key) => {
     console.log({blogData})
@@ -56,21 +44,14 @@ const BlogDetails = () => {
                   </h3>
                 </div>
                 <div className="blog-img-xl">
-                  <img src={bd_png} alt="" className="img-fluid" />
+                  <img src={require(`../../../assets/images/dubai/${getValue("image")}.jpg`)} alt="" className="img-fluid" />
                   <div className="blog-date">
                     <i className="flaticon-calendar" /> {getValue("Date")}
                   </div>
                 </div>
                 <div className="blog-texts mt-30">
                   <p>
-                    Suspendisse dolor risus, congue ac diam id, viverra
-                    facilisis dolor. Cras nec purus sagittis, varius tortor at,
-                    maximus erat. Sed at tellus id tellus lobortis dictum.
-                    Mauris dignissim, turpis vitae ullamcorper fermentum, sapien
-                    arcu aliquam arcu, in viverra quam est ac ex. Cras sed
-                    lectus eu sem ullamcorper lobortis a sit amet nulla. Proin a
-                    rutrum ipsum, sed maximus orci. Suspendisse nec risus nec
-                    felis accumsan rutrum sagittis vitae lectus.
+                    {getValue("content")}
                   </p>
                   <p className="mt-20">
                     Suspendisse dolor risus, congue ac diam id, viverra
@@ -91,16 +72,6 @@ const BlogDetails = () => {
                     porttitor interdum. Mauris convallis tempus dictum. Morbi
                     convallis sapien at sem pellentesque maximus.
                   </p>
-                  <p>
-                    Suspendisse dolor risus, congue ac diam id, viverra
-                    facilisis dolor. Cras nec purus sagittis, varius tortor at,
-                    maximus erat. Sed at tellus id tellus lobortis dictum.
-                    Mauris dignissim, turpis vitae ullamcorper fermentum, sapien
-                    arcu aliquam arcu, in viverra quam est ac ex. Cras sed
-                    lectus eu sem ullamcorper lobortis a sit amet nulla. Proin a
-                    rutrum ipsum, sed maximus orci. Suspendisse nec risus nec
-                    felis accumsan rutrum sagittis vitae lectus.
-                  </p>
                 </div>
               </div>
             </div>
@@ -113,92 +84,76 @@ const BlogDetails = () => {
                       <ul>
                         <li className="blog-card-sm">
                           <div className="blog-img-sm">
-                            <img src={b_sm_1} alt="" />
+                            <img src={package7Img} alt="" />
                           </div>
                           <div className="blog-details-sm">
                             <Link
-                              to={`${process.env.PUBLIC_URL}/blog-details`}
+                              to={`${process.env.PUBLIC_URL}/blog-details/2`}
                               className="blog-title-sm"
                             >
-                              Lake Garda
+                             Top 5 Must-Visit Attractions in Dubai
                             </Link>
                             <div className="blog-info">
-                              <Link to={`#`} className="blog-writer">
-                                <i className="flaticon-user" /> Dina Jems
-                              </Link>
-                              <Link to={`#`} className="blog-date">
+                              <Link to={`${process.env.PUBLIC_URL}/blog-details/2`} className="blog-date">
                                 {" "}
-                                <i className="flaticon-calendar" /> 11 April,
-                                2021
+                                <i className="flaticon-calendar" /> 20 October, 2024
                               </Link>
                             </div>
                           </div>
                         </li>
                         <li className="blog-card-sm">
                           <div className="blog-img-sm">
-                            <img src={b_sm_2} alt="" />
+                            <img src={package9Img} alt="" />
                           </div>
                           <div className="blog-details-sm">
                             <Link
-                              to={`${process.env.PUBLIC_URL}/blog-details`}
+                              to={`${process.env.PUBLIC_URL}/blog-details/3`}
                               className="blog-title-sm"
                             >
-                              Parish Hill
+                              ⁠A Foodie's Guide to Dubai
                             </Link>
                             <div className="blog-info">
-                              <Link to={`#`} className="blog-writer">
-                                <i className="flaticon-user" /> Dina Jems
-                              </Link>
-                              <Link to={`#`} className="blog-date">
+                              <Link to={`${process.env.PUBLIC_URL}/blog-details/3`} className="blog-date">
                                 {" "}
-                                <i className="flaticon-calendar" /> 11 April,
-                                2021
+                                <i className="flaticon-calendar" /> 5 November, 2024
                               </Link>
                             </div>
                           </div>
                         </li>
                         <li className="blog-card-sm">
                           <div className="blog-img-sm">
-                            <img src={b_sm_3} alt="" />
+                            <img src={package10Img} alt="" />
                           </div>
                           <div className="blog-details-sm">
                             <Link
-                              to={`${process.env.PUBLIC_URL}/blog-details`}
+                              to={`${process.env.PUBLIC_URL}/blog-details/4`}
                               className="blog-title-sm"
                             >
-                              Mount Dtna
+                              ⁠Why Dubai is Perfect for Family Holidays?
                             </Link>
                             <div className="blog-info">
-                              <Link to={`#`} className="blog-writer">
-                                <i className="flaticon-user" /> Dina Jems
-                              </Link>
-                              <Link to={`#`} className="blog-date">
+                              <Link to={`${process.env.PUBLIC_URL}/blog-details/4`} className="blog-date">
                                 {" "}
-                                <i className="flaticon-calendar" /> 11 April,
-                                2021
+                                <i className="flaticon-calendar" /> 20 November, 2024
                               </Link>
                             </div>
                           </div>
                         </li>
                         <li className="blog-card-sm">
                           <div className="blog-img-sm">
-                            <img src={b_sm_4} alt="" />
+                            <img src={package12Img} alt="" />
                           </div>
                           <div className="blog-details-sm">
                             <Link
-                              to={`${process.env.PUBLIC_URL}/blog-details`}
+                              to={`${process.env.PUBLIC_URL}/blog-details/5`}
                               className="blog-title-sm"
                             >
-                              Lake Geneva
+                              ⁠ ⁠Experiencing Luxury in Dubai
                             </Link>
                             <div className="blog-info">
-                              <Link to={`#`} className="blog-writer">
-                                <i className="flaticon-user" /> Dina Jems
-                              </Link>
-                              <Link to={`#`} className="blog-date">
+                              <Link to={`${process.env.PUBLIC_URL}/blog-details/5`} className="blog-date">
                                 {" "}
-                                <i className="flaticon-calendar" /> 10 April,
-                                2021
+                                <i className="flaticon-calendar" /> 25 November, 2024
                               </Link>
                             </div>
                           </div>
@@ -206,86 +161,24 @@ const BlogDetails = () => {
 
                         <li className="blog-card-sm">
                           <div className="blog-img-sm">
-                            <img src={b_sm_5} alt="" />
+                            <img src={package16Img} alt="" />
                           </div>
                           <div className="blog-details-sm">
                             <Link
-                              to={`${process.env.PUBLIC_URL}/blog-details`}
+                              to={`${process.env.PUBLIC_URL}/blog-details/6`}
                               className="blog-title-sm"
                             >
-                              Franch Rivira
+                              ⁠Best Time to Visit Dubai: A Seasonal Guide
                             </Link>
                             <div className="blog-info">
-                              <Link to={`#`} className="blog-writer">
-                                <i className="flaticon-user" /> Dina Jems
-                              </Link>
-                              <Link to={`#`} className="blog-date">
+                              <Link to={`${process.env.PUBLIC_URL}/blog-details/6`} className="blog-date">
                                 {" "}
-                                <i className="flaticon-calendar" /> 10 April,
-                                2021
+                                <i className="flaticon-calendar" /> 5 December, 2024
                               </Link>
                             </div>
                           </div>
                         </li>
                       </ul>
-                    </div>
-                  </div>
-                </div>
-                <div className="row">
-                  <div className="col-lg-12 col-md-6">
-                    <div className="blog-tag mt-40">
-                      <h5 className="categorie-head">Tag Tour</h5>
-                      <ul>
-                        <li>
-                          <Link to={`#`}>Adventure</Link>
-                        </li>
-                        <li>
-                          <Link to={`#`}>Trip</Link>
-                        </li>
-                        <li>
-                          <Link to={`#`}>Guided</Link>
-                        </li>
-                        <li>
-                          <Link to={`#`}>Historical</Link>
-                        </li>
-                        <li>
-                          <Link to={`#`}>Road Trips</Link>
-                        </li>
-                        <li>
-                          <Link to={`#`}>Tourist</Link>
-                        </li>
-                        <li>
-                          <Link to={`#`}>Tourist</Link>
-                        </li>
-                        <li>
-                          <Link to={`#`}>Selivia</Link>
-                        </li>
-                        <li>
-                          <Link to={`#`}>Tour Guide</Link>
-                        </li>
-                        <li>
-                          <Link to={`#`}>Cultural</Link>
-                        </li>
-                        <li>
-                          <Link to={`#`}>Natural</Link>
-                        </li>
-                        <li>
-                          <Link to={`#`}>Journey</Link>
-                        </li>
-                      </ul>
-                    </div>
-                  </div>
-                  <div className="col-lg-12 col-md-6">
-                    <div className="sidebar-banner mt-40">
-                      <img src={sidebarBanner} alt="" className="img-fluid" />
-                      <div className="sidebar-banner-overlay">
-                        <div className="sidebar-content">
-                          <h3>Get 50% Off In Dubai Tour</h3>
-                          <div className="sidebar-banner-btn">
-                            <Link to={"#"}>Book Now</Link>
-                          </div>
-                        </div>
-                      </div>
                     </div>
                   </div>
                 </div>

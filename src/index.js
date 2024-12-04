@@ -14,7 +14,9 @@ import Layout from "./components/app";
 
 //Import all page from components
 import aboutUs from "./components/pages/about-us/AboutUs";
-import destinations from "./components/pages/destinations/Destinations";
+import destinations from "./components/pages/dubai/Destinations";
+import international from "./components/pages/international/International";
+import bothDestinations from "./components/pages/both-destination/BothDestination";
 import packages from "./components/pages/package/Packages";
 import contact from "./components/pages/contact/Contact";
 import faq from "./components/pages/faq/Faq";
@@ -60,8 +62,16 @@ class Root extends React.Component {
               component={aboutUs}
             />
             <Route
-              path={`${process.env.PUBLIC_URL}/destination`}
+              path={`${process.env.PUBLIC_URL}/dubai/destination`}
               component={destinations}
+            />
+            <Route
+              path={`${process.env.PUBLIC_URL}/international/destination`}
+              component={international}
+            />
+            <Route
+              path={`${process.env.PUBLIC_URL}/bothDestinaton`}
+              component={bothDestinations}
             />
             <Route
               path={`${process.env.PUBLIC_URL}/package`}

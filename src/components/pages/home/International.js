@@ -2,13 +2,6 @@ import React, { Component } from "react";
 import { Link } from "react-router-dom";
 import OwlCarousel from "react-owl-carousel";
 import { data } from "../../../json/international_packages";
-
-//Import Images
-import package7Img from "../../../assets/images/dubai/package_7.jpg";
-import package9Img from "../../../assets/images/dubai/package_9.jpg";
-import package10Img from "../../../assets/images/dubai/package_10.jpg";
-import package12Img from "../../../assets/images/dubai/package_12.jpg";
-import package16Img from "../../../assets/images/dubai/package_16.jpg";
 import package11Img from "../../../assets/images/dubai/package_11.jpg";
 
 class International extends Component {

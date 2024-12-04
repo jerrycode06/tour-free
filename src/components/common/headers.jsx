@@ -29,41 +29,19 @@ class Headers extends Component {
 
                     <li>
                       <i className="bx bxl-instagram" />
-                      <a href="https://www.instagram.com/deserthoppers">Instagram</a>
+                      <a href="https://www.instagram.com/deserthoppers">
+                        Instagram
+                      </a>
                     </li>
                     <li>
                       <i className="bx bxl-facebook" />
-                      <a href="https://www.facebook.com/share/18BQscnH9K/?mibextid=LQQJ4d">Facebook</a>
+                      <a href="https://www.facebook.com/share/18BQscnH9K/?mibextid=LQQJ4d">
+                        Facebook
+                      </a>
                     </li>
                   </ul>
                 </div>
               </div>
-              {/* <div className="col-lg-4 col-md-6 col-sm-6 col-xs-6 col-6">
-                <div className="topbar-social">
-                  <ul>
-                    <li>
-                      <Link to={"https://www.instagram.com/deserthoppers"}>
-                        <i className="bx bxl-instagram" />
-                      </Link>
-                    </li>
-                    <li>
-                      <Link to={"#"}>
-                        <i className="bx bxl-facebook" />
-                      </Link>
-                    </li>
-                    <li>
-                      <Link to={"#"}>
-                        <i className="bx bxl-twitter" />
-                      </Link>
-                    </li>
-                    <li>
-                      <Link to={"#"}>
-                        <i className="bx bxl-whatsapp" />
-                      </Link>
-                    </li>
-                  </ul>
-                </div>
-              </div> */}
             </div>
           </div>
         </div>
@@ -83,7 +61,11 @@ class Headers extends Component {
                         className="navbar-brand"
                         onClick={this.scrollTop}
                       >
-                        <img src={logoMain} alt="" className="navbar-logo-img"/>
+                        <img
+                          src={logoMain}
+                          alt=""
+                          className="navbar-logo-img"
+                        />
                       </Link>
                     </div>
                     <div className="navbar-icons">
@@ -101,7 +83,11 @@ class Headers extends Component {
                 <div className="col-lg-10 col-md-10 col-sm-10 col-xs-10">
                   <nav className="main-nav">
                     <div className="navber-logo-sm">
-                      <img src={logoMain} alt="" className="img-fluid navbar-logo-img" />
+                      <img
+                        src={logoMain}
+                        alt=""
+                        className="img-fluid navbar-logo-img"
+                      />
                     </div>
                     <ul>
                       <li>
@@ -113,137 +99,16 @@ class Headers extends Component {
                         >
                           Home
                         </NavLink>
-                        {/* <Link to={"#"}>Home</Link>
-                                            <i className="fl flaticon-plus">+</i> */}
-                        {/* <ul className="sub-menu">
-                                                <li>
-                                                    <NavLink activeClassName="active" to={`${process.env.PUBLIC_URL}/`} className="sub-item" onClick={this.scrollTop}>Home Page</NavLink>
-                                                </li>
-                                                <li>
-                                                    <NavLink activeClassName="active" to={`${process.env.PUBLIC_URL}/home-page-2`} className="sub-item" onClick={this.scrollTop}>Home Page 2</NavLink>
-                                                </li>
-                                            </ul> */}
                       </li>
-                      {/* <li>
-                        <NavLink
-                          activeClassName="active"
-                          to={`${process.env.PUBLIC_URL}/about-us`}
-                          onClick={this.scrollTop}
-                        >
-                          About us
-                        </NavLink>
-                      </li> */}
                       <li>
                         <NavLink
                           activeClassName="active"
-                          to={`${process.env.PUBLIC_URL}/destination`}
+                          to={`${process.env.PUBLIC_URL}/bothDestinaton`}
                           onClick={this.scrollTop}
                         >
                           Destinations
                         </NavLink>
                       </li>
-                      {/* <li className="has-child-menu">
-                        <Link to={"#"}>Tour Package</Link>
-                        <i className="fl flaticon-plus">+</i>
-                        <ul className="sub-menu">
-                          <li>
-                            <NavLink
-                              activeClassName="active"
-                              to={`${process.env.PUBLIC_URL}/package`}
-                              className="sub-item"
-                              onClick={this.scrollTop}
-                            >
-                              package
-                            </NavLink>
-                          </li>
-                          <li>
-                            <NavLink
-                              activeClassName="active"
-                              to={`${process.env.PUBLIC_URL}/package-sidebar`}
-                              className="sub-item"
-                              onClick={this.scrollTop}
-                            >
-                              package sidebar
-                            </NavLink>
-                          </li>
-                          <li>
-                            <NavLink
-                              activeClassName="active"
-                              to={`${process.env.PUBLIC_URL}/package-standard`}
-                              className="sub-item"
-                              onClick={this.scrollTop}
-                            >
-                              package standard
-                            </NavLink>
-                          </li>
-                          <li>
-                            <NavLink
-                              activeClassName="active"
-                              to={`${process.env.PUBLIC_URL}/package-details`}
-                              className="sub-item"
-                              onClick={this.scrollTop}
-                            >
-                              package details
-                            </NavLink>
-                          </li>
-                        </ul>
-                      </li> */}
-                      {/* <li className="has-child-menu">
-                        <Link to={"#"}>Pages</Link>
-                        <i className="fl flaticon-plus">+</i>
-                        <ul className="sub-menu">
-                          <li>
-                            <NavLink
-                              activeClassName="active"
-                              to={`${process.env.PUBLIC_URL}/gallary`}
-                              className="sub-item"
-                              onClick={this.scrollTop}
-                            >
-                              gallary page
-                            </NavLink>
-                          </li>
-                          <li>
-                            <NavLink
-                              activeClassName="active"
-                              to={`${process.env.PUBLIC_URL}/guide`}
-                              className="sub-item"
-                              onClick={this.scrollTop}
-                            >
-                              guide page
-                            </NavLink>
-                          </li>
-                          <li>
-                            <NavLink
-                              activeClassName="active"
-                              to={`${process.env.PUBLIC_URL}/destination`}
-                              className="sub-item"
-                              onClick={this.scrollTop}
-                            >
-                              destination page
-                            </NavLink>
-                          </li>
-                          <li>
-                            <NavLink
-                              activeClassName="active"
-                              to={`${process.env.PUBLIC_URL}/404`}
-                              className="sub-item"
-                              onClick={this.scrollTop}
-                            >
-                              404 Page
-                            </NavLink>
-                          </li>
-                          <li>
-                            <NavLink
-                              activeClassName="active"
-                              to={`${process.env.PUBLIC_URL}/faq`}
-                              className="sub-item"
-                              onClick={this.scrollTop}
-                            >
-                              FAQ page
-                            </NavLink>
-                          </li>
-                        </ul>
-                      </li> */}
                       <li>
                         <NavLink
                           activeClassName="active"
@@ -267,7 +132,9 @@ class Headers extends Component {
                       <ul>
                         <li className="sidebar-single-contact">
                           <i className="bx bxs-phone" />
-                          <Link to={`tel:+971-54-401-3834`}>+971-54-401-3834</Link>
+                          <Link to={`tel:+971-54-401-3834`}>
+                            +971-54-401-3834
+                          </Link>
                         </li>
                       </ul>
                     </div>

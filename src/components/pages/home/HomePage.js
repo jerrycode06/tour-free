@@ -2,11 +2,6 @@ import React, { Component } from "react";
 import MainBanner from "./MainBanner";
 import Packages from "./Packages";
 import Destinations from "./Destinations";
-import Blog from "./Blog";
-import Features from "./Features";
-import Review from "./Review";
-import Enquiry from "./Enquiry";
-import Achievement from "./Achievement";
 import International from "./International";
 
 //Define Default Content

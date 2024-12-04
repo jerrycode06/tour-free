@@ -4,9 +4,9 @@ import { Link } from "react-router-dom";
 import package1Img from "../../../assets/images/dubai/package_1.jpg";
 import package2Img from "../../../assets/images/dubai/package_2.jpg";
 import package3Img from "../../../assets/images/dubai/package_3.jpg";
-import package4Img from "../../../assets/images/dubai/package_4.webp";
+import package7Img from "../../../assets/images/dubai/package_7.jpg";
 import package5Img from "../../../assets/images/dubai/package_5.jpg";
-import package6Img from "../../../assets/images/dubai/package_6.webp";
+import package8Img from "../../../assets/images/dubai/package_8.jpg";
 
 class BlogComponent extends Component {
   render() {
@@ -117,7 +117,7 @@ class BlogComponent extends Component {
               <div className="col-lg-4 col-md-6 col-sm-6">
                 <div className="blog-card">
                   <div className="blog-img">
-                    <img src={package4Img} alt="" className="img-fluid" />
+                    <img src={package7Img} alt="" className="img-fluid" />
                     <div className="blog-date">
                       <i className="flaticon-calendar" /> 20 November 2024
                     </div>
@@ -169,7 +169,7 @@ class BlogComponent extends Component {
               <div className="col-lg-4 col-md-6 col-sm-6">
                 <div className="blog-card">
                   <div className="blog-img">
-                    <img src={package6Img} alt="" className="img-fluid" />
+                    <img src={package8Img} alt="" className="img-fluid" />
                     <div className="blog-date">
                       <i className="flaticon-calendar" />5 December, 2024
                     </div>
