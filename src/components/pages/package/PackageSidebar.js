@@ -178,7 +178,7 @@ class PackageSidebar extends Component {
                                         </div>
                                         <div className="package-details">
                                             <div className="package-info">
-                                                <h5><span>$180</span>/Per Person</h5>
+                                                <h5><span>AED180</span>/Per Person</h5>
                                                 <h5><i className="flaticon-calendar" />5 Days/6 night</h5>
                                             </div>
                                             <h3><i className="flaticon-arrival" />
@@ -199,7 +199,7 @@ class PackageSidebar extends Component {
                                         </div>
                                         <div className="package-details">
                                             <div className="package-info">
-                                                <h5><span>$280</span>/Per Person</h5>
+                                                <h5><span>AED280</span>/Per Person</h5>
                                                 <h5><i className="flaticon-calendar" />5 Days/6 night</h5>
                                             </div>
                                             <h3><i className="flaticon-arrival" />
@@ -220,7 +220,7 @@ class PackageSidebar extends Component {
                                         </div>
                                         <div className="package-details">
                                             <div className="package-info">
-                                                <h5><span>$120</span>/Per Person</h5>
+                                                <h5><span>AED120</span>/Per Person</h5>
                                                 <h5><i className="flaticon-calendar" />5 Days/6 night</h5>
                                             </div>
                                             <h3><i className="flaticon-arrival" />
@@ -241,7 +241,7 @@ class PackageSidebar extends Component {
                                         </div>
                                         <div className="package-details">
                                             <div className="package-info">
-                                                <h5><span>$300</span>/Per Person</h5>
+                                                <h5><span>AED300</span>/Per Person</h5>
                                                 <h5><i className="flaticon-calendar" />5 Days/6 night</h5>
                                             </div>
                                             <h3><i className="flaticon-arrival" />
@@ -262,7 +262,7 @@ class PackageSidebar extends Component {
                                         </div>
                                         <div className="package-details">
                                             <div className="package-info">
-                                                <h5><span>$240</span>/Per Person</h5>
+                                                <h5><span>AED240</span>/Per Person</h5>
                                                 <h5><i className="flaticon-calendar" />5 Days/6 night</h5>
                                             </div>
                                             <h3><i className="flaticon-arrival" />
@@ -283,7 +283,7 @@ class PackageSidebar extends Component {
                                         </div>
                                         <div className="package-details">
                                             <div className="package-info">
-                                                <h5><span>$145</span>/Per Person</h5>
+                                                <h5><span>AED145</span>/Per Person</h5>
                                                 <h5><i className="flaticon-calendar" />5 Days/6 night</h5>
                                             </div>
                                             <h3><i className="flaticon-arrival" />
@@ -304,7 +304,7 @@ class PackageSidebar extends Component {
                                         </div>
                                         <div className="package-details">
                                             <div className="package-info">
-                                                <h5><span>$180</span>/Per Person</h5>
+                                                <h5><span>AED180</span>/Per Person</h5>
                                                 <h5><i className="flaticon-calendar" />5 Days/6 night</h5>
                                             </div>
                                             <h3><i className="flaticon-arrival" />
@@ -325,7 +325,7 @@ class PackageSidebar extends Component {
                                         </div>
                                         <div className="package-details">
                                             <div className="package-info">
-                                                <h5><span>$280</span>/Per Person</h5>
+                                                <h5><span>AED280</span>/Per Person</h5>
                                                 <h5><i className="flaticon-calendar" />5 Days/6 night</h5>
                                             </div>
                                             <h3><i className="flaticon-arrival" />
@@ -346,7 +346,7 @@ class PackageSidebar extends Component {
                                         </div>
                                         <div className="package-details">
                                             <div className="package-info">
-                                                <h5><span>$120</span>/Per Person</h5>
+                                                <h5><span>AED120</span>/Per Person</h5>
                                                 <h5><i className="flaticon-calendar" />5 Days/6 night</h5>
                                             </div>
                                             <h3><i className="flaticon-arrival" />
@@ -367,7 +367,7 @@ class PackageSidebar extends Component {
                                         </div>
                                         <div className="package-details">
                                             <div className="package-info">
-                                                <h5><span>$300</span>/Per Person</h5>
+                                                <h5><span>AED300</span>/Per Person</h5>
                                                 <h5><i className="flaticon-calendar" />5 Days/6 night</h5>
                                             </div>
                                             <h3><i className="flaticon-arrival" />

@@ -76,7 +76,7 @@ class International extends Component {
                   {data.map((item, index) => (
                     <div className="package-card">
                     <div className="package-thumb">
-                      <Link to={`${process.env.PUBLIC_URL}/package-details/1`}>
+                      <Link to={`${process.env.PUBLIC_URL}/package-details/I${index+1}`}>
                         <img src={package11Img} alt="" className="img-fluid" />
                       </Link>
                     </div>
@@ -91,7 +91,7 @@ class International extends Component {
                       </div>
                       <h3>
                         <i className="flaticon-arrival" />
-                        <Link to={`${process.env.PUBLIC_URL}/package-details/1`}>
+                        <Link to={`${process.env.PUBLIC_URL}/package-details/I${index+1}`}>
                         {item.name}
                         </Link>
                       </h3>

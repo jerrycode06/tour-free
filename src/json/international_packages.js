@@ -1,7 +1,7 @@
 
-	export let data = [
+	export const data = [
 		{
-			"id": 1,
+			"id": "I1",
 			"Destination Name": "Europe",
 			"name": "Paris & Switzerland Holiday Package",
 			"Nights": "6 Nights / 7 Days",
@@ -27,7 +27,7 @@
 			"Day 7": "Breakfast, Private departure Transfer to Zurich Airport for your onward flight Back to India"
 		},
 		{
-			"id": 2,
+			"id": "I2",
 			"Destination Name": "Europe",
 			"name": "Amsterdam, Paris & Swiss Holiday Package",
 			"Nights": "9 Nights / 10 Days",
@@ -56,7 +56,7 @@
 			"Day 10": "Breakfast, Private Departure Transfer to Zurich Airport for your onward flight bacck to India."
 		},
 		{
-			"id": 3,
+			"id": "I3",
 			"Destination Name": "Europe",
 			"name": "Italy Holiday Package",
 			"Nights": "7 Nights / 8 Days",
@@ -83,7 +83,7 @@
 			"Day 8": "Breakfast, Private Transfer from Milan Hotel to Airport to Board the flight Back to India."
 		},
 		{
-			"id": 4,
+			"id": "I4",
 			"Destination Name": "Europe",
 			"name": "Prague, Vienna & Budapest Holiday Package",
 			"Nights": "6 Nights / 7 Days",
@@ -109,7 +109,7 @@
 			"Day 7": "After Breakfast, Today private transfer from hotel to airport. Departure from Budapest Airport for your flight"
 		},
 		{
-			"id": 5,
+			"id": "I5",
 			"Destination Name": "Europe",
 			"name": "Turkey Holiday Package",
 			"Nights": "8 Nights / 9 Days",
@@ -136,7 +136,7 @@
 			"Day 8": "After Breakfast, Private transfer from hotel to airport. Departure from Istanbul airport for your flight."
 		},
 		{
-			"id": 6,
+			"id": "I6",
 			"Destination Name": "Europe",
 			"name": "Greece Holiday Package",
 			"Nights": "7 Nights / 8 Days",
@@ -163,7 +163,7 @@
 			"Day 8": "After Breakfast, Private transfer from hotel to airport. Departure from Athens Airport for your flight."
 		},
 		{
-			"id": 7,
+			"id": "I7",
 			"Destination Name": "Bali",
 			"name": "Exotic Bali (3*)",
 			"Nights": "4 Nights / 5 Days",
@@ -187,7 +187,7 @@
 			"Day 5": "After Breakfast, Check out from Hotel. You will be transferred to Airport."
 		},
 		{
-			"id": 8,
+			"id": "I8",
 			"Destination Name": "Bali",
 			"name": "Exotic Bali (4*)",
 			"Nights": "4 Nights / 5 Days",
@@ -211,7 +211,7 @@
 			"Day 5": "After Breakfast, Check out from Hotel. You will be transferred to Airport."
 		},
 		{
-			"id": 9,
+			"id": "I9",
 			"Destination Name": "Azerbaijan",
 			"name": "Mesmerizing Azerbaijan (4*)",
 			"Nights": "3 Nights / 4 Days",
@@ -234,7 +234,7 @@
 			"Day 4": "Transfer from Baku Hotel to Airport GYD – After breakfast at Baku hotel according to flight time driver will transfer to Airport. (if the flight time will be evening or midnight, you can choose any tour. Depending on your choice, it will be counted as an extra payment.)"
 		},
 		{
-			"id": 10,
+			"id": "I10",
 			"Destination Name": "Azerbaijan",
 			"name": "Mesmerizing Azerbaijan (4*)",
 			"Nights": "4 Nights / 5 Days",
@@ -258,7 +258,7 @@
 			"Day 5": "Transfer from Baku Hotel to Airport GYD – After breakfast at Baku hotel according to flight time driver will transfer to Airport. (if the flight time will be evening or midnight, you can choose any tour. Depending on your choice, it will be counted as an extra payment.)"
 		},
 		{
-			"id": 11,
+			"id": "I11",
 			"Destination Name": "Thailand",
 			"name": "Amazing Thailand (4*)",
 			"Nights": "4 Nights / 5 Days",
@@ -282,7 +282,7 @@
 			"Day 5": "After Breakfast, Check out from hotel. Transfer to Phuket Airport."
 		},
 		{
-			"id": 12,
+			"id": "I12",
 			"Destination Name": "Maldives",
 			"name": "Maldives (4*) (Medhufushi Island Resort)",
 			"Nights": "4 Nights / 5 Days",
@@ -306,7 +306,7 @@
 			"Day 5": "After Breakfast, Check out from hotel. Transfer to Airport."
 		},
 		{
-			"id": 13,
+			"id": "I13",
 			"Destination Name": "Maldives",
 			"name": "Maldives (5*) (Sheraton Maldives Full Moon Resort)",
 			"Nights": "4 Nights / 5 Days",

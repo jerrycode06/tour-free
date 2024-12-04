@@ -91,7 +91,7 @@ class Destinations extends Component {
                                    </div>
                                    <div className="package-details">
                                        <div className="package-info">
-                                           <h5><span>$145</span>/Per Person</h5>
+                                           <h5><span>AED145</span>/Per Person</h5>
                                        </div>
                                        <h3><i className="flaticon-arrival" />
                                            <Link to={`${process.env.PUBLIC_URL}/package-details`}>Paris Hill Tour</Link>
@@ -110,7 +110,7 @@ class Destinations extends Component {
                                    </div>
                                    <div className="package-details">
                                        <div className="package-info">
-                                           <h5><span>$240</span>/Per Person</h5>
+                                           <h5><span>AED240</span>/Per Person</h5>
                                        </div>
                                        <h3><i className="flaticon-arrival" />
                                            <Link to={`${process.env.PUBLIC_URL}/package-details`}>Lake Garda, Spain</Link>
@@ -129,7 +129,7 @@ class Destinations extends Component {
                                    </div>
                                    <div className="package-details">
                                        <div className="package-info">
-                                           <h5><span>$300</span>/Per Person</h5>
+                                           <h5><span>AED300</span>/Per Person</h5>
                                        </div>
                                        <h3><i className="flaticon-arrival" />
                                            <Link to={`${process.env.PUBLIC_URL}/package-details`}>Mount Dtna, Spain</Link>
@@ -148,7 +148,7 @@ class Destinations extends Component {
                                    </div>
                                    <div className="package-details">
                                        <div className="package-info">
-                                           <h5><span>$120</span>/Per Person</h5>
+                                           <h5><span>AED120</span>/Per Person</h5>
                                        </div>
                                        <h3><i className="flaticon-arrival" />
                                            <Link to={`${process.env.PUBLIC_URL}/package-details`}>Amalfi Costa, Italy</Link>
@@ -174,7 +174,7 @@ class Destinations extends Component {
                                    </div>
                                    <div className="package-details">
                                        <div className="package-info">
-                                           <h5><span>$145</span>/Per Person</h5>
+                                           <h5><span>AED145</span>/Per Person</h5>
                                        </div>
                                        <h3><i className="flaticon-arrival" />
                                            <Link to={`${process.env.PUBLIC_URL}/package-details`}>Amalfi Costa, Italy</Link>
@@ -194,7 +194,7 @@ class Destinations extends Component {
                                    </div>
                                    <div className="package-details">
                                        <div className="package-info">
-                                           <h5><span>$240</span>/Per Person</h5>
+                                           <h5><span>AED240</span>/Per Person</h5>
                                        </div>
                                        <h3><i className="flaticon-arrival" />
                                            <Link to={`${process.env.PUBLIC_URL}/package-details`}>Fench Rivira, Italy</Link>
@@ -214,7 +214,7 @@ class Destinations extends Component {
                                    </div>
                                    <div className="package-details">
                                        <div className="package-info">
-                                           <h5><span>$300</span>/Per Person</h5>
+                                           <h5><span>AED300</span>/Per Person</h5>
                                        </div>
                                        <h3><i className="flaticon-arrival" />
                                            <Link to={`${process.env.PUBLIC_URL}/package-details`}>Amalfi Costa, Italy</Link>
@@ -234,7 +234,7 @@ class Destinations extends Component {
                                    </div>
                                    <div className="package-details">
                                        <div className="package-info">
-                                           <h5><span>$120</span>/Per Person</h5>
+                                           <h5><span>AED120</span>/Per Person</h5>
                                        </div>
                                        <h3><i className="flaticon-arrival" />
                                            <Link to={`${process.env.PUBLIC_URL}/package-details`}>Mount Dtna, Italyr</Link>
@@ -276,7 +276,7 @@ class Destinations extends Component {
                                    </div>
                                    <div className="package-details">
                                        <div className="package-info">
-                                           <h5><span>$145</span>/Per Person</h5>
+                                           <h5><span>AED145</span>/Per Person</h5>
                                        </div>
                                        <h3><i className="flaticon-arrival" />
                                            <Link to={`${process.env.PUBLIC_URL}/package-details`}>Amalfi Costa, Italy</Link>
@@ -295,7 +295,7 @@ class Destinations extends Component {
                                    </div>
                                    <div className="package-details">
                                        <div className="package-info">
-                                           <h5><span>$240</span>/Per Person</h5>
+                                           <h5><span>AED240</span>/Per Person</h5>
                                        </div>
                                        <h3><i className="flaticon-arrival" />
                                            <Link to={`${process.env.PUBLIC_URL}/package-details`}>Maritime Heritage</Link>
@@ -314,7 +314,7 @@ class Destinations extends Component {
                                    </div>
                                    <div className="package-details">
                                        <div className="package-info">
-                                           <h5><span>$300</span>/Per Person</h5>
+                                           <h5><span>AED300</span>/Per Person</h5>
                                        </div>
                                        <h3><i className="flaticon-arrival" />
                                            <Link to={`${process.env.PUBLIC_URL}/package-details`}>Souks of Deira</Link>
@@ -333,7 +333,7 @@ class Destinations extends Component {
                                    </div>
                                    <div className="package-details">
                                        <div className="package-info">
-                                           <h5><span>$120</span>/Per Person</h5>
+                                           <h5><span>AED120</span>/Per Person</h5>
                                        </div>
                                        <h3>
                                            <i className="flaticon-arrival" />

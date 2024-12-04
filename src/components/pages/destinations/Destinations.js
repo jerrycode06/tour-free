@@ -89,7 +89,7 @@ class AboutUs extends Component {
                     <div className="package-details">
                       <div className="package-info">
                         <h5>
-                          <span>$145</span>/Per Person
+                          <span>AED145</span>/Per Person
                         </h5>
                       </div>
                       <h3>
@@ -119,7 +119,7 @@ class AboutUs extends Component {
                     <div className="package-details">
                       <div className="package-info">
                         <h5>
-                          <span>$240</span>/Per Person
+                          <span>AED240</span>/Per Person
                         </h5>
                       </div>
                       <h3>
@@ -149,7 +149,7 @@ class AboutUs extends Component {
                     <div className="package-details">
                       <div className="package-info">
                         <h5>
-                          <span>$300</span>/Per Person
+                          <span>AED300</span>/Per Person
                         </h5>
                       </div>
                       <h3>
@@ -179,7 +179,7 @@ class AboutUs extends Component {
                     <div className="package-details">
                       <div className="package-info">
                         <h5>
-                          <span>$120</span>/Per Person
+                          <span>AED120</span>/Per Person
                         </h5>
                       </div>
                       <h3>
@@ -218,7 +218,7 @@ class AboutUs extends Component {
                     <div className="package-details">
                       <div className="package-info">
                         <h5>
-                          <span>$145</span>/Per Person
+                          <span>AED145</span>/Per Person
                         </h5>
                       </div>
                       <h3>
@@ -249,7 +249,7 @@ class AboutUs extends Component {
                     <div className="package-details">
                       <div className="package-info">
                         <h5>
-                          <span>$240</span>/Per Person
+                          <span>AED240</span>/Per Person
                         </h5>
                       </div>
                       <h3>
@@ -280,7 +280,7 @@ class AboutUs extends Component {
                     <div className="package-details">
                       <div className="package-info">
                         <h5>
-                          <span>$300</span>/Per Person
+                          <span>AED300</span>/Per Person
                         </h5>
                       </div>
                       <h3>
@@ -311,7 +311,7 @@ class AboutUs extends Component {
                     <div className="package-details">
                       <div className="package-info">
                         <h5>
-                          <span>$120</span>/Per Person
+                          <span>AED120</span>/Per Person
                         </h5>
                       </div>
                       <h3>
@@ -357,7 +357,7 @@ class AboutUs extends Component {
                     <div className="package-details">
                       <div className="package-info">
                         <h5>
-                          <span>$376</span>/Per Person
+                          <span>AED376</span>/Per Person
                         </h5>
                         <h5>
                           <i className="flaticon-calendar" />4 night/5 days
@@ -396,7 +396,7 @@ class AboutUs extends Component {
                     <div className="package-details">
                       <div className="package-info">
                         <h5>
-                          <span>$485</span>/Per Person
+                          <span>AED485</span>/Per Person
                         </h5>
                       </div>
                       <h3>
@@ -434,7 +434,7 @@ class AboutUs extends Component {
                     <div className="package-details">
                       <div className="package-info">
                         <h5>
-                          <span>$610</span>/Per Person
+                          <span>AED610</span>/Per Person
                         </h5>
                       </div>
                       <h3>
@@ -472,7 +472,7 @@ class AboutUs extends Component {
                     <div className="package-details">
                       <div className="package-info">
                         <h5>
-                          <span>$705</span>/Per Person
+                          <span>AED705</span>/Per Person
                         </h5>
                       </div>
                       <h3>
@@ -512,7 +512,7 @@ class AboutUs extends Component {
                     <div className="package-details">
                       <div className="package-info">
                         <h5>
-                          <span>$750</span>/Per Person
+                          <span>AED750</span>/Per Person
                         </h5>
                       </div>
                       <h3>
@@ -559,7 +559,7 @@ class AboutUs extends Component {
                     <div className="package-details">
                       <div className="package-info">
                         <h5>
-                          <span>$145</span>/Per Person
+                          <span>AED145</span>/Per Person
                         </h5>
                       </div>
                       <h3>
@@ -590,7 +590,7 @@ class AboutUs extends Component {
                     <div className="package-details">
                       <div className="package-info">
                         <h5>
-                          <span>$240</span>/Per Person
+                          <span>AED240</span>/Per Person
                         </h5>
                       </div>
                       <h3>
@@ -621,7 +621,7 @@ class AboutUs extends Component {
                     <div className="package-details">
                       <div className="package-info">
                         <h5>
-                          <span>$300</span>/Per Person
+                          <span>AED300</span>/Per Person
                         </h5>
                       </div>
                       <h3>
@@ -652,7 +652,7 @@ class AboutUs extends Component {
                     <div className="package-details">
                       <div className="package-info">
                         <h5>
-                          <span>$120</span>/Per Person
+                          <span>AED120</span>/Per Person
                         </h5>
                       </div>
                       <h3>
@@ -707,7 +707,7 @@ class AboutUs extends Component {
                     <div className="package-details">
                       <div className="package-info">
                         <h5>
-                          <span>$145</span>/Per Person
+                          <span>AED145</span>/Per Person
                         </h5>
                       </div>
                       <h3>
@@ -737,7 +737,7 @@ class AboutUs extends Component {
                     <div className="package-details">
                       <div className="package-info">
                         <h5>
-                          <span>$240</span>/Per Person
+                          <span>AED240</span>/Per Person
                         </h5>
                       </div>
                       <h3>
@@ -767,7 +767,7 @@ class AboutUs extends Component {
                     <div className="package-details">
                       <div className="package-info">
                         <h5>
-                          <span>$300</span>/Per Person
+                          <span>AED300</span>/Per Person
                         </h5>
                       </div>
                       <h3>
@@ -797,7 +797,7 @@ class AboutUs extends Component {
                     <div className="package-details">
                       <div className="package-info">
                         <h5>
-                          <span>$120</span>/Per Person
+                          <span>AED120</span>/Per Person
                         </h5>
                       </div>
                       <h3>

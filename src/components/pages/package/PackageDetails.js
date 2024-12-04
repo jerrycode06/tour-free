@@ -8,9 +8,11 @@ import package12Img from "../../../assets/images/dubai/package_12.jpg";
 import package16Img from "../../../assets/images/dubai/package_16.jpg";
 import "react-datepicker/dist/react-datepicker.css";
 import PackagesData from "../../../dessert-hopper-data.json"
+import { data } from "../../../json/international_packages";
 
 function PackageDetails() {
   const [packageData, setPackageData] = useState(PackagesData.data || []);
+  const [internationalPackageData,setInternationalPackageData] = useState(data || [])
   const { id } = useParams();
 
   const scrollTop= () => {
@@ -22,11 +24,16 @@ function PackageDetails() {
 
   useEffect(() => {
     scrollTop();
-  }, [])
+  }, [internationalPackageData])
 
   const getValue = (key) => {
     console.log({nik: packageData})
-    const foundItem = packageData.find((ele) => ele.id === Number(id));
+    let foundItem;
+    if(id.startsWith("I")){
+      foundItem = internationalPackageData.find((ele) => ele.id === id);
+    }else{
+      foundItem = packageData.find((ele) => ele.id === Number(id));
+    }
     return foundItem ? foundItem[key] : "Miss"; // Handle missing keys or items
   }
   console.log({nik: packageData})
@@ -569,7 +576,7 @@ function PackageDetails() {
                                     </div>
                                   </div>
                                   <div className="timeline-content">
-                                    <h5>DAY {day} : {getValue(`Day ${day}`).split(".")[0]}</h5>
+                                    {!id.startsWith("I") ? <h5>DAY {day} : {getValue(`Day ${day}`).split(".")[0]}</h5> : <h5>DAY {day} : {getValue(`Day ${day+1}`).split(".")[0]}</h5>}
                                     {/* <strong>10.00 AM to 10.00 PM</strong> */}
                                     <p>
                                     {getValue(`Day ${day}`)}

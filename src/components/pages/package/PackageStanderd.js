@@ -180,7 +180,7 @@ class PackageStanderd extends Component {
                                         </div>
                                         <div className="package-details-xl">
                                             <div className="package-info">
-                                                <h5><span>$180</span>/Per Person</h5>
+                                                <h5><span>AED180</span>/Per Person</h5>
                                                 <h5><i className="flaticon-calendar" />5 Days/6 night</h5>
                                             </div>
                                             <h3><i className="flaticon-arrival" />
@@ -202,7 +202,7 @@ class PackageStanderd extends Component {
                                         </div>
                                         <div className="package-details-xl">
                                             <div className="package-info">
-                                                <h5><span>$300</span>/Per Person</h5>
+                                                <h5><span>AED300</span>/Per Person</h5>
                                                 <h5><i className="flaticon-calendar" />5 Days/6 night</h5>
                                             </div>
                                             <h3><i className="flaticon-arrival" />
@@ -224,7 +224,7 @@ class PackageStanderd extends Component {
                                         </div>
                                         <div className="package-details-xl">
                                             <div className="package-info">
-                                                <h5><span>$140</span>/Per Person</h5>
+                                                <h5><span>AED140</span>/Per Person</h5>
                                                 <h5><i className="flaticon-calendar" />5 Days/6 night</h5>
                                             </div>
                                             <h3><i className="flaticon-arrival" />
@@ -246,7 +246,7 @@ class PackageStanderd extends Component {
                                         </div>
                                         <div className="package-details-xl">
                                             <div className="package-info">
-                                                <h5><span>$250</span>/Per Person</h5>
+                                                <h5><span>AED250</span>/Per Person</h5>
                                                 <h5><i className="flaticon-calendar" />5 Days/6 night</h5>
                                             </div>
                                             <h3><i className="flaticon-arrival" />
@@ -268,7 +268,7 @@ class PackageStanderd extends Component {
                                         </div>
                                         <div className="package-details-xl">
                                             <div className="package-info">
-                                                <h5><span>$460</span>/Per Person</h5>
+                                                <h5><span>AED460</span>/Per Person</h5>
                                                 <h5><i className="flaticon-calendar" />5 Days/6 night</h5>
                                             </div>
                                             <h3><i className="flaticon-arrival" />
@@ -290,7 +290,7 @@ class PackageStanderd extends Component {
                                         </div>
                                         <div className="package-details-xl">
                                             <div className="package-info">
-                                                <h5><span>$160</span>/Per Person</h5>
+                                                <h5><span>AED160</span>/Per Person</h5>
                                                 <h5><i className="flaticon-calendar" />5 Days/6 night</h5>
                                             </div>
                                             <h3><i className="flaticon-arrival" />
@@ -312,7 +312,7 @@ class PackageStanderd extends Component {
                                         </div>
                                         <div className="package-details-xl">
                                             <div className="package-info">
-                                                <h5><span>$310</span>/Per Person</h5>
+                                                <h5><span>AED310</span>/Per Person</h5>
                                                 <h5><i className="flaticon-calendar" />5 Days/6 night</h5>
                                             </div>
                                             <h3><i className="flaticon-arrival" />
@@ -362,7 +362,7 @@ class PackageStanderd extends Component {
                                                     onChange={this.handleChange}
                                                     onChangeComplete={this.handleChangeComplete}
                                                 />
-                                                <div className='value'>${value}</div>
+                                                <div className='value'>AED{value}</div>
                                             </div>
                                         </div>
                                     </div>
