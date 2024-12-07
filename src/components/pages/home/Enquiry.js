@@ -1,4 +1,5 @@
 import React from "react";
+import AiportCodes from "../../../json/airport_codes.json";
 
 const Enquiry = () => {
   return (
@@ -39,6 +40,17 @@ const Enquiry = () => {
               <div className="col-lg-6">
                 <label htmlFor="when">Child age</label>
                 <input type="number" placeholder="child age" name="no" required />
+              </div>
+              <div className="col-lg-6">
+              <label htmlFor="aiport">Travel From</label>
+                <select name="aiport" id="aiport" style={{width: "90%", marginBottom: "0"}}>
+                  <option value="">Select Airport</option>
+                  {AiportCodes.map((item, index) => (
+                    <option key={index} value={item.code}>
+                      {item.code}, {item.city}, {item.country}
+                    </option>
+                  ))}
+                </select>
               </div>
               <div className="col-lg-6">
                 <label htmlFor="when">Depart Date</label>

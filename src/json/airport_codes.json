@@ -1,0 +1,259 @@
+[
+  {
+    "code": "AAL",
+    "city": "Aalborg",
+    "country": "Denmark",
+    "airport": "Aalborg"
+  },
+  {
+    "code": "AES",
+    "city": "Aalesund",
+    "country": "Norway",
+    "airport": "Vigra"
+  },
+  {
+    "code": "AAR",
+    "city": "Aarhus",
+    "country": "Denmark",
+    "airport": "Tirstrup"
+  },
+  {
+    "code": "YXX",
+    "city": "Abbotsford",
+    "country": "Canada",
+    "airport": "Abbotsford Airport"
+  },
+  {
+    "code": "ABZ",
+    "city": "Aberdeen",
+    "country": "Scotland, United Kingdom",
+    "airport": "Dyce"
+  },
+  {
+    "code": "ABR",
+    "city": "Aberdeen",
+    "country": "SD, USA",
+    "airport": "Aberdeen Regional Airport"
+  },
+  {
+    "code": "AHB",
+    "city": "Abha",
+    "country": "Saudi Arabia",
+    "airport": "Abha Airport"
+  },
+  {
+    "code": "ABJ",
+    "city": "Abidjan",
+    "country": "Cote D'ivoire",
+    "airport": "Port Bouet"
+  },
+  {
+    "code": "ABI",
+    "city": "Abilene",
+    "country": "TX, USA",
+    "airport": "Municipal"
+  },
+  {
+    "code": "AUH",
+    "city": "Abu Dhabi",
+    "country": "United Arab Emirates",
+    "airport": "Abu Dhabi International"
+  },
+  {
+    "code": "ABS",
+    "city": "Abu Simbel",
+    "country": "Egypt",
+    "airport": "Abu Simbel"
+  },
+  {
+    "code": "ABV",
+    "city": "Abuja",
+    "country": "Nigeria",
+    "airport": "Abuja International Airport"
+  },
+  {
+    "code": "ACA",
+    "city": "Acapulco",
+    "state": "Guerrero",
+    "country": "Mexico",
+    "airport": "Alvarez International"
+  },
+  {
+    "code": "ACC",
+    "city": "Accra",
+    "country": "Ghana",
+    "airport": "Kotoka"
+  },
+  {
+    "code": "ADK",
+    "city": "Adak Island",
+    "state": "Alaska, USA",
+    "airport": "Adak Island Airport"
+  },
+  {
+    "code": "ADA",
+    "city": "Adana",
+    "country": "Turkey",
+    "airport": "Adana"
+  },
+  {
+    "code": "ADD",
+    "city": "Addis Ababa",
+    "country": "Ethiopia",
+    "airport": "Bole"
+  },
+  {
+    "code": "ADL",
+    "city": "Adelaide",
+    "state": "South Australia",
+    "country": "Australia",
+    "airport": "Adelaide"
+  },
+  {
+    "code": "ADE",
+    "city": "Aden",
+    "country": "Yemen",
+    "airport": "Aden International Airport"
+  },
+  {
+    "code": "AGA",
+    "city": "Agadir",
+    "country": "Morocco",
+    "airport": "Inezgane"
+  },
+  {
+    "code": "GUM",
+    "city": "Agana",
+    "country": "Guam",
+    "airport": "Ab Wonpat Intl Airport"
+  },
+  {
+    "code": "IXA",
+    "city": "Agartala",
+    "country": "India",
+    "airport": "Singerbhil"
+  },
+  {
+    "code": "QGG",
+    "city": "Agedabia",
+    "country": "Libya"
+  },
+  {
+    "code": "AGF",
+    "city": "Agen",
+    "country": "France",
+    "airport": "La Garenne"
+  },
+  {
+    "code": "AGR",
+    "city": "Agra",
+    "country": "India",
+    "airport": "Kheria"
+  },
+  {
+    "code": "AJI",
+    "city": "Agri",
+    "country": "Turkey",
+    "airport": "Agri Airport"
+  },
+  {
+    "code": "BQN",
+    "city": "Aguadilla",
+    "state": "PR, USA"
+  },
+  {
+    "code": "AGU",
+    "city": "Aguascalientes",
+    "state": "Aguascalientes, Mexico"
+  },
+  {
+    "code": "IKA",
+    "city": "Ahmadabad (Tehran)",
+    "country": "Iran",
+    "airport": "Imam Khomeini International Airport"
+  },
+  {
+    "code": "AMD",
+    "city": "Ahmedabad",
+    "country": "India",
+    "airport": "Ahmedabad"
+  },
+  {
+    "code": "AWZ",
+    "city": "Ahwaz",
+    "country": "Iran",
+    "airport": "Ahwaz Airport"
+  },
+  {
+    "code": "QXB",
+    "city": "Aix-En-Provence",
+    "country": "France",
+    "airport": "Aix-En-Provence Airport"
+  },
+  {
+    "code": "AJA",
+    "city": "Ajaccio",
+    "state": "Corsica, France",
+    "airport": "Campo Dell Oro"
+  },
+  {
+    "code": "AXT",
+    "city": "Akita",
+    "country": "Japan",
+    "airport": "Akita Airport"
+  },
+  {
+    "code": "CAK",
+    "city": "Akron/Canton",
+    "state": "OH, USA",
+    "airport": "AkronCanton Regional Airport"
+  },
+  {
+    "code": "AKU",
+    "city": "Aksu",
+    "country": "China",
+    "airport": "Aksu Airport"
+  },
+  {
+    "code": "PVK",
+    "city": "Aktion",
+    "country": "Greece",
+    "airport": "Preveza-Lefkas Airport"
+  },
+  {
+    "code": "AKV",
+    "city": "Akulivik",
+    "country": "Canada",
+    "airport": "Akulivik Airport"
+  },
+  {
+    "code": "AEY",
+    "city": "Akureyri",
+    "country": "Iceland",
+    "airport": "Akureyri"
+  },
+  {
+    "code": "KQA",
+    "city": "Akutan",
+    "state": "Alaska, USA",
+    "airport": "Akutan Airport"
+  },
+  {
+    "code": "AAN",
+    "city": "Al Ain",
+    "country": "United Arab Emirates",
+    "airport": "Al Ain Airport"
+  },
+  {
+    "code": "AAC",
+    "city": "Al Arish",
+    "country": "Egypt",
+    "airport": "Al Arish Airport"
+  },
+  {
+    "code": "ABT",
+    "city": "Al-Baha",
+    "country": "Saudi Arabia",
+    "airport": "Al Baha-Al Aqiq Airport"
+  }
+]

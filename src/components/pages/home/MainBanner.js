@@ -1,9 +1,6 @@
 import React, { Component } from "react";
-import OwlCarousel from 'react-owl-carousel';
 import "owl.carousel/dist/assets/owl.carousel.css";
 import "owl.carousel/dist/assets/owl.theme.default.css";
-import {Link} from "react-router-dom";
-import DatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
 import Enquiry from "./Enquiry";
 import "../../../assets/css/style.css";

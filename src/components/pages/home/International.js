@@ -2,7 +2,6 @@ import React, { Component } from "react";
 import { Link } from "react-router-dom";
 import OwlCarousel from "react-owl-carousel";
 import { data } from "../../../json/international_packages";
-import package11Img from "../../../assets/images/dubai/package_11.jpg";
 
 class International extends Component {
   constructor(props) {
@@ -70,7 +69,7 @@ class International extends Component {
                     <div className="package-card">
                     <div className="package-thumb">
                       <Link to={`${process.env.PUBLIC_URL}/package-details/I${index+1}`}>
-                        <img src={package11Img} alt="" className="img-fluid" />
+                        <img src={require(`../../../assets/images/international/${item.image}.jpeg`)} alt="" className="img-fluid" />
                       </Link>
                     </div>
                     <div className="package-details">
