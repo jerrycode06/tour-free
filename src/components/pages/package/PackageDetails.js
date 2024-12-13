@@ -27,7 +27,6 @@ function PackageDetails() {
   }, [internationalPackageData, id])
 
   const getValue = (key) => {
-    console.log({nik: packageData})
     let foundItem;
     if(id.startsWith("I")){
       foundItem = internationalPackageData.find((ele) => ele.id === id);
@@ -42,7 +41,6 @@ function PackageDetails() {
     return match ? parseInt(match[1], 10) : null;
   }
 
-  console.log({nik: packageData})
     return (
       <>
         {/* ===============  breadcrumb area start =============== */}
@@ -197,11 +195,11 @@ function PackageDetails() {
                                   <tbody>
                                     <tr>
                                       <td>Destination</td>
-                                      <td>Dubai</td>
+                                      <td>{getValue("Destination Name")}</td>
                                     </tr>
                                     <tr>
                                       <td>Departure</td>
-                                      <td>Yes Required</td>
+                                      <td>Yes</td>
                                     </tr>
                                     {/* <tr>
                                       <td>Departure Time</td>
@@ -289,7 +287,7 @@ function PackageDetails() {
                                   </tbody>
                                 </table>
                               </div>
-                              <div className="p-rationg">
+                              {/* <div className="p-rationg">
                                 <h5>Rating</h5>
                                 <div className="rating-card">
                                   <div className="r-card-avarag">
@@ -361,7 +359,7 @@ function PackageDetails() {
                                     </ul>
                                   </div>
                                 </div>
-                              </div>
+                              </div> */}
                               <div className="p-review hide">
                                 <ul>
                                   <li className="p-review-card">

@@ -3,8 +3,6 @@ import { Link, NavLink } from "react-router-dom";
 
 //Import Image
 import logoMain from "../../assets/images/logo.png";
-import secondLogo from "../../assets/images/logo-2.png";
-
 class Headers extends Component {
   scrollTop() {
     window.scrollTo({
@@ -19,7 +17,7 @@ class Headers extends Component {
         <div className="topbar-area">
           <div className="container">
             <div className="row">
-              <div className="col-lg-5 col-md-5 tob-contact-row">
+              <div className="tob-contact-row">
                 <div className="topbar-contact">
                   <ul>
                     <li>
@@ -37,6 +35,16 @@ class Headers extends Component {
                       <i className="bx bxl-facebook" />
                       <a href="https://www.facebook.com/share/18BQscnH9K/?mibextid=LQQJ4d">
                         Facebook
+                      </a>
+                    </li>
+                    <li>
+                      <i className="bx bxl-whatsapp" />
+                      <a
+                        href={`https://wa.me/+918447510420?text=${encodeURIComponent(
+                          "Hello, I would like to enquire about your services."
+                        )}`}
+                      >
+                        Whatsapp
                       </a>
                     </li>
                   </ul>

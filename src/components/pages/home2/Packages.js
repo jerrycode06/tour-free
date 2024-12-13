@@ -28,8 +28,7 @@ class Packages extends Component {
              <div className="row">
                <div className="col-lg-12 col-md-12 col-sm-12">
                  <div className="section-head pb-45">
-                   <h5>Choose Your Package</h5>
-                   <b><h4>Select Your best Package For Your Travel</h4></b>
+                   <h5>UAE Packages</h5>
                  </div>
                </div>
              </div>

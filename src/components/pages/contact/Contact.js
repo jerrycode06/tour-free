@@ -63,8 +63,9 @@ class AboutUs extends Component {
                       <i className="flaticon-customer-service" />
                     </div>
                     <div className="contact-info">
-                      <h5>Phone</h5>
+                      <h5>Contact</h5>
                       <p>+971-54-401-3834</p>
+                      <p style={{fontSize: "15px"}}>enquiry@deserthoppers.com</p>
                     </div>
                   </div>
                 </div>
@@ -128,9 +129,9 @@ class AboutUs extends Component {
                           <i className="flaticon-clock-1" />
                         </div>
                         <div className="clock-info">
-                          <h5>Open Hour</h5>
+                          <h5>Official Timings</h5>
                           <p>
-                            Mon - Sat At <br /> 10.00Am to 6.00PM
+                            Mon - Sat At <br /> 10.00AM to 6.00PM
                           </p>
                         </div>
                       </li>
@@ -138,7 +139,7 @@ class AboutUs extends Component {
                         <div className="clock-icon">
                           <i className="flaticon-clock-1" />
                         </div>
-                        <div className="clock-info">
+                        <div className="clock-info" style={{display: "flex", alignItems: "center", height: "50px"}}>
                           <p>Sunday Office Close</p>
                         </div>
                       </li>

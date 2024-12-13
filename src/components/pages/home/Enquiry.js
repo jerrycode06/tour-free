@@ -33,6 +33,7 @@ const Enquiry = () => {
                   type="number"
                   placeholder="No of adults"
                   name="no"
+                  min="0"
                   required
                 />
               </div>
@@ -42,17 +43,29 @@ const Enquiry = () => {
                   type="number"
                   placeholder="No of child"
                   name="no"
+                  min="0"
                   required
                 />
               </div>
               <div className="col-lg-6">
-                <label htmlFor="when">Child age</label>
-                <input
-                  type="number"
-                  placeholder="child age"
-                  name="no"
-                  required
-                />
+                <label htmlFor="childAge">Child age</label>
+                <select
+                  name="childAge"
+                  id="aiport"
+                  style={{ width: "90%", marginBottom: "0" }}
+                >
+                  <option value="">Select Age</option>
+                  <option value="0-1">0-1</option>
+                  <option value="2">2</option>
+                  <option value="3">3</option>
+                  <option value="4">4</option>
+                  <option value="4">5</option>
+                  <option value="4">6</option>
+                  <option value="4">7</option>
+                  <option value="4">8</option>
+                  <option value="4">9</option>
+                  <option value="4">10</option>
+                </select>
               </div>
               <div className="col-lg-6">
                 <label htmlFor="when">Depart Date</label>

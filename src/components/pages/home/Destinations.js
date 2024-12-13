@@ -23,29 +23,24 @@ class Destinations extends Component {
         loop: true, // Enables infinite scrolling
         margin: 20, // Space between items
         smartSpeed: 3000, // Animation speed for transitions
-        // autoplay: true, // Enables auto-scrolling
-        // autoplayTimeout: 3000, // Delay between auto-scrolls (3 seconds)
-        // autoplayHoverPause: true, // Pauses auto-scroll on hover
+        autoplay: true, // Enables auto-scrolling
+        autoplayTimeout: 3000, // Delay between auto-scrolls (3 seconds)
+        autoplayHoverPause: true, // Pauses auto-scroll on hover
         dots: false, // Disable dots
-        nav: true, // Enables navigation arrows
-        navText: [
-          "<i class='bx bx-chevron-left bg-black'></i>",
-          "<i class='bx bx-chevron-right bg-black''></i>",
-        ],
         responsive: {
           0: {
             items: 1, // Items to display on small screens
-            nav: true,
+            // nav: true,
             dots: false,
           },
           600: {
             items: 2, // Items to display on medium screens
-            nav: true,
+            // nav: true,
             dots: false,
           },
           1000: {
             items: 3, // Items to display on large screens
-            nav: true,
+            // nav: true,
             loop: true,
           },
         },
@@ -60,9 +55,6 @@ class Destinations extends Component {
               <div className="col-lg-12 col-md-12 col-sm-12">
                 <div className="section-head pb-40">
                   <h5>Popular Packages</h5>
-                  <b>
-                    <h4>Select Your best Package For Your Travel</h4>
-                  </b>
                 </div>
               </div>
             </div>

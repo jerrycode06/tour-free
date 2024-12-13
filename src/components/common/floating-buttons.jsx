@@ -38,7 +38,7 @@ const FloatingButtons = () => {
   };
 
   return (
-    <div className="z-10 fixed flex gap-3 w-full justify-center items-center bottom-2">
+    <div className="z-10 fixed flex gap-3 w-full justify-end items-center bottom-2">
       <button onClick={handlePhoneClick}>
         <img
           src={phoneIcon}
