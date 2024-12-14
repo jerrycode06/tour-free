@@ -20,6 +20,19 @@ class International extends Component {
         autoplayTimeout: 3000, // Delay between auto-scrolls (3 seconds)
         autoplayHoverPause: true, // Pauses auto-scroll on hover
         dots: false, // Disable dots
+        nav: true, // Enable navigation arrows
+      navText: [
+        `<button class="custom-arrow custom-prev">
+          <svg width="40" height="40" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M15 18L9 12L15 6" stroke="#333" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </button>`,
+        `<button class="custom-arrow custom-next">
+          <svg width="40" height="40" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M9 18L15 12L9 6" stroke="#333" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </button>`,
+      ],
         responsive: {
           0: {
             items: 1, // Items to display on small screens

@@ -12,48 +12,36 @@ const BothDestinations = () => {
         <div className="row">
           <div className="col-md-6">
             <div className="blog-card">
+            <Link
+                    to={`${process.env.PUBLIC_URL}/dubai/destination`}
+                    // className="btn-common-sm"
+                  >
               <div className="blog-img">
                 <img src={package1Img} alt="" className="img-fluid" />
               </div>
               <div className="blog-details">
-                <Link
-                  to={`${process.env.PUBLIC_URL}/dubai/destination`}
-                  className="blog-title"
-                >
                   Dubai Packages
-                </Link>
+
                 <div className="blog-btn">
-                  <Link
-                    to={`${process.env.PUBLIC_URL}/dubai/destination`}
-                    className="btn-common-sm"
-                  >
-                    Check More
-                  </Link>
+
                 </div>
               </div>
+              </Link>
             </div>
           </div>
           <div className="col-md-6">
             <div className="blog-card">
+            <Link
+                    to={`${process.env.PUBLIC_URL}/international/destination`}
+                    // className="btn-common-sm"
+                  >
               <div className="blog-img">
                 <img src={package5Img} alt="" className="img-fluid" />
               </div>
               <div className="blog-details">
-                <Link
-                  to={`${process.env.PUBLIC_URL}/international/destination`}
-                  className="blog-title"
-                >
                  International Packages
-                </Link>
-                <div className="blog-btn">
-                  <Link
-                    to={`${process.env.PUBLIC_URL}/international/destination`}
-                    className="btn-common-sm"
-                  >
-                    Check More
-                  </Link>
-                </div>
               </div>
+              </Link>
             </div>
           </div>
         </div>

@@ -64,7 +64,7 @@ class AboutUs extends Component {
                     </div>
                     <div className="contact-info">
                       <h5>Contact</h5>
-                      <p>+971-54-401-3834</p>
+                      <a href="tel:+971-54-401-3834">+971-54-401-3834</a>
                       <p style={{fontSize: "15px"}}>enquiry@deserthoppers.com</p>
                     </div>
                   </div>
