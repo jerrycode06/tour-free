@@ -323,7 +323,7 @@
             justify-content: flex-start;
   }
   .tob-contact-row {
-    display: none;
+    /* display: none; */
   }
   .topbar-area .topbar-social ul {
     -webkit-box-pack: start;
