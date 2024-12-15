@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 
-const SearchableInput = ({ data }) => {
+const SearchableInput = ({ data,onSelect }) => {
   const [searchTerm, setSearchTerm] = useState("")
   const [focused, setFocused] = useState(false);
 
@@ -10,11 +10,13 @@ const SearchableInput = ({ data }) => {
 
   const handleSearchChange = (e) => {
     setSearchTerm(e.target.value); 
+    onSelect(e.target.value)
   };
 
 
   const handleAddItem = (item) => {
     setSearchTerm(item); 
+    onSelect(item)
     setFocused(false);  
   };
 
@@ -22,6 +24,7 @@ const SearchableInput = ({ data }) => {
   const handleInputBlur = () => {
     if (searchTerm && !filteredItems.length) {
       setSearchTerm(searchTerm); 
+      onSelect(searchTerm)
     }
     setFocused(false); 
   };

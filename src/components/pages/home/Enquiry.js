@@ -1,117 +1,141 @@
 import React, { useState } from "react";
+import emailjs from "@emailjs/browser";
 import AiportCodes from "../../../json/airport_codes.json";
 import SearchableInput from "../../common/searchable";
 
 const Enquiry = () => {
   const [noOfChilds, setNumberOfChilds] = useState(0);
-  const [error,setError] = useState({
-    error:false,
-    message:""
-  })
+  const [error, setError] = useState({ error: false, message: "" });
+  const [formData, setFormData] = useState({
+    travellingTo: "",
+    noOfAdults: "",
+    noOfChilds: 0,
+    childAges: [],
+    departDate: "",
+  });
 
   const handleChild = (e) => {
-    if (e.target.value <= 7) {
-      setNumberOfChilds(e.target.value);
+    const value = parseInt(e.target.value, 10);
+    if (value <= 7) {
+      setNumberOfChilds(value);
+      setFormData((prev) => ({ ...prev, noOfChilds: value, childAges: [] }));
+    } else {
+      setError({ error: true, message: "Cannot be more than 7" });
+      setTimeout(() => setError({ error: false, message: "" }), 3000);
     }
-    else{
-      setError({
-        error:true,
-        message:"Cannot be more then 7"
-      })
-      setTimeout(()=>{
-        setError({
-          error:false,
-          message:""
-        })
-      },3000)
-    }
+  };
 
+  const handleChildAge = (index, age) => {
+    const updatedAges = [...formData.childAges];
+    updatedAges[index] = age;
+    setFormData((prev) => ({ ...prev, childAges: updatedAges }));
+  };
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+
+    const payload = {
+      travelling_to: formData.travellingTo || "Not specified",
+      no_of_adults: formData.noOfAdults || "0",
+      no_of_children: formData.noOfChilds || "0",
+      children_details: formData.childAges.length > 0 ? formData.childAges.join(", ") : "",
+      departure_date: formData.departDate || "Not specified",
+    };
+
+    emailjs
+      .send(
+        "service_6d9ubmi", // Replace with your EmailJS Service ID
+        "template_o8ryz3u", // Replace with your EmailJS Template ID
+        payload,
+        "Cagg_uModER8D9sLU" // Replace with your EmailJS Public Key
+      )
+      .then(
+        (response) => {
+          console.log("Email sent successfully!", response);
+          alert("Form submitted successfully!");
+        },
+        (error) => {
+          console.error("Failed to send email", error);
+          alert("Failed to submit the form. Please try again.");
+        }
+      );
   };
 
   return (
-    <div
-      className="contact-inputs w-full flex justify-center  enquiry-form max-h-[700px] overflow-y-auto overflow-x-hidden no-scrollbar"
-      id="enquiry-form-id"
-    >
-      <div className="center enquiry-form-inside w-full">
-        <div className="contact-form">
-          <form
-            name="trip-enquiry"
-            method="post"
-            className="flex flex-col justify-center items-center"
-          >
-            <input type="hidden" name="form-name" value="trip-enquiry" />
-            <h5 className="contact-d-head d-flex justify-content-center">
-              Enquire Now
-            </h5>
-            <div className="row w-full flex flex-col justify-center items-center">
-              <div className="col-lg-6">
-                <label htmlFor="to">Travelling To</label>
-                <SearchableInput data={AiportCodes}/>
-              </div>
-              <div className="col-lg-6">
-                <label htmlFor="no">No of adults</label>
-                <input
-                  style={{ width: "100%" }}
-                  type="number"
-                  placeholder="No of adults"
-                  name="no"
-                  min="0"
-                  required
-                />
-              </div>
-              <div className="col-lg-6 mb-2">
-                <label htmlFor="no">No of child</label>
-                <input
-                  style={{ width: "100%",marginBottom:0 }}
-                  type="number"
-                  placeholder="No of child"
-                  name="no"
-                  min="0"
-                  value={noOfChilds}
-                  required
-                  onChange={handleChild}
-                />
-                {error.error && <span className="text-red-500 text-sm font-semibold">{error.message}</span>}
-              </div>
+    <div className="enquiry-form max-h-[700px] overflow-y-auto">
+      <div className="enquiry-form-inside w-full">
+        <form onSubmit={handleSubmit} className="flex flex-col ">
+          <h5 className="text-center">Enquire Now</h5>
 
-              {noOfChilds !== 0 &&
-                Array.from({ length: noOfChilds }).map((_, index) => (
-                  <div className="col-lg-6 pb-2" key={index}>
-                    <label htmlFor="childAge">Child {index + 1} age </label>
-                    <select
-                      name="childAge"
-                      id="aiport"
-                      style={{ marginBottom: "0" }}
-                    >
-                      <option value="">Select Age</option>
-                      <option value="0-1">0-1</option>
-                      <option value="2">2</option>
-                      <option value="3">3</option>
-                      <option value="4">4</option>
-                      <option value="4">5</option>
-                      <option value="4">6</option>
-                      <option value="4">7</option>
-                    </select>
-                  </div>
-                ))}
+          <label>Travelling To</label>
+          <SearchableInput
+            data={AiportCodes}
+            onSelect={(value) =>
+              setFormData((prev) => ({ ...prev, travellingTo: value }))
+            }
+          />
 
-              <div className="col-lg-6">
-                <label htmlFor="when">Depart Date</label>
-                <input
-                  style={{ width: "100%" }}
-                  type="date"
-                  placeholder="Depart"
-                  name="when"
+          <label>No of Adults</label>
+          <input
+            type="number"
+            placeholder="No of adults"
+            min="0"
+            required
+            value={formData.noOfAdults}
+            style={{width:"100%"}}
+            onChange={(e) =>
+              setFormData((prev) => ({ ...prev, noOfAdults: e.target.value }))
+            }
+          />
+
+          <label>No of Children</label>
+          <input
+            type="number"
+            placeholder="No of children"
+            min="0"
+            value={noOfChilds}
+            onChange={handleChild}
+            style={{width:"100%"}}
+          />
+          {error.error && <span className="text-red-500">{error.message}</span>}
+
+          {noOfChilds > 0 &&
+            Array.from({ length: noOfChilds }).map((_, index) => (
+              <div key={index} style={{width:"100%"}}>
+                <label>Child {index + 1} Age</label>
+                <select
+                  onChange={(e) => handleChildAge(index, e.target.value)}
                   required
-                />
+                  style={{width:"100%"}}
+                >
+                  <option value="">Select Age</option>
+                  <option value="0-1">0-1</option>
+                  <option value="2">2</option>
+                  <option value="3">3</option>
+                  <option value="4">4</option>
+                  <option value="5">5</option>
+                  <option value="6">6</option>
+                  <option value="7">7</option>
+                </select>
               </div>
-              <div className="col-lg-12 d-flex justify-content-center">
-                <input type="submit" defaultValue="Submit Now" />
-              </div>
-            </div>
-          </form>
-        </div>
+            ))}
+
+          <label>Depart Date</label>
+          <input
+            type="date"
+            required
+            value={formData.departDate}
+            style={{width:"100%"}}
+            onChange={(e) =>
+              setFormData((prev) => ({ ...prev, departDate: e.target.value }))
+            }
+          />
+
+          <div className="flex items-center w-full justify-center"><button type="submit" className="bg-blue-500 text-white p-2 mt-2 rounded">
+            Submit Now
+          </button>
+          </div>
+        </form>
       </div>
     </div>
   );

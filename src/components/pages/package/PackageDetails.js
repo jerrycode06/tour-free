@@ -742,7 +742,7 @@ function PackageDetails() {
                               <i className="bx bxs-star" />
                             </div>
                             <h5>
-                              <span>$535</span>/ Per Person
+                              <span>AED535</span>/ Per Person
                             </h5>
                           </div>
                         </li>
@@ -773,7 +773,7 @@ function PackageDetails() {
                               <i className="bx bxs-star" />
                             </div>
                             <h5>
-                              <span>$640</span>/ Per Person
+                              <span>AED640</span>/ Per Person
                             </h5>
                           </div>
                         </li>
@@ -808,7 +808,7 @@ function PackageDetails() {
                               <i className="bx bxs-star" />
                             </div>
                             <h5>
-                              <span>$786</span>/ Per Person
+                              <span>AED786</span>/ Per Person
                             </h5>
                           </div>
                         </li>
@@ -843,7 +843,7 @@ function PackageDetails() {
                               <i className="bx bxs-star" />
                             </div>
                             <h5>
-                              <span>$705</span>/ Per Person
+                              <span>AED705</span>/ Per Person
                             </h5>
                           </div>
                         </li>
@@ -876,7 +876,7 @@ function PackageDetails() {
                               <i className="bx bxs-star" />
                             </div>
                             <h5>
-                              <span>$376</span>/ Per Person
+                              <span>AED376</span>/ Per Person
                             </h5>
                           </div>
                         </li>
