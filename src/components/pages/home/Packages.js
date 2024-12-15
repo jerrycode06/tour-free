@@ -183,7 +183,7 @@ class Packages extends Component {
 
                 <div className="package-card">
                   <div className="package-thumb">
-                    <Link to={`${process.env.PUBLIC_URL}/package-details/10`}>
+                    <Link to={`${process.env.PUBLIC_URL}/package-details/33`}>
                       <img src={package3Img} alt="" className="img-fluid" />
                     </Link>
                   </div>
@@ -198,8 +198,8 @@ class Packages extends Component {
                     </div>
                     <h3>
                       <i className="flaticon-arrival" />
-                      <Link to={`${process.env.PUBLIC_URL}/package-details/10`}>
-                        Hotel Basic Dubai Tour
+                      <Link to={`${process.env.PUBLIC_URL}/package-details/33`}>
+                        Dubai Basic City Tour
                       </Link>
                     </h3>
                     <div className="package-rating mb-3">
@@ -214,9 +214,9 @@ class Packages extends Component {
                     {/* <div className="package-rating">
                       <i className="bx bxs-star" />
                       <strong><span>2.3K+</span> Rating</strong>
-                    </div> */}
-                  </div>
-                </div>
+                    </div>
+                   </div>
+                </div> 
 
                 <div className="package-card">
                   <div className="package-thumb">

@@ -352,7 +352,7 @@ class Footers extends Component {
 
                     <li>
                       <Link
-                        to={`${process.env.PUBLIC_URL}/package-details/10`}
+                        to={`${process.env.PUBLIC_URL}/package-details/33`}
                         onClick={this.scrollTop}
                       >
                         Dubai Basic City Tour

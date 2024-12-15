@@ -7,93 +7,97 @@ import package10Img from "../../../assets/images/dubai/package_10.jpg";
 import package12Img from "../../../assets/images/dubai/package_12.jpg";
 import package16Img from "../../../assets/images/dubai/package_16.jpg";
 import "react-datepicker/dist/react-datepicker.css";
-import PackagesData from "../../../dessert-hopper-data.json"
+import PackagesData from "../../../dessert-hopper-data.json";
 import { data } from "../../../json/international_packages";
 
 function PackageDetails() {
   const [packageData, setPackageData] = useState(PackagesData.data || []);
-  const [internationalPackageData,setInternationalPackageData] = useState(data || [])
+  const [internationalPackageData, setInternationalPackageData] = useState(
+    data || []
+  );
   const { id } = useParams();
 
-  const scrollTop= () => {
+  const scrollTop = () => {
     window.scrollTo({
       top: 0,
       behavior: "smooth",
     });
-  }
+  };
 
   useEffect(() => {
     scrollTop();
-  }, [internationalPackageData, id])
+  }, [internationalPackageData, id]);
 
   const getValue = (key) => {
     let foundItem;
-    if(id.startsWith("I")){
+    if (id.startsWith("I")) {
       foundItem = internationalPackageData.find((ele) => ele.id === id);
-    }else{
+    } else {
       foundItem = packageData.find((ele) => ele.id === Number(id));
     }
     return foundItem ? foundItem[key] : "Miss"; // Handle missing keys or items
-  }
+  };
 
   const extractPrice = (str) => {
-    const match = str.match(/USD\s+(\d+)/);
+    const match = str.match(/AED\s+(\d+)/);
     return match ? parseInt(match[1], 10) : null;
-  }
+  };
 
-    return (
-      <>
-        {/* ===============  breadcrumb area start =============== */}
-        <div className="breadcrumb-area">
-          <div className="container">
-            <div className="row">
-              <div className="col-lg-12 col-md-12 col-sm-12">
-                <div className="breadcrumb-wrap">
-                </div>
-              </div>
+  return (
+    <>
+      {/* ===============  breadcrumb area start =============== */}
+      <div className="breadcrumb-area">
+        <div className="container">
+          <div className="row">
+            <div className="col-lg-12 col-md-12 col-sm-12">
+              <div className="breadcrumb-wrap"></div>
             </div>
           </div>
         </div>
-        {/* ===============  breadcrumb area end =============== */}
-        <div className="package-details-wrapper pt-120">
-          <div className="container">
-            <div className="row">
-              <div className="col-lg-8">
-                <div className="package-details">
-                  {/* <div className="package-thumb">
+      </div>
+      {/* ===============  breadcrumb area end =============== */}
+      <div className="package-details-wrapper pt-120">
+        <div className="container">
+          <div className="row">
+            <div className="col-lg-8">
+              <div className="package-details">
+                {/* <div className="package-thumb">
                     <img src={pd_thumb} alt="" />
                   </div> */}
-                  <div className="package-header">
-                    <div className="package-title">
-                      <h3>{getValue("name")} - <br/>AED {extractPrice(getValue("Price"))}/person</h3>
-                      <strong>
-                        <i className="flaticon-arrival" />
-                        {getValue("Destination Name")}
-                      </strong>
-                    </div>
-                    <div className="pd-review">
-                      <p>Excellent</p>
-                      <ul>
-                        <li>
-                          <i className="bx bxs-star" />
-                        </li>
-                        <li>
-                          <i className="bx bxs-star" />
-                        </li>
-                        <li>
-                          <i className="bx bxs-star" />
-                        </li>
-                        <li>
-                          <i className="bx bxs-star" />
-                        </li>
-                        <li>
-                          <i className="bx bx-star" />
-                        </li>
-                      </ul>
-                      {/* <p>800 Review</p> */}
-                    </div>
+                <div className="package-header">
+                  <div className="package-title">
+                    <h3>
+                      {getValue("name")} - <br />
+                      AED {extractPrice(getValue("Price"))}/person
+                    </h3>
+                    <strong>
+                      <i className="flaticon-arrival" />
+                      {getValue("Destination Name")}
+                    </strong>
                   </div>
-                  {/* <div className="p-short-info">
+                  <div className="pd-review">
+                    <p>Excellent</p>
+                    <ul>
+                      <li>
+                        <i className="bx bxs-star" />
+                      </li>
+                      <li>
+                        <i className="bx bxs-star" />
+                      </li>
+                      <li>
+                        <i className="bx bxs-star" />
+                      </li>
+                      <li>
+                        <i className="bx bxs-star" />
+                      </li>
+                      <li>
+                        <i className="bx bx-star" />
+                      </li>
+                    </ul>
+                    {/* <p>800 Review</p> */}
+                  </div>
+                </div>
+                {/* <div className="p-short-info">
                     <div className="single-info">
                       <i className="flaticon-clock" />
                       <div className="info-texts">
@@ -123,39 +127,39 @@ function PackageDetails() {
                       </div>
                     </div>
                   </div> */}
-                  <div className="package-tab">
-                    <ul className="nav nav-pills" id="pills-tab" role="tablist">
-                      <li className="nav-item" role="presentation">
-                        <button
-                          className="nav-link active"
-                          id="pills-home-tab"
-                          data-bs-toggle="pill"
-                          data-bs-target="#pills-home"
-                          type="button"
-                          role="tab"
-                          aria-controls="pills-home"
-                          aria-selected="true"
-                        >
-                          <i className="flaticon-info" />
-                          Information
-                        </button>
-                      </li>
-                      <li className="nav-item" role="presentation">
-                        <button
-                          className="nav-link"
-                          id="pills-profile-tab"
-                          data-bs-toggle="pill"
-                          data-bs-target="#pills-profile"
-                          type="button"
-                          role="tab"
-                          aria-controls="pills-profile"
-                          aria-selected="false"
-                        >
-                          <i className="flaticon-clipboard" />
-                          Travel Plan
-                        </button>
-                      </li>
-                      {/* <li className="nav-item" role="presentation">
+                <div className="package-tab">
+                  <ul className="nav nav-pills" id="pills-tab" role="tablist">
+                    <li className="nav-item" role="presentation">
+                      <button
+                        className="nav-link active"
+                        id="pills-home-tab"
+                        data-bs-toggle="pill"
+                        data-bs-target="#pills-home"
+                        type="button"
+                        role="tab"
+                        aria-controls="pills-home"
+                        aria-selected="true"
+                      >
+                        <i className="flaticon-info" />
+                        Information
+                      </button>
+                    </li>
+                    <li className="nav-item" role="presentation">
+                      <button
+                        className="nav-link"
+                        id="pills-profile-tab"
+                        data-bs-toggle="pill"
+                        data-bs-target="#pills-profile"
+                        type="button"
+                        role="tab"
+                        aria-controls="pills-profile"
+                        aria-selected="false"
+                      >
+                        <i className="flaticon-clipboard" />
+                        Travel Plan
+                      </button>
+                    </li>
+                    {/* <li className="nav-item" role="presentation">
                         <button
                           className="nav-link"
                           id="pills-contact-tab"
@@ -171,37 +175,37 @@ function PackageDetails() {
                           Our Gallary
                         </button>
                       </li> */}
-                    </ul>
+                  </ul>
+                  <div
+                    className="tab-content p-tab-content"
+                    id="pills-tabContent"
+                  >
                     <div
-                      className="tab-content p-tab-content"
-                      id="pills-tabContent"
+                      className="tab-pane fade show active"
+                      id="pills-home"
+                      role="tabpanel"
+                      aria-labelledby="pills-home-tab"
                     >
-                      <div
-                        className="tab-pane fade show active"
-                        id="pills-home"
-                        role="tabpanel"
-                        aria-labelledby="pills-home-tab"
-                      >
-                        <div className="row">
-                          <div className="col-lg-12">
-                            <div className="tab-content-1">
-                              <div className="p-overview">
-                                <h5>Overview</h5>
-                                <p>{getValue("Overview")}</p>
-                                {/* <p>Pellentesque accumsan magna in augue sagittis, non fringilla eros molestie. Sed feugiat mi nec ex vehicula, nec vestibulum orci semper. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Donec tristique commodo fringilla. Duis aliquet varius mauris eget rutrum. Nullam sit amet justo consequat, bibendum orci in, convallis enim. Proin convallis neque viverra finibus cursus. Mauris lacinia lacinia erat in finibus. In non enim libero.Pellentesque accumsan magna in augue sagittis, non fringilla eros molestie. Sed feugiat mi nec ex vehicula, nec vestibulum orci semper. Class aptent taciti sociosqu ad litora torquent per conubia nostra.</p> */}
-                              </div>
-                              <div className="p-details-table">
-                                <table className="table caption-top">
-                                  <tbody>
-                                    <tr>
-                                      <td>Destination</td>
-                                      <td>{getValue("Destination Name")}</td>
-                                    </tr>
-                                    <tr>
-                                      <td>Departure</td>
-                                      <td>Yes</td>
-                                    </tr>
-                                    {/* <tr>
+                      <div className="row">
+                        <div className="col-lg-12">
+                          <div className="tab-content-1">
+                            <div className="p-overview">
+                              <h5>Overview</h5>
+                              <p>{getValue("Overview")}</p>
+                              {/* <p>Pellentesque accumsan magna in augue sagittis, non fringilla eros molestie. Sed feugiat mi nec ex vehicula, nec vestibulum orci semper. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Donec tristique commodo fringilla. Duis aliquet varius mauris eget rutrum. Nullam sit amet justo consequat, bibendum orci in, convallis enim. Proin convallis neque viverra finibus cursus. Mauris lacinia lacinia erat in finibus. In non enim libero.Pellentesque accumsan magna in augue sagittis, non fringilla eros molestie. Sed feugiat mi nec ex vehicula, nec vestibulum orci semper. Class aptent taciti sociosqu ad litora torquent per conubia nostra.</p> */}
+                            </div>
+                            <div className="p-details-table">
+                              <table className="table caption-top">
+                                <tbody>
+                                  <tr>
+                                    <td>Destination</td>
+                                    <td>{getValue("Destination Name")}</td>
+                                  </tr>
+                                  <tr>
+                                    <td>Departure</td>
+                                    <td>Yes</td>
+                                  </tr>
+                                  {/* <tr>
                                       <td>Departure Time</td>
                                       <td>01 April, 2021 10.00AM</td>
                                     </tr>
@@ -209,85 +213,94 @@ function PackageDetails() {
                                       <td>Return Time</td>
                                       <td>08 April, 2021 10.00AM</td>
                                     </tr> */}
-                                    <tr>
-                                      <td>Included</td>
-                                      <td>
-                                        <ul className="table-list-allow">
-                                          <li>
-                                            <i className="bx bx-check" />{" "}
-                                            {getValue("Inclusions").split(".")[0]}
-                                          </li>
-                                          <li>
-                                            {" "}
-                                            <i className="bx bx-check" />{" "}
-                                            {getValue("Inclusions").split(".")[1]}
-                                          </li>
-                                          <li>
-                                            <i className="bx bx-check" />{" "}
-                                            {getValue("Inclusions").split(".")[2]}
-                                          </li>
-                                          <li>
-                                            <i className="bx bx-check" />
-                                            {getValue("Inclusions").split(".")[3]}
-                                          </li>
-                                          <li>
-                                            <i className="bx bx-check" />
-                                            {getValue("Inclusions").split(".")[4]}
-                                          </li>
-                                          <li>
-                                            <i className="bx bx-check" />
-                                            {getValue("Inclusions").split(".")[5]}
-                                          </li>
-                                          <li>
-                                            <i className="bx bx-check" />
-                                            {getValue("Inclusions").split(".")[6]}
-                                          </li>
-                                        </ul>
-                                      </td>
-                                    </tr>
-                                    <tr>
-                                      <td>Excluded</td>
-                                      <td>
-                                        <ul className="table-list-disallow">
-                                          <li>
-                                            {" "}
-                                            <i className="bx bx-x" /> 
-                                            {getValue("Exclusions").split(".")[0]}
-                                          </li>
-                                          <li>
-                                            <i className="bx bx-x" /> {getValue("Exclusions").split(".")[1]}
-                                          </li>
-                                          <li>
-                                            <i className="bx bx-x" /> {getValue("Exclusions").split(".")[2]}
-                                          </li>
-                                          <li>
-                                            <i className="bx bx-x" /> {getValue("Exclusions").split(".")[3]}
-                                          </li>
-                                          <li>
-                                            <i className="bx bx-x" /> {getValue("Exclusions").split(".")[4]}
-                                          </li>
-                                          <li>
-                                            <i className="bx bx-x" /> {getValue("Exclusions").split(".")[5]}
-                                          </li>
-                                          <li>
-                                            <i className="bx bx-x" /> {getValue("Exclusions").split(".")[6]}
-                                          </li>
-                                          <li>
-                                            <i className="bx bx-x" /> {getValue("Exclusions").split(".")[7]}
-                                          </li>
-                                          <li>
-                                            <i className="bx bx-x" /> {getValue("Exclusions").split(".")[8]}
-                                          </li>
-                                          <li>
-                                            <i className="bx bx-x" /> {getValue("Exclusions").split(".")[9]}
-                                          </li>
-                                        </ul>
-                                      </td>
-                                    </tr>
-                                  </tbody>
-                                </table>
-                              </div>
-                              {/* <div className="p-rationg">
+                                  <tr>
+                                    <td>Included</td>
+                                    <td>
+                                      <ul className="table-list-allow">
+                                        <li>
+                                          <i className="bx bx-check" />{" "}
+                                          {getValue("Inclusions").split(".")[0]}
+                                        </li>
+                                        <li>
+                                          {" "}
+                                          <i className="bx bx-check" />{" "}
+                                          {getValue("Inclusions").split(".")[1]}
+                                        </li>
+                                        <li>
+                                          <i className="bx bx-check" />{" "}
+                                          {getValue("Inclusions").split(".")[2]}
+                                        </li>
+                                        <li>
+                                          <i className="bx bx-check" />
+                                          {getValue("Inclusions").split(".")[3]}
+                                        </li>
+                                        <li>
+                                          <i className="bx bx-check" />
+                                          {getValue("Inclusions").split(".")[4]}
+                                        </li>
+                                        <li>
+                                          <i className="bx bx-check" />
+                                          {getValue("Inclusions").split(".")[5]}
+                                        </li>
+                                        <li>
+                                          <i className="bx bx-check" />
+                                          {getValue("Inclusions").split(".")[6]}
+                                        </li>
+                                      </ul>
+                                    </td>
+                                  </tr>
+                                  <tr>
+                                    <td>Excluded</td>
+                                    <td>
+                                      <ul className="table-list-disallow">
+                                        <li>
+                                          {" "}
+                                          <i className="bx bx-x" />
+                                          {getValue("Exclusions").split(".")[0]}
+                                        </li>
+                                        <li>
+                                          <i className="bx bx-x" />{" "}
+                                          {getValue("Exclusions").split(".")[1]}
+                                        </li>
+                                        <li>
+                                          <i className="bx bx-x" />{" "}
+                                          {getValue("Exclusions").split(".")[2]}
+                                        </li>
+                                        <li>
+                                          <i className="bx bx-x" />{" "}
+                                          {getValue("Exclusions").split(".")[3]}
+                                        </li>
+                                        <li>
+                                          <i className="bx bx-x" />{" "}
+                                          {getValue("Exclusions").split(".")[4]}
+                                        </li>
+                                        <li>
+                                          <i className="bx bx-x" />{" "}
+                                          {getValue("Exclusions").split(".")[5]}
+                                        </li>
+                                        <li>
+                                          <i className="bx bx-x" />{" "}
+                                          {getValue("Exclusions").split(".")[6]}
+                                        </li>
+                                        <li>
+                                          <i className="bx bx-x" />{" "}
+                                          {getValue("Exclusions").split(".")[7]}
+                                        </li>
+                                        <li>
+                                          <i className="bx bx-x" />{" "}
+                                          {getValue("Exclusions").split(".")[8]}
+                                        </li>
+                                        <li>
+                                          <i className="bx bx-x" />{" "}
+                                          {getValue("Exclusions").split(".")[9]}
+                                        </li>
+                                      </ul>
+                                    </td>
+                                  </tr>
+                                </tbody>
+                              </table>
+                            </div>
+                            {/* <div className="p-rationg">
                                 <h5>Rating</h5>
                                 <div className="rating-card">
                                   <div className="r-card-avarag">
@@ -360,143 +373,143 @@ function PackageDetails() {
                                   </div>
                                 </div>
                               </div> */}
-                              <div className="p-review hide">
-                                <ul>
-                                  <li className="p-review-card">
-                                    <div className="p-review-info">
-                                      <div className="p-reviewr-img">
-                                        <img src={pr_1} alt="" />
-                                      </div>
-                                      <div className="p-reviewer-info">
-                                        <strong>Bertram Bil</strong>
-                                        <p>2 April, 2021 10.00PM</p>
-                                        <ul className="review-star">
-                                          <li>
-                                            {" "}
-                                            <i className="bx bxs-star" />{" "}
-                                          </li>
-                                          <li>
-                                            {" "}
-                                            <i className="bx bxs-star" />{" "}
-                                          </li>
-                                          <li>
-                                            {" "}
-                                            <i className="bx bxs-star" />{" "}
-                                          </li>
-                                          <li>
-                                            {" "}
-                                            <i className="bx bxs-star" />{" "}
-                                          </li>
-                                          <li>
-                                            {" "}
-                                            <i className="bx bxs-star" />{" "}
-                                          </li>
-                                        </ul>
-                                      </div>
+                            <div className="p-review hide">
+                              <ul>
+                                <li className="p-review-card">
+                                  <div className="p-review-info">
+                                    <div className="p-reviewr-img">
+                                      <img src={pr_1} alt="" />
                                     </div>
-                                    <div className="p-review-texts">
-                                      <p>
-                                        Morbi dictum pulvinar velit, id mollis
-                                        lorem faucibus acUt sed lacinia ipsum.
-                                        Suspendisse massa augue lorem faucibus
-                                        acUt sed lacinia ipsum. Suspendisse{" "}
-                                      </p>
+                                    <div className="p-reviewer-info">
+                                      <strong>Bertram Bil</strong>
+                                      <p>2 April, 2021 10.00PM</p>
+                                      <ul className="review-star">
+                                        <li>
+                                          {" "}
+                                          <i className="bx bxs-star" />{" "}
+                                        </li>
+                                        <li>
+                                          {" "}
+                                          <i className="bx bxs-star" />{" "}
+                                        </li>
+                                        <li>
+                                          {" "}
+                                          <i className="bx bxs-star" />{" "}
+                                        </li>
+                                        <li>
+                                          {" "}
+                                          <i className="bx bxs-star" />{" "}
+                                        </li>
+                                        <li>
+                                          {" "}
+                                          <i className="bx bxs-star" />{" "}
+                                        </li>
+                                      </ul>
                                     </div>
-                                    <Link to={`#`} className="r-reply-btn">
-                                      <i className="bx bx-reply" /> Reply
-                                    </Link>
-                                  </li>
-                                  <li className="p-review-card">
-                                    <div className="p-review-info">
-                                      <div className="p-reviewr-img">
-                                        <img src={pr_1} alt="" />
-                                      </div>
-                                      <div className="p-reviewer-info">
-                                        <strong>Bertram Bil</strong>
-                                        <p>2 April, 2021 10.00PM</p>
-                                        <ul className="review-star">
-                                          <li>
-                                            {" "}
-                                            <i className="bx bxs-star" />{" "}
-                                          </li>
-                                          <li>
-                                            {" "}
-                                            <i className="bx bxs-star" />{" "}
-                                          </li>
-                                          <li>
-                                            {" "}
-                                            <i className="bx bxs-star" />{" "}
-                                          </li>
-                                          <li>
-                                            {" "}
-                                            <i className="bx bxs-star" />{" "}
-                                          </li>
-                                          <li>
-                                            {" "}
-                                            <i className="bx bxs-star" />{" "}
-                                          </li>
-                                        </ul>
-                                      </div>
+                                  </div>
+                                  <div className="p-review-texts">
+                                    <p>
+                                      Morbi dictum pulvinar velit, id mollis
+                                      lorem faucibus acUt sed lacinia ipsum.
+                                      Suspendisse massa augue lorem faucibus
+                                      acUt sed lacinia ipsum. Suspendisse{" "}
+                                    </p>
+                                  </div>
+                                  <Link to={`#`} className="r-reply-btn">
+                                    <i className="bx bx-reply" /> Reply
+                                  </Link>
+                                </li>
+                                <li className="p-review-card">
+                                  <div className="p-review-info">
+                                    <div className="p-reviewr-img">
+                                      <img src={pr_1} alt="" />
                                     </div>
-                                    <div className="p-review-texts">
-                                      <p>
-                                        Morbi dictum pulvinar velit, id mollis
-                                        lorem faucibus acUt sed lacinia ipsum.
-                                        Suspendisse massa augue lorem faucibus
-                                        acUt sed lacinia ipsum. Suspendisse{" "}
-                                      </p>
+                                    <div className="p-reviewer-info">
+                                      <strong>Bertram Bil</strong>
+                                      <p>2 April, 2021 10.00PM</p>
+                                      <ul className="review-star">
+                                        <li>
+                                          {" "}
+                                          <i className="bx bxs-star" />{" "}
+                                        </li>
+                                        <li>
+                                          {" "}
+                                          <i className="bx bxs-star" />{" "}
+                                        </li>
+                                        <li>
+                                          {" "}
+                                          <i className="bx bxs-star" />{" "}
+                                        </li>
+                                        <li>
+                                          {" "}
+                                          <i className="bx bxs-star" />{" "}
+                                        </li>
+                                        <li>
+                                          {" "}
+                                          <i className="bx bxs-star" />{" "}
+                                        </li>
+                                      </ul>
                                     </div>
-                                    <Link to={`#`} className="r-reply-btn">
-                                      <i className="bx bx-reply" /> Reply
-                                    </Link>
-                                  </li>
-                                  <li className="p-review-card">
-                                    <div className="p-review-info">
-                                      <div className="p-reviewr-img">
-                                        <img src={pr_1} alt="" />
-                                      </div>
-                                      <div className="p-reviewer-info">
-                                        <strong>Bertram Bil</strong>
-                                        <p>2 April, 2021 10.00PM</p>
-                                        <ul className="review-star">
-                                          <li>
-                                            {" "}
-                                            <i className="bx bxs-star" />{" "}
-                                          </li>
-                                          <li>
-                                            {" "}
-                                            <i className="bx bxs-star" />{" "}
-                                          </li>
-                                          <li>
-                                            {" "}
-                                            <i className="bx bxs-star" />{" "}
-                                          </li>
-                                          <li>
-                                            {" "}
-                                            <i className="bx bxs-star" />{" "}
-                                          </li>
-                                          <li>
-                                            {" "}
-                                            <i className="bx bxs-star" />{" "}
-                                          </li>
-                                        </ul>
-                                      </div>
+                                  </div>
+                                  <div className="p-review-texts">
+                                    <p>
+                                      Morbi dictum pulvinar velit, id mollis
+                                      lorem faucibus acUt sed lacinia ipsum.
+                                      Suspendisse massa augue lorem faucibus
+                                      acUt sed lacinia ipsum. Suspendisse{" "}
+                                    </p>
+                                  </div>
+                                  <Link to={`#`} className="r-reply-btn">
+                                    <i className="bx bx-reply" /> Reply
+                                  </Link>
+                                </li>
+                                <li className="p-review-card">
+                                  <div className="p-review-info">
+                                    <div className="p-reviewr-img">
+                                      <img src={pr_1} alt="" />
                                     </div>
-                                    <div className="p-review-texts">
-                                      <p>
-                                        Morbi dictum pulvinar velit, id mollis
-                                        lorem faucibus acUt sed lacinia ipsum.
-                                        Suspendisse massa augue lorem faucibus
-                                        acUt sed lacinia ipsum. Suspendisse{" "}
-                                      </p>
+                                    <div className="p-reviewer-info">
+                                      <strong>Bertram Bil</strong>
+                                      <p>2 April, 2021 10.00PM</p>
+                                      <ul className="review-star">
+                                        <li>
+                                          {" "}
+                                          <i className="bx bxs-star" />{" "}
+                                        </li>
+                                        <li>
+                                          {" "}
+                                          <i className="bx bxs-star" />{" "}
+                                        </li>
+                                        <li>
+                                          {" "}
+                                          <i className="bx bxs-star" />{" "}
+                                        </li>
+                                        <li>
+                                          {" "}
+                                          <i className="bx bxs-star" />{" "}
+                                        </li>
+                                        <li>
+                                          {" "}
+                                          <i className="bx bxs-star" />{" "}
+                                        </li>
+                                      </ul>
                                     </div>
-                                    <Link to={`#`} className="r-reply-btn">
-                                      <i className="bx bx-reply" /> Reply
-                                    </Link>
-                                  </li>
-                                </ul>
-                              </div>
-                              {/* <div className="p-review-input">
+                                  </div>
+                                  <div className="p-review-texts">
+                                    <p>
+                                      Morbi dictum pulvinar velit, id mollis
+                                      lorem faucibus acUt sed lacinia ipsum.
+                                      Suspendisse massa augue lorem faucibus
+                                      acUt sed lacinia ipsum. Suspendisse{" "}
+                                    </p>
+                                  </div>
+                                  <Link to={`#`} className="r-reply-btn">
+                                    <i className="bx bx-reply" /> Reply
+                                  </Link>
+                                </li>
+                              </ul>
+                            </div>
+                            {/* <div className="p-review-input">
                                 <form>
                                   <h5>Leave Your Comment</h5>
                                   <div className="row">
@@ -552,27 +565,28 @@ function PackageDetails() {
                                   </div>
                                 </form>
                               </div> */}
-                            </div>
                           </div>
                         </div>
                       </div>
-                      <div
-                        className="tab-pane fade"
-                        id="pills-profile"
-                        role="tabpanel"
-                        aria-labelledby="pills-profile-tab"
-                      >
-                        <div className="tab-content-2">
-                          <div className="row">
-                            <div className="col-lg-12">
-                              <div className="p-timeline-overview">
-                                <h5>Overview</h5>
-                                <p>
-                                {getValue("Overview")}
-                                </p>
-                              </div>
-                              <ul className="p-timeline">
-                              {Array.from({ length: getValue("daysCount") }, (_, index) => index + 1).map((day) => (
+                    </div>
+                    <div
+                      className="tab-pane fade"
+                      id="pills-profile"
+                      role="tabpanel"
+                      aria-labelledby="pills-profile-tab"
+                    >
+                      <div className="tab-content-2">
+                        <div className="row">
+                          <div className="col-lg-12">
+                            <div className="p-timeline-overview">
+                              <h5>Overview</h5>
+                              <p>{getValue("Overview")}</p>
+                            </div>
+                            <ul className="p-timeline">
+                              {Array.from(
+                                { length: getValue("daysCount") },
+                                (_, index) => index + 1
+                              ).map((day) => (
                                 <li>
                                   <div className="timeline-index">
                                     <div className="index-circle">
@@ -580,16 +594,28 @@ function PackageDetails() {
                                     </div>
                                   </div>
                                   <div className="timeline-content">
-                                    {!id.startsWith("I") ? <h5>DAY {day} : {getValue(`Day ${day}`).split(".")[0]}</h5> : <h5>DAY {day} : {getValue(`Day ${day+1}`).split(".")[0]}</h5>}
+                                    {!id.startsWith("I") ? (
+                                      <h5>
+                                        DAY {day} :{" "}
+                                        {getValue(`Day ${day}`)?.split(
+                                          "."
+                                        )[0] || "No details available"}
+                                      </h5>
+                                    ) : (
+                                      <h5>
+                                        DAY {day} :{" "}
+                                        {getValue(`Day ${day + 1}`)?.split(
+                                          "."
+                                        )[0] || "No details available"}
+                                      </h5>
+                                    )}
+                                    {/* {!id.startsWith("I") ? <h5>DAY {day} : {getValue(`Day ${day}`).split(".")[0]}</h5> : <h5>DAY {day} : {getValue(`Day ${day+1}`).split(".")[0]}</h5>} */}
                                     {/* <strong>10.00 AM to 10.00 PM</strong> */}
-                                    <p>
-                                    {getValue(`Day ${day}`)}
-                                    </p>
+                                    <p>{getValue(`Day ${day}`)}</p>
                                   </div>
                                 </li>
                               ))}
-                              </ul>
-                            </div>
+                            </ul>
                           </div>
                         </div>
                       </div>
@@ -597,10 +623,11 @@ function PackageDetails() {
                   </div>
                 </div>
               </div>
-              <div className="col-lg-4">
-                <div className="package-d-sidebar">
-                  <div className="row">
-                    {/* <div className="col-lg-12 col-md-6">
+            </div>
+            <div className="col-lg-4">
+              <div className="package-d-sidebar">
+                <div className="row">
+                  {/* <div className="col-lg-12 col-md-6">
                       <div className="p-sidebar-form">
                         <form>
                           <h5 className="package-d-head">Book This Package</h5>
@@ -680,171 +707,183 @@ function PackageDetails() {
                         </form>
                       </div>
                     </div> */}
-                    <div className="col-lg-12 col-md-6">
-                      <div className="p-sidebar-cards mt-40">
-                        <h5 className="package-d-head">Popular Packages</h5>
-                        <ul className="package-cards">
-                          <li className="package-card-sm">
-                            <div className="p-sm-img">
-                              <img src={package7Img} alt="" />
-                            </div>
-                            <div className="package-info">
-                              <div className="package-date-sm">
-                                <strong>
-                                  <i className="flaticon-calendar" />4 Days/3
-                                  night
-                                </strong>
-                              </div>
-                              <h3>
-                                <i className="flaticon-arrival" />
-                                <Link
-                                  to={`${process.env.PUBLIC_URL}/package-details/10`}
-                                >
-                                  Burj Khalifa Tour
-                                </Link>
-                              </h3>
-                              <div className="package-rating mb-3">
-                              <i className="bx bxs-city" style={{marginRight:'15px'}}></i>
-                                  <i className="bx bxs-star" />
-                                  <i className="bx bxs-star" />
-                                  <i className="bx bxs-star" />
-                                  <i className="bx bxs-star" />
-                                  <i className="bx bxs-star" />
-                              </div>
-                              <h5>
-                                <span>$535</span>/ Per Person
-                              </h5>
-                            </div>
-                          </li>
-                          <li className="package-card-sm">
-                            <div className="p-sm-img">
-                              <img src={package9Img} alt="" />
-                            </div>
-                            <div className="package-info">
-                              <div className="package-date-sm">
-                                <strong>
-                                  <i className="flaticon-calendar" />5 Days/4
-                                  night
-                                </strong>
-                              </div>
-                              <h3>
-                                <i className="flaticon-arrival" />
-                                <Link
-                                  to={`${process.env.PUBLIC_URL}/package-details/8`}
-                                >
-                                  Burj Khalifa Tour
-                                </Link>
-                              </h3>
-                              <div className="package-rating mb-3">
-                                <i className="bx bxs-star" />
-                                <i className="bx bxs-star" />
-                                <i className="bx bxs-star" />
-                                <i className="bx bxs-star" />
-                                <i className="bx bxs-star" />
-                              </div>
-                              <h5>
-                                <span>$640</span>/ Per Person
-                              </h5>
-                            </div>
-                          </li>
-                          <li className="package-card-sm">
-                            <div className="p-sm-img">
-                              <img src={package10Img} alt="" />
-                            </div>
-                            <div className="package-info">
-                              <div className="package-date-sm">
-                                <strong>
-                                  <i className="flaticon-calendar" />6 Days/5
-                                  night
-                                </strong>
-                              </div>
-                              <h3>
-                                <i className="flaticon-arrival" />
-                                <Link
-                                  to={`${process.env.PUBLIC_URL}/package-details/19`}
-                                >
-                                  Burj Khalifa and Abu Dhabi
-                                </Link>
-                              </h3>
-                              <div className="package-rating mb-3">
-                              <i className="bx bxs-city" style={{marginRight:'15px'}}></i>
-                                  <i className="bx bxs-star" />
-                                  <i className="bx bxs-star" />
-                                  <i className="bx bxs-star" />
-                                  <i className="bx bxs-star" />
-                                  <i className="bx bxs-star" />
-                              </div>
-                              <h5>
-                                <span>$786</span>/ Per Person
-                              </h5>
-                            </div>
-                          </li>
-                          <li className="package-card-sm">
-                            <div className="p-sm-img">
-                              <img src={package12Img} alt="" />
-                            </div>
-                            <div className="package-info">
-                              <div className="package-date-sm">
-                                <strong>
-                                  <i className="flaticon-calendar" />6 Days/5
-                                  night
-                                </strong>
-                              </div>
-                              <h3>
-                                <i className="flaticon-arrival" />
-                                <Link
-                                  to={`${process.env.PUBLIC_URL}/package-details/18`}
-                                >
-                                  Abu Dhabi Tour
-                                </Link>
-                              </h3>
-                              <div className="package-rating mb-3">
-                              <i className="bx bxs-city" style={{marginRight:'15px'}}></i>
-                                  <i className="bx bxs-star" />
-                                  <i className="bx bxs-star" />
-                                  <i className="bx bxs-star" />
-                                  <i className="bx bxs-star" />
-                                  <i className="bx bxs-star" />
-                              </div>
-                              <h5>
-                                <span>$705</span>/ Per Person
-                              </h5>
-                            </div>
-                          </li>
-                          <li className="package-card-sm">
-                            <div className="p-sm-img">
-                              <img src={package16Img} alt="" />
-                            </div>
-                            <div className="package-info">
-                              <div className="package-date-sm">
-                                <strong>
-                                  <i className="flaticon-calendar" />4 Days/3
-                                  night
-                                </strong>
-                              </div>
-                              <h3>
-                                <i className="flaticon-arrival" />
-                                <Link
-                                  to={`${process.env.PUBLIC_URL}/package-details/1`}
-                                >
-                                  Hotel without Burj Khalifa
-                                </Link>
-                              </h3>
-                              <div className="package-rating mb-3">
-                              <i className="bx bxs-city" style={{marginRight:'15px'}}></i>
-                              <i className="bx bxs-star" />
-                              <i className="bx bxs-star" />
-                              <i className="bx bxs-star" />
+                  <div className="col-lg-12 col-md-6">
+                    <div className="p-sidebar-cards mt-40">
+                      <h5 className="package-d-head">Popular Packages</h5>
+                      <ul className="package-cards">
+                        <li className="package-card-sm">
+                          <div className="p-sm-img">
+                            <img src={package7Img} alt="" />
                           </div>
-                              <h5>
-                                <span>$376</span>/ Per Person
-                              </h5>
+                          <div className="package-info">
+                            <div className="package-date-sm">
+                              <strong>
+                                <i className="flaticon-calendar" />4 Days/3
+                                night
+                              </strong>
                             </div>
-                          </li>
-                        </ul>
-                      </div>
+                            <h3>
+                              <i className="flaticon-arrival" />
+                              <Link
+                                to={`${process.env.PUBLIC_URL}/package-details/10`}
+                              >
+                                Burj Khalifa Tour
+                              </Link>
+                            </h3>
+                            <div className="package-rating mb-3">
+                              <i
+                                className="bx bxs-city"
+                                style={{ marginRight: "15px" }}
+                              ></i>
+                              <i className="bx bxs-star" />
+                              <i className="bx bxs-star" />
+                              <i className="bx bxs-star" />
+                              <i className="bx bxs-star" />
+                              <i className="bx bxs-star" />
+                            </div>
+                            <h5>
+                              <span>$535</span>/ Per Person
+                            </h5>
+                          </div>
+                        </li>
+                        <li className="package-card-sm">
+                          <div className="p-sm-img">
+                            <img src={package9Img} alt="" />
+                          </div>
+                          <div className="package-info">
+                            <div className="package-date-sm">
+                              <strong>
+                                <i className="flaticon-calendar" />5 Days/4
+                                night
+                              </strong>
+                            </div>
+                            <h3>
+                              <i className="flaticon-arrival" />
+                              <Link
+                                to={`${process.env.PUBLIC_URL}/package-details/8`}
+                              >
+                                Burj Khalifa Tour
+                              </Link>
+                            </h3>
+                            <div className="package-rating mb-3">
+                              <i className="bx bxs-star" />
+                              <i className="bx bxs-star" />
+                              <i className="bx bxs-star" />
+                              <i className="bx bxs-star" />
+                              <i className="bx bxs-star" />
+                            </div>
+                            <h5>
+                              <span>$640</span>/ Per Person
+                            </h5>
+                          </div>
+                        </li>
+                        <li className="package-card-sm">
+                          <div className="p-sm-img">
+                            <img src={package10Img} alt="" />
+                          </div>
+                          <div className="package-info">
+                            <div className="package-date-sm">
+                              <strong>
+                                <i className="flaticon-calendar" />6 Days/5
+                                night
+                              </strong>
+                            </div>
+                            <h3>
+                              <i className="flaticon-arrival" />
+                              <Link
+                                to={`${process.env.PUBLIC_URL}/package-details/19`}
+                              >
+                                Burj Khalifa and Abu Dhabi
+                              </Link>
+                            </h3>
+                            <div className="package-rating mb-3">
+                              <i
+                                className="bx bxs-city"
+                                style={{ marginRight: "15px" }}
+                              ></i>
+                              <i className="bx bxs-star" />
+                              <i className="bx bxs-star" />
+                              <i className="bx bxs-star" />
+                              <i className="bx bxs-star" />
+                              <i className="bx bxs-star" />
+                            </div>
+                            <h5>
+                              <span>$786</span>/ Per Person
+                            </h5>
+                          </div>
+                        </li>
+                        <li className="package-card-sm">
+                          <div className="p-sm-img">
+                            <img src={package12Img} alt="" />
+                          </div>
+                          <div className="package-info">
+                            <div className="package-date-sm">
+                              <strong>
+                                <i className="flaticon-calendar" />6 Days/5
+                                night
+                              </strong>
+                            </div>
+                            <h3>
+                              <i className="flaticon-arrival" />
+                              <Link
+                                to={`${process.env.PUBLIC_URL}/package-details/18`}
+                              >
+                                Abu Dhabi Tour
+                              </Link>
+                            </h3>
+                            <div className="package-rating mb-3">
+                              <i
+                                className="bx bxs-city"
+                                style={{ marginRight: "15px" }}
+                              ></i>
+                              <i className="bx bxs-star" />
+                              <i className="bx bxs-star" />
+                              <i className="bx bxs-star" />
+                              <i className="bx bxs-star" />
+                              <i className="bx bxs-star" />
+                            </div>
+                            <h5>
+                              <span>$705</span>/ Per Person
+                            </h5>
+                          </div>
+                        </li>
+                        <li className="package-card-sm">
+                          <div className="p-sm-img">
+                            <img src={package16Img} alt="" />
+                          </div>
+                          <div className="package-info">
+                            <div className="package-date-sm">
+                              <strong>
+                                <i className="flaticon-calendar" />4 Days/3
+                                night
+                              </strong>
+                            </div>
+                            <h3>
+                              <i className="flaticon-arrival" />
+                              <Link
+                                to={`${process.env.PUBLIC_URL}/package-details/1`}
+                              >
+                                Hotel without Burj Khalifa
+                              </Link>
+                            </h3>
+                            <div className="package-rating mb-3">
+                              <i
+                                className="bx bxs-city"
+                                style={{ marginRight: "15px" }}
+                              ></i>
+                              <i className="bx bxs-star" />
+                              <i className="bx bxs-star" />
+                              <i className="bx bxs-star" />
+                            </div>
+                            <h5>
+                              <span>$376</span>/ Per Person
+                            </h5>
+                          </div>
+                        </li>
+                      </ul>
                     </div>
-                    {/* <div className="col-lg-12 col-md-6">
+                  </div>
+                  {/* <div className="col-lg-12 col-md-6">
                       <div className="p-sidebar-organizer mt-40">
                         <h5 className="package-d-head">Organized By</h5>
                         <div className="organizer-card">
@@ -881,7 +920,7 @@ function PackageDetails() {
                         </div>
                       </div>
                     </div> */}
-                    {/* <div className="col-lg-12 col-md-6">
+                  {/* <div className="col-lg-12 col-md-6">
                       <div className="p-sidebar-banner mt-40">
                         <img src={sidebarBannar} alt="" className="img-fluid" />
                         <div className="sidebar-banner-overlay">
@@ -894,13 +933,13 @@ function PackageDetails() {
                         </div>
                       </div>
                     </div> */}
-                  </div>
                 </div>
               </div>
             </div>
           </div>
         </div>
-      </>
-    );
-  }
+      </div>
+    </>
+  );
+}
 export default PackageDetails;

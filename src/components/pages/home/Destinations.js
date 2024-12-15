@@ -121,7 +121,7 @@ class Destinations extends Component {
                   <div className="package-details">
                     <div className="package-info">
                       <h5>
-                        <span>AED485</span>/Per Person
+                        <span>AED458</span>/Per Person
                       </h5>
                     </div>
                     <h3>
