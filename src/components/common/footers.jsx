@@ -193,7 +193,7 @@ class Footers extends Component {
       behavior: "smooth",
     });
   }
-  
+
   render() {
     const handleWhatsAppClick = () => {
       const phoneNumber = "+918447510420"; // Replace with the WhatsApp number
@@ -214,14 +214,37 @@ class Footers extends Component {
                   <h2>Terms and Conditions</h2>
                   <div className="new-social-container">
                     <ol type="a">
-                      <li>1) The above rates are quoted in AED, Nett and non-commissionable to you.</li>
+                      {/* <li>1) The above rates are quoted in AED, Nett and non-commissionable to you.</li>
                       <li>2) Above is just an offer and we are not holding any booking against this query.</li>
                       <li>3) All services/rooms are subject to availability at the time of receiving final confirmation from your end.</li>
                       <li>4) The above quote is valid only for this query and may vary in case the number of passengers change.</li>
                       <li>5) Please be reminded that all special requests like early check-in, smoking, nonsmoking, views, floors, king, twin, adjoining / interconnecting rooms are strictly subject to availability upon arrival and same cannot be guaranteed prior.</li>
                       <li>6) If the Hotel or Suppliers change their Quote for the services that they offer, the same will be forwarded to your Company.</li>
                       <li>7) Burj Khalifa tour once booked cannot be cancelled, also be informed the Burj Khalifa tour charge is nonrefundable and non-transferable.</li>
-                      <li>8) Kindly note that during Major Exhibitions/Events additional surcharge will be applicable, Surcharge may vary depending on the Hotels and will be advised at the time of final confirmation.</li>
+                      <li>8) Kindly note that during Major Exhibitions/Events additional surcharge will be applicable, Surcharge may vary depending on the Hotels and will be advised at the time of final confirmation.</li> */}
+
+                      <li>1)	This is only land package and price are subject to availability, Package price may change during peak seasons & if dates & schedules change. </li>
+                      <li>2)	Offered Packages are as per the current promotions.</li>
+                      <li>3)	Booking will be consider confirmed as per the payment policy.</li>
+                      <li>4)	Final vouchers will be issued only once we has received the full payment.</li>
+                      <li>5)	The booking is deemed cancelled if full payment is not received within 15 days prior to departure.</li>
+                      <li>6)	The customer hereby agrees that customized package is as per his/her will and choice & final price is as per inclusions selected by the customers, in case the customer has changed any component, the same will be updated in the final price.</li>
+                      <li>7)	Customers’ final confirmation will have exact components which were selected and reviewed by the customer while booking the package.</li>
+                      <li>8)	Mentioned itineraries are tentative & may change as per the real time scenario’s.</li>
+                      <li>9)	The prices displayed have been calculated as per the rate of exchange prevailing at the time of costing.</li>
+                      <li>10)	Desert Hoppers Tourism LLC reserves the right to amend the hotels on similar category in case of Non-Availability.</li>
+                      <li>11)	Desert Hoppers Tourism LLC reserves the right to change the prices in case of currency fluctuations, changes in the various gross rates of exchange, special/high season charge levied by the suppliers, hike in rail charges before the date of departure and to surcharge accordingly. All such increases in price must be paid in full before the departure by the client.</li>
+                      <li>12)	Any Visa cost fluctuations will have to be borne by the passenger.</li>
+                      <li>13)	For late night or early morning airport transfers supplements would be applicable.</li>
+                      <li>14)	Standard check in / out time is 1500 hrs / 1100 hrs for all international hotels, no guarantee for early check in & late checkout. For Guaranteed check in / out, supplement charges will be applicable.</li>
+                      <li>15)	100% cancellations will be applicable once the Booking is re- confirmed.</li>
+                      <li>16)	The Credit Note for the remaining amount after all applicable cancellations would be shared with you which could be utilize against your next booking with us.</li>
+                      <li>17)	In case seat in coach (sharing basis tours/transfer) the client should follow the timing on the ground. If any transfer is missed, Desert Hoppers Tourism LLC will not be responsible, and the client will bear the extra cost.</li>
+                      <li>18)	The passport must be valid for at least 6 months from the return date of departure. Client’s responsibility to obtain correct, current, and valid passports and re-entry permits where required. Please reach out to our team if you need any help with this.</li>
+                      <li>19)	Desert Hoppers Tourism LLC will not be responsible if in case the passenger could not travel due to any circumstances, cancellation policy will be applicable accordingly.</li>
+
+
+
                     </ol>
                   </div>
                 </div>
@@ -232,7 +255,10 @@ class Footers extends Component {
         {/* ===============  Newsletter area end =============== */}
 
         {/* =============== Footer Area Start ================= */}
-        <div className="bg-black max-[650px]:h-screen text-white flex justify-center py-[70px]">
+
+
+        {/* COMMENTED CODE FOR FOOTER */}
+        <div className="bg-black  text-white flex justify-center py-[70px]">
           <div className="w-[80%] flex flex-col items-center gap-3">
             <h1 className="text-3xl font-extrabold">
               Desert <span className="text-orange-300">Hoopers</span>
@@ -412,6 +438,8 @@ class Footers extends Component {
             </div>
           </div>
         </div>
+
+
         {/* ==============  Footer area end================= */}
       </>
     );
