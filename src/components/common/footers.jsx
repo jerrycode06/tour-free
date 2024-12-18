@@ -196,7 +196,7 @@ class Footers extends Component {
 
   render() {
     const handleWhatsAppClick = () => {
-      const phoneNumber = "+918447510420"; // Replace with the WhatsApp number
+      const phoneNumber = "+971544013834"; // Replace with the WhatsApp number
       const message = "Hello, I would like to enquire about your services."; // Default message
       window.open(
         `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`,

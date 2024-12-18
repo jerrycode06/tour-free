@@ -216,7 +216,21 @@ function PackageDetails() {
                                   <tr>
                                     <td>Included</td>
                                     <td>
-                                      <ul className="table-list-allow">
+                                      {getValue("Inclusions") && getValue("Inclusions").trim() && (
+                                        <ul className="table-list-allow">
+                                          {getValue("Inclusions")
+                                            .split(".")
+                                            .map((inclusion, index) => (
+                                              inclusion.trim() && ( // Ensures no empty inclusions are shown
+                                                <li key={index}>
+                                                  <i className="bx bx-check" /> {inclusion}
+                                                </li>
+                                              )
+                                            ))}
+                                        </ul>
+                                      )}
+
+                                      {/* <ul className="table-list-allow">
                                         <li>
                                           <i className="bx bx-check" />{" "}
                                           {getValue("Inclusions").split(".")[0]}
@@ -246,13 +260,29 @@ function PackageDetails() {
                                           <i className="bx bx-check" />
                                           {getValue("Inclusions").split(".")[6]}
                                         </li>
-                                      </ul>
+                                      </ul> */}
                                     </td>
                                   </tr>
                                   <tr>
                                     <td>Excluded</td>
                                     <td>
-                                      <ul className="table-list-disallow">
+
+                                      {getValue("Inclusions") && getValue("Inclusions").trim() && (
+                                        <ul className="table-list-disallow">
+                                          {getValue("Exclusions")
+                                            .split(".")
+                                            .map((inclusion, index) => (
+                                              inclusion.trim() && ( // Ensures no empty inclusions are shown
+                                                <li key={index}>
+                                                  <i className="bx bx-x" /> {inclusion}
+                                                </li>
+                                              )
+                                            ))}
+                                        </ul>
+                                      )}
+
+
+                                      {/* <ul className="table-list-disallow">
                                         <li>
                                           {" "}
                                           <i className="bx bx-x" />
@@ -294,7 +324,7 @@ function PackageDetails() {
                                           <i className="bx bx-x" />{" "}
                                           {getValue("Exclusions").split(".")[9]}
                                         </li>
-                                      </ul>
+                                      </ul> */}
                                     </td>
                                   </tr>
                                 </tbody>
