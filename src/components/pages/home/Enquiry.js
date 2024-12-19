@@ -69,7 +69,7 @@ const Enquiry = () => {
 
           <label>Travelling To</label>
           <SearchableInput
-            data={AiportCodes}
+            data={[]} // empty array [] passed instead of AiportCodes
             onSelect={(value) =>
               setFormData((prev) => ({ ...prev, travellingTo: value }))
             }
