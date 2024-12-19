@@ -68,10 +68,20 @@ const Enquiry = () => {
           <h5 className="text-center">Enquire Now</h5>
 
           <label>Travelling To</label>
-          <SearchableInput
+          {/* <SearchableInput
             data={[]} // empty array [] passed instead of AiportCodes
             onSelect={(value) =>
               setFormData((prev) => ({ ...prev, travellingTo: value }))
+            }
+          /> */}
+          <input
+            type="text"
+            placeholder="Travelling To"
+            required
+            value={formData.travellingTo}
+            style={{width:"100%"}}
+            onChange={(e) =>
+              setFormData((prev) => ({ ...prev, travellingTo: e.target.value }))
             }
           />
 
@@ -131,7 +141,7 @@ const Enquiry = () => {
             }
           />
 
-          <div className="flex items-center w-full justify-center"><button type="submit" className="bg-green-800 text-white p-2 mt-2 rounded">
+          <div className="flex items-center w-full justify-center mt-3"><button type="submit" className="bg-green-800 text-white p-2 mt-2 rounded">
             Submit Now
           </button>
           </div>

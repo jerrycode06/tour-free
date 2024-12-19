@@ -796,6 +796,10 @@ function PackageDetails() {
                               </Link>
                             </h3>
                             <div className="package-rating mb-3">
+                            <i
+                                className="bx bxs-city"
+                                style={{ marginRight: "15px" }}
+                              ></i>
                               <i className="bx bxs-star" />
                               <i className="bx bxs-star" />
                               <i className="bx bxs-star" />

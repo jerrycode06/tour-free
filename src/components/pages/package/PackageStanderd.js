@@ -187,9 +187,7 @@ class PackageStanderd extends Component {
                                                 <Link to={`${process.env.PUBLIC_URL}/package-details`}>Paris Hill Tour</Link>
                                             </h3>
                                             <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dolorem saepe amet magni!</p>
-                                            <div className="package-rating">
-                                                <strong><i className="bx bxs-star" /><span>8K+</span> Rating</strong>
-                                            </div>
+                                               
                                         </div>
                                     </div>
                                 </div>
@@ -209,9 +207,7 @@ class PackageStanderd extends Component {
                                                 <Link to={`${process.env.PUBLIC_URL}/package-details`}>Lake Garda, Spain</Link>
                                             </h3>
                                             <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dolorem saepe amet magni!</p>
-                                            <div className="package-rating">
-                                                <strong><i className="bx bxs-star" /><span>3K+</span> Rating</strong>
-                                            </div>
+                                               
                                         </div>
                                     </div>
                                 </div>
@@ -231,9 +227,7 @@ class PackageStanderd extends Component {
                                                 <Link to={`${process.env.PUBLIC_URL}/package-details`}>Mount Dtna, Spain</Link>
                                             </h3>
                                             <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dolorem saepe amet magni!</p>
-                                            <div className="package-rating">
-                                                <strong><i className="bx bxs-star" /><span>1K+</span> Rating</strong>
-                                            </div>
+                                                
                                         </div>
                                     </div>
                                 </div>
@@ -253,9 +247,7 @@ class PackageStanderd extends Component {
                                                 <Link to={`${process.env.PUBLIC_URL}/package-details`}>Amalfi Costa, Italy</Link>
                                             </h3>
                                             <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dolorem saepe amet magni!</p>
-                                            <div className="package-rating">
-                                                <strong><i className="bx bxs-star" /><span>0.5K+</span> Rating</strong>
-                                            </div>
+                                            
                                         </div>
                                     </div>
                                 </div>
@@ -275,9 +267,7 @@ class PackageStanderd extends Component {
                                                 <Link to={`${process.env.PUBLIC_URL}/package-details`}>Fench Rivira, Italy</Link>
                                             </h3>
                                             <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dolorem saepe amet magni!</p>
-                                            <div className="package-rating">
-                                                <strong><i className="bx bxs-star" /><span>1.2K+</span> Rating</strong>
-                                            </div>
+                                            
                                         </div>
                                     </div>
                                 </div>
@@ -297,10 +287,7 @@ class PackageStanderd extends Component {
                                                 <Link to={`${process.env.PUBLIC_URL}/package-details`}>Lake Geneva, Italy</Link>
                                             </h3>
                                             <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dolorem saepe amet magni!</p>
-                                            <div className="package-rating">
-                                                <strong><i className="bx bxs-star" /><span>4K+</span> Rating</strong>
-                                            </div>
-                                        </div>
+                                                                                    </div>
                                     </div>
                                 </div>
                                 <div className="col-lg-12 col-md-12">
@@ -319,9 +306,7 @@ class PackageStanderd extends Component {
                                                 <Link to={`${process.env.PUBLIC_URL}/package-details`}>Maritime Heritage</Link>
                                             </h3>
                                             <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dolorem saepe amet magni!</p>
-                                            <div className="package-rating">
-                                                <strong><i className="bx bxs-star" /><span>1K+</span> Rating</strong>
-                                            </div>
+                                                
                                         </div>
                                     </div>
                                 </div>

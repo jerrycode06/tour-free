@@ -95,10 +95,7 @@ class Destinations extends Component {
                                        <h3><i className="flaticon-arrival" />
                                            <Link to={`${process.env.PUBLIC_URL}/package-details`}>Paris Hill Tour</Link>
                                        </h3>
-                                       <div className="package-rating">
-                                           <i className="bx bxs-star" />
-                                           <strong><span>1.3K+</span> Rating</strong>
-                                       </div>
+                                       {/*   */}
                                    </div>
                                </div>
                                <div className="package-card">
@@ -114,10 +111,10 @@ class Destinations extends Component {
                                        <h3><i className="flaticon-arrival" />
                                            <Link to={`${process.env.PUBLIC_URL}/package-details`}>Lake Garda, Spain</Link>
                                        </h3>
-                                       <div className="package-rating">
+                                       {/* <div className="package-rating">
                                            <i className="bx bxs-star" />
                                            <strong><span>1.3K+</span> Rating</strong>
-                                       </div>
+                                       </div> */}
                                    </div>
                                </div>
                                <div className="package-card">
@@ -133,10 +130,10 @@ class Destinations extends Component {
                                        <h3><i className="flaticon-arrival" />
                                            <Link to={`${process.env.PUBLIC_URL}/package-details`}>Mount Dtna, Spain</Link>
                                        </h3>
-                                       <div className="package-rating">
+                                       {/* <div className="package-rating">
                                            <i className="bx bxs-star" />
                                            <strong><span>1.3K+</span> Rating</strong>
-                                       </div>
+                                       </div> */}
                                    </div>
                                </div>
                                <div className="package-card">
@@ -152,10 +149,10 @@ class Destinations extends Component {
                                        <h3><i className="flaticon-arrival" />
                                            <Link to={`${process.env.PUBLIC_URL}/package-details`}>Amalfi Costa, Italy</Link>
                                        </h3>
-                                       <div className="package-rating">
+                                       {/* <div className="package-rating">
                                            <i className="bx bxs-star" />
                                            <strong><span>1.3K+</span> Rating</strong>
-                                       </div>
+                                       </div> */}
                                    </div>
                                </div>
                            </OwlCarousel>
@@ -178,10 +175,10 @@ class Destinations extends Component {
                                        <h3><i className="flaticon-arrival" />
                                            <Link to={`${process.env.PUBLIC_URL}/package-details`}>Amalfi Costa, Italy</Link>
                                        </h3>
-                                       <div className="package-rating">
+                                       {/* <div className="package-rating">
                                            <i className="bx bxs-star" />
                                            <strong><span>1.3K+</span> Rating</strong>
-                                       </div>
+                                       </div> */}
                                    </div>
                                </div>
 
@@ -198,10 +195,10 @@ class Destinations extends Component {
                                        <h3><i className="flaticon-arrival" />
                                            <Link to={`${process.env.PUBLIC_URL}/package-details`}>Fench Rivira, Italy</Link>
                                        </h3>
-                                       <div className="package-rating">
+                                       {/* <div className="package-rating">
                                            <i className="bx bxs-star" />
                                            <strong><span>1.3K+</span> Rating</strong>
-                                       </div>
+                                       </div> */}
                                    </div>
                                </div>
 
@@ -218,10 +215,7 @@ class Destinations extends Component {
                                        <h3><i className="flaticon-arrival" />
                                            <Link to={`${process.env.PUBLIC_URL}/package-details`}>Amalfi Costa, Italy</Link>
                                        </h3>
-                                       <div className="package-rating">
-                                           <i className="bx bxs-star" />
-                                           <strong><span>1.3K+</span> Rating</strong>
-                                       </div>
+                                        
                                    </div>
                                </div>
 
@@ -238,10 +232,7 @@ class Destinations extends Component {
                                        <h3><i className="flaticon-arrival" />
                                            <Link to={`${process.env.PUBLIC_URL}/package-details`}>Mount Dtna, Italyr</Link>
                                        </h3>
-                                       <div className="package-rating">
-                                           <i className="bx bxs-star" />
-                                           <strong><span>1.3K+</span> Rating</strong>
-                                       </div>
+                                        
                                    </div>
                                </div>
                            </OwlCarousel>
@@ -280,10 +271,7 @@ class Destinations extends Component {
                                        <h3><i className="flaticon-arrival" />
                                            <Link to={`${process.env.PUBLIC_URL}/package-details`}>Amalfi Costa, Italy</Link>
                                        </h3>
-                                       <div className="package-rating">
-                                           <i className="bx bxs-star" />
-                                           <strong><span>1.3K+</span> Rating</strong>
-                                       </div>
+                                        
                                    </div>
                                </div>
                                <div className="package-card">
@@ -299,10 +287,7 @@ class Destinations extends Component {
                                        <h3><i className="flaticon-arrival" />
                                            <Link to={`${process.env.PUBLIC_URL}/package-details`}>Maritime Heritage</Link>
                                        </h3>
-                                       <div className="package-rating">
-                                           <i className="bx bxs-star" />
-                                           <strong><span>1.3K+</span> Rating</strong>
-                                       </div>
+                                        
                                    </div>
                                </div>
                                <div className="package-card">
@@ -318,10 +303,7 @@ class Destinations extends Component {
                                        <h3><i className="flaticon-arrival" />
                                            <Link to={`${process.env.PUBLIC_URL}/package-details`}>Souks of Deira</Link>
                                        </h3>
-                                       <div className="package-rating">
-                                           <i className="bx bxs-star" />
-                                           <strong><span>1.3K+</span> Rating</strong>
-                                       </div>
+                                        
                                    </div>
                                </div>
                                <div className="package-card">
@@ -338,10 +320,7 @@ class Destinations extends Component {
                                            <i className="flaticon-arrival" />
                                            <Link to={`${process.env.PUBLIC_URL}/package-details`}>Jumeirah Mosque</Link>
                                        </h3>
-                                       <div className="package-rating">
-                                           <i className="bx bxs-star" />
-                                           <strong><span>1.3K+</span> Rating</strong>
-                                       </div>
+                                        
                                    </div>
                                </div>
                            </OwlCarousel>

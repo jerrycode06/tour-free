@@ -69,12 +69,6 @@ class AboutUs extends Component {
                     <i className="bx bxs-star" />
                     <i className="bx bxs-star" />
                   </div>
-                  <div className="package-rating">
-                    <i className="bx bxs-star" />
-                    <strong>
-                      <span>2.6K+</span> Rating
-                    </strong>
-                  </div>
                 </div>
               </div>
 
@@ -106,12 +100,12 @@ class AboutUs extends Component {
                       <i className="bx bxs-star" />
                       <i className="bx bxs-star" />
                     </div>
-                    <div className="package-rating">
+                    {/* <div className="package-rating">
                       <i className="bx bxs-star" />
                       <strong>
                         <span>1.3K+</span> Rating
                       </strong>
-                    </div>
+                    </div> */}
                   </div>
                 </div>
                 <div className="package-card">
@@ -141,12 +135,12 @@ class AboutUs extends Component {
                       <i className="bx bxs-star" />
                       <i className="bx bxs-star" />
                     </div>
-                    <div className="package-rating">
+                    {/* <div className="package-rating">
                       <i className="bx bxs-star" />
                       <strong>
                         <span>1.3K+</span> Rating
                       </strong>
-                    </div>
+                    </div> */}
                   </div>
                 </div>
                 <div className="package-card">
@@ -178,12 +172,12 @@ class AboutUs extends Component {
                       <i className="bx bxs-star" />
                       <i className="bx bxs-star" />
                     </div>
-                    <div className="package-rating">
+                    {/* <div className="package-rating">
                       <i className="bx bxs-star" />
                       <strong>
                         <span>1.3K+</span> Rating
                       </strong>
-                    </div>
+                    </div> */}
                   </div>
                 </div>
                 <div className="package-card">
@@ -214,12 +208,12 @@ class AboutUs extends Component {
                       <i className="bx bxs-star" />
                       <i className="bx bxs-star" />
                     </div>
-                    <div className="package-rating">
+                    {/* <div className="package-rating">
                       <i className="bx bxs-star" />
                       <strong>
                         <span>1.3K+</span> Rating
                       </strong>
-                    </div>
+                    </div> */}
                   </div>
                 </div>
               </div>

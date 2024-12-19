@@ -184,9 +184,7 @@ class PackageSidebar extends Component {
                                             <h3><i className="flaticon-arrival" />
                                                 <Link to={`${process.env.PUBLIC_URL}/package-details`}>Paris Hill Tour</Link>
                                             </h3>
-                                            <div className="package-rating">
-                                                <strong><i className="bx bxs-star" /><span>8K+</span> Rating</strong>
-                                            </div>
+                                               
                                         </div>
                                     </div>
                                 </div>
@@ -205,9 +203,7 @@ class PackageSidebar extends Component {
                                             <h3><i className="flaticon-arrival" />
                                                 <Link to={`${process.env.PUBLIC_URL}/package-details`}>Lake Garda, Italy</Link>
                                             </h3>
-                                            <div className="package-rating">
-                                                <strong><i className="bx bxs-star" /><span>8K+</span> Rating</strong>
-                                            </div>
+                                               
                                         </div>
                                     </div>
                                 </div>
@@ -226,9 +222,7 @@ class PackageSidebar extends Component {
                                             <h3><i className="flaticon-arrival" />
                                                 <Link to={`${process.env.PUBLIC_URL}/package-details`}>Mount Dtna, Italyr</Link>
                                             </h3>
-                                            <div className="package-rating">
-                                                <strong><i className="bx bxs-star" /><span>8K+</span> Rating</strong>
-                                            </div>
+                                               
                                         </div>
                                     </div>
                                 </div>
@@ -247,9 +241,7 @@ class PackageSidebar extends Component {
                                             <h3><i className="flaticon-arrival" />
                                                 <Link to={`${process.env.PUBLIC_URL}/package-details`}>Amalfi Costa, Italy</Link>
                                             </h3>
-                                            <div className="package-rating">
-                                                <strong><i className="bx bxs-star" /><span>8K+</span> Rating</strong>
-                                            </div>
+                                               
                                         </div>
                                     </div>
                                 </div>
@@ -268,9 +260,7 @@ class PackageSidebar extends Component {
                                             <h3><i className="flaticon-arrival" />
                                                 <Link to={`${process.env.PUBLIC_URL}/package-details`}>French Rivira, France</Link>
                                             </h3>
-                                            <div className="package-rating">
-                                                <strong><i className="bx bxs-star" /><span>8K+</span> Rating</strong>
-                                            </div>
+                                               
                                         </div>
                                     </div>
                                 </div>
@@ -289,9 +279,7 @@ class PackageSidebar extends Component {
                                             <h3><i className="flaticon-arrival" />
                                                 <Link to={`${process.env.PUBLIC_URL}/package-details`}>Lake Geneva, France</Link>
                                             </h3>
-                                            <div className="package-rating">
-                                                <strong><i className="bx bxs-star" /><span>8K+</span> Rating</strong>
-                                            </div>
+                                               
                                         </div>
                                     </div>
                                 </div>
@@ -310,9 +298,7 @@ class PackageSidebar extends Component {
                                             <h3><i className="flaticon-arrival" />
                                                 <Link to={`${process.env.PUBLIC_URL}/package-details`}>Paris Hill Tour</Link>
                                             </h3>
-                                            <div className="package-rating">
-                                                <strong><i className="bx bxs-star" /><span>8K+</span> Rating</strong>
-                                            </div>
+                                               
                                         </div>
                                     </div>
                                 </div>
@@ -331,9 +317,7 @@ class PackageSidebar extends Component {
                                             <h3><i className="flaticon-arrival" />
                                                 <Link to={`${process.env.PUBLIC_URL}/package-details`}>Lake Garda, Italy</Link>
                                             </h3>
-                                            <div className="package-rating">
-                                                <strong><i className="bx bxs-star" /><span>8K+</span> Rating</strong>
-                                            </div>
+                                               
                                         </div>
                                     </div>
                                 </div>
@@ -352,9 +336,7 @@ class PackageSidebar extends Component {
                                             <h3><i className="flaticon-arrival" />
                                                 <Link to={`${process.env.PUBLIC_URL}/package-details`}>Mount Dtna, Italyr</Link>
                                             </h3>
-                                            <div className="package-rating">
-                                                <strong><i className="bx bxs-star" /><span>8K+</span> Rating</strong>
-                                            </div>
+                                               
                                         </div>
                                     </div>
                                 </div>
@@ -373,9 +355,7 @@ class PackageSidebar extends Component {
                                             <h3><i className="flaticon-arrival" />
                                                 <Link to={`${process.env.PUBLIC_URL}/package-details`}>Amalfi Costa, Italy</Link>
                                             </h3>
-                                            <div className="package-rating">
-                                                <strong><i className="bx bxs-star" /><span>8K+</span> Rating</strong>
-                                            </div>
+                                               
                                         </div>
                                     </div>
                                 </div>

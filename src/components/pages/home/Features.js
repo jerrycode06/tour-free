@@ -70,7 +70,7 @@ class Features extends Component {
                                    <div className="feature-content">
                                        <Link to={`${process.env.PUBLIC_URL}/package-details`} className="title">Group Travel Go To Bea
                                            Amsterdam</Link>
-                                       <h5><i className="bx bxs-star" /><span> 7K+</span>Rating</h5>
+                                       {/* <h5><i className="bx bxs-star" /><span> 7K+</span>Rating</h5> */}
                                        <strong>$150 <span>$200</span></strong>
                                    </div>
                                </div>
@@ -81,7 +81,7 @@ class Features extends Component {
                                    <div className="feature-content">
                                        <Link to={`${process.env.PUBLIC_URL}/package-details`} className="title">Group Travel Go To Bea
                                            Amsterdam</Link>
-                                       <h5><i className="bx bxs-star" /><span> 7K+</span>Rating</h5>
+                                       {/* <h5><i className="bx bxs-star" /><span> 7K+</span>Rating</h5> */}
                                        <strong>$150 <span>$200</span></strong>
                                    </div>
                                </div>
@@ -92,7 +92,7 @@ class Features extends Component {
                                    <div className="feature-content">
                                        <Link to={`${process.env.PUBLIC_URL}/package-details`} className="title">Group Travel Go To Bea
                                            Amsterdam</Link>
-                                       <h5><i className="bx bxs-star" /><span> 7K+</span>Rating</h5>
+                                       {/* <h5><i className="bx bxs-star" /><span> 7K+</span>Rating</h5> */}
                                        <strong>$150 <span>$200</span></strong>
                                    </div>
                                </div>
@@ -103,7 +103,7 @@ class Features extends Component {
                                    <div className="feature-content">
                                        <Link to={`${process.env.PUBLIC_URL}/package-details`} className="title">Group Travel Go To Bea
                                            Amsterdam</Link>
-                                       <h5><i className="bx bxs-star" /><span> 7K+</span>Rating</h5>
+                                       {/* <h5><i className="bx bxs-star" /><span> 7K+</span>Rating</h5> */}
                                        <strong>$150 <span>$200</span></strong>
                                    </div>
                                </div>
@@ -114,7 +114,7 @@ class Features extends Component {
                                    <div className="feature-content">
                                        <Link to={`${process.env.PUBLIC_URL}/package-details`} className="title">Group Travel Go To Bea
                                            Amsterdam</Link>
-                                       <h5><i className="bx bxs-star" /><span> 7K+</span>Rating</h5>
+                                       {/* <h5><i className="bx bxs-star" /><span> 7K+</span>Rating</h5> */}
                                        <strong>$150 <span>$200</span></strong>
                                    </div>
                                </div>
