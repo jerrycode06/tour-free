@@ -614,26 +614,27 @@ function PackageDetails() {
                             </div>
                             <ul className="p-timeline">
                               {Array.from(
-                                { length: getValue("daysCount") },
-                                (_, index) => index + 1
+                                { length: getValue("daysCount")+1 },
+                                (_, index) => index
                               ).map((day) => (
                                 <li>
                                   <div className="timeline-index">
                                     <div className="index-circle">
-                                      <h5>0{day}</h5>
+                                      {/* <h5>0{day + 1}</h5> */}
+                                      <h5>{day + 1 > 9 ? day + 1 : `0${day + 1}`}</h5>
                                     </div>
                                   </div>
                                   <div className="timeline-content">
                                     {!id.startsWith("I") ? (
                                       <h5>
-                                        DAY {day} :{" "}
+                                        DAY {day+1} :{" "}
                                         {getValue(`Day ${day}`)?.split(
                                           "."
                                         )[0] || "No details available"}
                                       </h5>
                                     ) : (
                                       <h5>
-                                        DAY {day} :{" "}
+                                        DAY {day+1} :{" "}
                                         {getValue(`Day ${day + 1}`)?.split(
                                           "."
                                         )[0] || "No details available"}
@@ -641,7 +642,7 @@ function PackageDetails() {
                                     )}
                                     {/* {!id.startsWith("I") ? <h5>DAY {day} : {getValue(`Day ${day}`).split(".")[0]}</h5> : <h5>DAY {day} : {getValue(`Day ${day+1}`).split(".")[0]}</h5>} */}
                                     {/* <strong>10.00 AM to 10.00 PM</strong> */}
-                                    <p>{getValue(`Day ${day}`)}</p>
+                                    <p>{getValue(`Day ${day+1}`)}</p>
                                   </div>
                                 </li>
                               ))}
