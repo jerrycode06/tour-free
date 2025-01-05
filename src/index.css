@@ -20,31 +20,50 @@
 
 
 /*=========Customized Small Css Part========*/
-i#packageCalenderIcon{
+i#packageCalenderIcon {
     top: 35% !important;
 }
 
 #packageCalenderMainDiv .react-datepicker-popper[data-placement^=bottom] {
-    padding-top: 0px!important;
+    padding-top: 0px !important;
 }
 
-.react-datepicker__day--selected, .react-datepicker__day--in-selecting-range, .react-datepicker__day--in-range, .react-datepicker__month-text--selected, .react-datepicker__month-text--in-selecting-range, .react-datepicker__month-text--in-range, .react-datepicker__quarter-text--selected, .react-datepicker__quarter-text--in-selecting-range, .react-datepicker__quarter-text--in-range, .react-datepicker__year-text--selected, .react-datepicker__year-text--in-selecting-range, .react-datepicker__year-text--in-range {
-    background-color: #386641!important;
+.react-datepicker__day--selected,
+.react-datepicker__day--in-selecting-range,
+.react-datepicker__day--in-range,
+.react-datepicker__month-text--selected,
+.react-datepicker__month-text--in-selecting-range,
+.react-datepicker__month-text--in-range,
+.react-datepicker__quarter-text--selected,
+.react-datepicker__quarter-text--in-selecting-range,
+.react-datepicker__quarter-text--in-range,
+.react-datepicker__year-text--selected,
+.react-datepicker__year-text--in-selecting-range,
+.react-datepicker__year-text--in-range {
+    background-color: #386641 !important;
 }
-.react-datepicker__day--keyboard-selected, .react-datepicker__month-text--keyboard-selected, .react-datepicker__quarter-text--keyboard-selected, .react-datepicker__year-text--keyboard-selected {
+
+.react-datepicker__day--keyboard-selected,
+.react-datepicker__month-text--keyboard-selected,
+.react-datepicker__quarter-text--keyboard-selected,
+.react-datepicker__year-text--keyboard-selected {
     border-radius: 0.3rem;
-    background-color: #386641!important;
+    background-color: #386641 !important;
     color: #fff;
 }
+
 .rangeslider-horizontal .rangeslider__handle:after {
-    background-color: #386641!important;
+    background-color: #386641 !important;
 }
+
 .rangeslider-horizontal .rangeslider__fill {
-    background-color: #304F47!important;
+    background-color: #304F47 !important;
 }
+
 .package-sidebar .sidebar-range .slider {
     position: relative;
 }
+
 .package-sidebar .sidebar-range .slider .value {
     text-align: right;
     font-weight: bold;
@@ -54,17 +73,90 @@ i#packageCalenderIcon{
 }
 
 header .header-area .main-nav ul li a.active {
-    color: #386641!important;
+    color: #386641 !important;
 }
 
 @layer utilities {
+
     /* Hide scrollbar for Chrome, Safari and Opera */
     .no-scrollbar::-webkit-scrollbar {
         display: none;
     }
-   /* Hide scrollbar for IE, Edge and Firefox */
+
+    /* Hide scrollbar for IE, Edge and Firefox */
     .no-scrollbar {
-        -ms-overflow-style: none;  /* IE and Edge */
-        scrollbar-width: none;  /* Firefox */
-  }
+        -ms-overflow-style: none;
+        /* IE and Edge */
+        scrollbar-width: none;
+        /* Firefox */
+    }
+}
+
+/* Container Styles */
+.terms-container {
+    background-color: #f4f4f4;
+    padding: 60px 20px;
+    display: flex;
+    justify-content: center;
+}
+
+.terms-content {
+    max-width: 90vw;
+    background: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    padding: 40px;
+    font-family: 'Roboto', sans-serif;
+}
+
+/* Title Styles */
+.terms-title {
+    text-align: center;
+    font-size: 2rem;
+    font-weight: bold;
+    color: #166534;
+    /* Primary color */
+    margin-bottom: 30px;
+    border-bottom: 2px solid #166534;
+    /* Border matching primary color */
+    padding-bottom: 10px;
+}
+
+/* List Styles */
+.terms-list {
+    list-style-type: decimal;
+    padding-left: 20px;
+    color: #333333;
+    /* Dark gray for text */
+    line-height: 1.8;
+    font-size: 1rem;
+}
+
+.terms-list li {
+    margin-bottom: 15px;
+}
+
+.terms-list li::marker {
+    color: #166534;
+    /* Primary color for list markers */
+    font-size: 1.2rem;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .terms-container {
+        padding: 40px 10px;
+    }
+
+    .terms-content {
+        padding: 20px;
+    }
+
+    .terms-title {
+        font-size: 1.5rem;
+    }
+
+    .terms-list {
+        font-size: 0.9rem;
+    }
 }

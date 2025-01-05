@@ -69,11 +69,19 @@ class Headers extends Component {
                         className="navbar-brand"
                         onClick={this.scrollTop}
                       >
-                        <img
-                          src={logoMain}
-                          alt=""
-                          className="navbar-logo-img"
-                        />
+                        <div style={{ display: "flex" }}>
+                          <img
+                            src={logoMain}
+                            alt=""
+                            className="navbar-logo-img"
+                          />
+                          <span className="hidden lg:block self-center pl-5">
+                            <h2 style={{fontFamily: "fantasy"}} className="text-[60px]">
+                              DESERTHOPPERS<span style={{color: "#ffa500"}}>.COM</span>
+                            </h2>
+                          </span>
+
+                        </div>
                       </Link>
                     </div>
                     <div className="navbar-icons">
@@ -97,6 +105,7 @@ class Headers extends Component {
                         className="img-fluid navbar-logo-img"
                       />
                     </div>
+                    {/* NAVIGATION LINKS */}
                     <ul>
                       <li>
                         <NavLink
@@ -135,6 +144,16 @@ class Headers extends Component {
                           Contact Us
                         </NavLink>
                       </li>
+                      {/* <li style={{ verticalAlign: "middle" }}>
+                        <a href="tel:+17632275032">
+                          <span>
+                            <h2 style={{ color: "#386641", fontSize: "34px", fontWeight: "bold", fontFamily: "fantasy" }}>
+                              <i className="bx bxs-phone" style={{ verticalAlign: "text-bottom", color: "" }} />
+                              <span>+971-54-401-3834</span>
+                            </h2>
+                          </span>
+                        </a>
+                      </li> */}
                     </ul>
                     <div className="sidebar-contact">
                       <ul>

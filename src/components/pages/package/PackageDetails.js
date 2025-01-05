@@ -614,7 +614,7 @@ function PackageDetails() {
                             </div>
                             <ul className="p-timeline">
                               {Array.from(
-                                { length: getValue("daysCount")+1 },
+                                { length: getValue("daysCount") },
                                 (_, index) => index
                               ).map((day) => (
                                 <li>
@@ -628,7 +628,7 @@ function PackageDetails() {
                                     {!id.startsWith("I") ? (
                                       <h5>
                                         DAY {day+1} :{" "}
-                                        {getValue(`Day ${day}`)?.split(
+                                        {getValue(`Day ${day+1}`)?.split(
                                           "."
                                         )[0] || "No details available"}
                                       </h5>

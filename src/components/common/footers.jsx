@@ -206,7 +206,7 @@ class Footers extends Component {
     return (
       <>
         {/* ===============  Newsletter area start =============== */}
-        <div className="newsletter-area">
+        {/* <div className="newsletter-area">
           <div className="container">
             <div className="row">
               <div className="col-lg-12 col-md-12">
@@ -214,15 +214,6 @@ class Footers extends Component {
                   <h2>Terms and Conditions</h2>
                   <div className="new-social-container">
                     <ol type="a">
-                      {/* <li>1) The above rates are quoted in AED, Nett and non-commissionable to you.</li>
-                      <li>2) Above is just an offer and we are not holding any booking against this query.</li>
-                      <li>3) All services/rooms are subject to availability at the time of receiving final confirmation from your end.</li>
-                      <li>4) The above quote is valid only for this query and may vary in case the number of passengers change.</li>
-                      <li>5) Please be reminded that all special requests like early check-in, smoking, nonsmoking, views, floors, king, twin, adjoining / interconnecting rooms are strictly subject to availability upon arrival and same cannot be guaranteed prior.</li>
-                      <li>6) If the Hotel or Suppliers change their Quote for the services that they offer, the same will be forwarded to your Company.</li>
-                      <li>7) Burj Khalifa tour once booked cannot be cancelled, also be informed the Burj Khalifa tour charge is nonrefundable and non-transferable.</li>
-                      <li>8) Kindly note that during Major Exhibitions/Events additional surcharge will be applicable, Surcharge may vary depending on the Hotels and will be advised at the time of final confirmation.</li> */}
-
                       <li>1)	This is only land package and price are subject to availability, Package price may change during peak seasons & if dates & schedules change. </li>
                       <li>2)	Offered Packages are as per the current promotions.</li>
                       <li>3)	Booking will be consider confirmed as per the payment policy.</li>
@@ -251,17 +242,44 @@ class Footers extends Component {
               </div>
             </div>
           </div>
+        </div> */}
+        <div className="terms-container">
+          <div className="terms-content">
+            <h1 className="terms-title">Terms and Conditions</h1>
+            <ol className="terms-list">
+              <li>This is only a land package and prices are subject to availability. Package prices may change during peak seasons or if dates or schedules change.</li>
+              <li>Offered packages are as per the current promotions.</li>
+              <li>Booking will be considered confirmed as per the payment policy.</li>
+              <li>Final vouchers will be issued only once full payment has been received.</li>
+              <li>The booking is deemed cancelled if full payment is not received within 15 days prior to departure.</li>
+              <li>The customer agrees that the customized package is as per their will and choice. The final price reflects the inclusions selected by the customer. Any changes will be reflected in the final price.</li>
+              <li>Customers’ final confirmation will include exact components selected and reviewed by the customer during booking.</li>
+              <li>Mentioned itineraries are tentative and may change based on real-time scenarios.</li>
+              <li>The displayed prices are calculated as per the prevailing exchange rate at the time of costing.</li>
+              <li>Desert Hoppers Tourism LLC reserves the right to amend hotels to a similar category in case of non-availability.</li>
+              <li>Prices are subject to changes due to currency fluctuations, supplier charges, or rail charge hikes. These changes must be paid in full before departure.</li>
+              <li>Any visa cost fluctuations will be borne by the passenger.</li>
+              <li>Late-night or early-morning airport transfers will incur additional charges.</li>
+              <li>Standard check-in/out times for hotels are 3:00 PM/11:00 AM. Early check-in/out is subject to additional charges.</li>
+              <li>100% cancellation fees apply once the booking is confirmed.</li>
+              <li>Credit notes for remaining amounts after cancellations can be used for future bookings.</li>
+              <li>For seat-in-coach (sharing basis) tours, clients must adhere to the provided timing. Missed transfers are the client’s responsibility, and additional costs will apply.</li>
+              <li>Passports must be valid for at least six months from the return date of departure. Clients must ensure valid documentation.</li>
+              <li>Desert Hoppers Tourism LLC is not responsible if passengers cannot travel due to circumstances. The cancellation policy will apply.</li>
+            </ol>
+          </div>
         </div>
+
         {/* ===============  Newsletter area end =============== */}
 
         {/* =============== Footer Area Start ================= */}
 
 
         {/* COMMENTED CODE FOR FOOTER */}
-        <div className="bg-black  text-white flex justify-center py-[70px]">
+        {/* <div className="bg-black  text-white flex justify-center py-[70px]">
           <div className="w-[80%] flex flex-col items-center gap-3">
             <h1 className="text-3xl font-extrabold">
-              Desert <span className="text-orange-300">Hoopers</span>
+              Desert <span className="text-orange-300">Hoppers</span>
             </h1>
             <h2
               className="text-xl text-white"
@@ -437,7 +455,97 @@ class Footers extends Component {
               </div>
             </div>
           </div>
+        </div> */}
+
+        {/* Footer added by Raza A Naqvi */}
+        <div className="bg-black text-white p-3">
+          <div className="max-w-6xl mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+            {/* About Section */}
+            <div>
+              <h1 className="text-2xl font-bold mb-4">
+                Desert <span className="text-orange-300">Hoppers</span>
+              </h1>
+              <p className="text-sm">
+                Experience the beauty of Dubai and beyond with our exclusive travel
+                packages. Your adventure awaits!
+              </p>
+            </div>
+
+            {/* Popular Packages Section */}
+            <div>
+              <h3 className="text-lg font-semibold mb-4" style={{ fontFamily: "Oswald" }}>
+                Popular Packages
+              </h3>
+              <ul className="space-y-2 text-orange-300 font-bold">
+                {[
+                  { href: "/package-details/10", text: "Hotel With Burj Khalifa" },
+                  { href: "/package-details/18", text: "Abu Dhabi City Tour" },
+                  { href: "/package-details/19", text: "Burj Khalifa and Abu Dhabi" },
+                  { href: "/package-details/33", text: "Dubai Basic City Tour" },
+                  { href: "/package-details/11", text: "Hotel Without Burj Khalifa" },
+                ].map((item, index) => (
+                  <li key={index}>
+                    <Link to={item.href} onClick={this.scrollTop} className="hover:underline">
+                      {item.text}
+                    </Link>
+                  </li>
+                ))}
+              </ul>
+            </div>
+
+            {/* Quick Links Section */}
+            <div>
+              <h3 className="text-lg font-semibold mb-4" style={{ fontFamily: "Oswald" }}>
+                Quick Links
+              </h3>
+              <ul className="space-y-2 text-orange-300 font-bold">
+                {[
+                  { href: "/", text: "Home" },
+                  { href: "/contact", text: "Contact Us" },
+                  { href: "/blog", text: "Blog" },
+                  { href: "/bothDestinaton", text: "Destinations" },
+                ].map((item, index) => (
+                  <li key={index}>
+                    <Link to={item.href} onClick={this.scrollTop} className="hover:underline">
+                      {item.text}
+                    </Link>
+                  </li>
+                ))}
+              </ul>
+            </div>
+
+            {/* Contact Section */}
+            <div>
+              <h3 className="text-lg font-semibold mb-4" style={{ fontFamily: "Oswald" }}>
+                Get In Touch
+              </h3>
+              <ul className="space-y-2 text-sm">
+                <li className="flex items-center gap-2">
+                  <img src={svg5} alt="Location" width={16} height={16} />
+                  C13-28-370 Hamsah A Building, Al Karama, Dubai, UAE (87556)
+                </li>
+                <li className="flex items-center gap-2">
+                  <img src={svg6} alt="Phone" width={16} height={16} />
+                  <a href="tel:+971-54-401-3834" className="hover:underline">
+                    +971-54-401-3834
+                  </a>
+                </li>
+                <li className="flex items-center gap-2">
+                  <img src={svg7} alt="Email" width={16} height={16} />
+                  <a href="mailto:enquiry@deserthoppers.com" className="hover:underline">
+                    enquiry@deserthoppers.com
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          {/* Footer Bottom */}
+          <div className="mt-4 border-t border-gray-700 pt-4 text-center text-xs">
+            © {new Date().getFullYear()} Desert Hoppers. All Rights Reserved.
+          </div>
         </div>
+
 
 
         {/* ==============  Footer area end================= */}
