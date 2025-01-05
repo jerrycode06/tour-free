@@ -136,7 +136,7 @@ const Enquiry = () => {
             type="date"
             required
             value={formData.departDate}
-            style={{width:"100%"}}
+            style={{width: "-webkit-fill-available"}}
             onChange={(e) =>
               setFormData((prev) => ({ ...prev, departDate: e.target.value }))
             }
