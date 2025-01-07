@@ -76,6 +76,7 @@ const FloatingButtons = () => {
                       <label htmlFor="to">Travelling To</label>
                       <input
                         type="text"
+                        // style={{color: ""}}
                         placeholder="Travelling To"
                         name="to"
                         required

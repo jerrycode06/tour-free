@@ -17,6 +17,7 @@ import aboutUs from "./components/pages/about-us/AboutUs";
 import destinations from "./components/pages/dubai/Destinations";
 import international from "./components/pages/international/International";
 import bothDestinations from "./components/pages/both-destination/BothDestination";
+import tnc from "./components/pages/tnc/TermsAndConditions";
 import packages from "./components/pages/package/Packages";
 import contact from "./components/pages/contact/Contact";
 import faq from "./components/pages/faq/Faq";
@@ -35,6 +36,7 @@ import FloatingButtons from "./components/common/floating-buttons"
 //Initializations All Css
 import "./index.css";
 import "./index.scss";
+import TermsAndConditions from "./components/pages/tnc/TermsAndConditions";
 
 //Default Warniing Error Hide
 console.log = console.warn = console.error = () => {};
@@ -72,6 +74,10 @@ class Root extends React.Component {
             <Route
               path={`${process.env.PUBLIC_URL}/bothDestinaton`}
               component={bothDestinations}
+            />
+            <Route
+              path={`${process.env.PUBLIC_URL}/tnc`}
+              component={TermsAndConditions}
             />
             <Route
               path={`${process.env.PUBLIC_URL}/package`}

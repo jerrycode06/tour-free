@@ -72,9 +72,16 @@ const Enquiry = () => {
     <div className="enquiry-form mt-5 max-h-[700px] overflow-y-auto" style={{ justifySelf: "end"}}>
       <div className="enquiry-form-inside w-full">
         <form onSubmit={handleSubmit} className="flex flex-col ">
-          <h5 className="text-center" style={{margin:"10px"}}>Enquire Now</h5>
+          <h5 className="text-center" style={
+            {
+              margin: "18px",
+              fontFamily: 'Quicksand',
+              fontSize: "xx-large",
+              color: "WHITE",
+              fontWeight: "500"
+            }}>ENQUIRE NOW</h5>
 
-          <label>Travelling To</label>
+          <label style={{color: "white"}}>Travelling To</label>
           <input
             type="text"
             placeholder="Travelling To"
@@ -86,7 +93,7 @@ const Enquiry = () => {
             }
           />
 
-          <label>No of Adults</label>
+          <label style={{color: "white"}}>No of Adults</label>
           <input
             type="number"
             placeholder="No of adults"
@@ -99,7 +106,7 @@ const Enquiry = () => {
             }
           />
 
-          <label>No of Children</label>
+          <label style={{color: "white"}}>No of Children</label>
           <input
             type="number"
             placeholder="No of children"
@@ -113,7 +120,7 @@ const Enquiry = () => {
           {noOfChilds > 0 &&
             Array.from({ length: noOfChilds }).map((_, index) => (
               <div key={index} style={{width:"100%"}}>
-                <label>Child {index + 1} Age</label>
+                <label style={{color: "white"}}>Child {index + 1} Age</label>
                 <select
                   onChange={(e) => handleChildAge(index, e.target.value)}
                   required
@@ -131,7 +138,7 @@ const Enquiry = () => {
               </div>
             ))}
 
-          <label>Depart Date</label>
+          <label style={{color: "white"}}>Depart Date</label>
           <input
             type="date"
             required

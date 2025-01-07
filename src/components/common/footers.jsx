@@ -243,7 +243,7 @@ class Footers extends Component {
             </div>
           </div>
         </div> */}
-        <div className="terms-container">
+        {/* <div className="terms-container">
           <div className="terms-content">
             <h1 className="terms-title">Terms and Conditions</h1>
             <ol className="terms-list">
@@ -268,7 +268,7 @@ class Footers extends Component {
               <li>Desert Hoppers Tourism LLC is not responsible if passengers cannot travel due to circumstances. The cancellation policy will apply.</li>
             </ol>
           </div>
-        </div>
+        </div> */}
 
         {/* ===============  Newsletter area end =============== */}
 
@@ -458,25 +458,27 @@ class Footers extends Component {
         </div> */}
 
         {/* Footer added by Raza A Naqvi */}
-        <div className="bg-black text-white p-3">
+        <div className="bg-black text-white p-3" style={{fontFamily:'Quicksand'}}>
           <div className="max-w-6xl mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
             {/* About Section */}
             <div>
-              <h1 className="text-2xl font-bold mb-4">
-                Desert <span className="text-orange-300">Hoppers</span>
+              <h1 className="text-xl font-bold mb-4">
+                DESERTHOPPERS <span className="text-orange-300">.COM</span>
               </h1>
-              <p className="text-sm">
+              <p className="text-sm text-white">
                 Experience the beauty of Dubai and beyond with our exclusive travel
                 packages. Your adventure awaits!
               </p>
             </div>
 
+            <hr className="block lg:hidden" />
+
             {/* Popular Packages Section */}
             <div>
-              <h3 className="text-lg font-semibold mb-4" style={{ fontFamily: "Oswald" }}>
-                Popular Packages
+              <h3 className="text-xl font-semibold mb-4" style={{ fontFamily: "Quicksand" }}>
+                POPULAR PACKAGES
               </h3>
-              <ul className="space-y-2 text-orange-300 font-bold">
+              <ul className="space-y-2 text-sm">
                 {[
                   { href: "/package-details/10", text: "Hotel With Burj Khalifa" },
                   { href: "/package-details/18", text: "Abu Dhabi City Tour" },
@@ -493,17 +495,20 @@ class Footers extends Component {
               </ul>
             </div>
 
+            <hr className="block lg:hidden" />
+
             {/* Quick Links Section */}
             <div>
-              <h3 className="text-lg font-semibold mb-4" style={{ fontFamily: "Oswald" }}>
-                Quick Links
+              <h3 className="text-xl font-semibold mb-4" style={{ fontFamily: "Quicksand" }}>
+                QUICK LINKS
               </h3>
-              <ul className="space-y-2 text-orange-300 font-bold">
+              <ul className="space-y-2 text-sm">
                 {[
                   { href: "/", text: "Home" },
                   { href: "/contact", text: "Contact Us" },
                   { href: "/blog", text: "Blog" },
                   { href: "/bothDestinaton", text: "Destinations" },
+                  { href: "/tnc", text: "Terms & Conditions" },
                 ].map((item, index) => (
                   <li key={index}>
                     <Link to={item.href} onClick={this.scrollTop} className="hover:underline">
@@ -514,10 +519,12 @@ class Footers extends Component {
               </ul>
             </div>
 
+            <hr className="block lg:hidden" />
+
             {/* Contact Section */}
             <div>
-              <h3 className="text-lg font-semibold mb-4" style={{ fontFamily: "Oswald" }}>
-                Get In Touch
+              <h3 className="text-xl font-semibold mb-4" style={{ fontFamily: "Quicksand" }}>
+                GET IN TOUCH
               </h3>
               <ul className="space-y-2 text-sm">
                 <li className="flex items-center gap-2">

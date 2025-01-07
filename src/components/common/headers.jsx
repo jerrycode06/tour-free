@@ -66,7 +66,7 @@ class Headers extends Component {
                     <div className="logo d-flex justify-content-between">
                       <Link
                         to={`${process.env.PUBLIC_URL}/`}
-                        className="navbar-brand"
+                        className="navbar-brand" style={{marginTop: "2px"}}
                         onClick={this.scrollTop}
                       >
                         <div style={{ display: "flex" }}>
@@ -75,8 +75,8 @@ class Headers extends Component {
                             alt=""
                             className="navbar-logo-img"
                           />
-                          <span className="hidden lg:block self-center pl-5">
-                            <h2 style={{fontFamily: "fantasy"}} className="text-[60px]">
+                          <span className="lg:block self-center pl-2">
+                            <h2 style={{fontFamily: "fantasy"}} className="lg:text-[60px] text-[30px]">
                               DESERTHOPPERS<span style={{color: "#ffa500"}}>.COM</span>
                             </h2>
                           </span>
