@@ -801,19 +801,20 @@ function PackageDetails() {
 
                     {/* ENQUIRY FORM */}
 
-                    <div className="enquiry-form mt-5 max-h-[700px] overflow-y-auto" style={{ justifySelf: "end", background: "orange" }}>
+                    <div className="enquiry-form mt-5 max-h-[700px] overflow-y-auto" 
+                    style={{ justifySelf: "end", background: "white", boxShadow: "0 0 64px #1111111a" }}>
                       <div className="enquiry-form-inside w-full">
                         <form onSubmit={handleSubmit} className="flex flex-col ">
                           <h5 className="text-center" style={
                             {
                               margin: "18px",
-                              fontFamily: 'Quicksand',
+                              // fontFamily: 'Quicksand',
                               fontSize: "xx-large",
-                              color: "WHITE",
-                              fontWeight: "500"
+                              color: "black",
+                              fontWeight: "600"
                             }}>ENQUIRE NOW</h5>
 
-                          <label style={{ color: "white" }}>Travelling To</label>
+                          <label style={{ color: "black" }}>Travelling To</label>
                           <input
                             type="text"
                             placeholder="Travelling To"
@@ -825,7 +826,7 @@ function PackageDetails() {
                             }
                           />
 
-                          <label style={{ color: "white" }}>No of Adults</label>
+                          <label style={{ color: "black" }}>No of Adults</label>
                           <input
                             type="number"
                             placeholder="No of adults"
@@ -838,7 +839,7 @@ function PackageDetails() {
                             }
                           />
 
-                          <label style={{ color: "white" }}>No of Children</label>
+                          <label style={{ color: "black" }}>No of Children</label>
                           <input
                             type="number"
                             placeholder="No of children"
@@ -870,7 +871,7 @@ function PackageDetails() {
                               </div>
                             ))}
 
-                          <label style={{ color: "white" }}>Depart Date</label>
+                          <label style={{ color: "black" }}>Depart Date</label>
                           <input
                             type="date"
                             required
@@ -881,7 +882,7 @@ function PackageDetails() {
                             }
                           />
 
-                          <div className="flex items-center w-full justify-center mt-3"><button type="submit" className="bg-green-800 text-white p-2 mt-2 rounded">
+                          <div className="flex items-center w-full justify-center mt-3"><button type="submit" className="bg-green-800 text-white px-4 py-2 mt-2 rounded">
                             Submit Now
                           </button>
                           </div>
