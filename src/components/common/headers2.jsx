@@ -315,7 +315,7 @@ class HeaderTwo extends Component {
                       <ul>
                         <li className="sidebar-single-contact">
                           <i className="bx bxs-phone" />
-                          <a href="tel:+17632275032">+1 763-227-5032</a>
+                          <a href="tel:+971505829005">+971-50-582-9005</a>
                         </li>
                         <li className="sidebar-single-contact">
                           <i className="bx bxs-envelope" />

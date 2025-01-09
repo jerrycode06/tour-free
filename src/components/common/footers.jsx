@@ -533,8 +533,8 @@ class Footers extends Component {
                 </li>
                 <li className="flex items-center gap-2">
                   <img src={svg6} alt="Phone" width={16} height={16} />
-                  <a href="tel:+971-54-401-3834" className="hover:underline">
-                    +971-54-401-3834
+                  <a href="tel:+971-50-582-9005" className="hover:underline">
+                    +971-50-582-9005
                   </a>
                 </li>
                 <li className="flex items-center gap-2">

@@ -22,7 +22,7 @@ class Headers extends Component {
                   <ul>
                     <li>
                       <i className="bx bxs-phone" />
-                      <a href="tel:+17632275032">+971-54-401-3834</a>
+                      <a href="tel:+971505829005">+971-50-582-9005</a>
                     </li>
 
                     <li>
@@ -76,8 +76,8 @@ class Headers extends Component {
                             className="navbar-logo-img"
                           />
                           <span className="lg:block self-center pl-2">
-                            <h1 style={{fontWeight: "bolder"}} className="lg:text-[50px] text-[20px]">
-                              DESERTHOPPERS<span style={{color: "#ffa500"}}>.COM</span>
+                            <h1 style={{ fontWeight: "bolder" }} className="lg:text-[50px] text-[20px]">
+                              DESERTHOPPERS<span style={{ color: "#ffa500" }}>.COM</span>
                             </h1>
                           </span>
 
@@ -159,8 +159,8 @@ class Headers extends Component {
                       <ul>
                         <li className="sidebar-single-contact">
                           <i className="bx bxs-phone" />
-                          <Link to={`tel:+971-54-401-3834`}>
-                            +971-54-401-3834
+                          <Link to={`tel:+971-50-582-9005`}>
+                            +971-50-582-9005
                           </Link>
                         </li>
                       </ul>
