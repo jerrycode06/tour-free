@@ -77,7 +77,7 @@ class Headers extends Component {
                           />
                           <span className="lg:block self-center pl-2">
                             <h1 style={{ fontWeight: "bolder" }} className="lg:text-[50px] text-[20px]">
-                              DESERTHOPPERS<span style={{ color: "#ffa500" }}>.COM</span>
+                              DESERT<span style={{ color: "#ffa500" }}>HOPPERS</span>
                             </h1>
                           </span>
 

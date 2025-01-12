@@ -463,7 +463,7 @@ class Footers extends Component {
             {/* About Section */}
             <div>
               <h1 className="text-xl font-bold mb-4">
-                DESERTHOPPERS <span className="text-orange-300">.COM</span>
+                DESERT <span className="text-orange-300">HOPPERS</span>
               </h1>
               <p className="text-sm text-white">
                 Experience the beauty of Dubai and beyond with our exclusive travel
