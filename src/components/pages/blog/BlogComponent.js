@@ -7,6 +7,7 @@ import package3Img from "../../../assets/images/dubai/package_3.jpg";
 import package7Img from "../../../assets/images/dubai/package_7.jpg";
 import package5Img from "../../../assets/images/dubai/package_5.jpg";
 import package8Img from "../../../assets/images/dubai/package_8.jpg";
+import TermsAndConditions from "../tnc/TermsAndConditions";
 
 class BlogComponent extends Component {
   render() {
@@ -101,7 +102,7 @@ class BlogComponent extends Component {
                       to={`${process.env.PUBLIC_URL}/blog-details/3`}
                       className="blog-title"
                     >
-                     ⁠A Foodie's Guide to Dubai
+                      ⁠A Foodie's Guide to Dubai
                     </Link>
                     <div className="blog-btn">
                       <Link
@@ -208,6 +209,8 @@ class BlogComponent extends Component {
           </div>
         </div>
         {/* ===============  Blog wrapper area end =============== */}
+        {/* Terms and Conditons */}
+        <TermsAndConditions />
       </>
     );
   }

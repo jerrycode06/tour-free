@@ -7,6 +7,7 @@ import package10Img from "../../../assets/images/dubai/package_10.jpg";
 import package12Img from "../../../assets/images/dubai/package_12.jpg";
 import package16Img from "../../../assets/images/dubai/package_16.jpg";
 import BlogData from "../../../json/blog_data.json";
+import TermsAndConditions from "../tnc/TermsAndConditions";
 
 const BlogDetails = () => {
   const [blogData, setBlogData] = useState(BlogData.data || []);
@@ -188,6 +189,8 @@ const BlogDetails = () => {
         </div>
       </div>
       {/* ===============  Blog wrapper area end =============== */}
+      {/* TERMS AND CONDITIONS */}
+      <TermsAndConditions/>
     </>
   );
 };

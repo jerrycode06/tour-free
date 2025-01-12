@@ -3,6 +3,7 @@ import MainBanner from "./MainBanner";
 import Packages from "./Packages";
 import Destinations from "./Destinations";
 import International from "./International";
+import TermsAndConditions from "../tnc/TermsAndConditions";
 
 //Define Default Content
 class HomePage extends Component {
@@ -45,7 +46,8 @@ class HomePage extends Component {
         <MainBanner />
         <Packages />
         <Destinations />
-        <International/>
+        <International />
+        <TermsAndConditions />
         {/* <Review /> */}
         {/* <Features /> */}
         {/* <Blog /> */}

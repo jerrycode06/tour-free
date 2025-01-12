@@ -1,5 +1,7 @@
 import React, { Component } from "react";
 import { Link } from "react-router-dom";
+import TermsAndConditions from "../tnc/TermsAndConditions";
+
 class AboutUs extends Component {
   componentDidMount() {
     this.scrollTop();
@@ -65,7 +67,7 @@ class AboutUs extends Component {
                     <div className="contact-info">
                       <h5>Contact</h5>
                       <a href="tel:+971-50-582-9005">+971-50-582-9005</a>
-                      <p style={{fontSize: "15px"}}>enquiry@deserthoppers.com</p>
+                      <p style={{ fontSize: "15px" }}>enquiry@deserthoppers.com</p>
                     </div>
                   </div>
                 </div>
@@ -139,7 +141,7 @@ class AboutUs extends Component {
                         <div className="clock-icon">
                           <i className="flaticon-clock-1" />
                         </div>
-                        <div className="clock-info" style={{display: "flex", alignItems: "center", height: "50px"}}>
+                        <div className="clock-info" style={{ display: "flex", alignItems: "center", height: "50px" }}>
                           <p>Sunday Office Close</p>
                         </div>
                       </li>
@@ -177,6 +179,8 @@ class AboutUs extends Component {
             </div>
           </div>
         </div>
+        {/* TERMS AND CONDITIOINS */}
+        <TermsAndConditions />
       </>
     );
   }

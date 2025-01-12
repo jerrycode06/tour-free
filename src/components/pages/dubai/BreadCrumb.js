@@ -11,7 +11,7 @@ class BreadCrumb extends Component {
                    <div className="row">
                        <div className="col-lg-12 col-md-12 col-sm-12">
                            <div className="breadcrumb-wrap">
-                               {/* <h2>Destination</h2> */}
+                               <h2>Destinations</h2>
                            </div>
                        </div>
                    </div>

@@ -3,6 +3,8 @@ import BreadCrumb from "../dubai/BreadCrumb";
 import { Link } from "react-router-dom";
 import package1Img from "../../../assets/images/dubai/package_1.jpg";
 import package5Img from "../../../assets/images/dubai/package_5.jpg";
+import TermsAndConditions from "../tnc/TermsAndConditions";
+
 
 const BothDestinations = () => {
   return (
@@ -46,6 +48,8 @@ const BothDestinations = () => {
           </div>
         </div>
       </div>
+
+      <TermsAndConditions/>
     </div>
   );
 };

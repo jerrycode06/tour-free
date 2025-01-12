@@ -10,6 +10,8 @@ import "react-datepicker/dist/react-datepicker.css";
 import PackagesData from "../../../dessert-hopper-data.json";
 import { data } from "../../../json/international_packages";
 import emailjs from "@emailjs/browser";
+import TermsAndConditions from "../tnc/TermsAndConditions";
+
 
 
 function PackageDetails() {
@@ -105,15 +107,37 @@ function PackageDetails() {
   return (
     <>
       {/* ===============  breadcrumb area start =============== */}
+      {/* <div className="breadcrumb-area">
+        <div className="container">
+          <div className="row">
+            <div className="col-lg-12 col-md-12 col-sm-12">
+              <div className="breadcrumb-wrap">
+
+              </div>
+            </div>
+          </div>
+        </div>
+      </div> */}
+
       <div className="breadcrumb-area">
         <div className="container">
           <div className="row">
             <div className="col-lg-12 col-md-12 col-sm-12">
-              <div className="breadcrumb-wrap"></div>
+              <div className="breadcrumb-wrap">
+                <h2>Destination</h2>
+                <ul className="breadcrumb-links">
+                  <li>
+                    <Link to={`${process.env.PUBLIC_URL}/`}>Home</Link>
+                    <i className="bx bx-chevron-right" />
+                  </li>
+                  <li>Destination</li>
+                </ul>
+              </div>
             </div>
           </div>
         </div>
       </div>
+
       {/* ===============  breadcrumb area end =============== */}
       <div className="package-details-wrapper pt-120">
         <div className="container">
@@ -801,8 +825,8 @@ function PackageDetails() {
 
                     {/* ENQUIRY FORM */}
 
-                    <div className="enquiry-form mt-5 max-h-[700px] overflow-y-auto" 
-                    style={{ justifySelf: "end", background: "white", boxShadow: "0 0 64px #1111111a" }}>
+                    <div className="enquiry-form mt-5 max-h-[700px] overflow-y-auto"
+                      style={{ justifySelf: "end", background: "white", boxShadow: "0 0 64px #1111111a" }}>
                       <div className="enquiry-form-inside w-full">
                         <form onSubmit={handleSubmit} className="flex flex-col ">
                           <h5 className="text-center" style={
@@ -1124,6 +1148,8 @@ function PackageDetails() {
           </div>
         </div>
       </div>
+
+      <TermsAndConditions />
     </>
   );
 }
