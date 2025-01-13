@@ -37,6 +37,8 @@ import FloatingButtons from "./components/common/floating-buttons"
 import "./index.css";
 import "./index.scss";
 import TermsAndConditions from "./components/pages/tnc/TermsAndConditions";
+import TermsAndConditionsMain from "./components/pages/tnc-main/TermsAndConditionsMain";
+import PrivacyPolicy from "./components/pages/privacy-policy/PrivacyPolicy";
 
 //Default Warniing Error Hide
 console.log = console.warn = console.error = () => {};
@@ -78,6 +80,14 @@ class Root extends React.Component {
             <Route
               path={`${process.env.PUBLIC_URL}/tnc`}
               component={TermsAndConditions}
+            />
+            <Route
+              path={`${process.env.PUBLIC_URL}/termsAndConditions`}
+              component={TermsAndConditionsMain}
+            />
+            <Route
+              path={`${process.env.PUBLIC_URL}/privacy-policy-overview`}
+              component={PrivacyPolicy}
             />
             <Route
               path={`${process.env.PUBLIC_URL}/package`}

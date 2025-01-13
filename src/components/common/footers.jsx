@@ -508,7 +508,8 @@ class Footers extends Component {
                   { href: "/contact", text: "Contact Us" },
                   { href: "/blog", text: "Blog" },
                   { href: "/bothDestinaton", text: "Destinations" },
-                  { href: "/tnc", text: "Terms & Conditions" },
+                  { href: "/termsAndConditions", text: "Terms & Conditions" },
+                  { href: "/privacy-policy-overview", text: "Privacy Policy" },
                 ].map((item, index) => (
                   <li key={index}>
                     <Link to={item.href} onClick={this.scrollTop} className="hover:underline">

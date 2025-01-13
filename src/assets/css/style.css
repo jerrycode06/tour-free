@@ -669,7 +669,7 @@ a {
 
 .breadcrumb-area {
   background: -webkit-gradient(linear, left top, left bottom, color-stop(100%, rgba(0, 0, 0, 0.65)), to(rgba(0, 0, 0, 0.65))), url(../images/dubai/Dubai_Home.jpg);
-  background: linear-gradient(rgba(0, 0, 0, 0.65) 100%, rgba(0, 0, 0, 0.65) 100%), url(../images/dubai/Dubai_Home.jpg);
+  background: linear-gradient(rgba(0, 0, 0, 0.65) 100%, rgba(0, 0, 0, 0.65) 100%), url(../images/dubai/DubaiSkyline.jpg);
   background-size: cover;
   min-height: 320px;
   display: -webkit-box;
