@@ -108,13 +108,47 @@ const PrivacyPolicy = () => {
                         <p style={styles.paragraph}>
                             We may share your data with:
                         </p>
-                        <ul style={{ paddingLeft: "20px" }}>
-                            <li>Customer support and travel partners to fulfill your bookings.</li>
-                            <li>Customs, immigration, and regulatory authorities, as required by law.</li>
-                            <li>Payment processors for transaction authentication.</li>
-                            <li>Third-party service providers for analytics, marketing, and operational support.</li>
-                            <li>Affiliates and parent companies to inform you about services and products of interest.</li>
-                        </ul>
+                        <p>
+                            - Customer support and travel partners to fulfill your bookings.<br />
+                            - Customs, immigration, and regulatory authorities, as required by law.<br />
+                            - Payment processors for transaction authentication.<br />
+                            - Third-party service providers for analytics, marketing, and operational support.<br />
+                            - Affiliates and parent companies to inform you about services and products of interest.<br />
+                        </p>
+                    </div>
+                    <div>
+                        <h2 style={styles.sectionTitle}>6. Legal Basis for Data Processing</h2>
+                        <p style={styles.paragraph}>
+                            We process your information based on:
+                            Your consent, where required.
+                            The necessity of fulfilling our agreement with you.
+                            Compliance with applicable laws.
+                            Our legitimate interests, such as improving services and ensuring security.
+                        </p>
+                    </div>
+
+                    <div>
+                        <h2 style={styles.sectionTitle}>7. Disclosure to Third Parties</h2>
+                        <p style={styles.paragraph}>
+                            We may disclose your data to:
+                            Legal authorities for investigations or law enforcement.
+                            Third-party service providers like airlines, hotels, and activity organizers.
+                            Professional advisors (e.g., auditors, lawyers) under confidentiality agreements.
+                            Data processors for analytics and storage purposes.
+                        </p>
+                    </div>
+                    <div>
+                        <h2 style={styles.sectionTitle}>8. Data Security</h2>
+                        <p style={styles.paragraph}>
+                            We implement reasonable technical and organizational measures to protect your information. However, due to the nature of the internet, we cannot guarantee complete security. Any transmission of data is at your own risk.
+                        </p>
+                    </div>
+
+                    <div>
+                        <h2 style={styles.sectionTitle}>9. Images</h2>
+                        <p style={styles.paragraph}>
+                            Images used on our platform are sourced from the internet. For copyright concerns, please contact us.
+                        </p>
                     </div>
                     <div>
                         <h2 style={styles.sectionTitle}>10. Contact Us</h2>
