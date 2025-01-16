@@ -480,11 +480,11 @@ class Footers extends Component {
               </h3>
               <ul className="space-y-2 text-sm">
                 {[
-                  { href: "/package-details/10", text: "Hotel With Burj Khalifa" },
-                  { href: "/package-details/18", text: "Abu Dhabi City Tour" },
-                  { href: "/package-details/19", text: "Burj Khalifa and Abu Dhabi" },
-                  { href: "/package-details/33", text: "Dubai Basic City Tour" },
-                  { href: "/package-details/11", text: "Hotel Without Burj Khalifa" },
+                  { href: "/package-details/10", text: "Best Selling Dubai Tour Package" },
+                  { href: "/package-details/18", text: "Dubai & Abu Dhabi Wonders" },
+                  { href: "/package-details/19", text: "Dubai Explorer Family Package" },
+                  { href: "/package-details/33", text: "Dubai Super Saver with 3 star" },
+                  { href: "/package-details/11", text: "Dubai Super Saver with 5 star" },
                 ].map((item, index) => (
                   <li key={index}>
                     <Link to={item.href} onClick={this.scrollTop} className="hover:underline">
