@@ -149,10 +149,11 @@ function PackageDetails() {
                   </div> */}
                 <div className="package-header">
                   <div className="package-title">
-                    <h3>
+                    <h3 style={{marginBottom: "0px"}}>
                       {getValue("name")} - <br />
-                      AED {extractPrice(getValue("Price"))}/person
+                      AED {extractPrice(getValue("Price"))}/Person <br/> 
                     </h3>
+                    <p style={{marginBottom: "15px"}}>(Cost Based on 2 Pax)</p>
                     <strong>
                       <i className="flaticon-arrival" />
                       {getValue("Destination Name")}

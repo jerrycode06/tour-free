@@ -83,7 +83,7 @@ class Destinations extends Component {
                   <div className="package-details">
                     <div className="package-info">
                       <h5>
-                        <span>AED376</span>/Per Person
+                        <span>AED 1376</span>/Per Person <br/> (Cost Based on 2 Pax)
                       </h5>
                       <h5>
                         <i className="flaticon-calendar" />4 night/5 days
@@ -92,7 +92,7 @@ class Destinations extends Component {
                     <h3>
                       <i className="flaticon-arrival" />
                       <Link to={`${process.env.PUBLIC_URL}/package-details/1`}>
-                        Hotel without Burj Khalifa
+                      Dubai Local Tour Package
                       </Link>
                     </h3>
                     <div className="package-rating mb-3">
@@ -121,13 +121,13 @@ class Destinations extends Component {
                   <div className="package-details">
                     <div className="package-info">
                       <h5>
-                        <span>AED458</span>/Per Person
+                        <span>AED 1675</span>/Per Person <br/> (Cost Based on 2 Pax)
                       </h5>
                     </div>
                     <h3>
                       <i className="flaticon-arrival" />
                       <Link to={`${process.env.PUBLIC_URL}/package-details/2`}>
-                        Burj Khalifa Tour
+                      Super Saver Dubai Vacation
                       </Link>
                     </h3>
                     <div className="package-rating mb-3">
@@ -156,13 +156,13 @@ class Destinations extends Component {
                   <div className="package-details">
                     <div className="package-info">
                       <h5>
-                        <span>AED610</span>/Per Person
+                        <span>AED 2230</span>/Per Person <br/> (Cost Based on 2 Pax)
                       </h5>
                     </div>
                     <h3>
                       <i className="flaticon-arrival" />
                       <Link to={`${process.env.PUBLIC_URL}/package-details/4`}>
-                        Burj Khalifa Tour
+                      Majestic Dubai
                       </Link>
                     </h3>
                     <div className="package-rating mb-3">
@@ -192,13 +192,14 @@ class Destinations extends Component {
                   <div className="package-details">
                     <div className="package-info">
                       <h5>
-                        <span>AED705</span>/Per Person
+                        <span>AED 2575</span>/Per Person <br/> (Cost Based on 2 Pax)
                       </h5>
                     </div>
                     <h3>
                       <i className="flaticon-arrival" />
                       <Link to={`${process.env.PUBLIC_URL}/package-details/18`}>
-                        Abu Dhabi Tour
+                      Dubai & Abu Dhabi Wonders
+
                       </Link>
                     </h3>
                     <div className="package-rating mb-3">
@@ -229,13 +230,13 @@ class Destinations extends Component {
                   <div className="package-details">
                     <div className="package-info">
                       <h5>
-                        <span>AED750</span>/Per Person
+                        <span>AED 2738</span>/Per Person <br/> (Cost Based on 2 Pax)
                       </h5>
                     </div>
                     <h3>
                       <i className="flaticon-arrival" />
                       <Link to={`${process.env.PUBLIC_URL}/package-details/16`}>
-                        Burj Khalifa and Abu Dhabi
+                      Dubai Treasure Hunt
                       </Link>
                     </h3>
                     <div className="package-rating mb-3">

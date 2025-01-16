@@ -80,7 +80,7 @@ class International extends Component {
                     <div className="package-details">
                       <div className="package-info">
                         <h5>
-                          <span>{item.Price}</span>/Per Person
+                          <span>{item.Price}</span>/Per Person <br/> (Cost Based on 2 Pax)
                         </h5>
                         <h5>
                           <i className="flaticon-calendar" />{item.Nights}
