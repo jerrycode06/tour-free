@@ -42,7 +42,7 @@ const TermsAndConditionsMain = () => {
             color: "#166534",
             textAlign: "center",
             marginBottom: "30px",
-            fontSize: "40px",
+            fontSize: "25px",
             fontWeight: "bold",
             textTransform: "uppercase",
             letterSpacing: "2px",
