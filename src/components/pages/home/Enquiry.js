@@ -342,8 +342,8 @@ const Enquiry = () => {
             }
           />
 
-          <div className="mb-4">
-            <label htmlFor="contactNo" style={{ color: "white", display: "block", marginBottom: "8px" }}>
+          <div className="">
+            <label htmlFor="contactNo" style={{ color: "white", display: "block", marginBottom: "" }}>
               Contact No.
             </label>
             <div style={{ display: "flex", alignItems: "center", width: "100%" }}>
