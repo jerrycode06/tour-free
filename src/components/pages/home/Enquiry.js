@@ -342,6 +342,62 @@ const Enquiry = () => {
             }
           />
 
+          <label style={{ color: "white" }}>No of Adults</label>
+          <input
+            type="number"
+            placeholder="No of adults"
+            min="0"
+            required
+            value={formData.noOfAdults}
+            style={{ width: "100%" }}
+            onChange={(e) =>
+              setFormData((prev) => ({ ...prev, noOfAdults: e.target.value }))
+            }
+          />
+
+          <label style={{ color: "white" }}>No of Children</label>
+          <input
+            type="number"
+            placeholder="No of children"
+            min="0"
+            value={noOfChilds}
+            onChange={handleChild}
+            style={{ width: "100%" }}
+          />
+          {error.error && <span className="text-red-500">{error.message}</span>}
+
+          {noOfChilds > 0 &&
+            Array.from({ length: noOfChilds }).map((_, index) => (
+              <div key={index} style={{ width: "100%" }}>
+                <label style={{ color: "white" }}>Child {index + 1} Age</label>
+                <select
+                  onChange={(e) => handleChildAge(index, e.target.value)}
+                  required
+                  style={{ width: "100%" }}
+                >
+                  <option value="">Select Age</option>
+                  <option value="0-1">0-1</option>
+                  <option value="2">2</option>
+                  <option value="3">3</option>
+                  <option value="4">4</option>
+                  <option value="5">5</option>
+                  <option value="6">6</option>
+                  <option value="7">7</option>
+                </select>
+              </div>
+            ))}
+
+          <label style={{ color: "white" }}>Depart Date</label>
+          <input
+            type="date"
+            required
+            value={formData.departDate}
+            style={{ width: "-webkit-fill-available" }}
+            onChange={(e) =>
+              setFormData((prev) => ({ ...prev, departDate: e.target.value }))
+            }
+          />
+
           <div className="">
             <label htmlFor="contactNo" style={{ color: "white", display: "block", marginBottom: "" }}>
               Contact No.
@@ -427,62 +483,6 @@ const Enquiry = () => {
             style={{ width: "100%" }}
             onChange={(e) =>
               setFormData((prev) => ({ ...prev, emailId: e.target.value }))
-            }
-          />
-
-          <label style={{ color: "white" }}>No of Adults</label>
-          <input
-            type="number"
-            placeholder="No of adults"
-            min="0"
-            required
-            value={formData.noOfAdults}
-            style={{ width: "100%" }}
-            onChange={(e) =>
-              setFormData((prev) => ({ ...prev, noOfAdults: e.target.value }))
-            }
-          />
-
-          <label style={{ color: "white" }}>No of Children</label>
-          <input
-            type="number"
-            placeholder="No of children"
-            min="0"
-            value={noOfChilds}
-            onChange={handleChild}
-            style={{ width: "100%" }}
-          />
-          {error.error && <span className="text-red-500">{error.message}</span>}
-
-          {noOfChilds > 0 &&
-            Array.from({ length: noOfChilds }).map((_, index) => (
-              <div key={index} style={{ width: "100%" }}>
-                <label style={{ color: "white" }}>Child {index + 1} Age</label>
-                <select
-                  onChange={(e) => handleChildAge(index, e.target.value)}
-                  required
-                  style={{ width: "100%" }}
-                >
-                  <option value="">Select Age</option>
-                  <option value="0-1">0-1</option>
-                  <option value="2">2</option>
-                  <option value="3">3</option>
-                  <option value="4">4</option>
-                  <option value="5">5</option>
-                  <option value="6">6</option>
-                  <option value="7">7</option>
-                </select>
-              </div>
-            ))}
-
-          <label style={{ color: "white" }}>Depart Date</label>
-          <input
-            type="date"
-            required
-            value={formData.departDate}
-            style={{ width: "-webkit-fill-available" }}
-            onChange={(e) =>
-              setFormData((prev) => ({ ...prev, departDate: e.target.value }))
             }
           />
 
