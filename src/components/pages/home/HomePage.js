@@ -47,7 +47,7 @@ class HomePage extends Component {
         <Packages />
         <Destinations />
         <International />
-        <TermsAndConditions />
+        {/* <TermsAndConditions /> */}
         {/* <Review /> */}
         {/* <Features /> */}
         {/* <Blog /> */}

@@ -786,7 +786,7 @@ class Packages extends Component {
                         <span>AED 2720</span>/Per Person <br/> (Cost Based on 2 Pax)
                       </h5>
                       <h5>
-                        <i className="flaticon-calendar" />6 Days and 5 night
+                        <i className="flaticon-calendar" />5 night/6 Days
                       </h5>
                     </div>
                     <h3>
