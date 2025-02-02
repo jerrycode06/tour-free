@@ -100,55 +100,60 @@ class AboutUs extends Component {
 
         <div className="container mt-4">
           <div className="row">
-            {DUBAI_PACKAGES.map((pkg) => (
-              <div key={pkg.ID} className="col-12 col-md-6 col-lg-4 mb-4">
+            {DUBAI_PACKAGES
+              .sort((a, b) => parseInt(a.PricePerPerson.replace(/\D/g, "")) - parseInt(b.PricePerPerson.replace(/\D/g, "")))
+              .map((pkg) => (
+                <div key={pkg.ID} className="col-12 col-md-6 col-lg-4 mb-4">
 
-                {/* Dynamic */}
-                <div className="package-card">
-                  <div className="package-thumb">
-                    <Link to={`${process.env.PUBLIC_URL}/package-details/${pkg.Name.replace(/\s+/g, "-").toLowerCase()}`}>
-                      <img
-                        src={packageImages[pkg.ID]}
-                        alt={pkg.Name}
-                        className="img-fluid"
-                        style={{ objectFit: "cover" }}
-                      />
-                    </Link>
-                  </div>
-                  <div className="package-details">
-                    <div className="package-info">
-                      <h5>
-                        <span>{pkg.PricePerPerson}</span>
-                        /Per Person <br />
-                        {pkg.CostBasedOn2Pax === "Yes" && '(Cost Based on 2 Pax)'}
-                      </h5>
-                      <h5>
-                        <i className="flaticon-calendar" /> {pkg.NightsCount} nights/{pkg.DaysCount} days
-                      </h5>
-                    </div>
-                    <h3>
-                      <i className="flaticon-arrival" />
-                      <Link to={`${process.env.PUBLIC_URL}/package-details/${pkg.ID}`}>
-                        {pkg.Name}
+                  {/* Dynamic */}
+                  <div className="package-card">
+                    <div className="package-thumb">
+                      <Link to={`${process.env.PUBLIC_URL}/package-details/${pkg.Name.replace(/\s+/g, "-").toLowerCase()}`}>
+                        <img
+                          src={packageImages[pkg.ID]}
+                          alt={pkg.Name}
+                          className="img-fluid"
+                          style={{ objectFit: "cover" }}
+                        />
                       </Link>
-                    </h3>
-                    <div className="package-rating mb-3">
+                    </div>
+                    <div className="package-details">
+                      <div className="package-info">
+                        <h5>
+                          <span>{pkg.PricePerPerson}</span>
+                          /Per Person <br />
+                          {pkg.CostBasedOn2Pax === "Yes" && '(Cost Based on 2 Pax)'}
+                        </h5>
+                        <h5>
+                          <i className="flaticon-calendar" /> {pkg.NightsCount} nights/{pkg.DaysCount} days
+                        </h5>
+                      </div>
+                      <h3>
+                        <i className="flaticon-arrival" />
+                        <Link to={`${process.env.PUBLIC_URL}/package-details/${pkg.ID}`}>
+                          {pkg.Name}
+                        </Link>
+                      </h3>
                       <div className="package-rating mb-3">
-                        <i
-                          className="bx bxs-city"
-                          style={{ marginRight: "15px" }}
-                        ></i>
+                        <div className="package-rating mb-3">
+                          <i
+                            className="bx bxs-city"
+                            style={{ marginRight: "15px" }}
+                          ></i>
+                          {[...Array(pkg.HotelStars)].map((_, index) => (
+                            <i key={index} className="bx bxs-star" />
+                          ))}
+                          {/* <i className="bx bxs-star" />
                         <i className="bx bxs-star" />
                         <i className="bx bxs-star" />
                         <i className="bx bxs-star" />
-                        <i className="bx bxs-star" />
-                        <i className="bx bxs-star" />
+                        <i className="bx bxs-star" /> */}
+                        </div>
                       </div>
                     </div>
                   </div>
                 </div>
-              </div>
-            ))}
+              ))}
           </div>
         </div>
 

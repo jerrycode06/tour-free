@@ -49,7 +49,7 @@ function PackageDetails() {
     // International Package
     if (!foundItem) {
       foundItem = internationalPackageData.find((pkg) => pkg.name.replace(/\s+/g, "-").toLowerCase() === name);
-    } 
+    }
 
     return foundItem ? foundItem[key] : "Miss"; // Handle missing keys or items
   };
@@ -378,14 +378,27 @@ function PackageDetails() {
           <div className="row">
             <div className="col-lg-12 col-md-12 col-sm-12">
               <div className="breadcrumb-wrap">
-                <h2>Destination</h2>
-                <ul className="breadcrumb-links">
+                <h2 style={{marginBottom: "0px"}}>Destination</h2>
+                <ul className="breadcrumb-links" style={{marginBottom: "10px"}}>
                   <li>
                     <Link to={`${process.env.PUBLIC_URL}/`}>Home</Link>
                     <i className="bx bx-chevron-right" />
                   </li>
                   <li>Destination</li>
                 </ul>
+                <a href="tel:+971505829005"
+                  className="btn btn-outline px-4 py-2 fw-bold d-inline-flex align-items-center"
+                  style={{
+                    color: "#304F47",
+                    backgroundColor: "white",
+                    borderColor: "#304F47",
+                    borderWidth: "2px",
+                    borderRadius: "30px",
+                    fontSize: "18px",
+                    transition: "all 0.3s ease-in-out"
+                  }}>
+                  <i className="bx bx-phone-call me-2" style={{ fontSize: "22px" }}></i> Call Us
+                </a>
               </div>
             </div>
           </div>
@@ -432,7 +445,7 @@ function PackageDetails() {
                     </ul>
                   </div>
                 </div>
-              
+
                 <div className="package-tab">
                   <ul className="nav nav-pills" id="pills-tab" role="tablist">
                     <li className="nav-item" role="presentation">
@@ -465,7 +478,7 @@ function PackageDetails() {
                         Travel Plan
                       </button>
                     </li>
-                  
+
                   </ul>
                   <div
                     className="tab-content p-tab-content"
@@ -496,7 +509,7 @@ function PackageDetails() {
                                     <td>Departure</td>
                                     <td>Yes</td>
                                   </tr>
-                                
+
                                   <tr>
                                     <td>Included</td>
                                     <td>
@@ -539,7 +552,7 @@ function PackageDetails() {
                                 </tbody>
                               </table>
                             </div>
-                           
+
                             <div className="p-review hide">
                               <ul>
                                 <li className="p-review-card">
@@ -676,7 +689,7 @@ function PackageDetails() {
                                 </li>
                               </ul>
                             </div>
-                           
+
                           </div>
                         </div>
                       </div>
@@ -1074,7 +1087,7 @@ function PackageDetails() {
                       </ul>
                     </div>
                   </div>
-                 
+
                 </div>
               </div>
             </div>
