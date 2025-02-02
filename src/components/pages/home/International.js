@@ -11,16 +11,16 @@ class International extends Component {
 
   render() {
     const destinationsOptions = {
-        stagePadding: 1,
-        items: 3,
-        loop: true, // Enables infinite scrolling
-        margin: 20, // Space between items
-        smartSpeed: 3000, // Animation speed for transitions
-        autoplay: true, // Enables auto-scrolling
-        autoplayTimeout: 3000, // Delay between auto-scrolls (3 seconds)
-        autoplayHoverPause: true, // Pauses auto-scroll on hover
-        dots: false, // Disable dots
-        nav: true, // Enable navigation arrows
+      stagePadding: 1,
+      items: 3,
+      loop: true, // Enables infinite scrolling
+      margin: 20, // Space between items
+      smartSpeed: 3000, // Animation speed for transitions
+      autoplay: true, // Enables auto-scrolling
+      autoplayTimeout: 3000, // Delay between auto-scrolls (3 seconds)
+      autoplayHoverPause: true, // Pauses auto-scroll on hover
+      dots: false, // Disable dots
+      nav: true, // Enable navigation arrows
       navText: [
         `<button class="custom-arrow custom-prev">
           <svg width="40" height="40" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -33,24 +33,24 @@ class International extends Component {
           </svg>
         </button>`,
       ],
-        responsive: {
-          0: {
-            items: 1, // Items to display on small screens
-            // nav: true,
-            dots: false,
-          },
-          600: {
-            items: 2, // Items to display on medium screens
-            // nav: true,
-            dots: false,
-          },
-          1000: {
-            items: 3, // Items to display on large screens
-            // nav: true,
-            loop: true,
-          },
+      responsive: {
+        0: {
+          items: 1, // Items to display on small screens
+          // nav: true,
+          dots: false,
         },
-      };
+        600: {
+          items: 2, // Items to display on medium screens
+          // nav: true,
+          dots: false,
+        },
+        1000: {
+          items: 3, // Items to display on large screens
+          // nav: true,
+          loop: true,
+        },
+      },
+    };
 
     return (
       <>
@@ -66,21 +66,22 @@ class International extends Component {
             </div>
 
             <div className="row">
-                <OwlCarousel
-                  className="owl-carousel destinations-1"
-                  {...destinationsOptions}
-                >
-                  {data.map((item, index) => (
-                    <div className="package-card">
+              <OwlCarousel
+                className="owl-carousel destinations-1"
+                {...destinationsOptions}
+              >
+                {data.map((item, index) => (
+                  <div className="package-card">
                     <div className="package-thumb">
-                      <Link to={`${process.env.PUBLIC_URL}/package-details/I${index+1}`}>
+                      <Link to={`${process.env.PUBLIC_URL}/package-details/${item.name.replace(/\s+/g, "-").toLowerCase()}`}>
+                        {/* <Link to={`${process.env.PUBLIC_URL}/package-details/I${index+1}`}> */}
                         <img src={require(`../../../assets/images/international/${item.image}.jpeg`)} alt="" className="img-fluid" />
                       </Link>
                     </div>
                     <div className="package-details">
                       <div className="package-info">
                         <h5>
-                          <span>{item.Price}</span>/Per Person <br/> (Cost Based on 2 Pax)
+                          <span>{item.Price}</span>/Per Person <br /> (Cost Based on 2 Pax)
                         </h5>
                         <h5>
                           <i className="flaticon-calendar" />{item.Nights}
@@ -88,8 +89,8 @@ class International extends Component {
                       </div>
                       <h3>
                         <i className="flaticon-arrival" />
-                        <Link to={`${process.env.PUBLIC_URL}/package-details/I${index+1}`}>
-                        {item.name}
+                        <Link to={`${process.env.PUBLIC_URL}/package-details/${item.name.replace(/\s+/g, "-").toLowerCase()}`}>
+                          {item.name}
                         </Link>
                       </h3>
                       <div className="package-rating mb-3">
@@ -102,17 +103,11 @@ class International extends Component {
                         <i className="bx bxs-star" />
                         <i className="bx bxs-star" />
                       </div>
-                      {/* <div className="package-rating">
-                        <i className="bx bxs-star" />
-                        <strong>
-                          <span>2.6K+</span> Rating
-                        </strong>
-                      </div> */}
                     </div>
                   </div>
-    
-                  ))}
-                </OwlCarousel>
+
+                ))}
+              </OwlCarousel>
             </div>
           </div>
         </div>

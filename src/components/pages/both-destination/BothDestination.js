@@ -24,7 +24,6 @@ const BothDestinations = () => {
               </div>
               <div className="blog-details">
                   Dubai Packages
-
                 <div className="blog-btn">
 
                 </div>

@@ -14,20 +14,21 @@ class Destinations extends Component {
   constructor(props) {
     super(props);
     this.state = {};
+    console.log("Props: ", props);
   }
 
   render() {
     const destinationsOptions = {
-        stagePadding: 1,
-        items: 3,
-        loop: true, // Enables infinite scrolling
-        margin: 20, // Space between items
-        smartSpeed: 3000, // Animation speed for transitions
-        autoplay: true, // Enables auto-scrolling
-        autoplayTimeout: 3000, // Delay between auto-scrolls (3 seconds)
-        autoplayHoverPause: true, // Pauses auto-scroll on hover
-        dots: false, // Disable dots
-        nav: true, // Enable navigation arrows
+      stagePadding: 1,
+      items: 3,
+      loop: true, // Enables infinite scrolling
+      margin: 20, // Space between items
+      smartSpeed: 3000, // Animation speed for transitions
+      autoplay: true, // Enables auto-scrolling
+      autoplayTimeout: 3000, // Delay between auto-scrolls (3 seconds)
+      autoplayHoverPause: true, // Pauses auto-scroll on hover
+      dots: false, // Disable dots
+      nav: true, // Enable navigation arrows
       navText: [
         `<button class="custom-arrow custom-prev">
           <svg width="40" height="40" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -40,24 +41,24 @@ class Destinations extends Component {
           </svg>
         </button>`,
       ],
-        responsive: {
-          0: {
-            items: 1, // Items to display on small screens
-            // nav: true,
-            dots: false,
-          },
-          600: {
-            items: 2, // Items to display on medium screens
-            // nav: true,
-            dots: false,
-          },
-          1000: {
-            items: 3, // Items to display on large screens
-            // nav: true,
-            loop: true,
-          },
+      responsive: {
+        0: {
+          items: 1, // Items to display on small screens
+          // nav: true,
+          dots: false,
         },
-      };
+        600: {
+          items: 2, // Items to display on medium screens
+          // nav: true,
+          dots: false,
+        },
+        1000: {
+          items: 3, // Items to display on large screens
+          // nav: true,
+          loop: true,
+        },
+      },
+    };
 
     return (
       <>
@@ -73,190 +74,165 @@ class Destinations extends Component {
             </div>
             <div className="row">
               <div className="">
-              <OwlCarousel className="owl-carousel destinations-1"  {...destinationsOptions}>
-                <div className="package-card">
-                  <div className="package-thumb">
-                    <Link to={`${process.env.PUBLIC_URL}/package-details/1`}>
-                      <img src={package11Img} alt="" className="img-fluid" />
-                    </Link>
-                  </div>
-                  <div className="package-details">
-                    <div className="package-info">
-                      <h5>
-                        <span>AED 1376</span>/Per Person <br/> (Cost Based on 2 Pax)
-                      </h5>
-                      <h5>
-                        <i className="flaticon-calendar" />4 night/5 days
-                      </h5>
-                    </div>
-                    <h3>
-                      <i className="flaticon-arrival" />
-                      <Link to={`${process.env.PUBLIC_URL}/package-details/1`}>
-                      Dubai Local Tour Package
-                      </Link>
-                    </h3>
-                    <div className="package-rating mb-3">
-                      <i
-                        className="bx bxs-city"
-                        style={{ marginRight: "15px" }}
-                      ></i>
-                      <i className="bx bxs-star" />
-                      <i className="bx bxs-star" />
-                      <i className="bx bxs-star" />
-                    </div>
-                    {/* <div className="package-rating">
-                      <i className="bx bxs-star" />
-                      <strong>
-                        <span>2.6K+</span> Rating
-                      </strong>
-                    </div> */}
-                  </div>
-                </div>
-                <div className="package-card">
-                  <div className="package-thumb">
-                    <Link to={`${process.env.PUBLIC_URL}/package-details/2`}>
-                      <img src={package10Img} alt="" className="img-fluid" />
-                    </Link>
-                  </div>
-                  <div className="package-details">
-                    <div className="package-info">
-                      <h5>
-                        <span>AED 1675</span>/Per Person <br/> (Cost Based on 2 Pax)
-                      </h5>
-                    </div>
-                    <h3>
-                      <i className="flaticon-arrival" />
-                      <Link to={`${process.env.PUBLIC_URL}/package-details/2`}>
-                      Super Saver Dubai Vacation
-                      </Link>
-                    </h3>
-                    <div className="package-rating mb-3">
-                      <i
-                        className="bx bxs-city"
-                        style={{ marginRight: "15px" }}
-                      ></i>
-                      <i className="bx bxs-star" />
-                      <i className="bx bxs-star" />
-                      <i className="bx bxs-star" />
-                    </div>
-                    {/* <div className="package-rating">
-                      <i className="bx bxs-star" />
-                      <strong>
-                        <span>1.3K+</span> Rating
-                      </strong>
-                    </div> */}
-                  </div>
-                </div>
-                <div className="package-card">
-                  <div className="package-thumb">
-                    <Link to={`${process.env.PUBLIC_URL}/package-details/4`}>
-                      <img src={package12Img} alt="" className="img-fluid" />
-                    </Link>
-                  </div>
-                  <div className="package-details">
-                    <div className="package-info">
-                      <h5>
-                        <span>AED 2230</span>/Per Person <br/> (Cost Based on 2 Pax)
-                      </h5>
-                    </div>
-                    <h3>
-                      <i className="flaticon-arrival" />
-                      <Link to={`${process.env.PUBLIC_URL}/package-details/4`}>
-                      Majestic Dubai
-                      </Link>
-                    </h3>
-                    <div className="package-rating mb-3">
-                      <i
-                        className="bx bxs-city"
-                        style={{ marginRight: "15px" }}
-                      ></i>
-                      <i className="bx bxs-star" />
-                      <i className="bx bxs-star" />
-                      <i className="bx bxs-star" />
-                      <i className="bx bxs-star" />
-                    </div>
-                    {/* <div className="package-rating">
-                      <i className="bx bxs-star" />
-                      <strong>
-                        <span>1.3K+</span> Rating
-                      </strong>
-                    </div> */}
-                  </div>
-                </div>
-                <div className="package-card">
-                  <div className="package-thumb">
-                    <Link to={`${process.env.PUBLIC_URL}/package-details/18`}>
-                      <img src={package16Img} alt="" className="img-fluid" />
-                    </Link>
-                  </div>
-                  <div className="package-details">
-                    <div className="package-info">
-                      <h5>
-                        <span>AED 2575</span>/Per Person <br/> (Cost Based on 2 Pax)
-                      </h5>
-                    </div>
-                    <h3>
-                      <i className="flaticon-arrival" />
-                      <Link to={`${process.env.PUBLIC_URL}/package-details/18`}>
-                      Dubai & Abu Dhabi Wonders
+                <OwlCarousel className="owl-carousel destinations-1"  {...destinationsOptions}>
 
+                  <div className="package-card">
+                    <div className="package-thumb">
+                      <Link to={`${process.env.PUBLIC_URL}/package-details/dubai-local-tour-package`}>
+                        <img src={package11Img} alt="" className="img-fluid" />
                       </Link>
-                    </h3>
-                    <div className="package-rating mb-3">
-                      <i
-                        className="bx bxs-city"
-                        style={{ marginRight: "15px" }}
-                      ></i>
-                      <i className="bx bxs-star" />
-                      <i className="bx bxs-star" />
-                      <i className="bx bxs-star" />
-                      <i className="bx bxs-star" />
-                      <i className="bx bxs-star" />
                     </div>
-                    {/* <div className="package-rating">
-                      <i className="bx bxs-star" />
-                      <strong>
-                        <span>1.3K+</span> Rating
-                      </strong>
-                    </div> */}
-                  </div>
-                </div>
-                <div className="package-card">
-                  <div className="package-thumb">
-                    <Link to={`${process.env.PUBLIC_URL}/package-details/16`}>
-                      <img src={package9Img} alt="" className="img-fluid" />
-                    </Link>
-                  </div>
-                  <div className="package-details">
-                    <div className="package-info">
-                      <h5>
-                        <span>AED 2738</span>/Per Person <br/> (Cost Based on 2 Pax)
-                      </h5>
+                    <div className="package-details">
+                      <div className="package-info">
+                        <h5>
+                          <span>AED 1376</span>/Per Person <br /> (Cost Based on 2 Pax)
+                        </h5>
+                        <h5>
+                          <i className="flaticon-calendar" />4 night/5 days
+                        </h5>
+                      </div>
+                      <h3>
+                        <i className="flaticon-arrival" />
+                        <Link to={`${process.env.PUBLIC_URL}/package-details/dubai-local-tour-package`}>
+                          Dubai Local Tour Package
+                        </Link>
+                      </h3>
+                      <div className="package-rating mb-3">
+                        <i
+                          className="bx bxs-city"
+                          style={{ marginRight: "15px" }}
+                        ></i>
+                        <i className="bx bxs-star" />
+                        <i className="bx bxs-star" />
+                        <i className="bx bxs-star" />
+                      </div>
                     </div>
-                    <h3>
-                      <i className="flaticon-arrival" />
-                      <Link to={`${process.env.PUBLIC_URL}/package-details/16`}>
-                      Dubai Treasure Hunt
+                  </div>
+
+                  <div className="package-card">
+                    <div className="package-thumb">
+                      <Link to={`${process.env.PUBLIC_URL}/package-details/super-saver-dubai-vacation`}>
+                        <img src={package10Img} alt="" className="img-fluid" />
                       </Link>
-                    </h3>
-                    <div className="package-rating mb-3">
-                      <i
-                        className="bx bxs-city"
-                        style={{ marginRight: "15px" }}
-                      ></i>
-                      <i className="bx bxs-star" />
-                      <i className="bx bxs-star" />
-                      <i className="bx bxs-star" />
-                      <i className="bx bxs-star" />
                     </div>
-                    {/* <div className="package-rating">
-                      <i className="bx bxs-star" />
-                      <strong>
-                        <span>1.3K+</span> Rating
-                      </strong>
-                    </div> */}
+                    <div className="package-details">
+                      <div className="package-info">
+                        <h5>
+                          <span>AED 1675</span>/Per Person <br /> (Cost Based on 2 Pax)
+                        </h5>
+                      </div>
+                      <h3>
+                        <i className="flaticon-arrival" />
+                        <Link to={`${process.env.PUBLIC_URL}/package-details/super-saver-dubai-vacation`}>
+                          Super Saver Dubai Vacation
+                        </Link>
+                      </h3>
+                      <div className="package-rating mb-3">
+                        <i
+                          className="bx bxs-city"
+                          style={{ marginRight: "15px" }}
+                        ></i>
+                        <i className="bx bxs-star" />
+                        <i className="bx bxs-star" />
+                        <i className="bx bxs-star" />
+                      </div>
+                    </div>
                   </div>
-                </div>
+
+                  <div className="package-card">
+                    <div className="package-thumb">
+                      <Link to={`${process.env.PUBLIC_URL}/package-details/majestic-dubai`}>
+                        <img src={package12Img} alt="" className="img-fluid" />
+                      </Link>
+                    </div>
+                    <div className="package-details">
+                      <div className="package-info">
+                        <h5>
+                          <span>AED 2230</span>/Per Person <br /> (Cost Based on 2 Pax)
+                        </h5>
+                      </div>
+                      <h3>
+                        <i className="flaticon-arrival" />
+                        <Link to={`${process.env.PUBLIC_URL}/package-details/majestic-dubai`}>
+                          Majestic Dubai
+                        </Link>
+                      </h3>
+                      <div className="package-rating mb-3">
+                        <i
+                          className="bx bxs-city"
+                          style={{ marginRight: "15px" }}
+                        ></i>
+                        <i className="bx bxs-star" />
+                        <i className="bx bxs-star" />
+                        <i className="bx bxs-star" />
+                        <i className="bx bxs-star" />
+                      </div>
+                    </div>
+                  </div>
+
+                  <div className="package-card">
+                    <div className="package-thumb">
+                      <Link to={`${process.env.PUBLIC_URL}/package-details/dubai-&-abu-dhabi-wonders`}>
+                        <img src={package16Img} alt="" className="img-fluid" />
+                      </Link>
+                    </div>
+                    <div className="package-details">
+                      <div className="package-info">
+                        <h5>
+                          <span>AED 2575</span>/Per Person <br /> (Cost Based on 2 Pax)
+                        </h5>
+                      </div>
+                      <h3>
+                        <i className="flaticon-arrival" />
+                        <Link to={`${process.env.PUBLIC_URL}/package-details/dubai-&-abu-dhabi-wonders`}>
+                          Dubai & Abu Dhabi Wonders
+                        </Link>
+                      </h3>
+                      <div className="package-rating mb-3">
+                        <i
+                          className="bx bxs-city"
+                          style={{ marginRight: "15px" }}
+                        ></i>
+                        <i className="bx bxs-star" />
+                        <i className="bx bxs-star" />
+                        <i className="bx bxs-star" />
+                        <i className="bx bxs-star" />
+                        <i className="bx bxs-star" />
+                      </div>
+                    </div>
+                  </div>
+
+                  <div className="package-card">
+                    <div className="package-thumb">
+                      <Link to={`${process.env.PUBLIC_URL}/package-details/dubai-treasure-hunt`}>
+                        <img src={package9Img} alt="" className="img-fluid" />
+                      </Link>
+                    </div>
+                    <div className="package-details">
+                      <div className="package-info">
+                        <h5>
+                          <span>AED 2738</span>/Per Person <br /> (Cost Based on 2 Pax)
+                        </h5>
+                      </div>
+                      <h3>
+                        <i className="flaticon-arrival" />
+                        <Link to={`${process.env.PUBLIC_URL}/package-details/dubai-treasure-hunt`}>
+                          Dubai Treasure Hunt
+                        </Link>
+                      </h3>
+                      <div className="package-rating mb-3">
+                        <i
+                          className="bx bxs-city"
+                          style={{ marginRight: "15px" }}
+                        ></i>
+                        <i className="bx bxs-star" />
+                        <i className="bx bxs-star" />
+                        <i className="bx bxs-star" />
+                        <i className="bx bxs-star" />
+                      </div>
+                    </div>
+                  </div>
+
                 </OwlCarousel>
               </div>
             </div>

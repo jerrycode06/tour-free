@@ -19,7 +19,7 @@ function PackageDetails() {
   const [internationalPackageData, setInternationalPackageData] = useState(
     data || []
   );
-  const { id } = useParams();
+  // const { id } = useParams();
 
   const scrollTop = () => {
     window.scrollTo({
@@ -28,17 +28,29 @@ function PackageDetails() {
     });
   };
 
+  const { name } = useParams(); // Get the 'name' param from the URL
+
+  console.log('NAME: ', name);
+
   useEffect(() => {
     scrollTop();
-  }, [internationalPackageData, id]);
+  }, [internationalPackageData, name]);
 
   const getValue = (key) => {
     let foundItem;
-    if (id.startsWith("I")) {
-      foundItem = internationalPackageData.find((ele) => ele.id === id);
-    } else {
-      foundItem = packageData.find((ele) => ele.id === Number(id));
-    }
+    // if (id.startsWith("I")) {
+    //   
+    // } else {
+    console.log('Name: ', key);
+    // Dubai package
+    foundItem = packageData.find((pkg) => pkg.name.replace(/\s+/g, "-").toLowerCase() === name);
+    // }
+
+    // International Package
+    if (!foundItem) {
+      foundItem = internationalPackageData.find((pkg) => pkg.name.replace(/\s+/g, "-").toLowerCase() === name);
+    } 
+
     return foundItem ? foundItem[key] : "Miss"; // Handle missing keys or items
   };
 
@@ -47,6 +59,8 @@ function PackageDetails() {
     return match ? parseInt(match[1], 10) : null;
   };
 
+
+  // ---------------------------------ENQUIRY FORM SUBMITTION CODE---------------------------------
   const [noOfChilds, setNumberOfChilds] = useState(0);
   const [error, setError] = useState({ error: false, message: "" });
   const [formData, setFormData] = useState({
@@ -320,16 +334,9 @@ function PackageDetails() {
     setFormData((prev) => ({ ...prev, childAges: updatedAges }));
   };
 
+  // FORM SUBMIT HANDLE REQUEST
   const handleSubmit = (e) => {
     e.preventDefault();
-
-    // const payload = {
-    //   travelling_to: formData.travellingTo || "Not specified",
-    //   no_of_adults: formData.noOfAdults || "0",
-    //   no_of_children: formData.noOfChilds || "0",
-    //   children_details: formData.childAges.length > 0 ? formData.childAges.join(", ") : "",
-    //   departure_date: formData.departDate || "Not specified",
-    // };
 
     const payload = {
       travelling_to: formData.travellingTo || "Not specified",
@@ -361,20 +368,10 @@ function PackageDetails() {
       );
   };
 
+
   return (
     <>
       {/* ===============  breadcrumb area start =============== */}
-      {/* <div className="breadcrumb-area">
-        <div className="container">
-          <div className="row">
-            <div className="col-lg-12 col-md-12 col-sm-12">
-              <div className="breadcrumb-wrap">
-
-              </div>
-            </div>
-          </div>
-        </div>
-      </div> */}
 
       <div className="breadcrumb-area">
         <div className="container">
@@ -401,9 +398,7 @@ function PackageDetails() {
           <div className="row">
             <div className="col-lg-8">
               <div className="package-details">
-                {/* <div className="package-thumb">
-                    <img src={pd_thumb} alt="" />
-                  </div> */}
+
                 <div className="package-header">
                   <div className="package-title">
                     <h3 style={{ marginBottom: "0px" }}>
@@ -435,39 +430,9 @@ function PackageDetails() {
                         <i className="bx bx-star" />
                       </li>
                     </ul>
-                    {/* <p>800 Review</p> */}
                   </div>
                 </div>
-                {/* <div className="p-short-info">
-                    <div className="single-info">
-                      <i className="flaticon-clock" />
-                      <div className="info-texts">
-                        <strong>Duration</strong>
-                        <p>Daily Tour</p>
-                      </div>
-                    </div>
-                    <div className="single-info">
-                      <i className="flaticon-footprints" />
-                      <div className="info-texts">
-                        <strong>Tour Type</strong>
-                        <p>{getValue("daysCount")} Days</p>
-                      </div>
-                    </div>
-                    <div className="single-info">
-                      <i className="flaticon-traveller" />
-                      <div className="info-texts">
-                        <strong>Group Size</strong>
-                        <p>30 People</p>
-                      </div>
-                    </div>
-                    <div className="single-info">
-                      <i className="flaticon-translate" />
-                      <div className="info-texts">
-                        <strong>Languages</strong>
-                        <p>Any Language</p>
-                      </div>
-                    </div>
-                  </div> */}
+              
                 <div className="package-tab">
                   <ul className="nav nav-pills" id="pills-tab" role="tablist">
                     <li className="nav-item" role="presentation">
@@ -500,22 +465,7 @@ function PackageDetails() {
                         Travel Plan
                       </button>
                     </li>
-                    {/* <li className="nav-item" role="presentation">
-                        <button
-                          className="nav-link"
-                          id="pills-contact-tab"
-                          data-bs-toggle="pill"
-                          data-bs-target="#pills-contact"
-                          type="button"
-                          role="tab"
-                          aria-controls="pills-contact"
-                          aria-selected="false"
-                        >
-                          {" "}
-                          <i className="flaticon-gallery" />
-                          Our Gallary
-                        </button>
-                      </li> */}
+                  
                   </ul>
                   <div
                     className="tab-content p-tab-content"
@@ -533,7 +483,7 @@ function PackageDetails() {
                             <div className="p-overview">
                               <h5>Overview</h5>
                               <p>{getValue("Overview")}</p>
-                              {/* <p>Pellentesque accumsan magna in augue sagittis, non fringilla eros molestie. Sed feugiat mi nec ex vehicula, nec vestibulum orci semper. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Donec tristique commodo fringilla. Duis aliquet varius mauris eget rutrum. Nullam sit amet justo consequat, bibendum orci in, convallis enim. Proin convallis neque viverra finibus cursus. Mauris lacinia lacinia erat in finibus. In non enim libero.Pellentesque accumsan magna in augue sagittis, non fringilla eros molestie. Sed feugiat mi nec ex vehicula, nec vestibulum orci semper. Class aptent taciti sociosqu ad litora torquent per conubia nostra.</p> */}
+
                             </div>
                             <div className="p-details-table">
                               <table className="table caption-top">
@@ -546,14 +496,7 @@ function PackageDetails() {
                                     <td>Departure</td>
                                     <td>Yes</td>
                                   </tr>
-                                  {/* <tr>
-                                      <td>Departure Time</td>
-                                      <td>01 April, 2021 10.00AM</td>
-                                    </tr>
-                                    <tr>
-                                      <td>Return Time</td>
-                                      <td>08 April, 2021 10.00AM</td>
-                                    </tr> */}
+                                
                                   <tr>
                                     <td>Included</td>
                                     <td>
@@ -571,37 +514,6 @@ function PackageDetails() {
                                         </ul>
                                       )}
 
-                                      {/* <ul className="table-list-allow">
-                                        <li>
-                                          <i className="bx bx-check" />{" "}
-                                          {getValue("Inclusions").split(".")[0]}
-                                        </li>
-                                        <li>
-                                          {" "}
-                                          <i className="bx bx-check" />{" "}
-                                          {getValue("Inclusions").split(".")[1]}
-                                        </li>
-                                        <li>
-                                          <i className="bx bx-check" />{" "}
-                                          {getValue("Inclusions").split(".")[2]}
-                                        </li>
-                                        <li>
-                                          <i className="bx bx-check" />
-                                          {getValue("Inclusions").split(".")[3]}
-                                        </li>
-                                        <li>
-                                          <i className="bx bx-check" />
-                                          {getValue("Inclusions").split(".")[4]}
-                                        </li>
-                                        <li>
-                                          <i className="bx bx-check" />
-                                          {getValue("Inclusions").split(".")[5]}
-                                        </li>
-                                        <li>
-                                          <i className="bx bx-check" />
-                                          {getValue("Inclusions").split(".")[6]}
-                                        </li>
-                                      </ul> */}
                                     </td>
                                   </tr>
                                   <tr>
@@ -622,128 +534,12 @@ function PackageDetails() {
                                         </ul>
                                       )}
 
-
-                                      {/* <ul className="table-list-disallow">
-                                        <li>
-                                          {" "}
-                                          <i className="bx bx-x" />
-                                          {getValue("Exclusions").split(".")[0]}
-                                        </li>
-                                        <li>
-                                          <i className="bx bx-x" />{" "}
-                                          {getValue("Exclusions").split(".")[1]}
-                                        </li>
-                                        <li>
-                                          <i className="bx bx-x" />{" "}
-                                          {getValue("Exclusions").split(".")[2]}
-                                        </li>
-                                        <li>
-                                          <i className="bx bx-x" />{" "}
-                                          {getValue("Exclusions").split(".")[3]}
-                                        </li>
-                                        <li>
-                                          <i className="bx bx-x" />{" "}
-                                          {getValue("Exclusions").split(".")[4]}
-                                        </li>
-                                        <li>
-                                          <i className="bx bx-x" />{" "}
-                                          {getValue("Exclusions").split(".")[5]}
-                                        </li>
-                                        <li>
-                                          <i className="bx bx-x" />{" "}
-                                          {getValue("Exclusions").split(".")[6]}
-                                        </li>
-                                        <li>
-                                          <i className="bx bx-x" />{" "}
-                                          {getValue("Exclusions").split(".")[7]}
-                                        </li>
-                                        <li>
-                                          <i className="bx bx-x" />{" "}
-                                          {getValue("Exclusions").split(".")[8]}
-                                        </li>
-                                        <li>
-                                          <i className="bx bx-x" />{" "}
-                                          {getValue("Exclusions").split(".")[9]}
-                                        </li>
-                                      </ul> */}
                                     </td>
                                   </tr>
                                 </tbody>
                               </table>
                             </div>
-                            {/* <div className="p-rationg">
-                                <h5>Rating</h5>
-                                <div className="rating-card">
-                                  <div className="r-card-avarag">
-                                    <h2>4.9</h2>
-                                    <h5>Excellent</h5>
-                                  </div>
-                                  <div className="r-card-info">
-                                    <ul>
-                                      <li>
-                                        <strong>Accommodation</strong>
-                                        <ul className="r-rating">
-                                          <li>
-                                            <i className="bx bxs-star" />
-                                            <i className="bx bxs-star" />
-                                            <i className="bx bxs-star" />
-                                            <i className="bx bxs-star" />
-                                            <i className="bx bxs-star" />
-                                          </li>
-                                        </ul>
-                                      </li>
-                                      <li>
-                                        <strong>Transport</strong>
-                                        <ul className="r-rating">
-                                          <li>
-                                            <i className="bx bxs-star" />
-                                            <i className="bx bxs-star" />
-                                            <i className="bx bxs-star" />
-                                            <i className="bx bx-star" />
-                                            <i className="bx bx-star" />
-                                          </li>
-                                        </ul>
-                                      </li>
-                                      <li>
-                                        <strong>Comfort</strong>
-                                        <ul className="r-rating">
-                                          <li>
-                                            <i className="bx bxs-star" />
-                                            <i className="bx bxs-star" />
-                                            <i className="bx bxs-star" />
-                                            <i className="bx bxs-star" />
-                                            <i className="bx bx-star" />
-                                          </li>
-                                        </ul>
-                                      </li>
-                                      <li>
-                                        <strong>Hospitality</strong>
-                                        <ul className="r-rating">
-                                          <li>
-                                            <i className="bx bxs-star" />
-                                            <i className="bx bxs-star" />
-                                            <i className="bx bxs-star" />
-                                            <i className="bx bxs-star" />
-                                            <i className="bx bx-star" />
-                                          </li>
-                                        </ul>
-                                      </li>
-                                      <li>
-                                        <strong>Food</strong>
-                                        <ul className="r-rating">
-                                          <li>
-                                            <i className="bx bxs-star" />
-                                            <i className="bx bxs-star" />
-                                            <i className="bx bx-star" />
-                                            <i className="bx bx-star" />
-                                            <i className="bx bx-star" />
-                                          </li>
-                                        </ul>
-                                      </li>
-                                    </ul>
-                                  </div>
-                                </div>
-                              </div> */}
+                           
                             <div className="p-review hide">
                               <ul>
                                 <li className="p-review-card">
@@ -880,62 +676,7 @@ function PackageDetails() {
                                 </li>
                               </ul>
                             </div>
-                            {/* <div className="p-review-input">
-                                <form>
-                                  <h5>Leave Your Comment</h5>
-                                  <div className="row">
-                                    <div className="col-lg-6">
-                                      <input
-                                        type="text"
-                                        placeholder="Your Full Name"
-                                      />
-                                    </div>
-                                    <div className="col-lg-6">
-                                      <input
-                                        type="text"
-                                        placeholder="Your Email"
-                                      />
-                                    </div>
-                                    <div className="col-lg-12">
-                                      <input
-                                        type="text"
-                                        placeholder="Tour Type"
-                                      />
-                                    </div>
-                                    <div className="col-lg-12">
-                                      <textarea
-                                        cols={30}
-                                        rows={7}
-                                        placeholder="Write Message"
-                                        defaultValue={""}
-                                      />
-                                    </div>
-                                    <div className="col-lg-12">
-                                      <ul className="input-rating">
-                                        <li>
-                                          <i className="bx bx-star" />
-                                        </li>
-                                        <li>
-                                          <i className="bx bx-star" />
-                                        </li>
-                                        <li>
-                                          <i className="bx bx-star" />
-                                        </li>
-                                        <li>
-                                          <i className="bx bx-star" />
-                                        </li>
-                                        <li>
-                                          <i className="bx bx-star" />
-                                        </li>
-                                      </ul>
-                                      <input
-                                        type="submit"
-                                        defaultValue="Submit Now"
-                                      />
-                                    </div>
-                                  </div>
-                                </form>
-                              </div> */}
+                           
                           </div>
                         </div>
                       </div>
@@ -966,21 +707,21 @@ function PackageDetails() {
                                     </div>
                                   </div>
                                   <div className="timeline-content">
-                                    {!id.startsWith("I") ? (
+                                    {/* {!id.startsWith("I") ? ( */}
+                                    <h5>
+                                      DAY {day + 1} :{" "}
+                                      {getValue(`Day ${day + 1}`)?.split(
+                                        "."
+                                      )[0] || "No details available"}
+                                    </h5>
+                                    {/* ) : (
                                       <h5>
                                         DAY {day + 1} :{" "}
                                         {getValue(`Day ${day + 1}`)?.split(
                                           "."
                                         )[0] || "No details available"}
-                                      </h5>
-                                    ) : (
-                                      <h5>
-                                        DAY {day + 1} :{" "}
-                                        {getValue(`Day ${day + 1}`)?.split(
-                                          "."
-                                        )[0] || "No details available"}
-                                      </h5>
-                                    )}
+                                      </h5> */}
+                                    {/* )} */}
                                     {/* {!id.startsWith("I") ? <h5>DAY {day} : {getValue(`Day ${day}`).split(".")[0]}</h5> : <h5>DAY {day} : {getValue(`Day ${day+1}`).split(".")[0]}</h5>} */}
                                     {/* <strong>10.00 AM to 10.00 PM</strong> */}
                                     <p>{getValue(`Day ${day + 1}`)}</p>
@@ -999,89 +740,9 @@ function PackageDetails() {
             <div className="col-lg-4">
               <div className="package-d-sidebar">
                 <div className="row">
-                  {/* <div className="col-lg-12 col-md-6">
-                      <div className="p-sidebar-form">
-                        <form>
-                          <h5 className="package-d-head">Book This Package</h5>
-                          <div className="row">
-                            <div className="col-lg-12">
-                              <input type="text" placeholder="Your Full Name" />
-                            </div>
-                            <div className="col-lg-12">
-                              <input type="email" placeholder="Your Email" />
-                            </div>
-                            <div className="col-lg-12">
-                              <input type="tel" placeholder="Phone" />
-                            </div>
-                            <div className="col-lg-12">
-                              <select
-                                className="form-select"
-                                aria-label="Default select example"
-                              >
-                                <option selected>Tickets Type</option>
-                                <option value={1}>Travel With Bus</option>
-                                <option value={2}>Travel With Plane</option>
-                              </select>
-                            </div>
-                            <div className="col-lg-6">
-                              <select
-                                className="form-select"
-                                aria-label="Default select example"
-                              >
-                                <option selected>Adult</option>
-                                <option value={1}>1</option>
-                                <option value={2}>2</option>
-                                <option value={3}>3</option>
-                              </select>
-                            </div>
-                            <div className="col-lg-6">
-                              <select
-                                className="form-select"
-                                aria-label="Default select example"
-                              >
-                                <option selected>Child</option>
-                                <option value={1}>1</option>
-                                <option value={2}>2</option>
-                                <option value={3}>3</option>
-                              </select>
-                            </div>
-                            <div className="col-lg-12">
-                              <div
-                                className="calendar-input"
-                                id="packageCalenderMainDiv"
-                              >
-                                <DatePicker
-                                  selected={startDate}
-                                  onChange={(date) =>
-                                    changeDatepickerHandeller(date)
-                                  }
-                                  className="input-field check-in"
-                                  placeholder="dd-mm-yy"
-                                />
-                                <i
-                                  className="flaticon-calendar"
-                                  id="packageCalenderIcon"
-                                />
-                              </div>
-                            </div>
-                            <div className="col-lg-12">
-                              <textarea
-                                cols={30}
-                                rows={7}
-                                placeholder="Message"
-                                defaultValue={""}
-                              />
-                            </div>
-                            <div className="col-lg-12">
-                              <input type="submit" defaultValue="Book Now" />
-                            </div>
-                          </div>
-                        </form>
-                      </div>
-                    </div> */}
                   <div className="col-lg-12 col-md-6">
 
-                    {/* ENQUIRY FORM */}
+                    {/* ************************************ENQUIRY FORM********************************** */}
 
                     <div className="enquiry-form mt-5 max-h-[700px] overflow-y-auto"
                       style={{ justifySelf: "end", background: "white", boxShadow: "0 0 64px #1111111a" }}>
@@ -1113,7 +774,6 @@ function PackageDetails() {
                               Contact No.
                             </label>
                             <div style={{ display: "flex", alignItems: "center", width: "100%" }}>
-                              {/* Dropdown for Country Code */}
                               <select
                                 value={formData.countryCode}
                                 onChange={(e) =>
@@ -1136,31 +796,6 @@ function PackageDetails() {
                                   </option>
                                 ))}
                               </select>
-
-                              {/* <select
-                name="countryCode"
-                value={formData.countryCode || "+1"}
-                required
-                onChange={(e) =>
-                  setFormData((prev) => ({ ...prev, countryCode: e.target.value }))
-                }
-                style={{
-                  padding: "8px",
-                  border: "1px solid #ccc",
-                  borderRadius: "4px 0 0 4px",
-                  background: "#fff",
-                  color: "#333",
-                  width: "30%",
-                  marginRight: "4px",
-                  marginBottom: "0px"
-                }}
-              >
-                <option value="+1">+1 (US)</option>
-                <option value="+44">+44 (UK)</option>
-                <option value="+91">+91 (India)</option>
-                <option value="+61">+61 (Australia)</option>
-                <option value="+81">+81 (Japan)</option>
-              </select> */}
 
                               {/* Input for Phone Number */}
                               <input
@@ -1276,9 +911,9 @@ function PackageDetails() {
                             <h3>
                               <i className="flaticon-arrival" />
                               <Link
-                                to={`${process.env.PUBLIC_URL}/package-details/10`}
+                                to={`${process.env.PUBLIC_URL}/package-details/best-selling-dubai-tour-package`}
                               >
-                                Burj Khalifa Tour
+                                Best Selling Dubai Tour Package
                               </Link>
                             </h3>
                             <div className="package-rating mb-3">
@@ -1293,7 +928,7 @@ function PackageDetails() {
                               <i className="bx bxs-star" />
                             </div>
                             <h5>
-                              <span>AED535</span>/ Per Person
+                              <span>AED1955</span>/ Per Person
                             </h5>
                           </div>
                         </li>
@@ -1311,9 +946,9 @@ function PackageDetails() {
                             <h3>
                               <i className="flaticon-arrival" />
                               <Link
-                                to={`${process.env.PUBLIC_URL}/package-details/8`}
+                                to={`${process.env.PUBLIC_URL}/package-details/tours-in-glitzy-dubai`}
                               >
-                                Burj Khalifa Tour
+                                Tours in Glitzy Dubai
                               </Link>
                             </h3>
                             <div className="package-rating mb-3">
@@ -1328,10 +963,11 @@ function PackageDetails() {
                               <i className="bx bxs-star" />
                             </div>
                             <h5>
-                              <span>AED640</span>/ Per Person
+                              <span>AED2340</span>/ Per Person
                             </h5>
                           </div>
                         </li>
+
                         <li className="package-card-sm">
                           <div className="p-sm-img">
                             <img src={package10Img} alt="" />
@@ -1346,9 +982,9 @@ function PackageDetails() {
                             <h3>
                               <i className="flaticon-arrival" />
                               <Link
-                                to={`${process.env.PUBLIC_URL}/package-details/19`}
+                                to={`${process.env.PUBLIC_URL}/package-details/dubai-explorer-family-package`}
                               >
-                                Burj Khalifa and Abu Dhabi
+                                Dubai Explorer Family Package
                               </Link>
                             </h3>
                             <div className="package-rating mb-3">
@@ -1363,7 +999,7 @@ function PackageDetails() {
                               <i className="bx bxs-star" />
                             </div>
                             <h5>
-                              <span>AED786</span>/ Per Person
+                              <span>AED2870</span>/ Per Person
                             </h5>
                           </div>
                         </li>
@@ -1381,9 +1017,9 @@ function PackageDetails() {
                             <h3>
                               <i className="flaticon-arrival" />
                               <Link
-                                to={`${process.env.PUBLIC_URL}/package-details/18`}
+                                to={`${process.env.PUBLIC_URL}/package-details/dubai-&-abu-dhabi-wonders`}
                               >
-                                Abu Dhabi Tour
+                                Dubai & Abu Dhabi Wonders
                               </Link>
                             </h3>
                             <div className="package-rating mb-3">
@@ -1398,7 +1034,7 @@ function PackageDetails() {
                               <i className="bx bxs-star" />
                             </div>
                             <h5>
-                              <span>AED705</span>/ Per Person
+                              <span>AED2575</span>/ Per Person
                             </h5>
                           </div>
                         </li>
@@ -1416,9 +1052,9 @@ function PackageDetails() {
                             <h3>
                               <i className="flaticon-arrival" />
                               <Link
-                                to={`${process.env.PUBLIC_URL}/package-details/1`}
+                                to={`${process.env.PUBLIC_URL}/package-details/dubai-local-tour-package`}
                               >
-                                Hotel without Burj Khalifa
+                                Dubai Local Tour Package
                               </Link>
                             </h3>
                             <div className="package-rating mb-3">
@@ -1431,63 +1067,14 @@ function PackageDetails() {
                               <i className="bx bxs-star" />
                             </div>
                             <h5>
-                              <span>AED376</span>/ Per Person
+                              <span>AED1376</span>/ Per Person
                             </h5>
                           </div>
                         </li>
                       </ul>
                     </div>
                   </div>
-                  {/* <div className="col-lg-12 col-md-6">
-                      <div className="p-sidebar-organizer mt-40">
-                        <h5 className="package-d-head">Organized By</h5>
-                        <div className="organizer-card">
-                          <div className="organizer-img">
-                            <img src={organizer} alt="" />
-                          </div>
-                          <div className="organizer-info">
-                            <h5>Travelhotel</h5>
-                            <p>Member since 2021</p>
-                            <ul className="organizer-rating">
-                              <li>
-                                <i className="bx bxs-star" />
-                              </li>
-                              <li>
-                                <i className="bx bxs-star" />
-                              </li>
-                              <li>
-                                <i className="bx bxs-star" />
-                              </li>
-                              <li>
-                                <i className="bx bxs-star" />
-                              </li>
-                              <li>
-                                <i className="bx bx-star" />
-                              </li>
-                            </ul>
-                            <h5>500 Reviews</h5>
-                          </div>
-                        </div>
-                        <div className="p-ask-btn">
-                          <Link to={`${process.env.PUBLIC_URL}/contact`}>
-                            ASK A QUESTION
-                          </Link>
-                        </div>
-                      </div>
-                    </div> */}
-                  {/* <div className="col-lg-12 col-md-6">
-                      <div className="p-sidebar-banner mt-40">
-                        <img src={sidebarBannar} alt="" className="img-fluid" />
-                        <div className="sidebar-banner-overlay">
-                          <div className="overlay-content">
-                            <h3>Get 50% Off In Dubai Tour</h3>
-                            <div className="sidebar-banner-btn">
-                              <Link to={`#`}>Book Now</Link>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                    </div> */}
+                 
                 </div>
               </div>
             </div>

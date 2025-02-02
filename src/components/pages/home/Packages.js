@@ -105,7 +105,7 @@ class Packages extends Component {
               >
                 <div className="package-card">
                   <div className="package-thumb">
-                    <Link to={`${process.env.PUBLIC_URL}/package-details/11`}>
+                    <Link to={`${process.env.PUBLIC_URL}/package-details/dubai-super-saver-with-5-star`}>
                       <img src={package1Img} alt="" className="img-fluid" />
                     </Link>
                   </div>
@@ -120,7 +120,7 @@ class Packages extends Component {
                     </div>
                     <h3>
                       <i className="flaticon-arrival" />
-                      <Link to={`${process.env.PUBLIC_URL}/package-details/11`}>
+                      <Link to={`${process.env.PUBLIC_URL}/package-details/dubai-super-saver-with-5-star`}>
                         Dubai Super Saver with 5 star
                       </Link>
                     </h3>
@@ -135,16 +135,13 @@ class Packages extends Component {
                       <i className="bx bxs-star" />
                       <i className="bx bxs-star" />
                     </div>
-                    {/* <div className="package-rating">
-                              <i className="bx bxs-star" />
-                              <strong><span>1.3K+</span> Rating</strong>
-                          </div> */}
+
                   </div>
                 </div>
 
                 <div className="package-card">
                   <div className="package-thumb">
-                    <Link to={`${process.env.PUBLIC_URL}/package-details/10`}>
+                    <Link to={`${process.env.PUBLIC_URL}/package-details/best-selling-dubai-tour-package`}>
                       <img src={package2Img} alt="" className="img-fluid" />
                     </Link>
                   </div>
@@ -159,7 +156,7 @@ class Packages extends Component {
                     </div>
                     <h3>
                       <i className="flaticon-arrival" />
-                      <Link to={`${process.env.PUBLIC_URL}/package-details/10`}>
+                      <Link to={`${process.env.PUBLIC_URL}/package-details/best-selling-dubai-tour-package`}>
                         Best Selling Dubai Tour Package
                       </Link>
                     </h3>
@@ -174,16 +171,13 @@ class Packages extends Component {
                       <i className="bx bxs-star" />
                       <i className="bx bxs-star" />
                     </div>
-                    {/* <div className="package-rating">
-                        <i className="bx bxs-star" />
-                        <strong><span>1.6+</span> Rating</strong>
-                    </div> */}
+
                   </div>
                 </div>
 
                 <div className="package-card">
                   <div className="package-thumb">
-                    <Link to={`${process.env.PUBLIC_URL}/package-details/33`}>
+                    <Link to={`${process.env.PUBLIC_URL}/package-details/dubai-super-saver-with-3-star`}>
                       <img src={package3Img} alt="" className="img-fluid" />
                     </Link>
                   </div>
@@ -198,7 +192,7 @@ class Packages extends Component {
                     </div>
                     <h3>
                       <i className="flaticon-arrival" />
-                      <Link to={`${process.env.PUBLIC_URL}/package-details/33`}>
+                      <Link to={`${process.env.PUBLIC_URL}/package-details/dubai-super-saver-with-3-star`}>
                         Dubai Super Saver with 3 star
                       </Link>
                     </h3>
@@ -211,53 +205,13 @@ class Packages extends Component {
                       <i className="bx bxs-star" />
                       <i className="bx bxs-star" />
                     </div>
-                    {/* <div className="package-rating">
-                      <i className="bx bxs-star" />
-                      <strong><span>2.3K+</span> Rating</strong>
-                    </div>
-                   </div>
-                </div> 
-
-                <div className="package-card">
-                  <div className="package-thumb">
-                    <Link to={`${process.env.PUBLIC_URL}/package-details/3`}>
-                      <img src={package4Img} alt="" className="img-fluid" />
-                    </Link>
-                  </div>
-                  <div className="package-details">
-                    <div className="package-info">
-                      <h5>
-                        <span>AED 395</span>/Per Person <br/> (Cost Based on 2 Pax)
-                      </h5>
-                      <h5>
-                        <i className="flaticon-calendar" />3 night/4 days
-                      </h5>
-                    </div>
-                    <h3>
-                      <i className="flaticon-arrival" />
-                      <Link to={`${process.env.PUBLIC_URL}/package-details/3`}>
-                        Hotel with Burj Khalifa
-                      </Link>
-                    </h3>
-                    <div className="package-rating mb-3">
-                      <i
-                        className="bx bxs-city"
-                        style={{ marginRight: "15px" }}
-                      ></i>
-                      <i className="bx bxs-star" />
-                      <i className="bx bxs-star" />
-                      <i className="bx bxs-star" />
-                    </div>
-                    {/* <div className="package-rating">
-                      <i className="bx bxs-star" />
-                      <strong><span>3.4K+</span> Rating</strong>
-                    </div> */}
+                    
                   </div>
                 </div>
 
                 <div className="package-card">
                   <div className="package-thumb">
-                    <Link to={`${process.env.PUBLIC_URL}/package-details/6`}>
+                    <Link to={`${process.env.PUBLIC_URL}/package-details/reasonable-dubai-package`}>
                       <img src={package5Img} alt="" className="img-fluid" />
                     </Link>
                   </div>
@@ -272,7 +226,7 @@ class Packages extends Component {
                     </div>
                     <h3>
                       <i className="flaticon-arrival" />
-                      <Link to={`${process.env.PUBLIC_URL}/package-details/6`}>
+                      <Link to={`${process.env.PUBLIC_URL}/package-details/reasonable-dubai-package`}>
                         Reasonable Dubai Package
                       </Link>
                     </h3>
@@ -286,16 +240,12 @@ class Packages extends Component {
                       <i className="bx bxs-star" />
                       <i className="bx bxs-star" />
                     </div>
-                    {/* <div className="package-rating">
-                      <i className="bx bxs-star" />
-                      <strong><span>2.7K+</span> Rating</strong>
-                    </div> */}
                   </div>
                 </div>
 
                 <div className="package-card">
                   <div className="package-thumb">
-                    <Link to={`${process.env.PUBLIC_URL}/package-details/8`}>
+                    <Link to={`${process.env.PUBLIC_URL}/package-details/tours-in-glitzy-dubai`}>
                       <img src={package6Img} alt="" className="img-fluid" />
                     </Link>
                   </div>
@@ -310,7 +260,7 @@ class Packages extends Component {
                     </div>
                     <h3>
                       <i className="flaticon-arrival" />
-                      <Link to={`${process.env.PUBLIC_URL}/package-details/8`}>
+                      <Link to={`${process.env.PUBLIC_URL}/package-details/tours-in-glitzy-dubai`}>
                         Tours in Glitzy Dubai
                       </Link>
                     </h3>
@@ -325,18 +275,13 @@ class Packages extends Component {
                       <i className="bx bxs-star" />
                       <i className="bx bxs-star" />
                     </div>
-                    {/* <div className="package-rating">
-                      <i className="bx bxs-star" />
-                      <strong>
-                        <span>2.9K+</span> Rating
-                      </strong>
-                    </div> */}
+                  
                   </div>
                 </div>
 
                 <div className="package-card">
                   <div className="package-thumb">
-                    <Link to={`${process.env.PUBLIC_URL}/package-details/9`}>
+                    <Link to={`${process.env.PUBLIC_URL}/package-details/breathtaking-dubai-getaway`}>
                       <img src={package7Img} alt="" className="img-fluid" />
                     </Link>
                   </div>
@@ -351,7 +296,7 @@ class Packages extends Component {
                     </div>
                     <h3>
                       <i className="flaticon-arrival" />
-                      <Link to={`${process.env.PUBLIC_URL}/package-details/9`}>
+                      <Link to={`${process.env.PUBLIC_URL}/package-details/breathtaking-dubai-getaway`}>
                         Breathtaking Dubai Getaway
                       </Link>
                     </h3>
@@ -366,18 +311,13 @@ class Packages extends Component {
                       <i className="bx bxs-star" />
                       <i className="bx bxs-star" />
                     </div>
-                    {/* <div className="package-rating">
-                      <i className="bx bxs-star" />
-                      <strong>
-                        <span>4.7K+</span> Rating
-                      </strong>
-                    </div> */}
+
                   </div>
                 </div>
 
                 <div className="package-card">
                   <div className="package-thumb">
-                    <Link to={`${process.env.PUBLIC_URL}/package-details/4`}>
+                    <Link to={`${process.env.PUBLIC_URL}/package-details/majestic-dubai`}>
                       <img src={package8Img} alt="" className="img-fluid" />
                     </Link>
                   </div>
@@ -392,7 +332,7 @@ class Packages extends Component {
                     </div>
                     <h3>
                       <i className="flaticon-arrival" />
-                      <Link to={`${process.env.PUBLIC_URL}/package-details/4`}>
+                      <Link to={`${process.env.PUBLIC_URL}/package-details/majestic-dubai`}>
                         Majestic Dubai
                       </Link>
                     </h3>
@@ -406,12 +346,7 @@ class Packages extends Component {
                       <i className="bx bxs-star" />
                       <i className="bx bxs-star" />
                     </div>
-                    {/* <div className="package-rating">
-                      <i className="bx bxs-star" />
-                      <strong>
-                        <span>2.5K+</span> Rating
-                      </strong>
-                    </div> */}
+
                   </div>
                 </div>
 
@@ -432,8 +367,8 @@ class Packages extends Component {
                     </div>
                     <h3>
                       <i className="flaticon-arrival" />
-                      <Link to={`${process.env.PUBLIC_URL}/package-details/5`}>
-                        Glittering Dubai - 4N
+                      <Link to={`${process.env.PUBLIC_URL}/package-details/glittering-dubai`}>
+                        Glittering Dubai
                       </Link>
                     </h3>
                     <div className="package-rating mb-3">
@@ -446,18 +381,13 @@ class Packages extends Component {
                       <i className="bx bxs-star" />
                       <i className="bx bxs-star" />
                     </div>
-                    {/* <div className="package-rating">
-                      <i className="bx bxs-star" />
-                      <strong>
-                        <span>1.8K+</span> Rating
-                      </strong>
-                    </div> */}
+                  
                   </div>
                 </div>
 
                 <div className="package-card">
                   <div className="package-thumb">
-                    <Link to={`${process.env.PUBLIC_URL}/package-details/2`}>
+                    <Link to={`${process.env.PUBLIC_URL}/package-details/super-saver-dubai-vacation`}>
                       <img src={package10Img} alt="" className="img-fluid" />
                     </Link>
                   </div>
@@ -472,7 +402,7 @@ class Packages extends Component {
                     </div>
                     <h3>
                       <i className="flaticon-arrival" />
-                      <Link to={`${process.env.PUBLIC_URL}/package-details/2`}>
+                      <Link to={`${process.env.PUBLIC_URL}/package-details/super-saver-dubai-vacation`}>
                         Super Saver Dubai Vacation
                       </Link>
                     </h3>
@@ -485,18 +415,13 @@ class Packages extends Component {
                       <i className="bx bxs-star" />
                       <i className="bx bxs-star" />
                     </div>
-                    {/* <div className="package-rating">
-                      <i className="bx bxs-star" />
-                      <strong>
-                        <span>2.3K+</span> Rating
-                      </strong>
-                    </div> */}
+                 
                   </div>
                 </div>
 
                 <div className="package-card">
                   <div className="package-thumb">
-                    <Link to={`${process.env.PUBLIC_URL}/package-details/1`}>
+                    <Link to={`${process.env.PUBLIC_URL}/package-details/dubai-local-tour-package`}>
                       <img src={package11Img} alt="" className="img-fluid" />
                     </Link>
                   </div>
@@ -511,7 +436,7 @@ class Packages extends Component {
                     </div>
                     <h3>
                       <i className="flaticon-arrival" />
-                      <Link to={`${process.env.PUBLIC_URL}/package-details/1`}>
+                      <Link to={`${process.env.PUBLIC_URL}/package-details/dubai-local-tour-package`}>
                         Dubai Local Tour Package
                       </Link>
                     </h3>
@@ -524,18 +449,13 @@ class Packages extends Component {
                       <i className="bx bxs-star" />
                       <i className="bx bxs-star" />
                     </div>
-                    {/* <div className="package-rating">
-                      <i className="bx bxs-star" />
-                      <strong>
-                        <span>2.6K+</span> Rating
-                      </strong>
-                    </div> */}
+              
                   </div>
                 </div>
 
                 <div className="package-card">
                   <div className="package-thumb">
-                    <Link to={`${process.env.PUBLIC_URL}/package-details/14`}>
+                    <Link to={`${process.env.PUBLIC_URL}/package-details/dubai-dreamland-adventure-&-wonders`}>
                       <img src={package12Img} alt="" className="img-fluid" />
                     </Link>
                   </div>
@@ -550,7 +470,7 @@ class Packages extends Component {
                     </div>
                     <h3>
                       <i className="flaticon-arrival" />
-                      <Link to={`${process.env.PUBLIC_URL}/package-details/14`}>
+                      <Link to={`${process.env.PUBLIC_URL}/package-details/dubai-dreamland-adventure-&-wonders`}>
                         Dubai Dreamland Adventure & Wonders
                       </Link>
                     </h3>
@@ -563,18 +483,13 @@ class Packages extends Component {
                       <i className="bx bxs-star" />
                       <i className="bx bxs-star" />
                     </div>
-                    {/* <div className="package-rating">
-                      <i className="bx bxs-star" />
-                      <strong>
-                        <span>2.3K+</span> Rating
-                      </strong>
-                    </div> */}
+              
                   </div>
                 </div>
 
                 <div className="package-card">
                   <div className="package-thumb">
-                    <Link to={`${process.env.PUBLIC_URL}/package-details/13`}>
+                    <Link to={`${process.env.PUBLIC_URL}/package-details/dazzling-dubai`}>
                       <img src={package13Img} alt="" className="img-fluid" />
                     </Link>
                   </div>
@@ -589,7 +504,7 @@ class Packages extends Component {
                     </div>
                     <h3>
                       <i className="flaticon-arrival" />
-                      <Link to={`${process.env.PUBLIC_URL}/package-details/13`}>
+                      <Link to={`${process.env.PUBLIC_URL}/package-details/dazzling-dubai`}>
                         Dazzling Dubai
                       </Link>
                     </h3>
@@ -602,18 +517,13 @@ class Packages extends Component {
                       <i className="bx bxs-star" />
                       <i className="bx bxs-star" />
                     </div>
-                    {/* <div className="package-rating">
-                      <i className="bx bxs-star" />
-                      <strong>
-                        <span>2.3K+</span> Rating
-                      </strong>
-                    </div> */}
+                  
                   </div>
                 </div>
 
                 <div className="package-card">
                   <div className="package-thumb">
-                    <Link to={`${process.env.PUBLIC_URL}/package-details/12`}>
+                    <Link to={`${process.env.PUBLIC_URL}/package-details/wonderful-dubai-holiday`}>
                       <img src={package14Img} alt="" className="img-fluid" />
                     </Link>
                   </div>
@@ -628,7 +538,7 @@ class Packages extends Component {
                     </div>
                     <h3>
                       <i className="flaticon-arrival" />
-                      <Link to={`${process.env.PUBLIC_URL}/package-details/12`}>
+                      <Link to={`${process.env.PUBLIC_URL}/package-details/wonderful-dubai-holiday`}>
                         Wonderful Dubai Holiday
                       </Link>
                     </h3>
@@ -641,18 +551,13 @@ class Packages extends Component {
                       <i className="bx bxs-star" />
                       <i className="bx bxs-star" />
                     </div>
-                    {/* <div className="package-rating">
-                      <i className="bx bxs-star" />
-                      <strong>
-                        <span>2.3K+</span> Rating
-                      </strong>
-                    </div> */}
+                  
                   </div>
                 </div>
 
                 <div className="package-card">
                   <div className="package-thumb">
-                    <Link to={`${process.env.PUBLIC_URL}/package-details/17`}>
+                    <Link to={`${process.env.PUBLIC_URL}/package-details/feel-the-magic-of-love-in-dubai`}>
                       <img src={package15Img} alt="" className="img-fluid" />
                     </Link>
                   </div>
@@ -667,7 +572,7 @@ class Packages extends Component {
                     </div>
                     <h3>
                       <i className="flaticon-arrival" />
-                      <Link to={`${process.env.PUBLIC_URL}/package-details/17`}>
+                      <Link to={`${process.env.PUBLIC_URL}/package-details/feel-the-magic-of-love-in-dubai`}>
                         Feel the Magic of Love in Dubai
                       </Link>
                     </h3>
@@ -681,22 +586,19 @@ class Packages extends Component {
                       <i className="bx bxs-star" />
                       <i className="bx bxs-star" />
                     </div>
-                    {/* <div className="package-rating mb-3">
-                      <i
-                        className="bx bxs-city"
-                        style={{ marginRight: "15px" }}
-                      ></i>
-                      <strong>
-                        <i className="bx bxs-star" />
-                        <span>7K+</span> Rating
-                      </strong>
-                    </div> */}
                   </div>
                 </div>
 
+
+
+
+
+
+
+
                 <div className="package-card">
                   <div className="package-thumb">
-                    <Link to={`${process.env.PUBLIC_URL}/package-details/16`}>
+                    <Link to={`${process.env.PUBLIC_URL}/package-details/dubai-treasure-hunt`}>
                       <img src={package16Img} alt="" className="img-fluid" />
                     </Link>
                   </div>
@@ -711,7 +613,7 @@ class Packages extends Component {
                     </div>
                     <h3>
                       <i className="flaticon-arrival" />
-                      <Link to={`${process.env.PUBLIC_URL}/package-details/16`}>
+                      <Link to={`${process.env.PUBLIC_URL}/package-details/dubai-treasure-hunt`}>
                         Dubai Treasure Hunt
                       </Link>
                     </h3>
@@ -725,18 +627,13 @@ class Packages extends Component {
                       <i className="bx bxs-star" />
                       <i className="bx bxs-star" />
                     </div>
-                    {/* <div className="package-rating">
-                      <strong>
-                        <i className="bx bxs-star" />
-                        <span>8.1 K+</span> Rating
-                      </strong>
-                    </div> */}
+                  
                   </div>
                 </div>
 
                 <div className="package-card">
                   <div className="package-thumb">
-                    <Link to={`${process.env.PUBLIC_URL}/package-details/15`}>
+                    <Link to={`${process.env.PUBLIC_URL}/package-details/ultimate-dubai-experience`}>
                       <img src={package17Img} alt="" className="img-fluid" />
                     </Link>
                   </div>
@@ -751,7 +648,7 @@ class Packages extends Component {
                     </div>
                     <h3>
                       <i className="flaticon-arrival" />
-                      <Link to={`${process.env.PUBLIC_URL}/package-details/15`}>
+                      <Link to={`${process.env.PUBLIC_URL}/package-details/ultimate-dubai-experience`}>
                         Ultimate Dubai Experience
                       </Link>
                     </h3>
@@ -765,18 +662,13 @@ class Packages extends Component {
                       <i className="bx bxs-star" />
                       <i className="bx bxs-star" />
                     </div>
-                    {/* <div className="package-rating">
-                      <strong>
-                        <i className="bx bxs-star" />
-                        <span>8.2K+</span> Rating
-                      </strong>
-                    </div> */}
+                 
                   </div>
                 </div>
 
                 <div className="package-card">
                   <div className="package-thumb">
-                    <Link to={`${process.env.PUBLIC_URL}/package-details/20`}>
+                    <Link to={`${process.env.PUBLIC_URL}/package-details/dubai-majestic-mix`}>
                       <img src={package18Img} alt="" className="img-fluid" />
                     </Link>
                   </div>
@@ -791,7 +683,7 @@ class Packages extends Component {
                     </div>
                     <h3>
                       <i className="flaticon-arrival" />
-                      <Link to={`${process.env.PUBLIC_URL}/package-details/17`}>
+                      <Link to={`${process.env.PUBLIC_URL}/package-details/dubai-majestic-mix`}>
                         Dubai Majestic Mix
                       </Link>
                     </h3>
@@ -806,18 +698,13 @@ class Packages extends Component {
                       <i className="bx bxs-star" />
                       <i className="bx bxs-star" />
                     </div>
-                    {/* <div className="package-rating">
-                      <strong>
-                        <i className="bx bxs-star" />
-                        <span>6K+</span> Rating
-                      </strong>
-                    </div> */}
+                  
                   </div>
                 </div>
 
                 <div className="package-card">
                   <div className="package-thumb">
-                    <Link to={`${process.env.PUBLIC_URL}/package-details/19`}>
+                    <Link to={`${process.env.PUBLIC_URL}/package-details/dubai-explorer-family-package`}>
                       <img src={package19Img} alt="" className="img-fluid" />
                     </Link>
                   </div>
@@ -832,7 +719,7 @@ class Packages extends Component {
                     </div>
                     <h3>
                       <i className="flaticon-arrival" />
-                      <Link to={`${process.env.PUBLIC_URL}/package-details/19`}>
+                      <Link to={`${process.env.PUBLIC_URL}/package-details/dubai-explorer-family-package`}>
                         Dubai Explorer Family Package
                       </Link>
                     </h3>
@@ -847,18 +734,13 @@ class Packages extends Component {
                       <i className="bx bxs-star" />
                       <i className="bx bxs-star" />
                     </div>
-                    {/* <div className="package-rating">
-                      <strong>
-                        <i className="bx bxs-star" />
-                        <span>5K+</span> Rating
-                      </strong>
-                    </div> */}
+                  
                   </div>
                 </div>
 
                 <div className="package-card">
                   <div className="package-thumb">
-                    <Link to={`${process.env.PUBLIC_URL}/package-details/18`}>
+                    <Link to={`${process.env.PUBLIC_URL}/package-details/dubai-&-abu-dhabi-wonders`}>
                       <img src={package20Img} alt="" className="img-fluid" />
                     </Link>
                   </div>
@@ -873,7 +755,7 @@ class Packages extends Component {
                     </div>
                     <h3>
                       <i className="flaticon-arrival" />
-                      <Link to={`${process.env.PUBLIC_URL}/package-details/18`}>
+                      <Link to={`${process.env.PUBLIC_URL}/package-details/dubai-&-abu-dhabi-wonders`}>
                         Dubai & Abu Dhabi Wonders
                       </Link>
                     </h3>
@@ -888,18 +770,13 @@ class Packages extends Component {
                       <i className="bx bxs-star" />
                       <i className="bx bxs-star" />
                     </div>
-                    {/* <div className="package-rating">
-                      <strong>
-                        <i className="bx bxs-star" />
-                        <span>9K+</span> Rating
-                      </strong>
-                    </div> */}
+                   
                   </div>
                 </div>
 
                 <div className="package-card">
                   <div className="package-thumb">
-                    <Link to={`${process.env.PUBLIC_URL}/package-details/24`}>
+                    <Link to={`${process.env.PUBLIC_URL}/package-details/dubai-delights`}>
                       <img src={package21Img} alt="" className="img-fluid" />
                     </Link>
                   </div>
@@ -914,7 +791,7 @@ class Packages extends Component {
                     </div>
                     <h3>
                       <i className="flaticon-arrival" />
-                      <Link to={`${process.env.PUBLIC_URL}/package-details/24`}>
+                      <Link to={`${process.env.PUBLIC_URL}/package-details/dubai-delights`}>
                         Dubai Delights
                       </Link>
                     </h3>
@@ -923,18 +800,13 @@ class Packages extends Component {
                       <i className="bx bxs-star" />
                       <i className="bx bxs-star" />
                     </div>
-                    {/* <div className="package-rating">
-                      <strong>
-                        <i className="bx bxs-star" />
-                        <span>7.8K+</span> Rating
-                      </strong>
-                    </div> */}
+                   
                   </div>
                 </div>
 
                 <div className="package-card">
                   <div className="package-thumb">
-                    <Link to={`${process.env.PUBLIC_URL}/package-details/21`}>
+                    <Link to={`${process.env.PUBLIC_URL}/package-details/dubai-and-abu-dhabi-discoveries`}>
                       <img src={package22Img} alt="" className="img-fluid" />
                     </Link>
                   </div>
@@ -949,7 +821,7 @@ class Packages extends Component {
                     </div>
                     <h3>
                       <i className="flaticon-arrival" />
-                      <Link to={`${process.env.PUBLIC_URL}/package-details/21`}>
+                      <Link to={`${process.env.PUBLIC_URL}/package-details/dubai-and-abu-dhabi-discoveries`}>
                         Dubai and Abu Dhabi discoveries
                       </Link>
                     </h3>
@@ -962,18 +834,13 @@ class Packages extends Component {
                       <i className="bx bxs-star" />
                       <i className="bx bxs-star" />
                     </div>
-                    {/* <div className="package-rating">
-                      <strong>
-                        <i className="bx bxs-star" />
-                        <span>8K+</span> Rating
-                      </strong>
-                    </div> */}
+                  
                   </div>
                 </div>
 
                 <div className="package-card">
                   <div className="package-thumb">
-                    <Link to={`${process.env.PUBLIC_URL}/package-details/22`}>
+                    <Link to={`${process.env.PUBLIC_URL}/package-details/romantic-escapes-in-dubai`}>
                       <img src={package23Img} alt="" className="img-fluid" />
                     </Link>
                   </div>
@@ -988,7 +855,7 @@ class Packages extends Component {
                     </div>
                     <h3>
                       <i className="flaticon-arrival" />
-                      <Link to={`${process.env.PUBLIC_URL}/package-details/22`}>
+                      <Link to={`${process.env.PUBLIC_URL}/package-details/romantic-escapes-in-dubai`}>
                         Romantic Escapes in Dubai
                       </Link>
                     </h3>
@@ -1001,18 +868,13 @@ class Packages extends Component {
                       <i className="bx bxs-star" />
                       <i className="bx bxs-star" />
                     </div>
-                    {/* <div className="package-rating">
-                      <strong>
-                        <i className="bx bxs-star" />
-                        <span>9.0K+</span> Rating
-                      </strong>
-                    </div> */}
+                  
                   </div>
                 </div>
 
                 <div className="package-card">
                   <div className="package-thumb">
-                    <Link to={`${process.env.PUBLIC_URL}/package-details/23`}>
+                    <Link to={`${process.env.PUBLIC_URL}/package-details/unforgettable-dubai`}>
                       <img src={package24Img} alt="" className="img-fluid" />
                     </Link>
                   </div>
@@ -1027,7 +889,7 @@ class Packages extends Component {
                     </div>
                     <h3>
                       <i className="flaticon-arrival" />
-                      <Link to={`${process.env.PUBLIC_URL}/package-details/23`}>
+                      <Link to={`${process.env.PUBLIC_URL}/package-details/unforgettable-dubai`}>
                         Unforgettable Dubai
                       </Link>
                     </h3>
@@ -1040,18 +902,13 @@ class Packages extends Component {
                       <i className="bx bxs-star" />
                       <i className="bx bxs-star" />
                     </div>
-                    {/* <div className="package-rating">
-                      <strong>
-                        <i className="bx bxs-star" />
-                        <span>6K+</span> Rating
-                      </strong>
-                    </div> */}
+                  
                   </div>
                 </div>
 
                 <div className="package-card">
                   <div className="package-thumb">
-                    <Link to={`${process.env.PUBLIC_URL}/package-details/28`}>
+                    <Link to={`${process.env.PUBLIC_URL}/package-details/dubai-delights-serving-you-just-deserts`}>
                       <img src={package25Img} alt="" className="img-fluid" />
                     </Link>
                   </div>
@@ -1066,7 +923,7 @@ class Packages extends Component {
                     </div>
                     <h3>
                       <i className="flaticon-arrival" />
-                      <Link to={`${process.env.PUBLIC_URL}/package-details/28`}>
+                      <Link to={`${process.env.PUBLIC_URL}/package-details/dubai-delights-serving-you-just-deserts`}>
                         Dubai Delights- Serving you just Deserts
                       </Link>
                     </h3>
@@ -1080,18 +937,13 @@ class Packages extends Component {
                       <i className="bx bxs-star" />
                       <i className="bx bxs-star" />
                     </div>
-                    {/* <div className="package-rating">
-                      <strong>
-                        <i className="bx bxs-star" />
-                        <span>8.2K+</span> Rating
-                      </strong>
-                    </div> */}
+                  
                   </div>
                 </div>
 
                 <div className="package-card">
                   <div className="package-thumb">
-                    <Link to={`${process.env.PUBLIC_URL}/package-details/25`}>
+                    <Link to={`${process.env.PUBLIC_URL}/package-details/best-of-dubai-&-abu-dhabi`}>
                       <img src={package26Img} alt="" className="img-fluid" />
                     </Link>
                   </div>
@@ -1106,7 +958,7 @@ class Packages extends Component {
                     </div>
                     <h3>
                       <i className="flaticon-arrival" />
-                      <Link to={`${process.env.PUBLIC_URL}/package-details/25`}>
+                      <Link to={`${process.env.PUBLIC_URL}/package-details/best-of-dubai-&-abu-dhabi`}>
                         Best of Dubai & Abu Dhabi
                       </Link>
                     </h3>
@@ -1120,18 +972,13 @@ class Packages extends Component {
                       <i className="bx bxs-star" />
                       <i className="bx bxs-star" />
                     </div>
-                    {/* <div className="package-rating">
-                      <strong>
-                        <i className="bx bxs-star" />
-                        <span>6.5K+</span> Rating
-                      </strong>
-                    </div> */}
+                    
                   </div>
                 </div>
 
                 <div className="package-card">
                   <div className="package-thumb">
-                    <Link to={`${process.env.PUBLIC_URL}/package-details/26`}>
+                    <Link to={`${process.env.PUBLIC_URL}/package-details/romantic-gateway-to-dubai-arabian-nights-&-city-life`}>
                       <img src={package27Img} alt="" className="img-fluid" />
                     </Link>
                   </div>
@@ -1146,7 +993,7 @@ class Packages extends Component {
                     </div>
                     <h3>
                       <i className="flaticon-arrival" />
-                      <Link to={`${process.env.PUBLIC_URL}/package-details/26`}>
+                      <Link to={`${process.env.PUBLIC_URL}/package-details/romantic-gateway-to-dubai-arabian-nights-&-city-life`}>
                         Romantic Gateway to Dubai - Arabian Nights & City Life
                       </Link>
                     </h3>
@@ -1160,18 +1007,13 @@ class Packages extends Component {
                       <i className="bx bxs-star" />
                       <i className="bx bxs-star" />
                     </div>
-                    {/* <div className="package-rating">
-                      <strong>
-                        <i className="bx bxs-star" />
-                        <span>9.0K+</span> Rating
-                      </strong>
-                    </div> */}
+                   
                   </div>
                 </div>
 
                 <div className="package-card">
                   <div className="package-thumb">
-                    <Link to={`${process.env.PUBLIC_URL}/package-details/27`}>
+                    <Link to={`${process.env.PUBLIC_URL}/package-details/exciting-trip-to-dubai`}>
                       <img src={package28Img} alt="" className="img-fluid" />
                     </Link>
                   </div>
@@ -1186,7 +1028,7 @@ class Packages extends Component {
                     </div>
                     <h3>
                       <i className="flaticon-arrival" />
-                      <Link to={`${process.env.PUBLIC_URL}/package-details/27`}>
+                      <Link to={`${process.env.PUBLIC_URL}/package-details/exciting-trip-to-dubai`}>
                         Exciting trip to Dubai
                       </Link>
                     </h3>
@@ -1200,18 +1042,13 @@ class Packages extends Component {
                       <i className="bx bxs-star" />
                       <i className="bx bxs-star" />
                     </div>
-                    {/* <div className="package-rating">
-                      <strong>
-                        <i className="bx bxs-star" />
-                        <span>8.3K+</span> Rating
-                      </strong>
-                    </div> */}
+                  
                   </div>
                 </div>
 
                 <div className="package-card">
                   <div className="package-thumb">
-                    <Link to={`${process.env.PUBLIC_URL}/package-details/32`}>
+                    <Link to={`${process.env.PUBLIC_URL}/package-details/discover-dubai`}>
                       <img src={package29Img} alt="" className="img-fluid" />
                     </Link>
                   </div>
@@ -1226,7 +1063,7 @@ class Packages extends Component {
                     </div>
                     <h3>
                       <i className="flaticon-arrival" />
-                      <Link to={`${process.env.PUBLIC_URL}/package-details/32`}>
+                      <Link to={`${process.env.PUBLIC_URL}/package-details/discover-dubai`}>
                         Discover Dubai
                       </Link>
                     </h3>
@@ -1241,18 +1078,13 @@ class Packages extends Component {
                       <i className="bx bxs-star" />
                       <i className="bx bxs-star" />
                     </div>
-                    {/* <div className="package-rating">
-                      <strong>
-                        <i className="bx bxs-star" />
-                        <span>8.2K+</span> Rating
-                      </strong>
-                    </div> */}
+                   
                   </div>
                 </div>
 
                 <div className="package-card">
                   <div className="package-thumb">
-                    <Link to={`${process.env.PUBLIC_URL}/package-details/29`}>
+                    <Link to={`${process.env.PUBLIC_URL}/package-details/dubai-and-abu-dhabi-escapes-with-grand-mosque-&-baps-temple-visit`}>
                       <img src={package30Img} alt="" className="img-fluid" />
                     </Link>
                   </div>
@@ -1267,7 +1099,7 @@ class Packages extends Component {
                     </div>
                     <h3>
                       <i className="flaticon-arrival" />
-                      <Link to={`${process.env.PUBLIC_URL}/package-details/29`}>
+                      <Link to={`${process.env.PUBLIC_URL}/package-details/dubai-and-abu-dhabi-escapes-with-grand-mosque-&-baps-temple-visit`}>
                         Dubai and Abu Dhabi Escapes with Grand Mosque & BAPS Temple Visit
                       </Link>
                     </h3>
@@ -1282,18 +1114,13 @@ class Packages extends Component {
                       <i className="bx bxs-star" />
                       <i className="bx bxs-star" />
                     </div>
-                    {/* <div className="package-rating">
-                      <strong>
-                        <i className="bx bxs-star" />
-                        <span>4.9K+</span> Rating
-                      </strong>
-                    </div> */}
+                  
                   </div>
                 </div>
 
                 <div className="package-card">
                   <div className="package-thumb">
-                    <Link to={`${process.env.PUBLIC_URL}/package-details/30`}>
+                    <Link to={`${process.env.PUBLIC_URL}/package-details/luxury-dubai`}>
                       <img src={package31Img} alt="" className="img-fluid" />
                     </Link>
                   </div>
@@ -1308,7 +1135,7 @@ class Packages extends Component {
                     </div>
                     <h3>
                       <i className="flaticon-arrival" />
-                      <Link to={`${process.env.PUBLIC_URL}/package-details/30`}>
+                      <Link to={`${process.env.PUBLIC_URL}/package-details/luxury-dubai`}>
                         Luxury Dubai
                       </Link>
                     </h3>
@@ -1323,18 +1150,13 @@ class Packages extends Component {
                       <i className="bx bxs-star" />
                       <i className="bx bxs-star" />
                     </div>
-                    {/* <div className="package-rating">
-                      <strong>
-                        <i className="bx bxs-star" />
-                        <span>7.5K+</span> Rating
-                      </strong>
-                    </div> */}
+                   
                   </div>
                 </div>
 
                 <div className="package-card">
                   <div className="package-thumb">
-                    <Link to={`${process.env.PUBLIC_URL}/package-details/31`}>
+                    <Link to={`${process.env.PUBLIC_URL}/package-details/limitless-with-dubai`}>
                       <img src={package32Img} alt="" className="img-fluid" />
                     </Link>
                   </div>
@@ -1349,7 +1171,7 @@ class Packages extends Component {
                     </div>
                     <h3>
                       <i className="flaticon-arrival" />
-                      <Link to={`${process.env.PUBLIC_URL}/package-details/31`}>
+                      <Link to={`${process.env.PUBLIC_URL}/package-details/limitless-with-dubai`}>
                         Limitless with Dubai
                       </Link>
                     </h3>
@@ -1364,12 +1186,7 @@ class Packages extends Component {
                       <i className="bx bxs-star" />
                       <i className="bx bxs-star" />
                     </div>
-                    {/* <div className="package-rating">
-                      <strong>
-                        <i className="bx bxs-star" />
-                        <span>8.9K+</span> Rating
-                      </strong>
-                    </div> */}
+                   
                   </div>
                 </div>
               </OwlCarousel>
