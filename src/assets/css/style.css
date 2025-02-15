@@ -2828,6 +2828,8 @@ header > .header-area .nav-right {
   position: relative;
   border-radius: 5px 5px 0 0;
   overflow: hidden;
+  height: 300px;
+  overflow: hidden;
 }
 
 .blog-card .blog-img img {

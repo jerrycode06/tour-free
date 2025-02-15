@@ -39,6 +39,9 @@ import "./index.scss";
 import TermsAndConditions from "./components/pages/tnc/TermsAndConditions";
 import TermsAndConditionsMain from "./components/pages/tnc-main/TermsAndConditionsMain";
 import PrivacyPolicy from "./components/pages/privacy-policy/PrivacyPolicy";
+import Activities from "./components/pages/dubai-activities/Activities";
+import ActivityDetails from "./components/pages/dubai-activities/ActivityDetails";
+import HotelsDubai from "./components/pages/dubai-hotels/HotelsDubai";
 
 //Default Warniing Error Hide
 console.log = console.warn = console.error = () => {};
@@ -68,6 +71,18 @@ class Root extends React.Component {
             <Route
               path={`${process.env.PUBLIC_URL}/dubai/destination`}
               component={destinations}
+            />
+            <Route
+              path={`${process.env.PUBLIC_URL}/dubai/activities`}
+              component={Activities}
+            />
+            <Route
+              path={`${process.env.PUBLIC_URL}/dubai/activity-details/:name`}
+              component={ActivityDetails}
+            />
+            <Route
+              path={`${process.env.PUBLIC_URL}/dubai/hotels`}
+              component={HotelsDubai}
             />
             <Route
               path={`${process.env.PUBLIC_URL}/international/destination`}

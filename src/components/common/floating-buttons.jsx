@@ -4,6 +4,7 @@ import phoneIcon from "../../assets/images/call-us.png";
 import whatsappIcon from "../../assets/images/links/whatsapp-button.png";
 import enquireIcon from "../../assets/images/links/enq.png";
 import emailjs from "@emailjs/browser";
+import EnquiryForm from "./EnquiryForm";
 
 
 const FloatingButtons = () => {
@@ -290,6 +291,7 @@ const FloatingButtons = () => {
 
   // Close modal handler
   const closeModal = () => {
+    console.log("Close Modal");
     setModalOpen(false);
     // Go back in history if the modal was opened by pushing a state
     if (window.history.state?.modalOpen) {
@@ -414,297 +416,214 @@ const FloatingButtons = () => {
       </button>
 
       {/* Modal */}
+
+
       {isModalOpen && (
-        <div className="modal-overlay" style={{ backgroundColor: "#000000eb", padding: "20px" }}>
-          <div
-            className="contact-inputs p-100 enquiry-form container"
-            id="enquiry-form-id" style={{
-              background: "#225822d6",
-              maxHeight: "80vh",
-              overflowY: "scroll",
-              marginTop: "10vh"
-            }}
-          >
-            <div className="center enquiry-form-inside">
-              <div className="contact-form">
-                <button
-                  className="close-modal-btn"
-                  style={{
-                    position: "absolute",
-                    top: "10px",
-                    right: "10px",
-                    backgroundColor: "#ff0000",
-                    color: "#fff",
-                    border: "none",
-                    borderRadius: "50%",
-                    width: "30px",
-                    height: "30px",
-                    cursor: "pointer",
-                    zIndex: "9999",
-                    display: "flex",
-                    alignItems: "center",
-                    justifyContent: "center",
-                    fontSize: "16px",
-                  }}
-                  onClick={closeModal}
-                >
-                  X
-                </button>
-                <form onSubmit={handleSubmit} className="flex flex-col ">
-                  <h5 className="text-center" style={
-                    {
-                      margin: "18px",
-                      fontFamily: 'Quicksand',
-                      fontSize: "xx-large",
-                      color: "WHITE",
-                      fontWeight: "500"
-                    }}>ENQUIRE NOW</h5>
+        <EnquiryForm />
 
-                  <div className="row">
-                    <div className="col-lg-6">
-                      <label style={{ color: "white" }}>Travelling To</label>
-                      <input
-                        type="text"
-                        placeholder="Travelling To"
-                        required
-                        value={formData.travellingTo}
-                        style={{ width: "100%" }}
-                        onChange={(e) =>
-                          setFormData((prev) => ({ ...prev, travellingTo: e.target.value }))
-                        }
-                      />
-                    </div>
-                    <div className="col-lg-6">
-                      <label style={{ color: "white" }}>No of Adults</label>
-                      <input
-                        type="number"
-                        placeholder="No of adults"
-                        min="0"
-                        required
-                        value={formData.noOfAdults}
-                        style={{ width: "100%" }}
-                        onChange={(e) =>
-                          setFormData((prev) => ({ ...prev, noOfAdults: e.target.value }))
-                        }
-                      />
-                    </div>
-                  </div>
+        // <div className="modal-overlay" style={{ backgroundColor: "#000000eb", padding: "20px" }}>
+        //   <div
+        //     className="contact-inputs p-100 enquiry-form container"
+        //     id="enquiry-form-id" style={{
+        //       background: "#225822d6",
+        //       maxHeight: "80vh",
+        //       overflowY: "scroll",
+        //       marginTop: "10vh"
+        //     }}
+        //   >
+        //     <div className="center enquiry-form-inside">
+        //       <div className="contact-form">
+        //         <button
+        //           className="close-modal-btn"
+        //           style={{
+        //             position: "absolute",
+        //             top: "10px",
+        //             right: "10px",
+        //             backgroundColor: "#ff0000",
+        //             color: "#fff",
+        //             border: "none",
+        //             borderRadius: "50%",
+        //             width: "30px",
+        //             height: "30px",
+        //             cursor: "pointer",
+        //             zIndex: "9999",
+        //             display: "flex",
+        //             alignItems: "center",
+        //             justifyContent: "center",
+        //             fontSize: "16px",
+        //           }}
+        //           onClick={closeModal}
+        //         >
+        //           X
+        //         </button>
+        //         <form onSubmit={handleSubmit} className="flex flex-col ">
+        //           <h5 className="text-center" style={
+        //             {
+        //               margin: "18px",
+        //               fontFamily: 'Quicksand',
+        //               fontSize: "xx-large",
+        //               color: "WHITE",
+        //               fontWeight: "500"
+        //             }}>ENQUIRE NOW</h5>
 
-                  <div className="row">
-                    <div className="col-lg-6">
-                      <label style={{ color: "white" }}>No of Children</label>
-                      <input
-                        type="number"
-                        placeholder="No of children"
-                        min="0"
-                        value={noOfChilds}
-                        onChange={handleChild}
-                        style={{ width: "100%" }}
-                      />
-                      {error.error && <span className="text-red-500">{error.message}</span>}
-                    </div>
-                    <div className="col-lg-6">
-                      <label style={{ color: "white" }}>Depart Date</label>
-                      <input
-                        type="date"
-                        required
-                        value={formData.departDate}
-                        style={{ width: "-webkit-fill-available" }}
-                        onChange={(e) =>
-                          setFormData((prev) => ({ ...prev, departDate: e.target.value }))
-                        }
-                      />
-                    </div>
-                  </div>
+        //           <div className="row">
+        //             <div className="col-lg-6">
+        //               <label style={{ color: "white" }}>Travelling To</label>
+        //               <input
+        //                 type="text"
+        //                 placeholder="Travelling To"
+        //                 required
+        //                 value={formData.travellingTo}
+        //                 style={{ width: "100%" }}
+        //                 onChange={(e) =>
+        //                   setFormData((prev) => ({ ...prev, travellingTo: e.target.value }))
+        //                 }
+        //               />
+        //             </div>
+        //             <div className="col-lg-6">
+        //               <label style={{ color: "white" }}>No of Adults</label>
+        //               <input
+        //                 type="number"
+        //                 placeholder="No of adults"
+        //                 min="0"
+        //                 required
+        //                 value={formData.noOfAdults}
+        //                 style={{ width: "100%" }}
+        //                 onChange={(e) =>
+        //                   setFormData((prev) => ({ ...prev, noOfAdults: e.target.value }))
+        //                 }
+        //               />
+        //             </div>
+        //           </div>
 
-                  {noOfChilds > 0 &&
-                    Array.from({ length: noOfChilds }).map((_, index) => (
-                      <div key={index} style={{ width: "100%" }}>
+        //           <div className="row">
+        //             <div className="col-lg-6">
+        //               <label style={{ color: "white" }}>No of Children</label>
+        //               <input
+        //                 type="number"
+        //                 placeholder="No of children"
+        //                 min="0"
+        //                 value={noOfChilds}
+        //                 onChange={handleChild}
+        //                 style={{ width: "100%" }}
+        //               />
+        //               {error.error && <span className="text-red-500">{error.message}</span>}
+        //             </div>
+        //             <div className="col-lg-6">
+        //               <label style={{ color: "white" }}>Depart Date</label>
+        //               <input
+        //                 type="date"
+        //                 required
+        //                 value={formData.departDate}
+        //                 style={{ width: "-webkit-fill-available" }}
+        //                 onChange={(e) =>
+        //                   setFormData((prev) => ({ ...prev, departDate: e.target.value }))
+        //                 }
+        //               />
+        //             </div>
+        //           </div>
 
-                        <div className="row">
+        //           {noOfChilds > 0 &&
+        //             Array.from({ length: noOfChilds }).map((_, index) => (
+        //               <div key={index} style={{ width: "100%" }}>
 
-                          <div className="col-lg-12">
-                            <label style={{ color: "white" }}>Child {index + 1} Age</label>
-                            <select
-                              onChange={(e) => handleChildAge(index, e.target.value)}
-                              required style={{ width: "100%", marginBottom: "10px" }}
-                            >
-                              <option value="">Select Age</option>
-                              <option value="0-1">0-1</option>
-                              <option value="2">2</option>
-                              <option value="3">3</option>
-                              <option value="4">4</option>
-                              <option value="5">5</option>
-                              <option value="6">6</option>
-                              <option value="7">7</option>
-                            </select>
-                          </div>
-                        </div>
+        //                 <div className="row">
 
-                      </div>
-                    ))}
+        //                   <div className="col-lg-12">
+        //                     <label style={{ color: "white" }}>Child {index + 1} Age</label>
+        //                     <select
+        //                       onChange={(e) => handleChildAge(index, e.target.value)}
+        //                       required style={{ width: "100%", marginBottom: "10px" }}
+        //                     >
+        //                       <option value="">Select Age</option>
+        //                       <option value="0-1">0-1</option>
+        //                       <option value="2">2</option>
+        //                       <option value="3">3</option>
+        //                       <option value="4">4</option>
+        //                       <option value="5">5</option>
+        //                       <option value="6">6</option>
+        //                       <option value="7">7</option>
+        //                     </select>
+        //                   </div>
+        //                 </div>
 
-                  <div className="row">
-                    <div className="col-lg-6">
-                      <div className="">
-                        <label htmlFor="contactNo" style={{ color: "white", display: "block", marginBottom: "" }}>
-                          Contact No.
-                        </label>
-                        <div style={{ display: "flex", alignItems: "center", width: "100%" }}>
-                          {/* Dropdown for Country Code */}
-                          <select
-                            value={formData.countryCode}
-                            onChange={(e) =>
-                              setFormData((prev) => ({ ...prev, countryCode: e.target.value }))
-                            }
-                            style={{
-                              padding: "8px",
-                              border: "1px solid #ccc",
-                              borderRadius: "4px 0 0 4px",
-                              background: "#fff",
-                              color: "#333",
-                              width: "30%",
-                              marginRight: "4px",
-                              marginBottom: "0px"
-                            }}
-                          >
-                            {countries.map((country, index) => (
-                              <option key={index} value={country.code}>
-                                {country.code} ({country.name})
-                              </option>
-                            ))}
-                          </select>
+        //               </div>
+        //             ))}
 
-                          {/* Input for Phone Number */}
-                          <input
-                            type="tel"
-                            id="contactNo"
-                            placeholder="Enter your contact no."
-                            required
-                            value={formData.contactNo}
-                            onChange={(e) =>
-                              setFormData((prev) => ({ ...prev, contactNo: e.target.value }))
-                            }
-                            style={{
-                              width: "70%",
-                              padding: "8px",
-                              border: "1px solid #ccc",
-                              borderRadius: "0 4px 4px 0",
-                              outline: "none",
-                              marginBottom: "0px"
-                            }}
-                          />
-                        </div>
-                      </div>
-                    </div>
-                    <div className="col-lg-6">
-                      <label style={{ color: "white" }}>Email ID</label>
-                      <input
-                        type="email"
-                        placeholder="Enter your Email ID"
-                        required
-                        value={formData.emailId}
-                        style={{ width: "100%", marginBottom: "0px" }}
-                        onChange={(e) =>
-                          setFormData((prev) => ({ ...prev, emailId: e.target.value }))
-                        }
-                      />
+        //           <div className="row">
+        //             <div className="col-lg-6">
+        //               <div className="">
+        //                 <label htmlFor="contactNo" style={{ color: "white", display: "block", marginBottom: "" }}>
+        //                   Contact No.
+        //                 </label>
+        //                 <div style={{ display: "flex", alignItems: "center", width: "100%" }}>
+        //                   <select
+        //                     value={formData.countryCode}
+        //                     onChange={(e) =>
+        //                       setFormData((prev) => ({ ...prev, countryCode: e.target.value }))
+        //                     }
+        //                     style={{
+        //                       padding: "8px",
+        //                       border: "1px solid #ccc",
+        //                       borderRadius: "4px 0 0 4px",
+        //                       background: "#fff",
+        //                       color: "#333",
+        //                       width: "30%",
+        //                       marginRight: "4px",
+        //                       marginBottom: "0px"
+        //                     }}
+        //                   >
+        //                     {countries.map((country, index) => (
+        //                       <option key={index} value={country.code}>
+        //                         {country.code} ({country.name})
+        //                       </option>
+        //                     ))}
+        //                   </select>
 
-                    </div>
-                  </div>
-
-                  <div className="flex items-center w-full justify-center mt-3"><button type="submit" className="bg-green-800 text-white p-2 mt-2 rounded">
-                    Submit Now
-                  </button>
-                  </div>
-                </form>
-              </div>
-            </div>
-          </div>
-          {/* <div
-            className="contact-inputs p-100 enquiry-form"
-            id="enquiry-form-id" style={{background: "#225822d6"}}
-          >
-            <div className="center enquiry-form-inside">
-              <div className="contact-form">
-                <form name="trip-enquiry" method="post">
-                  <input type="hidden" name="form-name" value="trip-enquiry" />
-                  <h5 className="contact-d-head d-flex justify-content-center text-white">
-                    Enquire Now
-                  </h5>
-                  <div className="row">
-                    <div className="col-lg-6">
-                      <label htmlFor="to" className="text-white">Travelling To</label>
-                      <input
-                        type="text"
-                        placeholder="Travelling To"
-                        name="to"
-                        style={{width: "100%"}}
-                        required
-                      />
-                    </div>
-                    <div className="col-lg-6">
-                      <label htmlFor="no" className="text-white">No of adults</label>
-                      <input
-                        type="number"
-                        placeholder="No of adults"
-                        name="no"
-                        style={{width: "100%"}}
-                        required
-                      />
-                    </div>
-                    <div className="col-lg-6">
-                      <label htmlFor="no" className="text-white">No of child</label>
-                      <input
-                        type="number"
-                        placeholder="No of child"
-                        name="no"
-                        style={{width: "100%"}}
-                        required
-                      />
-                    </div>
-                    <div className="col-lg-6">
-                      <label htmlFor="when" className="text-white">Depart Date</label>
-                      <input
-                        type="date"
-                        placeholder="Depart"
-                        name="when"
-                        style={{width: "100%"}}
-                        required
-                      />
-                    </div>
-                    <div className="col-lg-12 d-flex justify-content-center">
-                      <input type="submit" defaultValue="Submit Now" />
-                    </div>
-                  </div>
-                </form>
-              </div>
-            </div>
-            <button
-              className="close-modal-btn"
-              style={{
-                position: "absolute",
-                top: "10px",
-                right: "10px",
-                backgroundColor: "#ff0000",
-                color: "#fff",
-                border: "none",
-                borderRadius: "50%",
-                width: "30px",
-                height: "30px",
-                cursor: "pointer",
-                zIndex: "9999",
-                display: "flex",
-                alignItems: "center",
-                justifyContent: "center",
-                fontSize: "16px",
-              }}
-              onClick={closeModal}
-            >
-              X
-            </button>
-          </div> */}
-        </div>
+        //                   <input
+        //                     type="tel"
+        //                     id="contactNo"
+        //                     placeholder="Enter your contact no."
+        //                     required
+        //                     value={formData.contactNo}
+        //                     onChange={(e) =>
+        //                       setFormData((prev) => ({ ...prev, contactNo: e.target.value }))
+        //                     }
+        //                     style={{
+        //                       width: "70%",
+        //                       padding: "8px",
+        //                       border: "1px solid #ccc",
+        //                       borderRadius: "0 4px 4px 0",
+        //                       outline: "none",
+        //                       marginBottom: "0px"
+        //                     }}
+        //                   />
+        //                 </div>
+        //               </div>
+        //             </div>
+        //             <div className="col-lg-6">
+        //               <label style={{ color: "white" }}>Email ID</label>
+        //               <input
+        //                 type="email"
+        //                 placeholder="Enter your Email ID"
+        //                 required
+        //                 value={formData.emailId}
+        //                 style={{ width: "100%", marginBottom: "0px" }}
+        //                 onChange={(e) =>
+        //                   setFormData((prev) => ({ ...prev, emailId: e.target.value }))
+        //                 }
+        //               />
+        //             </div>
+        //           </div>
+        //           <div className="flex items-center w-full justify-center mt-3"><button type="submit" className="bg-green-800 text-white p-2 mt-2 rounded">
+        //             Submit Now
+        //           </button>
+        //           </div>
+        //         </form>
+        //       </div>
+        //     </div>
+        //   </div>
+        // </div>
       )}
     </div>
   );
