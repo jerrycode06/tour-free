@@ -37,6 +37,7 @@ function PackageDetails() {
   }, [internationalPackageData, name]);
 
   const getValue = (key) => {
+    console.log("Key: ", key)
     let foundItem;
     // if (id.startsWith("I")) {
     //   
@@ -44,6 +45,7 @@ function PackageDetails() {
     console.log('Name: ', key);
     // Dubai package
     foundItem = packageData.find((pkg) => pkg.name.replace(/\s+/g, "-").toLowerCase() === name);
+    
     // }
 
     // International Package
@@ -51,7 +53,7 @@ function PackageDetails() {
       foundItem = internationalPackageData.find((pkg) => pkg.name.replace(/\s+/g, "-").toLowerCase() === name);
     }
 
-    return foundItem ? foundItem[key] : "Miss"; // Handle missing keys or items
+    return foundItem ? foundItem[key] : ""; // Handle missing keys or items
   };
 
   const extractPrice = (str) => {

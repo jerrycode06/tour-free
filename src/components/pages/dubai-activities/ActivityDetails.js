@@ -36,7 +36,7 @@ const ActivityDetails = () => {
         console.log('Name: ', key);
         foundItem = packageData.find((pkg) => pkg.title.replace(/\s+/g, "-").toLowerCase() === name);
 
-        return foundItem ? foundItem[key] : "Miss"; // Handle missing keys or items
+        return foundItem ? foundItem[key] : ""; // Handle missing keys or items
     };
 
     const extractPrice = (str) => {
@@ -391,7 +391,7 @@ const ActivityDetails = () => {
             </div>
 
             {/* ===============  breadcrumb area end =============== */}
-            <div className="package-details-wrapper pt-120">
+            <div className="package-details-wrapper pt-140">
                 <div className="container">
                     <div className="row">
                         <div className="col-lg-8">
@@ -399,18 +399,20 @@ const ActivityDetails = () => {
 
                                 <div className="package-header">
                                     <div className="package-title">
-                                        <h3 style={{ marginBottom: "0px" }}>
-                                            {getValue("title")} - <br />
-                                            AED {extractPrice(getValue("price"))} <br />
+                                        <h2 style={{ marginBottom: "4px" }}>
+                                            {getValue("title")}  <br />
+                                        </h2>
+                                        <h3>
+                                            Price: AED {extractPrice(getValue("price"))} <br />
                                         </h3>
-                                        <strong>
+                                        {/* <strong>
                                             <i className="flaticon-arrival" />
-                                        </strong>
+                                        </strong> */}
                                     </div>
                                 </div>
 
                                 <div className="package-tab">
-                                    
+
                                     <div
                                         className="tab-content p-tab-content"
                                         id="pills-tabContent"
@@ -429,20 +431,26 @@ const ActivityDetails = () => {
                                                             <p dangerouslySetInnerHTML={{ __html: getValue("tour_overview")?.replace(/\n/g, "<br />") }}></p>
 
                                                         </div>
-                                                        {getValue("additional_notes")?.trim() && (
-                                                            <div className="p-overview" style={{ marginBottom: "25px" }}>
-                                                                <h5>Additional Notes</h5>
-                                                                <p>{getValue("additional_notes")}</p>
-                                                            </div>
-                                                        )}
 
                                                         <div className="p-details-table">
                                                             <table className="table caption-top">
                                                                 <tbody>
                                                                     <tr>
                                                                         <td>Destination</td>
-                                                                        <td>Dubai</td>
+                                                                        <td>
+                                                                            <p style={{ fontWeight: "400" }}>UAE</p>
+                                                                        </td>
                                                                     </tr>
+
+                                                                    {getValue("price_note") && (
+                                                                        <tr>
+                                                                            <td>Price Note</td>
+                                                                            <td>
+                                                                                <p style={{ fontWeight: "400" }}>
+                                                                                    {getValue("price_note")}</p>
+                                                                            </td>
+                                                                        </tr>
+                                                                    )}
 
                                                                     <tr>
                                                                         <td>Included</td>
@@ -465,8 +473,11 @@ const ActivityDetails = () => {
                                                                             {getValue("inclusions") && Array.isArray(getValue("inclusions")) && (
                                                                                 <ul className="table-list-allow">
                                                                                     {getValue("inclusions").map((inclusion, index) => (
-                                                                                        <li key={index}>
-                                                                                            <i className="bx bx-check" /> {inclusion}
+                                                                                        <li key={index} style={{ display: "flex", gap: "8px" }}>
+                                                                                            <i className="bx bx-check" />
+                                                                                            <p style={{ fontWeight: "400" }}>
+                                                                                                {inclusion}
+                                                                                            </p>
                                                                                         </li>
                                                                                     ))}
                                                                                 </ul>
@@ -479,9 +490,12 @@ const ActivityDetails = () => {
                                                                         <td>
                                                                             {getValue("exclusions") && Array.isArray(getValue("exclusions")) && (
                                                                                 <ul className="table-list-disallow">
-                                                                                    {getValue("exclusions").map((inclusion, index) => (
-                                                                                        <li key={index}>
-                                                                                            <i className="bx bx-x" /> {inclusion}
+                                                                                    {getValue("exclusions").map((exclusion, index) => (
+                                                                                        <li key={index} style={{ display: "flex", gap: "8px" }}>
+                                                                                            <i className="bx bx-x" />
+                                                                                            <p style={{ fontWeight: "400" }}>
+                                                                                                {exclusion}
+                                                                                            </p>
                                                                                         </li>
                                                                                     ))}
                                                                                 </ul>
@@ -508,187 +522,18 @@ const ActivityDetails = () => {
                                                             </table>
                                                         </div>
 
-                                                        {/* <div className="p-review hide">
-                                                            <ul>
-                                                                <li className="p-review-card">
-                                                                    <div className="p-review-info">
-                                                                        <div className="p-reviewr-img">
-                                                                            <img src={pr_1} alt="" />
-                                                                        </div>
-                                                                        <div className="p-reviewer-info">
-                                                                            <strong>Bertram Bil</strong>
-                                                                            <p>2 April, 2021 10.00PM</p>
-                                                                            <ul className="review-star">
-                                                                                <li>
-                                                                                    {" "}
-                                                                                    <i className="bx bxs-star" />{" "}
-                                                                                </li>
-                                                                                <li>
-                                                                                    {" "}
-                                                                                    <i className="bx bxs-star" />{" "}
-                                                                                </li>
-                                                                                <li>
-                                                                                    {" "}
-                                                                                    <i className="bx bxs-star" />{" "}
-                                                                                </li>
-                                                                                <li>
-                                                                                    {" "}
-                                                                                    <i className="bx bxs-star" />{" "}
-                                                                                </li>
-                                                                                <li>
-                                                                                    {" "}
-                                                                                    <i className="bx bxs-star" />{" "}
-                                                                                </li>
-                                                                            </ul>
-                                                                        </div>
-                                                                    </div>
-                                                                    <div className="p-review-texts">
-                                                                        <p>
-                                                                            Morbi dictum pulvinar velit, id mollis
-                                                                            lorem faucibus acUt sed lacinia ipsum.
-                                                                            Suspendisse massa augue lorem faucibus
-                                                                            acUt sed lacinia ipsum. Suspendisse{" "}
-                                                                        </p>
-                                                                    </div>
-                                                                    <Link to={`#`} className="r-reply-btn">
-                                                                        <i className="bx bx-reply" /> Reply
-                                                                    </Link>
-                                                                </li>
-                                                                <li className="p-review-card">
-                                                                    <div className="p-review-info">
-                                                                        <div className="p-reviewr-img">
-                                                                            <img src={pr_1} alt="" />
-                                                                        </div>
-                                                                        <div className="p-reviewer-info">
-                                                                            <strong>Bertram Bil</strong>
-                                                                            <p>2 April, 2021 10.00PM</p>
-                                                                            <ul className="review-star">
-                                                                                <li>
-                                                                                    {" "}
-                                                                                    <i className="bx bxs-star" />{" "}
-                                                                                </li>
-                                                                                <li>
-                                                                                    {" "}
-                                                                                    <i className="bx bxs-star" />{" "}
-                                                                                </li>
-                                                                                <li>
-                                                                                    {" "}
-                                                                                    <i className="bx bxs-star" />{" "}
-                                                                                </li>
-                                                                                <li>
-                                                                                    {" "}
-                                                                                    <i className="bx bxs-star" />{" "}
-                                                                                </li>
-                                                                                <li>
-                                                                                    {" "}
-                                                                                    <i className="bx bxs-star" />{" "}
-                                                                                </li>
-                                                                            </ul>
-                                                                        </div>
-                                                                    </div>
-                                                                    <div className="p-review-texts">
-                                                                        <p>
-                                                                            Morbi dictum pulvinar velit, id mollis
-                                                                            lorem faucibus acUt sed lacinia ipsum.
-                                                                            Suspendisse massa augue lorem faucibus
-                                                                            acUt sed lacinia ipsum. Suspendisse{" "}
-                                                                        </p>
-                                                                    </div>
-                                                                    <Link to={`#`} className="r-reply-btn">
-                                                                        <i className="bx bx-reply" /> Reply
-                                                                    </Link>
-                                                                </li>
-                                                                <li className="p-review-card">
-                                                                    <div className="p-review-info">
-                                                                        <div className="p-reviewr-img">
-                                                                            <img src={pr_1} alt="" />
-                                                                        </div>
-                                                                        <div className="p-reviewer-info">
-                                                                            <strong>Bertram Bil</strong>
-                                                                            <p>2 April, 2021 10.00PM</p>
-                                                                            <ul className="review-star">
-                                                                                <li>
-                                                                                    {" "}
-                                                                                    <i className="bx bxs-star" />{" "}
-                                                                                </li>
-                                                                                <li>
-                                                                                    {" "}
-                                                                                    <i className="bx bxs-star" />{" "}
-                                                                                </li>
-                                                                                <li>
-                                                                                    {" "}
-                                                                                    <i className="bx bxs-star" />{" "}
-                                                                                </li>
-                                                                                <li>
-                                                                                    {" "}
-                                                                                    <i className="bx bxs-star" />{" "}
-                                                                                </li>
-                                                                                <li>
-                                                                                    {" "}
-                                                                                    <i className="bx bxs-star" />{" "}
-                                                                                </li>
-                                                                            </ul>
-                                                                        </div>
-                                                                    </div>
-                                                                    <div className="p-review-texts">
-                                                                        <p>
-                                                                            Morbi dictum pulvinar velit, id mollis
-                                                                            lorem faucibus acUt sed lacinia ipsum.
-                                                                            Suspendisse massa augue lorem faucibus
-                                                                            acUt sed lacinia ipsum. Suspendisse{" "}
-                                                                        </p>
-                                                                    </div>
-                                                                    <Link to={`#`} className="r-reply-btn">
-                                                                        <i className="bx bx-reply" /> Reply
-                                                                    </Link>
-                                                                </li>
-                                                            </ul>
-                                                        </div> */}
+                                                        {getValue("additional_notes")?.trim() && (
+                                                            <div className="p-overview" style={{ marginBottom: "25px" }}>
+                                                                <h5>Additional Notes</h5>
+                                                                <p>{getValue("additional_notes")}</p>
+                                                            </div>
+                                                        )}
 
                                                     </div>
                                                 </div>
                                             </div>
                                         </div>
-                                        {/* <div
-                      className="tab-pane fade"
-                      id="pills-profile"
-                      role="tabpanel"
-                      aria-labelledby="pills-profile-tab"
-                    >
-                      <div className="tab-content-2">
-                        <div className="row">
-                          <div className="col-lg-12">
-                            <div className="p-timeline-overview">
-                              <h5>Overview</h5>
-                              <p>{getValue("Overview")}</p>
-                            </div>
-                            <ul className="p-timeline">
-                              {Array.from(
-                                { length: getValue("daysCount") },
-                                (_, index) => index
-                              ).map((day) => (
-                                <li>
-                                  <div className="timeline-index">
-                                    <div className="index-circle">
-                                      <h5>{day + 1 > 9 ? day + 1 : `0${day + 1}`}</h5>
-                                    </div>
-                                  </div>
-                                  <div className="timeline-content">
-                                    <h5>
-                                      DAY {day + 1} :{" "}
-                                      {getValue(`Day ${day + 1}`)?.split(
-                                        "."
-                                      )[0] || "No details available"}
-                                    </h5>
-                                    <p>{getValue(`Day ${day + 1}`)}</p>
-                                  </div>
-                                </li>
-                              ))}
-                            </ul>
-                          </div>
-                        </div>
-                      </div>
-                    </div> */}
+                                       
                                     </div>
                                 </div>
                             </div>
@@ -707,7 +552,7 @@ const ActivityDetails = () => {
                                                     <h5 className="text-center" style={
                                                         {
                                                             margin: "18px",
-                                                            fontFamily: 'Quicksand',
+                                                            // fontFamily: 'Quicksand',
                                                             fontSize: "xx-large",
                                                             color: "black",
                                                             fontWeight: "500"

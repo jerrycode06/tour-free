@@ -2,12 +2,11 @@ import React, { Component } from "react";
 import BreadCrumb from "../dubai/BreadCrumb";
 import { Link } from "react-router-dom";
 import package1Img from "../../../assets/images/dubai/package_1.jpg";
-import dubaiActivityImg from "../../../assets/images/dubai-activities/dubai-tourism.png"
+import dubaiActivityImg from "../../../assets/images/dubai-activities/dubai_activity20.png"
 import dubaiSkylineImg from "../../../assets/images/dubai/DubaiSkyline.jpg"
 import package5Img from "../../../assets/images/dubai/package_5.jpg";
 import TermsAndConditions from "../tnc/TermsAndConditions";
 import dubaiHotelsImg from '../../../assets/images/hotels/dubai-hotels.png'
-
 
 const BothDestinations = () => {
   return (
@@ -24,7 +23,7 @@ const BothDestinations = () => {
                 to={`${process.env.PUBLIC_URL}/dubai/destination`}
               >
                 <div className="blog-img">
-                  <img src={package1Img} alt="" className="img-fluid" style={{height: "100%", objectFit: "cover"}} />
+                  <img src={package1Img} alt="" className="img-fluid" style={{ height: "100%", objectFit: "cover" }} />
                 </div>
                 <div className="blog-details">
                   Dubai Packages
@@ -33,7 +32,7 @@ const BothDestinations = () => {
               </Link>
             </div>
           </div>
-          <div className="col-md-4">
+          {/* <div className="col-md-4">
             <div className="blog-card">
               <Link
                 to={`${process.env.PUBLIC_URL}/international/destination`}
@@ -46,7 +45,7 @@ const BothDestinations = () => {
                 </div>
               </Link>
             </div>
-          </div>
+          </div> */}
 
           {/* DUBAI ACTIVITIES */}
           <div className="col-md-4">
@@ -55,7 +54,7 @@ const BothDestinations = () => {
                 to={`${process.env.PUBLIC_URL}/dubai/activities`}
               >
                 <div className="blog-img">
-                  <img src={dubaiActivityImg} alt="" className="img-fluid" style={{height: "100%", objectFit: "cover"}} />
+                  <img src={dubaiActivityImg} alt="" className="img-fluid" style={{ height: "100%", objectFit: "cover" }} />
                 </div>
                 <div className="blog-details">
                   Dubai Activities
@@ -65,10 +64,6 @@ const BothDestinations = () => {
             </div>
           </div>
 
-        </div>
-
-        <div className="row">
-
           {/* HOTELS */}
           <div className="col-md-4">
             <div className="blog-card">
@@ -76,7 +71,7 @@ const BothDestinations = () => {
                 to={`${process.env.PUBLIC_URL}/dubai/hotels`}
               >
                 <div className="blog-img">
-                  <img src={dubaiHotelsImg} alt="" className="img-fluid" style={{height: "100%", objectFit: "cover"}} />
+                  <img src={dubaiHotelsImg} alt="" className="img-fluid" style={{ height: "100%", objectFit: "cover" }} />
                 </div>
                 <div className="blog-details">
                   Hotels

@@ -42,9 +42,10 @@ import PrivacyPolicy from "./components/pages/privacy-policy/PrivacyPolicy";
 import Activities from "./components/pages/dubai-activities/Activities";
 import ActivityDetails from "./components/pages/dubai-activities/ActivityDetails";
 import HotelsDubai from "./components/pages/dubai-hotels/HotelsDubai";
+import Error from "./components/pages/404/404";
 
 //Default Warniing Error Hide
-console.log = console.warn = console.error = () => {};
+console.log = console.warn = console.error = () => { };
 
 /*
  * Version : 0.1
@@ -89,7 +90,7 @@ class Root extends React.Component {
               component={international}
             />
             <Route
-              path={`${process.env.PUBLIC_URL}/bothDestinaton`}
+              path={`${process.env.PUBLIC_URL}/holidays`}
               component={bothDestinations}
             />
             <Route
@@ -144,6 +145,9 @@ class Root extends React.Component {
               path={`${process.env.PUBLIC_URL}/contact`}
               component={contact}
             />
+            <Route path="/404" element={<Error />} />
+            <Route path="*" element={<Error />} /> {/* Catch-all route */}
+
           </Layout>
         </Switch>
       </BrowserRouter>

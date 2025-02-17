@@ -121,9 +121,9 @@ export const DUBAI_ACTIVITIES = [
     },
     {
         "id": 7,
-        "title": "Yacht Tours in Dubai",
+        "title": "Luxury yacht Rental Dubai",
         "imageUrl": "",
-        "price": "AED 380/-",
+        "price": "AED 380 Per Hour - (33 Feet Yacht)",
         "price_note": "Subject to Availability",
         "inclusions": [
             "Cruising in Marina Lagoon",
@@ -131,7 +131,8 @@ export const DUBAI_ACTIVITIES = [
             "Refreshments (Water and Soft Drinks)",
             "Magnificent views",
             "Yacht Cruise aboard a compact and luxuriously set yacht",
-            "Professional services of an experienced crew"
+            "Professional services of an experienced crew",
+            "33 Feet Yacht (Max Capacity 4 Pax)"
         ],
         "exclusions": [
             "Hotel Transfers",
@@ -177,7 +178,7 @@ export const DUBAI_ACTIVITIES = [
     },
     {
         "id": 10,
-        "title": "Burj Khalifa: An Impressive Marvel of Modern Architecture",
+        "title": "Burj Khalifa 124th Floor (Non-Prime)",
         "imageUrl": "",
         "price": "AED 235/-",
         "price_note": "Subject to Availability",
@@ -282,7 +283,7 @@ export const DUBAI_ACTIVITIES = [
         "title": "Dubai Dolphinarium",
         "imageUrl": "",
         "price": "AED 100/-",
-        "price_note": "(Subject to Availability)",
+        "price_note": "Subject to Availability",
         "inclusions": [
             "Entrance ticket to Dolphin Live Show on general admission tickets.",
             "Access to up-to-date marine mammal facility."
@@ -382,7 +383,7 @@ export const DUBAI_ACTIVITIES = [
         "title": "Skydive Dubai - Desert Dropzone",
         "imageUrl": "",
         "price": "AED 2885/-",
-        "price_note": "(Subject to Availability)",
+        "price_note": "Subject to Availability",
         "inclusions": [
             "Enjoy Tandem skydiving from a height of 13,000 feet.",
             "Free-fall for 60 seconds at 200 miles/hour.",
@@ -407,7 +408,7 @@ export const DUBAI_ACTIVITIES = [
         "title": "Jebel Jais Flight Zip Line",
         "imageUrl": "",
         "price": "AED 441/-",
-        "price_note": "(Subject to Availability)",
+        "price_note": "Subject to Availability",
         "inclusions": [
             "Ticket Only.",
             "Access to the world's longest zipline.",
@@ -424,7 +425,7 @@ export const DUBAI_ACTIVITIES = [
         "title": "Wild Wadi Waterpark Jumeirah",
         "imageUrl": "",
         "price": "AED 280/-",
-        "price_note": "(Subject to Availability)",
+        "price_note": "Subject to Availability",
         "inclusions": [
             "General Admission Ticket Only."
         ],
@@ -439,7 +440,7 @@ export const DUBAI_ACTIVITIES = [
         "title": "Hot Air Balloon Dubai",
         "imageUrl": "",
         "price": "AED 910/-",
-        "price_note": "(Subject to Availability)",
+        "price_note": "Subject to Availability",
         "inclusions": [
             "Hot Air Balloon 60 Min Ride.",
             "SIC Hotel Transfers (Bur Dubai/ Deira /SZR).",
