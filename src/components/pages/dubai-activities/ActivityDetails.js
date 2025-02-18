@@ -402,12 +402,15 @@ const ActivityDetails = () => {
                                         <h2 style={{ marginBottom: "4px" }}>
                                             {getValue("title")}  <br />
                                         </h2>
-                                        <h3>
+                                        <h3 style={{ marginBottom: "0px" }}>
                                             Price: AED {extractPrice(getValue("price"))} <br />
                                         </h3>
-                                        {/* <strong>
-                                            <i className="flaticon-arrival" />
-                                        </strong> */}
+
+                                        {getValue("price_note") && (
+                                            <p style={{ fontWeight: "400" }}>
+                                                ({getValue("price_note")})
+                                            </p>
+                                        )}
                                     </div>
                                 </div>
 
@@ -442,7 +445,7 @@ const ActivityDetails = () => {
                                                                         </td>
                                                                     </tr>
 
-                                                                    {getValue("price_note") && (
+                                                                    {/* {getValue("price_note") && (
                                                                         <tr>
                                                                             <td>Price Note</td>
                                                                             <td>
@@ -450,7 +453,7 @@ const ActivityDetails = () => {
                                                                                     {getValue("price_note")}</p>
                                                                             </td>
                                                                         </tr>
-                                                                    )}
+                                                                    )} */}
 
                                                                     <tr>
                                                                         <td>Included</td>
@@ -533,7 +536,7 @@ const ActivityDetails = () => {
                                                 </div>
                                             </div>
                                         </div>
-                                       
+
                                     </div>
                                 </div>
                             </div>
