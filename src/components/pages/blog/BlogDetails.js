@@ -6,6 +6,7 @@ import package9Img from "../../../assets/images/dubai/package_9.jpg";
 import package10Img from "../../../assets/images/dubai/package_10.jpg";
 import package12Img from "../../../assets/images/dubai/package_12.jpg";
 import package16Img from "../../../assets/images/dubai/package_16.jpg";
+// import dubaiImg1 from '../../../assets/images/dubai/package_1.jpg'
 import BlogData from "../../../json/blog_data.json";
 import TermsAndConditions from "../tnc/TermsAndConditions";
 
@@ -45,7 +46,7 @@ const BlogDetails = () => {
                   </h3>
                 </div>
                 <div className="blog-img-xl">
-                  <img src={require(`../../../assets/images/dubai/${getValue("image")}.jpg`)} alt="" className="img-fluid" />
+                  {/* <img src={require(`../../../assets/images/dubai/${getValue("image")}.jpg`)} alt="" className="img-fluid" /> */}
                   <div className="blog-date">
                     <i className="flaticon-calendar" /> {getValue("Date")}
                   </div>

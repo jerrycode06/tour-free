@@ -94,8 +94,8 @@ class Activities extends Component {
                                                 />
                                             </Link>
                                         </div>
-                                        <div className="package-details" style={{ padding: "5px 10px;"}}>
-                                            <h3 style={{display: "flex", gap: "6px", alignItems: "baseline"}}>
+                                        <div className="package-details" style={{ padding: "5px 10px;" }}>
+                                            <h3 style={{ display: "flex", gap: "6px", alignItems: "baseline" }}>
                                                 <i className="flaticon-arrival" />
                                                 {/* <Link to={`${process.env.PUBLIC_URL}/package-details/${pkg.id}`} style={{alignSelf: "anchor-self"}}>
                                                     {pkg.title}

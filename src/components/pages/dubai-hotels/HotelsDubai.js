@@ -1,48 +1,23 @@
 import React from "react";
+import { HOTELS_DATA } from "../../../json/hotels";
+import dubaiImg1 from "../../../assets/images/dubai/package_1.jpg";
+import dubaiImg2 from "../../../assets/images/dubai/package_2.jpg";
+import dubaiImg3 from "../../../assets/images/dubai/package_3.jpg";
 
-const hotelsData = [
-    {
-        package_name: "3 Star Budgeted Hotel in Dubai",
-        destination_name: "UAE",
-        nights: "Per Room Per Night",
-        price: "AED 199",
-        inclusions: "1 Night Accommodation in Standard Room",
-        terms: [
-            "Rates are subject to availability and change during peak seasons.",
-            "Final vouchers are issued only after full payment is received.",
-        ],
-    },
-    {
-        package_name: "4 Star Hotel in Dubai",
-        destination_name: "UAE",
-        nights: "Per Room Per Night",
-        price: "AED 275",
-        inclusions: "1 Night Accommodation in Standard Room",
-        terms: [
-            "Rates may change during peak seasons or due to schedule changes.",
-            "Final vouchers are issued only after full payment is received.",
-        ],
-    },
-    {
-        package_name: "5 Star Luxury Hotel in Dubai",
-        destination_name: "UAE",
-        nights: "Per Room Per Night",
-        price: "AED 375",
-        inclusions: "1 Night Accommodation in Standard Room",
-        terms: [
-            "Rates may change during peak seasons or due to schedule changes.",
-            "Final vouchers are issued only after full payment is received.",
-        ],
-    },
-];
+const hotelImages = [dubaiImg1, dubaiImg2, dubaiImg3];
 
 const HotelsDubai = () => {
     return (
         <div style={styles.container}>
             <h2 style={styles.heading}>🏨 Dubai Hotel Packages</h2>
             <div style={styles.cardContainer}>
-                {hotelsData.map((hotel, index) => (
+                {HOTELS_DATA.map((hotel, index) => (
                     <div key={index} className="hotel-card" style={styles.card}>
+                        <img
+                            src={hotelImages[index % hotelImages.length]}
+                            alt={hotel.package_name}
+                            style={styles.cardImage}
+                        />
                         <div style={styles.cardHeader}>
                             <h3 style={styles.cardTitle}>{hotel.package_name}</h3>
                             <span style={styles.priceTag}>{hotel.price}</span>
@@ -53,7 +28,7 @@ const HotelsDubai = () => {
                             <p><strong>✅ Inclusions:</strong> {hotel.inclusions}</p>
                             <ul style={styles.termsList}>
                                 {hotel.terms.map((term, idx) => (
-                                    <li key={idx} style={{display: "flex", gap: "4px"}}>
+                                    <li key={idx} style={{ display: "flex", gap: "4px" }}>
                                         ⚠️ <p>{term}</p>
                                     </li>
                                 ))}
@@ -62,23 +37,6 @@ const HotelsDubai = () => {
                     </div>
                 ))}
             </div>
-            <style>
-                {`
-          .hotel-card {
-            transition: all 0.3s ease-in-out;
-          }
-          .hotel-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.15);
-          }
-
-          @media (max-width: 768px) {
-            .cardContainer {
-              grid-template-columns: 1fr;
-            }
-          }
-        `}
-            </style>
         </div>
     );
 };
@@ -112,7 +70,14 @@ const styles = {
         borderLeft: "5px solid #fe8000",
         boxShadow: "0px 4px 8px rgba(0, 0, 0, 0.1)",
         transition: "all 0.3s ease-in-out",
-        fontFamily: '"Quicksand", sans-serif'
+        fontFamily: '"Quicksand", sans-serif',
+    },
+    cardImage: {
+        width: "100%",
+        height: "200px",
+        objectFit: "cover",
+        borderRadius: "10px",
+        marginBottom: "10px",
     },
     cardHeader: {
         display: "flex",
@@ -138,7 +103,7 @@ const styles = {
         borderRadius: "6px",
         fontWeight: "bold",
         whiteSpace: "nowrap",
-        marginLeft: "5px"
+        marginLeft: "5px",
     },
     termsList: {
         paddingLeft: "20px",

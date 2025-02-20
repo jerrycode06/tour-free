@@ -1,38 +1,22 @@
 import React, { useState, useEffect } from "react";
 import { Link, useParams } from "react-router-dom";
-import pr_1 from "../../../assets/images/package/pr-1.png";
-import package7Img from "../../../assets/images/dubai/package_7.jpg";
-import package9Img from "../../../assets/images/dubai/package_9.jpg";
-import package10Img from "../../../assets/images/dubai/package_10.jpg";
-import package12Img from "../../../assets/images/dubai/package_12.jpg";
-import package16Img from "../../../assets/images/dubai/package_16.jpg";
 import "react-datepicker/dist/react-datepicker.css";
-import PackagesData from "../../../dessert-hopper-data.json";
-import { data } from "../../../json/international_packages";
 import emailjs from "@emailjs/browser";
 import TermsAndConditions from "../tnc/TermsAndConditions";
 import { DUBAI_ACTIVITIES } from "../../../json/dubaiActivities";
 
-
+import BreadCrumb from "../../pages/dubai-activities/BreadCrumb";
 
 const ActivityDetails = () => {
-    // function ActivityDetails() {
     const [packageData, setPackageData] = useState(DUBAI_ACTIVITIES || []);
 
-    const scrollTop = () => {
-        window.scrollTo({
-            top: 0,
-            behavior: "smooth",
-        });
-    };
+    // Get the first activity (or change logic based on user selection)
+    const selectedActivity = packageData.length > 0 ? packageData[0] : null;
 
     const { name } = useParams(); // Get the 'name' param from the URL
 
-    console.log('NAME: ', name);
-
     const getValue = (key) => {
         let foundItem;
-
         console.log('Name: ', key);
         foundItem = packageData.find((pkg) => pkg.title.replace(/\s+/g, "-").toLowerCase() === name);
 
@@ -43,7 +27,6 @@ const ActivityDetails = () => {
         const match = str.match(/AED\s+(\d+)/);
         return match ? parseInt(match[1], 10) : null;
     };
-
 
     // ---------------------------------ENQUIRY FORM SUBMITTION CODE---------------------------------
     const [noOfChilds, setNumberOfChilds] = useState(0);
@@ -302,6 +285,13 @@ const ActivityDetails = () => {
         { code: "+263", name: "Zimbabwe" },
     ];
 
+    useEffect(() => {
+        window.scrollTo({
+            top: 0,
+            behavior: "smooth",
+        });
+    }, [name]); // Runs when 'name' param changes
+
     const handleChild = (e) => {
         const value = parseInt(e.target.value, 10);
         if (value <= 7) {
@@ -353,44 +343,22 @@ const ActivityDetails = () => {
             );
     };
 
-
     return (
         <>
             {/* ===============  breadcrumb area start =============== */}
-
-            <div className="breadcrumb-area">
-                <div className="container">
-                    <div className="row">
-                        <div className="col-lg-12 col-md-12 col-sm-12">
-                            <div className="breadcrumb-wrap">
-                                <h2 style={{ marginBottom: "0px" }}>Dubai Activities</h2>
-                                <ul className="breadcrumb-links" style={{ marginBottom: "10px" }}>
-                                    <li>
-                                        <Link to={`${process.env.PUBLIC_URL}/`}>Home</Link>
-                                        <i className="bx bx-chevron-right" />
-                                    </li>
-                                    <li>Activities</li>
-                                </ul>
-                                <a href="tel:+971505829005"
-                                    className="btn btn-outline px-4 py-2 fw-bold d-inline-flex align-items-center"
-                                    style={{
-                                        color: "#304F47",
-                                        backgroundColor: "white",
-                                        borderColor: "#304F47",
-                                        borderWidth: "2px",
-                                        borderRadius: "30px",
-                                        fontSize: "18px",
-                                        transition: "all 0.3s ease-in-out"
-                                    }}>
-                                    <i className="bx bx-phone-call me-2" style={{ fontSize: "22px" }}></i> Call Us
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+            {/* <BreadCrumb title={getValue("title")} backgroundImage={activityImage} /> */}
+            {selectedActivity && (
+                <BreadCrumb
+                    title={getValue("title")}
+                    id={getValue("id")}
+                />
+            )}
+            <div className="activity-content">
+                {/* Rest of your page content */}
             </div>
 
             {/* ===============  breadcrumb area end =============== */}
+
             <div className="package-details-wrapper pt-140">
                 <div className="container">
                     <div className="row">
@@ -698,185 +666,7 @@ const ActivityDetails = () => {
                                                 </form>
                                             </div>
                                         </div>
-                                        {/* <div className="p-sidebar-cards mt-40">
-                                            <h5 className="package-d-head">Popular Packages</h5>
-                                            <ul className="package-cards">
-                                                <li className="package-card-sm">
-                                                    <div className="p-sm-img">
-                                                        <img src={package7Img} alt="" />
-                                                    </div>
-                                                    <div className="package-info">
-                                                        <div className="package-date-sm">
-                                                            <strong>
-                                                                <i className="flaticon-calendar" />4 Days/3
-                                                                night
-                                                            </strong>
-                                                        </div>
-                                                        <h3>
-                                                            <i className="flaticon-arrival" />
-                                                            <Link
-                                                                to={`${process.env.PUBLIC_URL}/package-details/best-selling-dubai-tour-package`}
-                                                            >
-                                                                Best Selling Dubai Tour Package
-                                                            </Link>
-                                                        </h3>
-                                                        <div className="package-rating mb-3">
-                                                            <i
-                                                                className="bx bxs-city"
-                                                                style={{ marginRight: "15px" }}
-                                                            ></i>
-                                                            <i className="bx bxs-star" />
-                                                            <i className="bx bxs-star" />
-                                                            <i className="bx bxs-star" />
-                                                            <i className="bx bxs-star" />
-                                                            <i className="bx bxs-star" />
-                                                        </div>
-                                                        <h5>
-                                                            <span>AED1955</span>/ Per Person
-                                                        </h5>
-                                                    </div>
-                                                </li>
-                                                <li className="package-card-sm">
-                                                    <div className="p-sm-img">
-                                                        <img src={package9Img} alt="" />
-                                                    </div>
-                                                    <div className="package-info">
-                                                        <div className="package-date-sm">
-                                                            <strong>
-                                                                <i className="flaticon-calendar" />5 Days/4
-                                                                night
-                                                            </strong>
-                                                        </div>
-                                                        <h3>
-                                                            <i className="flaticon-arrival" />
-                                                            <Link
-                                                                to={`${process.env.PUBLIC_URL}/package-details/tours-in-glitzy-dubai`}
-                                                            >
-                                                                Tours in Glitzy Dubai
-                                                            </Link>
-                                                        </h3>
-                                                        <div className="package-rating mb-3">
-                                                            <i
-                                                                className="bx bxs-city"
-                                                                style={{ marginRight: "15px" }}
-                                                            ></i>
-                                                            <i className="bx bxs-star" />
-                                                            <i className="bx bxs-star" />
-                                                            <i className="bx bxs-star" />
-                                                            <i className="bx bxs-star" />
-                                                            <i className="bx bxs-star" />
-                                                        </div>
-                                                        <h5>
-                                                            <span>AED2340</span>/ Per Person
-                                                        </h5>
-                                                    </div>
-                                                </li>
 
-                                                <li className="package-card-sm">
-                                                    <div className="p-sm-img">
-                                                        <img src={package10Img} alt="" />
-                                                    </div>
-                                                    <div className="package-info">
-                                                        <div className="package-date-sm">
-                                                            <strong>
-                                                                <i className="flaticon-calendar" />6 Days/5
-                                                                night
-                                                            </strong>
-                                                        </div>
-                                                        <h3>
-                                                            <i className="flaticon-arrival" />
-                                                            <Link
-                                                                to={`${process.env.PUBLIC_URL}/package-details/dubai-explorer-family-package`}
-                                                            >
-                                                                Dubai Explorer Family Package
-                                                            </Link>
-                                                        </h3>
-                                                        <div className="package-rating mb-3">
-                                                            <i
-                                                                className="bx bxs-city"
-                                                                style={{ marginRight: "15px" }}
-                                                            ></i>
-                                                            <i className="bx bxs-star" />
-                                                            <i className="bx bxs-star" />
-                                                            <i className="bx bxs-star" />
-                                                            <i className="bx bxs-star" />
-                                                            <i className="bx bxs-star" />
-                                                        </div>
-                                                        <h5>
-                                                            <span>AED2870</span>/ Per Person
-                                                        </h5>
-                                                    </div>
-                                                </li>
-                                                <li className="package-card-sm">
-                                                    <div className="p-sm-img">
-                                                        <img src={package12Img} alt="" />
-                                                    </div>
-                                                    <div className="package-info">
-                                                        <div className="package-date-sm">
-                                                            <strong>
-                                                                <i className="flaticon-calendar" />6 Days/5
-                                                                night
-                                                            </strong>
-                                                        </div>
-                                                        <h3>
-                                                            <i className="flaticon-arrival" />
-                                                            <Link
-                                                                to={`${process.env.PUBLIC_URL}/package-details/dubai-&-abu-dhabi-wonders`}
-                                                            >
-                                                                Dubai & Abu Dhabi Wonders
-                                                            </Link>
-                                                        </h3>
-                                                        <div className="package-rating mb-3">
-                                                            <i
-                                                                className="bx bxs-city"
-                                                                style={{ marginRight: "15px" }}
-                                                            ></i>
-                                                            <i className="bx bxs-star" />
-                                                            <i className="bx bxs-star" />
-                                                            <i className="bx bxs-star" />
-                                                            <i className="bx bxs-star" />
-                                                            <i className="bx bxs-star" />
-                                                        </div>
-                                                        <h5>
-                                                            <span>AED2575</span>/ Per Person
-                                                        </h5>
-                                                    </div>
-                                                </li>
-                                                <li className="package-card-sm">
-                                                    <div className="p-sm-img">
-                                                        <img src={package16Img} alt="" />
-                                                    </div>
-                                                    <div className="package-info">
-                                                        <div className="package-date-sm">
-                                                            <strong>
-                                                                <i className="flaticon-calendar" />4 Days/3
-                                                                night
-                                                            </strong>
-                                                        </div>
-                                                        <h3>
-                                                            <i className="flaticon-arrival" />
-                                                            <Link
-                                                                to={`${process.env.PUBLIC_URL}/package-details/dubai-local-tour-package`}
-                                                            >
-                                                                Dubai Local Tour Package
-                                                            </Link>
-                                                        </h3>
-                                                        <div className="package-rating mb-3">
-                                                            <i
-                                                                className="bx bxs-city"
-                                                                style={{ marginRight: "15px" }}
-                                                            ></i>
-                                                            <i className="bx bxs-star" />
-                                                            <i className="bx bxs-star" />
-                                                            <i className="bx bxs-star" />
-                                                        </div>
-                                                        <h5>
-                                                            <span>AED1376</span>/ Per Person
-                                                        </h5>
-                                                    </div>
-                                                </li>
-                                            </ul>
-                                        </div> */}
                                     </div>
 
                                 </div>
@@ -891,3 +681,216 @@ const ActivityDetails = () => {
     );
 }
 export default ActivityDetails;
+
+
+{/* <div className="breadcrumb-area">
+        <div className="container">
+            <div className="row">
+                <div className="col-lg-12 col-md-12 col-sm-12">
+                    <div className="breadcrumb-wrap">
+                        <h2 style={{ marginBottom: "0px" }}>Dubai Activities</h2>
+                        <ul className="breadcrumb-links" style={{ marginBottom: "10px" }}>
+                            <li>
+                                <Link to={`${process.env.PUBLIC_URL}/`}>Home</Link>
+                                <i className="bx bx-chevron-right" />
+                            </li>
+                            <li>Activities</li>
+                        </ul>
+                        <a href="tel:+971505829005"
+                            className="btn btn-outline px-4 py-2 fw-bold d-inline-flex align-items-center"
+                            style={{
+                                color: "#304F47",
+                                backgroundColor: "white",
+                                borderColor: "#304F47",
+                                borderWidth: "2px",
+                                borderRadius: "30px",
+                                fontSize: "18px",
+                                transition: "all 0.3s ease-in-out"
+                            }}>
+                            <i className="bx bx-phone-call me-2" style={{ fontSize: "22px" }}></i> Call Us
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div> */}
+
+{/* <div className="p-sidebar-cards mt-40">
+        <h5 className="package-d-head">Popular Packages</h5>
+        <ul className="package-cards">
+            <li className="package-card-sm">
+                <div className="p-sm-img">
+                    <img src={package7Img} alt="" />
+                </div>
+                <div className="package-info">
+                    <div className="package-date-sm">
+                        <strong>
+                            <i className="flaticon-calendar" />4 Days/3
+                            night
+                        </strong>
+                    </div>
+                    <h3>
+                        <i className="flaticon-arrival" />
+                        <Link
+                            to={`${process.env.PUBLIC_URL}/package-details/best-selling-dubai-tour-package`}
+                        >
+                            Best Selling Dubai Tour Package
+                        </Link>
+                    </h3>
+                    <div className="package-rating mb-3">
+                        <i
+                            className="bx bxs-city"
+                            style={{ marginRight: "15px" }}
+                        ></i>
+                        <i className="bx bxs-star" />
+                        <i className="bx bxs-star" />
+                        <i className="bx bxs-star" />
+                        <i className="bx bxs-star" />
+                        <i className="bx bxs-star" />
+                    </div>
+                    <h5>
+                        <span>AED1955</span>/ Per Person
+                    </h5>
+                </div>
+            </li>
+            <li className="package-card-sm">
+                <div className="p-sm-img">
+                    <img src={package9Img} alt="" />
+                </div>
+                <div className="package-info">
+                    <div className="package-date-sm">
+                        <strong>
+                            <i className="flaticon-calendar" />5 Days/4
+                            night
+                        </strong>
+                    </div>
+                    <h3>
+                        <i className="flaticon-arrival" />
+                        <Link
+                            to={`${process.env.PUBLIC_URL}/package-details/tours-in-glitzy-dubai`}
+                        >
+                            Tours in Glitzy Dubai
+                        </Link>
+                    </h3>
+                    <div className="package-rating mb-3">
+                        <i
+                            className="bx bxs-city"
+                            style={{ marginRight: "15px" }}
+                        ></i>
+                        <i className="bx bxs-star" />
+                        <i className="bx bxs-star" />
+                        <i className="bx bxs-star" />
+                        <i className="bx bxs-star" />
+                        <i className="bx bxs-star" />
+                    </div>
+                    <h5>
+                        <span>AED2340</span>/ Per Person
+                    </h5>
+                </div>
+            </li>
+
+            <li className="package-card-sm">
+                <div className="p-sm-img">
+                    <img src={package10Img} alt="" />
+                </div>
+                <div className="package-info">
+                    <div className="package-date-sm">
+                        <strong>
+                            <i className="flaticon-calendar" />6 Days/5
+                            night
+                        </strong>
+                    </div>
+                    <h3>
+                        <i className="flaticon-arrival" />
+                        <Link
+                            to={`${process.env.PUBLIC_URL}/package-details/dubai-explorer-family-package`}
+                        >
+                            Dubai Explorer Family Package
+                        </Link>
+                    </h3>
+                    <div className="package-rating mb-3">
+                        <i
+                            className="bx bxs-city"
+                            style={{ marginRight: "15px" }}
+                        ></i>
+                        <i className="bx bxs-star" />
+                        <i className="bx bxs-star" />
+                        <i className="bx bxs-star" />
+                        <i className="bx bxs-star" />
+                        <i className="bx bxs-star" />
+                    </div>
+                    <h5>
+                        <span>AED2870</span>/ Per Person
+                    </h5>
+                </div>
+            </li>
+            <li className="package-card-sm">
+                <div className="p-sm-img">
+                    <img src={package12Img} alt="" />
+                </div>
+                <div className="package-info">
+                    <div className="package-date-sm">
+                        <strong>
+                            <i className="flaticon-calendar" />6 Days/5
+                            night
+                        </strong>
+                    </div>
+                    <h3>
+                        <i className="flaticon-arrival" />
+                        <Link
+                            to={`${process.env.PUBLIC_URL}/package-details/dubai-&-abu-dhabi-wonders`}
+                        >
+                            Dubai & Abu Dhabi Wonders
+                        </Link>
+                    </h3>
+                    <div className="package-rating mb-3">
+                        <i
+                            className="bx bxs-city"
+                            style={{ marginRight: "15px" }}
+                        ></i>
+                        <i className="bx bxs-star" />
+                        <i className="bx bxs-star" />
+                        <i className="bx bxs-star" />
+                        <i className="bx bxs-star" />
+                        <i className="bx bxs-star" />
+                    </div>
+                    <h5>
+                        <span>AED2575</span>/ Per Person
+                    </h5>
+                </div>
+            </li>
+            <li className="package-card-sm">
+                <div className="p-sm-img">
+                    <img src={package16Img} alt="" />
+                </div>
+                <div className="package-info">
+                    <div className="package-date-sm">
+                        <strong>
+                            <i className="flaticon-calendar" />4 Days/3
+                            night
+                        </strong>
+                    </div>
+                    <h3>
+                        <i className="flaticon-arrival" />
+                        <Link
+                            to={`${process.env.PUBLIC_URL}/package-details/dubai-local-tour-package`}
+                        >
+                            Dubai Local Tour Package
+                        </Link>
+                    </h3>
+                    <div className="package-rating mb-3">
+                        <i
+                            className="bx bxs-city"
+                            style={{ marginRight: "15px" }}
+                        ></i>
+                        <i className="bx bxs-star" />
+                        <i className="bx bxs-star" />
+                        <i className="bx bxs-star" />
+                    </div>
+                    <h5>
+                        <span>AED1376</span>/ Per Person
+                    </h5>
+                </div>
+            </li>
+        </ul>
+    </div> */}

@@ -12,13 +12,16 @@ import { data } from "../../../json/international_packages";
 import emailjs from "@emailjs/browser";
 import TermsAndConditions from "../tnc/TermsAndConditions";
 
-
+import BreadCrumb from "./BreadCrumb";
 
 function PackageDetails() {
   const [packageData, setPackageData] = useState(PackagesData.data || []);
   const [internationalPackageData, setInternationalPackageData] = useState(
     data || []
   );
+
+  const selectedPackage = packageData.length > 0 ? packageData[0] : null;
+
   // const { id } = useParams();
 
   const scrollTop = () => {
@@ -45,8 +48,6 @@ function PackageDetails() {
     console.log('Name: ', key);
     // Dubai package
     foundItem = packageData.find((pkg) => pkg.name.replace(/\s+/g, "-").toLowerCase() === name);
-    
-    // }
 
     // International Package
     if (!foundItem) {
@@ -375,13 +376,20 @@ function PackageDetails() {
     <>
       {/* ===============  breadcrumb area start =============== */}
 
-      <div className="breadcrumb-area">
+      {selectedPackage && (
+        <BreadCrumb
+          title={getValue("name")}
+          id={getValue("id")}
+        />
+      )}
+
+      {/* <div className="breadcrumb-area">
         <div className="container">
           <div className="row">
             <div className="col-lg-12 col-md-12 col-sm-12">
               <div className="breadcrumb-wrap">
-                <h2 style={{marginBottom: "0px"}}>Destination</h2>
-                <ul className="breadcrumb-links" style={{marginBottom: "10px"}}>
+                <h2 style={{ marginBottom: "0px" }}>Destination</h2>
+                <ul className="breadcrumb-links" style={{ marginBottom: "10px" }}>
                   <li>
                     <Link to={`${process.env.PUBLIC_URL}/`}>Home</Link>
                     <i className="bx bx-chevron-right" />
@@ -405,7 +413,7 @@ function PackageDetails() {
             </div>
           </div>
         </div>
-      </div>
+      </div> */}
 
       {/* ===============  breadcrumb area end =============== */}
       <div className="package-details-wrapper pt-120">

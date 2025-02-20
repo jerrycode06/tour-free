@@ -85,7 +85,7 @@ const BothDestinations = () => {
 
       </div>
 
-      <TermsAndConditions />
+      {/* <TermsAndConditions /> */}
     </div>
   );
 };
