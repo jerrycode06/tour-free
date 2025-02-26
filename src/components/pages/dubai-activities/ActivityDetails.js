@@ -676,7 +676,7 @@ const ActivityDetails = () => {
                 </div>
             </div>
 
-            <TermsAndConditions />
+            {/* <TermsAndConditions /> */}
         </>
     );
 }

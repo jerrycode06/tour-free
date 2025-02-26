@@ -1105,7 +1105,7 @@ function PackageDetails() {
         </div>
       </div>
 
-      <TermsAndConditions />
+      {/* <TermsAndConditions /> */}
     </>
   );
 }

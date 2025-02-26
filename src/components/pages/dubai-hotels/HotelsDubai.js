@@ -1,8 +1,8 @@
 import React from "react";
 import { HOTELS_DATA } from "../../../json/hotels";
 import dubaiImg1 from "../../../assets/images/dubai/package_1.jpg";
-import dubaiImg2 from "../../../assets/images/dubai/package_2.jpg";
-import dubaiImg3 from "../../../assets/images/dubai/package_3.jpg";
+import dubaiImg2 from "../../../assets/images/dubai/package_3.jpg";
+import dubaiImg3 from "../../../assets/images/dubai/package_16.jpg";
 
 const hotelImages = [dubaiImg1, dubaiImg2, dubaiImg3];
 

@@ -180,7 +180,7 @@ class AboutUs extends Component {
           </div>
         </div>
         {/* TERMS AND CONDITIOINS */}
-        <TermsAndConditions />
+        {/* <TermsAndConditions /> */}
       </>
     );
   }

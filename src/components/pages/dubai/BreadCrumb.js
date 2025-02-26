@@ -49,8 +49,8 @@ class BreadCrumb extends Component {
                         <div className="row">
                             <div className="col-lg-12">
                                 <div className="breadcrumb-wrap">
-                                    <h2 style={{ marginBottom: "0px" }}>Destinations</h2>
-                                    <ul className="breadcrumb-links" style={{
+                                    <h2 style={{ marginBottom: "0px" }}>UAE Holidays</h2>
+                                    {/* <ul className="breadcrumb-links" style={{
                                         display: "flex",
                                         flexWrap: "wrap",
                                         alignItems: "center",
@@ -69,7 +69,7 @@ class BreadCrumb extends Component {
                                             <i className="bx bx-chevron-right" />
                                         </li>
                                         <li>Dubai</li>
-                                    </ul>
+                                    </ul> */}
 
                                     <a href="tel:+971505829005"
                                         className="btn btn-outline px-4 py-2 fw-bold d-inline-flex align-items-center"
