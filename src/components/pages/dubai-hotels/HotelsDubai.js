@@ -20,7 +20,12 @@ const HotelsDubai = () => {
                         />
                         <div style={styles.cardHeader}>
                             <h3 style={styles.cardTitle}>{hotel.package_name}</h3>
-                            <span style={styles.priceTag}>{hotel.price}</span>
+                            <div>
+                                
+                                <p style={{whiteSpace: 'nowrap', textAlign: 'center'}}>Starting from</p>
+                                <p style={styles.priceTag}>{hotel.price}*/-</p>
+
+                            </div>
                         </div>
                         <div style={styles.cardBody}>
                             <p><strong>📍 Destination:</strong> {hotel.destination_name}</p>
